@@ -64,45 +64,83 @@ export default function Home() {
         </div>
 
         {/* Navigation */}
-        <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-2xl border-b border-white/10">
+        <nav className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-3xl border-b border-white/10 shadow-2xl shadow-black/20">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="flex items-center justify-between h-20">
+            <div className="flex items-center justify-between h-24">
               {/* Logo */}
-              <div className="group cursor-pointer">
-                <div className="flex items-center space-x-3">
+              <div className="group cursor-pointer transform hover:scale-105 transition-all duration-300">
+                <div className="flex items-center space-x-4">
                   <div className="relative">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-xl rotate-45 group-hover:rotate-180 transition-all duration-500"></div>
-                    <div className="absolute inset-0 w-12 h-12 bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 rounded-xl rotate-45 group-hover:rotate-180 transition-all duration-500 scale-75"></div>
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-2xl rotate-12 group-hover:rotate-45 transition-all duration-700 shadow-lg shadow-blue-500/30"></div>
+                    <div className="absolute inset-0 w-14 h-14 bg-gradient-to-br from-cyan-400 via-blue-400 to-purple-400 rounded-2xl rotate-12 group-hover:rotate-45 transition-all duration-700 scale-75 opacity-80"></div>
+                    <div className="absolute inset-0 w-14 h-14 bg-white/20 rounded-2xl rotate-12 group-hover:rotate-45 transition-all duration-700 scale-50"></div>
                   </div>
-                  <span className="text-2xl font-black tracking-tight">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Orzu</span>
-                    <span className="text-white">Tech</span>
-                  </span>
+                  <div>
+                    <span className="text-3xl font-black tracking-tight block">
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">ORZU</span>
+                      <span className="text-white">TECH</span>
+                    </span>
+                    <div className="text-xs text-white/60 font-medium tracking-widest uppercase">Electronics Store</div>
+                  </div>
                 </div>
               </div>
 
               {/* Navigation Links */}
-              <div className="hidden lg:flex items-center space-x-12">
-                {['Products', 'Experience', 'Innovation', 'Support'].map((item, index) => (
-                  <a 
-                    key={item}
-                    href="#" 
-                    className="relative text-white/80 hover:text-white font-medium tracking-wide transition-all duration-300 group"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    {item}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
-                  </a>
-                ))}
+              <div className="hidden lg:flex items-center">
+                <div className="flex items-center space-x-2 bg-white/5 backdrop-blur-md rounded-2xl p-2 border border-white/10">
+                  {[
+                    { name: 'Смартфоны', icon: '📱' },
+                    { name: 'Ноутбуки', icon: '💻' },
+                    { name: 'Планшеты', icon: '📟' },
+                    { name: 'Аксессуары', icon: '🎧' },
+                    { name: 'Акции', icon: '🔥' }
+                  ].map((item, index) => (
+                    <a
+                      key={item.name}
+                      href="#"
+                      className="group relative flex items-center space-x-2 px-4 py-3 rounded-xl text-white/80 hover:text-white font-medium tracking-wide transition-all duration-300 hover:bg-white/10"
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    >
+                      <span className="text-lg group-hover:scale-110 transition-transform duration-300">{item.icon}</span>
+                      <span className="text-sm">{item.name}</span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                    </a>
+                  ))}
+                </div>
               </div>
 
-              {/* CTA Button */}
-              <button className="relative group overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/25">
-                <span className="relative z-10">Shop Now</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-              </button>
+              {/* Right Side Actions */}
+              <div className="flex items-center space-x-4">
+                {/* Search Button */}
+                <button className="relative group w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl flex items-center justify-center hover:bg-white/20 transition-all duration-300">
+                  <span className="text-xl group-hover:scale-110 transition-transform duration-300">🔍</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                </button>
+
+                {/* Cart Button */}
+                <button className="relative group flex items-center space-x-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-6 py-3 rounded-xl font-bold transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 transform hover:scale-105">
+                  <span className="text-xl group-hover:scale-110 transition-transform duration-300">🛒</span>
+                  <span className="relative">
+                    Корзина
+                    <div className="absolute -top-2 -right-3 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center animate-pulse">2</div>
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                </button>
+
+                {/* Mobile Menu Button */}
+                <button className="lg:hidden relative group w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl flex items-center justify-center hover:bg-white/20 transition-all duration-300">
+                  <div className="flex flex-col space-y-1.5">
+                    <div className="w-5 h-0.5 bg-white group-hover:bg-blue-400 transition-colors duration-300"></div>
+                    <div className="w-5 h-0.5 bg-white group-hover:bg-purple-400 transition-colors duration-300"></div>
+                    <div className="w-5 h-0.5 bg-white group-hover:bg-pink-400 transition-colors duration-300"></div>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
+
+          {/* Progress Bar */}
+          <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-30"></div>
         </nav>
 
         {/* Hero Section */}
