@@ -54,25 +54,12 @@ export default function Home() {
                 </button>
               </div>
 
-              {/* Stats */}
-              <div className="flex space-x-12 pt-8">
-                <div>
-                  <div className="text-2xl font-bold text-white">5000+</div>
-                  <div className="text-sm text-gray-500">товаров</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-white">24 часа</div>
-                  <div className="text-sm text-gray-500">поддержка</div>
-                </div>
-              </div>
+
             </div>
 
             {/* Right Content - Product Showcase */}
             <div className="relative">
-              {/* Large Number */}
-              <div className="absolute -top-8 -right-8 text-8xl font-black text-gray-800 opacity-50 z-0">
-                7+
-              </div>
+
 
 
 
@@ -83,14 +70,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Bottom Right Stats Card */}
-          <div className="absolute bottom-8 right-8 bg-black/50 backdrop-blur-md rounded-2xl p-4 border border-gray-700">
-            <div className="text-center space-y-2">
-              <div className="text-xs text-gray-400">В наличии</div>
-              <div className="text-2xl font-bold text-white">15K+</div>
-              <div className="text-xs text-gray-500">устройств</div>
-            </div>
-          </div>
+
 
           {/* Decorative Elements */}
 
@@ -98,10 +78,7 @@ export default function Home() {
           <div className="absolute top-1/2 left-1/6 w-1.5 h-1.5 bg-purple-400 rounded-full animate-ping animation-delay-1500"></div>
         </div>
 
-        {/* Floating Status Card */}
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-black px-6 py-2 rounded-full font-bold text-sm shadow-lg">
-          🟢 СИСТЕМА АКТИВНА
-        </div>
+
 
         {/* Side Elements */}
         <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 bg-white/10 backdrop-blur-md rounded-full p-4 text-white">
