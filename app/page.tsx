@@ -24,12 +24,12 @@ export default function Home() {
         <div className="bg-gray-900 h-full w-full p-8 relative overflow-hidden shadow-2xl">
           {/* Top Left Brand */}
           <div className="absolute top-8 left-8 text-gray-400 text-sm font-light tracking-widest">
-            Электроника будущего
+            Магазин техники в Бухаре
           </div>
 
           {/* Top Right Company */}
           <div className="absolute top-8 right-8 text-gray-400 text-sm font-light tracking-wider">
-            ORZU INC.
+            Узбекистан
           </div>
 
           {/* Main Content */}
