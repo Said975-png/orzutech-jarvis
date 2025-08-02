@@ -37,11 +37,11 @@ export default function Home() {
             {/* Left Content - Centered */}
             <div className="flex flex-col justify-center space-y-8 z-10 relative h-full">
               <div className="space-y-8">
-                <h1 className="text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 leading-tight">
+                <h1 className="text-8xl lg:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 leading-tight">
                   ORZUTECH
                 </h1>
 
-                <p className="text-gray-300 text-lg leading-relaxed max-w-md">
+                <p className="text-gray-300 text-2xl leading-relaxed max-w-lg font-light">
                   Революционные технологии для нового поколения.
                   Откройте для себя будущее электроники уже сегодня.
                 </p>
