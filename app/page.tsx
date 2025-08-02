@@ -117,13 +117,7 @@ export default function Home() {
               
               <h1 className="text-6xl lg:text-8xl font-black leading-none tracking-tight">
                 <span className="block overflow-hidden">
-                  <span className="block animate-slide-up">Future</span>
-                </span>
-                <span className="block overflow-hidden">
-                  <span className="block animate-slide-up animation-delay-200 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">Technology</span>
-                </span>
-                <span className="block overflow-hidden">
-                  <span className="block animate-slide-up animation-delay-400">Today</span>
+                  <span className="block animate-slide-up text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">ORZUTECH</span>
                 </span>
               </h1>
               
