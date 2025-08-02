@@ -63,10 +63,10 @@ export default function Home() {
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 pt-4">
                 <button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
-                  Каталог
+                  Смотреть товары
                 </button>
                 <button className="border-2 border-cyan-400 text-cyan-300 hover:text-white hover:bg-cyan-400/10 px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105">
-                  Подписаться
+                  Контакты
                 </button>
               </div>
             </div>
