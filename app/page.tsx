@@ -33,40 +33,39 @@ export default function Home() {
           </div>
 
           {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center mt-16">
-            {/* Left Content */}
-            <div className="space-y-8 z-10 relative">
-              <h1 className="text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 leading-tight">
-                ORZUTECH
-              </h1>
+          <div className="grid lg:grid-cols-2 gap-16 items-center h-full">
+            {/* Left Content - Centered */}
+            <div className="flex flex-col justify-center space-y-8 z-10 relative h-full">
+              <div className="space-y-8">
+                <h1 className="text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 leading-tight">
+                  ORZUTECH
+                </h1>
 
-              <p className="text-gray-300 text-lg leading-relaxed max-w-md">
-                Революционные технологии для нового поколения. 
-                Откройте для себя будущее электроники уже сегодня.
-              </p>
+                <p className="text-gray-300 text-lg leading-relaxed max-w-md">
+                  Революционные технологии для нового поколения.
+                  Откройте для себя будущее электроники уже сегодня.
+                </p>
 
-              <div className="flex space-x-4">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
-                  Каталог
-                </button>
-                <button className="border border-gray-500 text-gray-300 hover:text-white hover:border-white px-8 py-3 rounded-full font-semibold transition-all duration-300">
-                  Подписаться
-                </button>
+                <div className="flex space-x-4">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
+                    Каталог
+                  </button>
+                  <button className="border border-gray-500 text-gray-300 hover:text-white hover:border-white px-8 py-3 rounded-full font-semibold transition-all duration-300">
+                    Подписаться
+                  </button>
+                </div>
               </div>
 
 
             </div>
 
-            {/* Right Content - Product Showcase */}
-            <div className="relative">
-
-
-
-
-              {/* Floating Elements */}
-              <div className="absolute top-1/4 -left-8 w-16 h-16 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
-
-              <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-purple-500/20 rounded-full blur-xl animate-pulse animation-delay-500"></div>
+            {/* Right Content - Product Image */}
+            <div className="flex justify-center items-center h-full">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F02f225558365433abb0d2ad515b82942%2F52db23e5e3e24501b060c9ae46a778e6?format=webp&width=800"
+                alt="Apple Products"
+                className="max-w-full max-h-[80vh] object-contain"
+              />
             </div>
           </div>
 
