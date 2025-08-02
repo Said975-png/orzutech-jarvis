@@ -1,319 +1,369 @@
+'use client'
+
+import { useEffect, useRef } from 'react'
+
 export default function Home() {
+  const cursorRef = useRef<HTMLDivElement>(null)
+  const heroRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const cursor = cursorRef.current
+    if (!cursor) return
+
+    const moveCursor = (e: MouseEvent) => {
+      cursor.style.left = e.clientX + 'px'
+      cursor.style.top = e.clientY + 'px'
+    }
+
+    window.addEventListener('mousemove', moveCursor)
+    return () => window.removeEventListener('mousemove', moveCursor)
+  }, [])
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in')
+        }
+      })
+    }, observerOptions)
+
+    document.querySelectorAll('.observe').forEach(el => {
+      observer.observe(el)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <main className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">O</span>
-              </div>
-              <span className="text-2xl font-bold text-gray-900">OrzuTech</span>
-            </div>
+    <>
+      {/* Custom Cursor */}
+      <div 
+        ref={cursorRef}
+        className="fixed w-6 h-6 pointer-events-none z-[9999] mix-blend-difference"
+        style={{ 
+          background: 'radial-gradient(circle, rgba(59,130,246,0.8) 0%, rgba(59,130,246,0.2) 70%, transparent 100%)',
+          transform: 'translate(-50%, -50%)',
+          transition: 'all 0.1s ease-out'
+        }}
+      />
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Смартфоны</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Ноутбуки</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Планшеты</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Аксессуары</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Акции</a>
-            </div>
+      <main className="min-h-screen bg-black text-white overflow-hidden relative">
+        {/* Animated Background */}
+        <div className="fixed inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -inset-10 opacity-20">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+            <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+            <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+          </div>
+        </div>
 
-            {/* Language Switcher & Cart */}
-            <div className="flex items-center space-x-4">
-              <div className="flex bg-gray-100 rounded-lg p-1">
-                <button className="px-3 py-1 bg-white rounded text-sm font-medium text-blue-600 shadow-sm">RU</button>
-                <button className="px-3 py-1 text-sm font-medium text-gray-600 hover:text-blue-600">UZ</button>
+        {/* Navigation */}
+        <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-2xl border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="flex items-center justify-between h-20">
+              {/* Logo */}
+              <div className="group cursor-pointer">
+                <div className="flex items-center space-x-3">
+                  <div className="relative">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-xl rotate-45 group-hover:rotate-180 transition-all duration-500"></div>
+                    <div className="absolute inset-0 w-12 h-12 bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 rounded-xl rotate-45 group-hover:rotate-180 transition-all duration-500 scale-75"></div>
+                  </div>
+                  <span className="text-2xl font-black tracking-tight">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Orzu</span>
+                    <span className="text-white">Tech</span>
+                  </span>
+                </div>
               </div>
-              <button className="relative bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
-                Корзина
-                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">2</span>
+
+              {/* Navigation Links */}
+              <div className="hidden lg:flex items-center space-x-12">
+                {['Products', 'Experience', 'Innovation', 'Support'].map((item, index) => (
+                  <a 
+                    key={item}
+                    href="#" 
+                    className="relative text-white/80 hover:text-white font-medium tracking-wide transition-all duration-300 group"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    {item}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                  </a>
+                ))}
+              </div>
+
+              {/* CTA Button */}
+              <button className="relative group overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/25">
+                <span className="relative z-10">Shop Now</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
               </button>
             </div>
           </div>
-        </div>
-      </nav>
+        </nav>
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 to-white py-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-sm font-medium">
-                🔥 Скидки до 30% на новые модели
+        {/* Hero Section */}
+        <section ref={heroRef} className="relative min-h-screen flex items-center justify-center pt-20">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Content */}
+            <div className="space-y-8 observe opacity-0 translate-y-20 transition-all duration-1000">
+              <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+                <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></div>
+                <span className="text-sm font-medium">New Collection Available</span>
               </div>
-
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Технологии <span className="text-blue-600">нового</span> поколения
+              
+              <h1 className="text-6xl lg:text-8xl font-black leading-none tracking-tight">
+                <span className="block overflow-hidden">
+                  <span className="block animate-slide-up">Future</span>
+                </span>
+                <span className="block overflow-hidden">
+                  <span className="block animate-slide-up animation-delay-200 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">Technology</span>
+                </span>
+                <span className="block overflow-hidden">
+                  <span className="block animate-slide-up animation-delay-400">Today</span>
+                </span>
               </h1>
-
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Откройте для себя лучшие смартфоны, ноутбуки и гаджеты.
-                Официальные устройства с гарантией и быстрой доставкой по всему Узбекистану.
+              
+              <p className="text-xl text-white/70 leading-relaxed max-w-lg animate-fade-in animation-delay-600">
+                Experience the next generation of consumer electronics. 
+                Where innovation meets design in perfect harmony.
               </p>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                  Смотреть каталог
+              
+              <div className="flex items-center space-x-6 animate-fade-in animation-delay-800">
+                <button className="group relative overflow-hidden bg-white text-black px-10 py-4 rounded-full font-bold transition-all duration-300 hover:shadow-2xl hover:shadow-white/25">
+                  <span className="relative z-10 group-hover:text-white transition-colors duration-300">Explore Collection</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                 </button>
-                <button className="border-2 border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
-                  Новинки недели
+                
+                <button className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors group">
+                  <div className="w-12 h-12 border-2 border-white/30 rounded-full flex items-center justify-center group-hover:border-white transition-colors">
+                    <span className="text-xl">▶</span>
+                  </div>
+                  <span className="font-medium">Watch Demo</span>
                 </button>
               </div>
             </div>
 
-            {/* Hero Product Showcase */}
-            <div className="relative">
-              <div className="relative bg-white rounded-3xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-all duration-500">
-                <div className="text-center space-y-6">
-                  <div className="w-64 h-64 mx-auto bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                    <div className="text-8xl">📱</div>
-                    <div className="absolute top-4 right-4 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-bold">-25%</div>
+            {/* Right Content - 3D Product Showcase */}
+            <div className="relative observe opacity-0 translate-x-20 transition-all duration-1000 animation-delay-400">
+              <div className="relative group cursor-pointer">
+                {/* Main Product */}
+                <div className="relative w-80 h-80 mx-auto">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-3xl backdrop-blur-sm border border-white/10 animate-float"></div>
+                  <div className="absolute inset-4 bg-gradient-to-br from-gray-900 to-black rounded-2xl flex items-center justify-center group-hover:scale-105 transition-all duration-500">
+                    <div className="text-9xl animate-pulse">📱</div>
                   </div>
+                  
+                  {/* Floating Price Tag */}
+                  <div className="absolute -top-6 -right-6 bg-gradient-to-r from-green-500 to-emerald-500 text-black px-6 py-3 rounded-2xl font-bold shadow-2xl animate-bounce">
+                    <div className="text-sm">From</div>
+                    <div className="text-xl">$999</div>
+                  </div>
+                  
+                  {/* Orbiting Elements */}
+                  <div className="absolute top-1/4 -left-8 w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center animate-orbit">
+                    <span className="text-2xl">⚡</span>
+                  </div>
+                  <div className="absolute bottom-1/4 -right-8 w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center animate-orbit-reverse">
+                    <span className="text-xl">🔋</span>
+                  </div>
+                  <div className="absolute top-1/2 -right-12 w-8 h-8 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center animate-orbit">
+                    <span className="text-sm">📡</span>
+                  </div>
+                </div>
 
-                  <div className="space-y-3">
-                    <h3 className="text-2xl font-bold text-gray-900">iPhone 15 Pro Max</h3>
-                    <p className="text-gray-600">256GB • Titanium Natural</p>
-                    <div className="flex items-center justify-center space-x-2">
-                      <span className="text-3xl font-bold text-blue-600">74,990,000 сум</span>
-                      <span className="text-lg text-gray-400 line-through">99,990,000 сум</span>
+                {/* Specs Cards */}
+                <div className="absolute -bottom-8 left-0 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 animate-slide-up animation-delay-1000">
+                  <div className="text-xs text-white/60">Display</div>
+                  <div className="text-sm font-bold">6.7" Super Retina</div>
+                </div>
+                
+                <div className="absolute -bottom-8 right-0 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 animate-slide-up animation-delay-1200">
+                  <div className="text-xs text-white/60">Chip</div>
+                  <div className="text-sm font-bold">A17 Pro</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
+            </div>
+          </div>
+        </section>
+
+        {/* Products Grid */}
+        <section className="py-32 relative">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-20 observe opacity-0 translate-y-20 transition-all duration-1000">
+              <h2 className="text-5xl lg:text-7xl font-black mb-6">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Featured</span>
+                <span className="text-white"> Products</span>
+              </h2>
+              <p className="text-xl text-white/60 max-w-2xl mx-auto">
+                Cutting-edge technology designed for the future
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-3 gap-8">
+              {[
+                { name: "iPhone 15 Pro", category: "Smartphone", price: "$999", image: "📱", gradient: "from-blue-500 to-cyan-500" },
+                { name: "MacBook Pro", category: "Laptop", price: "$1,999", image: "💻", gradient: "from-purple-500 to-pink-500" },
+                { name: "AirPods Pro", category: "Audio", price: "$249", image: "🎧", gradient: "from-green-500 to-emerald-500" }
+              ].map((product, index) => (
+                <div 
+                  key={index} 
+                  className="group observe opacity-0 translate-y-20 transition-all duration-1000 cursor-pointer"
+                  style={{ animationDelay: `${index * 200}ms` }}
+                >
+                  <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-white/10">
+                    <div className="relative mb-8">
+                      <div className={`w-full h-64 bg-gradient-to-br ${product.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-105 transition-all duration-500`}>
+                        <span className="text-8xl">{product.image}</span>
+                      </div>
+                      <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full">
+                        New
+                      </div>
                     </div>
-                    <button className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-semibold transition-colors">
-                      Купить сейчас
-                    </button>
+                    
+                    <div className="space-y-4">
+                      <div>
+                        <div className="text-sm text-white/60 mb-1">{product.category}</div>
+                        <h3 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-300">
+                          {product.name}
+                        </h3>
+                      </div>
+                      
+                      <div className="flex items-center justify-between">
+                        <span className="text-3xl font-black text-white">{product.price}</span>
+                        <button className="bg-white text-black px-6 py-2 rounded-full font-bold hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white transition-all duration-300">
+                          Add to Cart
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -left-4 w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center animate-bounce">
-                <span className="text-2xl">💰</span>
-              </div>
-              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-green-100 rounded-full flex items-center justify-center animate-pulse">
-                <span className="text-xl">✨</span>
-              </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Popular Categories */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Популярные категории</h2>
-            <p className="text-xl text-gray-600">Выберите устройство для ваших потребностей</p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { icon: "📱", title: "Смартфоны", desc: "iPhone, Samsung, Xiaomi", count: "500+ моделей" },
-              { icon: "💻", title: "Ноутбуки", desc: "MacBook, Asus, HP", count: "200+ моделей" },
-              { icon: "📟", title: "Планшеты", desc: "iPad, Samsung Tab", count: "100+ моделей" },
-              { icon: "🎧", title: "Аксессуары", desc: "Наушники, чехлы, зарядки", count: "1000+ товаров" }
-            ].map((category, index) => (
-              <div key={index} className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
-                <div className="text-center space-y-4">
-                  <div className="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-blue-600 transition-colors duration-300">
-                    <span className="text-4xl group-hover:scale-110 transition-transform duration-300">{category.icon}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">{category.title}</h3>
-                  <p className="text-gray-600">{category.desc}</p>
-                  <p className="text-sm text-blue-600 font-medium">{category.count}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Best Sellers */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-12">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-2">Хиты продаж</h2>
-              <p className="text-xl text-gray-600">Самые популярные устройства</p>
-            </div>
-            <button className="text-blue-600 hover:text-blue-700 font-semibold flex items-center space-x-2">
-              <span>Все хиты</span>
-              <span>→</span>
-            </button>
-          </div>
-
-          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {[
-              { name: "iPhone 15 Pro", price: "74,990,000", oldPrice: "79,990,000", image: "📱", rating: 5, badge: "ХИТ" },
-              { name: "MacBook Air M2", price: "54,990,000", oldPrice: "", image: "💻", rating: 5, badge: "НОВИНКА" },
-              { name: "AirPods Pro 2", price: "1,490,000", oldPrice: "1,690,000", image: "🎧", rating: 5, badge: "-12%" },
-              { name: "iPad Air 5", price: "3,990,000", oldPrice: "", image: "📟", rating: 4, badge: "" }
-            ].map((product, index) => (
-              <div key={index} className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
-                {product.badge && (
-                  <div className="absolute top-4 left-4 z-10 bg-red-500 text-white text-xs px-2 py-1 rounded font-bold">
-                    {product.badge}
-                  </div>
-                )}
-
-                <div className="relative p-6">
-                  <div className="w-full h-48 bg-gray-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-50 transition-colors">
-                    <span className="text-6xl">{product.image}</span>
-                  </div>
-
-                  <div className="space-y-3">
-                    <h3 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">{product.name}</h3>
-
-                    <div className="flex items-center space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <span key={i} className={`text-sm ${i < product.rating ? 'text-yellow-400' : 'text-gray-300'}`}>★</span>
+        {/* Experience Section */}
+        <section className="py-32 relative">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
+              <div className="observe opacity-0 translate-x-20 transition-all duration-1000">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-3xl blur-3xl"></div>
+                  <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-12">
+                    <div className="grid grid-cols-2 gap-8">
+                      {[
+                        { icon: "⚡", label: "5G Speed", value: "2.4 Gbps" },
+                        { icon: "🔋", label: "Battery", value: "All Day" },
+                        { icon: "📸", label: "Camera", value: "48MP Pro" },
+                        { icon: "🛡️", label: "Security", value: "Face ID" }
+                      ].map((spec, index) => (
+                        <div key={index} className="text-center space-y-3">
+                          <div className="text-4xl">{spec.icon}</div>
+                          <div>
+                            <div className="text-2xl font-bold text-white">{spec.value}</div>
+                            <div className="text-sm text-white/60">{spec.label}</div>
+                          </div>
+                        </div>
                       ))}
-                      <span className="text-sm text-gray-500 ml-2">(127)</span>
                     </div>
-
-                    <div className="flex items-center space-x-2">
-                      <span className="text-xl font-bold text-blue-600">{product.price} сум</span>
-                      {product.oldPrice && (
-                        <span className="text-sm text-gray-400 line-through">{product.oldPrice} сум</span>
-                      )}
-                    </div>
-
-                    <button className="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-lg font-medium transition-colors">
-                      В корзину
-                    </button>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Advantages */}
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Почему выбирают OrzuTech</h2>
-            <p className="text-xl text-blue-100">Мы гарантируем лучший сервис в Узбекистане</p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { icon: "🚚", title: "Быстрая доставка", desc: "По Ташкенту в день заказа, по регионам 1-3 дня" },
-              { icon: "🛡️", title: "Официальная гарантия", desc: "На все устройства от производителя" },
-              { icon: "💳", title: "Рассрочка 0%", desc: "До 24 месяцев без переплаты" },
-              { icon: "🎧", title: "Поддержка 24/7", desc: "Консультации и техническая помощь" }
-            ].map((advantage, index) => (
-              <div key={index} className="text-center space-y-4">
-                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto">
-                  <span className="text-3xl">{advantage.icon}</span>
-                </div>
-                <h3 className="text-xl font-bold">{advantage.title}</h3>
-                <p className="text-blue-100">{advantage.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Customer Reviews */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Отзывы клиентов</h2>
-            <p className="text-xl text-gray-600">Что говорят о нас наши покупатели</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { name: "Азиз Каримов", rating: 5, text: "Купил iPhone 15 Pro. Быстрая доставка, оригинальный товар. Рекомендую!", city: "Ташкент" },
-              { name: "Дилноза Юсупова", rating: 5, text: "Отличный сервис! MacBook пришел на следующий день, все отлично упаковано.", city: "Самарканд" },
-              { name: "Бахтиёр Рахимов", rating: 5, text: "Лучшие цены в городе! Взял в рассрочку без переплаты. Очень доволен.", city: "Бухара" }
-            ].map((review, index) => (
-              <div key={index} className="bg-gray-50 rounded-2xl p-8">
-                <div className="flex items-center space-x-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className={`text-lg ${i < review.rating ? 'text-yellow-400' : 'text-gray-300'}`}>★</span>
+              <div className="space-y-8 observe opacity-0 translate-x-20 transition-all duration-1000 animation-delay-300">
+                <h2 className="text-5xl lg:text-7xl font-black leading-tight">
+                  <span className="text-white">Beyond</span><br/>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Expectations</span>
+                </h2>
+                
+                <p className="text-xl text-white/70 leading-relaxed">
+                  Experience technology that adapts to your lifestyle. 
+                  Every detail crafted for perfection, every feature designed for the future.
+                </p>
+                
+                <div className="space-y-6">
+                  {[
+                    "Premium materials and precision engineering",
+                    "AI-powered performance optimization",
+                    "Seamless ecosystem integration"
+                  ].map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-4">
+                      <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-xs">✓</span>
+                      </div>
+                      <span className="text-white/80">{feature}</span>
+                    </div>
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 italic">"{review.text}"</p>
-                <div>
-                  <p className="font-bold text-gray-900">{review.name}</p>
-                  <p className="text-sm text-gray-500">{review.city}</p>
+                
+                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-bold hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="relative py-20 border-t border-white/10">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="grid lg:grid-cols-4 gap-12">
+              <div className="lg:col-span-2 space-y-6">
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl"></div>
+                  <span className="text-2xl font-black">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Orzu</span>
+                    <span className="text-white">Tech</span>
+                  </span>
+                </div>
+                <p className="text-white/60 max-w-md">
+                  Pioneering the future of technology with innovative products that enhance human potential.
+                </p>
+                <div className="flex space-x-4">
+                  {['📱', '📷', '✈️'].map((icon, index) => (
+                    <a key={index} href="#" className="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl flex items-center justify-center hover:bg-white/20 transition-colors">
+                      <span className="text-xl">{icon}</span>
+                    </a>
+                  ))}
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            {/* Company Info */}
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">O</span>
-                </div>
-                <span className="text-2xl font-bold">OrzuTech</span>
+              
+              <div>
+                <h3 className="text-white font-bold mb-6">Products</h3>
+                <ul className="space-y-3 text-white/60">
+                  {['Smartphones', 'Laptops', 'Audio', 'Accessories'].map(item => (
+                    <li key={item}><a href="#" className="hover:text-white transition-colors">{item}</a></li>
+                  ))}
+                </ul>
               </div>
-              <p className="text-gray-400">Лучший магазин электроники в Узбекистане</p>
-              <div className="flex space-x-4">
-                <a href="#" className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors">
-                  <span>📱</span>
-                </a>
-                <a href="#" className="w-10 h-10 bg-pink-600 rounded-lg flex items-center justify-center hover:bg-pink-700 transition-colors">
-                  <span>📷</span>
-                </a>
-                <a href="#" className="w-10 h-10 bg-blue-400 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors">
-                  <span>✈️</span>
-                </a>
+              
+              <div>
+                <h3 className="text-white font-bold mb-6">Support</h3>
+                <ul className="space-y-3 text-white/60">
+                  {['Contact', 'Warranty', 'Returns', 'FAQ'].map(item => (
+                    <li key={item}><a href="#" className="hover:text-white transition-colors">{item}</a></li>
+                  ))}
+                </ul>
               </div>
             </div>
-
-            {/* Quick Links */}
-            <div>
-              <h3 className="font-bold mb-4">К��тегории</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Смартфоны</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Ноутбуки</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Планшеты</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Аксессуары</a></li>
-              </ul>
-            </div>
-
-            {/* Support */}
-            <div>
-              <h3 className="font-bold mb-4">Поддержка</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Гарантия</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Доставка</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Возврат</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">FAQ</a></li>
-              </ul>
-            </div>
-
-            {/* Contact */}
-            <div>
-              <h3 className="font-bold mb-4">Контакты</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>📞 +998 71 123 45 67</li>
-                <li>📧 info@orzutech.uz</li>
-                <li>📍 Ташкент, ул. Амира Темура</li>
-                <li>🕐 Пн-Вс: 09:00-21:00</li>
-              </ul>
+            
+            <div className="border-t border-white/10 mt-16 pt-8 text-center text-white/40">
+              <p>&copy; 2024 OrzuTech. All rights reserved.</p>
             </div>
           </div>
-
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 OrzuTech. Все права защищены.</p>
-          </div>
-        </div>
-      </footer>
-    </main>
+        </footer>
+      </main>
+    </>
   )
 }
