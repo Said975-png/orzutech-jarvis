@@ -107,78 +107,37 @@ export default function Home() {
 
         {/* Hero Section */}
         <section ref={heroRef} className="relative min-h-screen flex items-center justify-center pt-20">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Content */}
-            <div className="space-y-8 observe opacity-0 translate-y-20 transition-all duration-1000">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-center">
+            {/* Content */}
+            <div className="space-y-8 observe opacity-0 translate-y-20 transition-all duration-1000 text-center">
               <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
                 <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></div>
                 <span className="text-sm font-medium">New Collection Available</span>
               </div>
-              
+
               <h1 className="text-6xl lg:text-8xl font-black leading-none tracking-tight">
                 <span className="block overflow-hidden">
                   <span className="block animate-slide-up text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">ORZUTECH</span>
                 </span>
               </h1>
-              
-              <p className="text-xl text-white/70 leading-relaxed max-w-lg animate-fade-in animation-delay-600">
-                Experience the next generation of consumer electronics. 
+
+              <p className="text-xl text-white/70 leading-relaxed max-w-2xl mx-auto animate-fade-in animation-delay-600">
+                Experience the next generation of consumer electronics.
                 Where innovation meets design in perfect harmony.
               </p>
-              
-              <div className="flex items-center space-x-6 animate-fade-in animation-delay-800">
+
+              <div className="flex items-center justify-center space-x-6 animate-fade-in animation-delay-800">
                 <button className="group relative overflow-hidden bg-white text-black px-10 py-4 rounded-full font-bold transition-all duration-300 hover:shadow-2xl hover:shadow-white/25">
                   <span className="relative z-10 group-hover:text-white transition-colors duration-300">Explore Collection</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                 </button>
-                
+
                 <button className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors group">
                   <div className="w-12 h-12 border-2 border-white/30 rounded-full flex items-center justify-center group-hover:border-white transition-colors">
                     <span className="text-xl">▶</span>
                   </div>
                   <span className="font-medium">Watch Demo</span>
                 </button>
-              </div>
-            </div>
-
-            {/* Right Content - 3D Product Showcase */}
-            <div className="relative observe opacity-0 translate-x-20 transition-all duration-1000 animation-delay-400">
-              <div className="relative group cursor-pointer">
-                {/* Main Product */}
-                <div className="relative w-80 h-80 mx-auto">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-3xl backdrop-blur-sm border border-white/10 animate-float"></div>
-                  <div className="absolute inset-4 bg-gradient-to-br from-gray-900 to-black rounded-2xl flex items-center justify-center group-hover:scale-105 transition-all duration-500">
-                    <div className="text-9xl animate-pulse">📱</div>
-                  </div>
-                  
-                  {/* Floating Price Tag */}
-                  <div className="absolute -top-6 -right-6 bg-gradient-to-r from-green-500 to-emerald-500 text-black px-6 py-3 rounded-2xl font-bold shadow-2xl animate-bounce">
-                    <div className="text-sm">From</div>
-                    <div className="text-xl">$999</div>
-                  </div>
-                  
-                  {/* Orbiting Elements */}
-                  <div className="absolute top-1/4 -left-8 w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center animate-orbit">
-                    <span className="text-2xl">⚡</span>
-                  </div>
-                  <div className="absolute bottom-1/4 -right-8 w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center animate-orbit-reverse">
-                    <span className="text-xl">🔋</span>
-                  </div>
-                  <div className="absolute top-1/2 -right-12 w-8 h-8 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center animate-orbit">
-                    <span className="text-sm">📡</span>
-                  </div>
-                </div>
-
-                {/* Specs Cards */}
-                <div className="absolute -bottom-8 left-0 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 animate-slide-up animation-delay-1000">
-                  <div className="text-xs text-white/60">Display</div>
-                  <div className="text-sm font-bold">6.7" Super Retina</div>
-                </div>
-                
-                <div className="absolute -bottom-8 right-0 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 animate-slide-up animation-delay-1200">
-                  <div className="text-xs text-white/60">Chip</div>
-                  <div className="text-sm font-bold">A17 Pro</div>
-                </div>
               </div>
             </div>
           </div>
