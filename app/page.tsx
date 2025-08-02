@@ -74,35 +74,7 @@ export default function Home() {
                 7+
               </div>
 
-              {/* Products */}
-              <div className="relative z-10 space-y-8">
-                {/* Top Product - Smartphone */}
-                <div className="transform rotate-12 hover:rotate-6 transition-all duration-500">
-                  <div className="w-80 h-48 bg-gradient-to-br from-gray-800 to-black rounded-3xl flex items-center justify-center relative shadow-2xl border border-gray-700">
-                    <div className="text-8xl opacity-80">📱</div>
-                    <div className="absolute top-4 left-4 w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
-                    <div className="absolute bottom-4 right-4 text-xs text-gray-400 font-mono">iPhone 15 Pro</div>
-                  </div>
-                </div>
 
-                {/* Middle Product - Laptop */}
-                <div className="transform -rotate-6 hover:rotate-0 transition-all duration-500 -mt-4">
-                  <div className="w-72 h-44 bg-gradient-to-br from-gray-700 to-gray-900 rounded-3xl flex items-center justify-center relative shadow-2xl border border-gray-600">
-                    <div className="text-7xl opacity-80">💻</div>
-                    <div className="absolute top-4 left-4 w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <div className="absolute bottom-4 right-4 text-xs text-gray-400 font-mono">MacBook Pro</div>
-                  </div>
-                </div>
-
-                {/* Bottom Product - Headphones */}
-                <div className="transform rotate-3 hover:rotate-12 transition-all duration-500 ml-8">
-                  <div className="w-64 h-40 bg-gradient-to-br from-gray-800 to-black rounded-3xl flex items-center justify-center relative shadow-2xl border border-gray-700">
-                    <div className="text-6xl opacity-80">🎧</div>
-                    <div className="absolute top-4 left-4 w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
-                    <div className="absolute bottom-4 right-4 text-xs text-gray-400 font-mono">AirPods Pro</div>
-                  </div>
-                </div>
-              </div>
 
               {/* Floating Elements */}
               <div className="absolute top-1/4 -left-8 w-16 h-16 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
