@@ -80,10 +80,7 @@ export default function Home() {
 
 
 
-        {/* Side Elements */}
-        <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 bg-white/10 backdrop-blur-md rounded-full p-4 text-white">
-          <div className="text-2xl">⚡</div>
-        </div>
+
         
 
       </div>
