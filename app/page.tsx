@@ -21,6 +21,18 @@ export default function Home() {
   }, [])
 
   useEffect(() => {
+    // Set initial time and update every second
+    const updateTime = () => {
+      setCurrentTime(new Date().toLocaleTimeString())
+    }
+
+    updateTime() // Set initial time
+    const interval = setInterval(updateTime, 1000)
+
+    return () => clearInterval(interval)
+  }, [])
+
+  useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
