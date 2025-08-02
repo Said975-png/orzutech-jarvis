@@ -106,7 +106,7 @@ export default function Home() {
 
               {/* Floating Elements */}
               <div className="absolute top-1/4 -left-8 w-16 h-16 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
-              <div className="absolute bottom-1/4 -right-8 w-20 h-20 bg-cyan-500/20 rounded-full blur-xl animate-pulse animation-delay-1000"></div>
+
               <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-purple-500/20 rounded-full blur-xl animate-pulse animation-delay-500"></div>
             </div>
           </div>
@@ -121,7 +121,7 @@ export default function Home() {
           </div>
 
           {/* Decorative Elements */}
-          <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-ping"></div>
+
           <div className="absolute bottom-1/3 left-1/3 w-1 h-1 bg-cyan-400 rounded-full animate-ping animation-delay-700"></div>
           <div className="absolute top-1/2 left-1/6 w-1.5 h-1.5 bg-purple-400 rounded-full animate-ping animation-delay-1500"></div>
         </div>
@@ -136,9 +136,7 @@ export default function Home() {
           <div className="text-2xl">⚡</div>
         </div>
         
-        <div className="absolute -right-8 top-1/3 bg-white/10 backdrop-blur-md rounded-full p-4 text-white">
-          <div className="text-2xl">🚀</div>
-        </div>
+
       </div>
 
       {/* Background Pattern */}
