@@ -38,15 +38,15 @@ export default function Home() {
             <div className="flex-1 flex flex-col justify-center space-y-6 lg:space-y-8 z-20 relative max-w-2xl">
               {/* Main Title with Epic Effects */}
               <div className="relative">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-400 leading-none tracking-tight animate-pulse">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-blue-300 leading-none tracking-tight drop-shadow-lg">
                   ORZU
-                  <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-r from-cyan-300 via-blue-400 to-indigo-500 bg-clip-text text-transparent animate-pulse animation-delay-300">
+                  <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-r from-cyan-200 via-white to-blue-200 bg-clip-text text-transparent">
                     TECH
                   </span>
                 </h1>
 
                 {/* Glow Effect */}
-                <div className="absolute inset-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-blue-400/20 blur-2xl leading-none tracking-tight animate-pulse -z-10">
+                <div className="absolute inset-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-cyan-400/40 blur-xl leading-none tracking-tight -z-10">
                   ORZU
                   <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
                     TECH
@@ -55,10 +55,16 @@ export default function Home() {
               </div>
 
               {/* Description */}
-              <p className="text-gray-300 text-lg sm:text-xl lg:text-2xl leading-relaxed max-w-xl font-light opacity-90">
-                Качественная техника по доступным ценам в Бухаре.
-                Смартфоны, планшеты, аксессуары - всё в одном месте.
-              </p>
+              <div className="space-y-4">
+                <p className="text-white text-xl sm:text-2xl lg:text-3xl font-bold leading-tight drop-shadow-md">
+                  🔥 Лучшая техника в Бухаре
+                </p>
+                <p className="text-gray-100 text-lg sm:text-xl lg:text-2xl leading-relaxed max-w-xl font-medium">
+                  📱 iPhone • Samsung • Xiaomi • AirPods
+                  <br />
+                  <span className="text-cyan-200 font-semibold drop-shadow-sm">✅ Оригинал • 🛡️ Гарантия • 🚀 Быстрая доставка</span>
+                </p>
+              </div>
 
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 pt-4">
