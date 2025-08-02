@@ -56,8 +56,8 @@ export default function Home() {
 
               {/* Description */}
               <p className="text-gray-300 text-lg sm:text-xl lg:text-2xl leading-relaxed max-w-xl font-light opacity-90">
-                Революционные технологии для нового поколения.
-                Откройте для себя будущее электроники уже сегодня.
+                Качественная техника по доступным ценам в Бухаре.
+                Смартфоны, планшеты, аксессуары - всё в одном месте.
               </p>
 
               {/* Buttons */}
