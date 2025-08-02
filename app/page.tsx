@@ -17,11 +17,11 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="h-screen w-screen bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 flex items-center justify-center overflow-hidden">
+    <main className="h-screen w-screen bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 overflow-hidden">
       {/* Main Card */}
-      <div className="relative w-full">
+      <div className="relative w-full h-full">
         {/* Background Card */}
-        <div className="bg-gray-900 rounded-3xl p-12 relative overflow-hidden shadow-2xl">
+        <div className="bg-gray-900 h-full w-full p-8 relative overflow-hidden shadow-2xl">
           {/* Top Left Brand */}
           <div className="absolute top-8 left-8 text-gray-400 text-sm font-light tracking-widest">
             Электроника будущего
