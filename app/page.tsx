@@ -3,121 +3,139 @@
 import { useEffect, useRef, useState } from 'react'
 
 export default function Home() {
-  const [currentTime, setCurrentTime] = useState('')
-
-  useEffect(() => {
-    const updateTime = () => {
-      setCurrentTime(new Date().toLocaleTimeString())
-    }
-    
-    updateTime()
-    const interval = setInterval(updateTime, 1000)
-    
-    return () => clearInterval(interval)
-  }, [])
-
   return (
-    <main className="h-screen w-screen bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 overflow-hidden">
-      {/* Main Card */}
-      <div className="relative w-full h-full">
-        {/* Background Card */}
-        <div className="bg-gray-900 h-full w-full p-8 relative overflow-hidden shadow-2xl">
-          {/* Top Left Brand */}
-          <div className="absolute top-8 left-8 text-gray-400 text-sm font-light tracking-widest">
-            Магазин техники в Бухаре
-          </div>
-
-          {/* Top Right Company */}
-          <div className="absolute top-8 right-8 text-gray-400 text-sm font-light tracking-wider">
-            Узбекистан
-          </div>
-
-          {/* Main Content */}
-          <div className="flex flex-col lg:flex-row items-center justify-between h-full px-4 lg:px-0 gap-8 lg:gap-16">
-            {/* Left Content - Epic Typography */}
-            <div className="flex-1 flex flex-col justify-center space-y-6 lg:space-y-8 z-20 relative max-w-2xl">
-              {/* Main Title with Epic Effects */}
-              <div className="relative">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-blue-300 leading-none tracking-tight drop-shadow-lg">
-                  ORZU
-                  <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-r from-cyan-200 via-white to-blue-200 bg-clip-text text-transparent">
-                    TECH
-                  </span>
-                </h1>
-
-                {/* Glow Effect */}
-                <div className="absolute inset-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-cyan-400/40 blur-xl leading-none tracking-tight -z-10">
-                  ORZU
-                  <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
-                    TECH
-                  </span>
-                </div>
-              </div>
-
-              {/* Description */}
-              <div className="space-y-4">
-                <p className="text-white text-xl sm:text-2xl lg:text-3xl font-bold leading-tight drop-shadow-md">
-                  🔥 Лучшая техника в Бухаре
-                </p>
-                <p className="text-gray-100 text-lg sm:text-xl lg:text-2xl leading-relaxed max-w-xl font-medium">
-                  📱 iPhone • Samsung • Xiaomi • AirPods
-                  <br />
-                  <span className="text-cyan-200 font-semibold drop-shadow-sm">✅ Оригинал • 🛡️ Гарантия • 🚀 Быстрая доставка</span>
-                </p>
-              </div>
-
-              {/* Buttons */}
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 pt-4">
-                <button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
-                  Смотреть товары
-                </button>
-                <button className="border-2 border-cyan-400 text-cyan-300 hover:text-white hover:bg-cyan-400/10 px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105">
-                  Контакты
-                </button>
-              </div>
+    <main className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 p-4 lg:p-8">
+      {/* Main Dark Card */}
+      <div className="max-w-7xl mx-auto bg-black/40 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl overflow-hidden">
+        {/* Navigation */}
+        <nav className="flex items-center justify-between p-6 lg:p-8 border-b border-white/10">
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">OT</span>
             </div>
+            <span className="text-white font-bold text-xl">ORZUTECH</span>
+          </div>
+          
+          <div className="hidden lg:flex items-center space-x-8 text-gray-300">
+            <a href="#" className="hover:text-white transition-colors">Главная</a>
+            <a href="#" className="hover:text-white transition-colors">О нас</a>
+            <a href="#" className="hover:text-white transition-colors">Каталог</a>
+            <a href="#" className="hover:text-white transition-colors">Гарантия</a>
+            <a href="#" className="hover:text-white transition-colors">Блог</a>
+          </div>
+          
+          <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+            Контакты
+          </button>
+        </nav>
 
-            {/* Right Content - Product Image */}
-            <div className="flex-1 flex justify-center items-center h-full lg:h-auto relative">
-              {/* Image with Effects */}
-              <div className="relative group">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F02f225558365433abb0d2ad515b82942%2F52db23e5e3e24501b060c9ae46a778e6?format=webp&width=800"
-                  alt="Apple Products"
-                  className="max-w-[280px] sm:max-w-[350px] lg:max-w-[450px] xl:max-w-[500px] h-auto object-contain transform group-hover:scale-105 transition-transform duration-500 drop-shadow-2xl"
-                />
-
-                {/* Rotating Glow */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-transparent to-cyan-500/20 rounded-full blur-3xl animate-spin opacity-50"></div>
-
-                {/* Floating Particles */}
-                <div className="absolute top-1/4 -left-4 w-3 h-3 bg-blue-400 rounded-full animate-bounce opacity-60"></div>
-                <div className="absolute top-3/4 -right-4 w-2 h-2 bg-cyan-400 rounded-full animate-bounce animation-delay-500 opacity-60"></div>
-                <div className="absolute top-1/2 -left-8 w-1 h-1 bg-purple-400 rounded-full animate-ping animation-delay-1000"></div>
+        {/* Main Content */}
+        <div className="grid lg:grid-cols-2 gap-12 p-6 lg:p-12 items-center">
+          {/* Left Content */}
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <div className="text-sm text-gray-400 font-medium tracking-wider uppercase">
+                150+ довольных клиентов
               </div>
+              
+              <h1 className="text-4xl lg:text-6xl xl:text-7xl font-black text-white leading-tight">
+                Покупки с нами
+                <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Без Границ
+                </span>
+              </h1>
+              
+              <p className="text-gray-300 text-lg lg:text-xl leading-relaxed max-w-lg">
+                Упрощенная покупка техники с 
+                беспрецедентным доступом к рынку через ORZUTECH
+              </p>
+            </div>
+            
+            <button className="group bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center space-x-2">
+              <span>Начать покупки</span>
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Right Content - 3D Product Display */}
+          <div className="flex justify-center items-center relative">
+            <div className="relative">
+              {/* Main Product Image */}
+              <img 
+                src="https://cdn.builder.io/api/v1/image/assets%2F02f225558365433abb0d2ad515b82942%2F52db23e5e3e24501b060c9ae46a778e6?format=webp&width=800"
+                alt="Apple Products"
+                className="max-w-[400px] lg:max-w-[500px] h-auto object-contain relative z-10 drop-shadow-2xl"
+              />
+              
+              {/* Floating 3D Elements */}
+              <div className="absolute top-10 -left-10 w-20 h-20 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-2xl backdrop-blur-sm border border-white/10 rotate-12 animate-float"></div>
+              <div className="absolute top-32 -right-8 w-16 h-16 bg-gradient-to-r from-purple-400/20 to-pink-500/20 rounded-xl backdrop-blur-sm border border-white/10 -rotate-12 animate-float animation-delay-500"></div>
+              <div className="absolute bottom-20 -left-6 w-12 h-12 bg-gradient-to-r from-blue-400/20 to-cyan-500/20 rounded-lg backdrop-blur-sm border border-white/10 rotate-45 animate-float animation-delay-1000"></div>
+              
+              {/* Glow Effects */}
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 via-transparent to-blue-500/30 rounded-full blur-3xl opacity-50"></div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-full blur-3xl"></div>
             </div>
           </div>
-
-
-
-          {/* Decorative Elements */}
-
-          <div className="absolute bottom-1/3 left-1/3 w-1 h-1 bg-cyan-400 rounded-full animate-ping animation-delay-700"></div>
-          <div className="absolute top-1/2 left-1/6 w-1.5 h-1.5 bg-purple-400 rounded-full animate-ping animation-delay-1500"></div>
         </div>
 
+        {/* Bottom Feature Cards */}
+        <div className="grid md:grid-cols-3 gap-6 p-6 lg:p-12 pt-0">
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+            <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mb-4">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+            </div>
+            <h3 className="text-white font-bold text-lg mb-2">Быстрый обмен</h3>
+            <p className="text-gray-400 text-sm">
+              Быст��ый обмен старых устройств на новые с реальными мировыми брендами.
+            </p>
+          </div>
 
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+            <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-4">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 className="text-white font-bold text-lg mb-2">Общая гарантия</h3>
+            <p className="text-gray-400 text-sm">
+              Гарантия через проверенных партнеров на фракционализацию физических активов.
+            </p>
+          </div>
 
-
-        
-
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+            <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 className="text-white font-bold text-lg mb-2">Честность продаж</h3>
+            <p className="text-gray-400 text-sm">
+              Прозрачность в каждой транзакции, подкрепленная аудиторскими проверками.
+            </p>
+          </div>
+        </div>
       </div>
 
-      {/* Background Pattern */}
-      <div className="fixed inset-0 pointer-events-none opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-300 rounded-full blur-3xl"></div>
-      </div>
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-10px) rotate(5deg); }
+        }
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+        .animation-delay-500 {
+          animation-delay: 0.5s;
+        }
+        .animation-delay-1000 {
+          animation-delay: 1s;
+        }
+      `}</style>
     </main>
   )
 }
