@@ -17,7 +17,7 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 flex items-center justify-center p-8">
+    <main className="h-screen w-screen bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 flex items-center justify-center overflow-hidden">
       {/* Main Card */}
       <div className="relative max-w-6xl w-full">
         {/* Background Card */}
