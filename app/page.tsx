@@ -29,7 +29,7 @@ export default function Home() {
 
   const products: Product[] = [
     { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
-    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
+    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой заря��кой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
@@ -109,24 +109,24 @@ export default function Home() {
       {/* Decorative Wave Background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <svg
-          className="absolute bottom-0 left-0 w-full h-full opacity-20"
+          className="absolute bottom-0 left-0 w-full h-full opacity-60"
           viewBox="0 0 1200 800"
           fill="none"
           preserveAspectRatio="xMidYMid slice"
         >
           <path
             d="M0,320 C300,280 600,240 900,280 C1050,300 1150,320 1200,340 L1200,800 L0,800 Z"
-            fill="#E5E7EB"
+            fill="#D1D5DB"
           />
           <path
             d="M0,400 C250,360 500,320 750,360 C950,380 1100,400 1200,420 L1200,800 L0,800 Z"
-            fill="#F3F4F6"
-            opacity="0.8"
+            fill="#E5E7EB"
+            opacity="0.9"
           />
           <path
             d="M0,500 C200,460 400,420 600,460 C800,480 1000,500 1200,520 L1200,800 L0,800 Z"
-            fill="#F9FAFB"
-            opacity="0.6"
+            fill="#F3F4F6"
+            opacity="0.8"
           />
         </svg>
       </div>
@@ -213,7 +213,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и у��тановка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
-                    <span className="whitespace-nowrap">Премиум-сервис �� поддержка</span>
+                    <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
@@ -498,7 +498,7 @@ export default function Home() {
                     Смартфон Premium
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для ��рофессиональной фотографии
+                    Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии
                   </p>
                   <div className="text-xl font-semibold text-gray-900 mb-6">
                     ₽ 59,900
@@ -565,7 +565,7 @@ export default function Home() {
 
                 <div className="p-6">
                   <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
-                    Беспроводные наушники
+                    Беспроводн��е наушники
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     Premium наушники с активным шумоподавлением и кристально чистым звуком
