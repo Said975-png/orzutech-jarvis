@@ -36,6 +36,36 @@ export default function Home() {
           <div className="absolute -left-20 top-1/4 bottom-1/4 w-64 bg-gradient-to-r from-white/20 via-white/8 to-transparent blur-2xl opacity-40"></div>
           <div className="absolute -left-10 top-1/3 bottom-1/3 w-32 bg-gradient-to-r from-white/30 via-white/10 to-transparent blur-xl opacity-30"></div>
 
+          {/* Animated Neon Arc */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="animate-neon-arc">
+              <svg width="400" height="300" viewBox="0 0 400 300" className="opacity-70">
+                <defs>
+                  <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style={{stopColor: '#00f5ff', stopOpacity: 0.8}} />
+                    <stop offset="50%" style={{stopColor: '#ffffff', stopOpacity: 1}} />
+                    <stop offset="100%" style={{stopColor: '#00f5ff', stopOpacity: 0.8}} />
+                  </linearGradient>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                    <feMerge>
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+                <path
+                  d="M 50 250 Q 200 50 350 250"
+                  stroke="url(#neonGradient)"
+                  strokeWidth="3"
+                  fill="none"
+                  filter="url(#glow)"
+                  className="drop-shadow-[0_0_20px_rgba(0,245,255,0.6)]"
+                />
+              </svg>
+            </div>
+          </div>
+
           {/* Left Content */}
           <div className="relative flex flex-col justify-center space-y-12 z-10">
             <div className="space-y-6">
@@ -114,7 +144,7 @@ export default function Home() {
             </div>
             <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">ГАРАНТИЯ КАЧЕСТВА</h3>
             <p className="text-gray-400 leading-relaxed">
-              Полная гарантия на все товары. Сер��ифицированные устройства.
+              Полная гарантия на все товары. Сертифицированные устройства.
             </p>
           </div>
 
