@@ -57,17 +57,24 @@ export default function Home() {
               <span className="text-white font-black text-2xl tracking-tight">ORZUTECH</span>
             </div>
 
-            <div className="hidden lg:flex items-center space-x-12 text-gray-300 font-medium">
-              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Главная</a>
-              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">О нас</a>
+            <div className="hidden lg:flex items-center space-x-8 text-gray-300 font-medium">
               <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Каталог</a>
-              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Гарантия</a>
-              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Блог</a>
+              <button className="relative hover:text-white transition-colors uppercase tracking-wide">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.68 6.32a1 1 0 00.95 1.32h10.46m-2-8a2 2 0 11-4 0 2 2 0 014 0zm6 0a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+              </button>
             </div>
 
-            <button className="bg-white text-black px-8 py-3 font-bold uppercase tracking-wide hover:bg-gray-100 transition-colors">
-              Контакты
-            </button>
+            <div className="flex items-center space-x-4">
+              <button className="text-gray-300 hover:text-white transition-colors uppercase tracking-wide font-medium">
+                Вход
+              </button>
+              <button className="bg-white text-black px-6 py-2 font-bold uppercase tracking-wide hover:bg-gray-100 transition-colors">
+                Регистрация
+              </button>
+            </div>
           </div>
         </nav>
 
@@ -108,7 +115,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
-                    <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
+                    <span className="whitespace-nowrap">Самая качественная техника �� Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                   </div>
                 </div>
@@ -143,7 +150,7 @@ export default function Home() {
               onWheel={(e) => {
                 e.preventDefault()
                 if (e.deltaY > 0) {
-                  // Скролл вниз - следующая модель
+                  // Скролл вниз - с��едующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
                   // Скролл в����рх - предыдущая модель
