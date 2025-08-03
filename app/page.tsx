@@ -32,7 +32,7 @@ export default function Home() {
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
-    { id: 5, name: "Умные часы", price: 34900, description: "Современные сма��т-часы с мониторингом здоровья и спортивными функциями" },
+    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
   ]
 
@@ -62,7 +62,7 @@ export default function Home() {
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
-      name: "Астро��авт"
+      name: "Астронавт"
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/ShopifyPickup.glb",
@@ -289,7 +289,7 @@ export default function Home() {
               onWheel={(e) => {
                 e.preventDefault()
                 if (e.deltaY > 0) {
-                  // Скролл вн��з - следующая модель
+                  // Скролл вниз - следующая м��дель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
                   // Скролл вверх - предыдущая модель
@@ -434,7 +434,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
                     </svg>
                   </div>
-                  <span className="text-xs">Категория</span>
+                  <span className="text-xs">Кате��ория</span>
                 </button>
                 {activeDropdown === 'category' && (
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
