@@ -54,9 +54,9 @@ export default function Home() {
               <span className="text-yellow-400 font-bold text-2xl tracking-wide font-sans">ORZUTECH</span>
             </div>
 
-            <div className="hidden lg:flex items-center space-x-8 text-gray-300 font-medium font-sans">
-              <a href="#" className="hover:text-white transition-colors text-base font-medium tracking-normal">Каталог</a>
-              <button className="relative hover:text-white transition-colors">
+            <div className="hidden lg:flex items-center space-x-8 text-gray-700 font-medium font-sans">
+              <a href="#" className="hover:text-black transition-colors text-base font-medium tracking-normal">Каталог</a>
+              <button className="relative hover:text-black transition-colors">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l-1 7H6L5 9z" />
                 </svg>
@@ -65,10 +65,10 @@ export default function Home() {
             </div>
 
             <div className="flex items-center space-x-6">
-              <button className="text-gray-300 hover:text-white transition-colors text-base font-medium font-sans">
+              <button className="text-gray-700 hover:text-black transition-colors text-base font-medium font-sans">
                 Вход
               </button>
-              <button className="text-gray-300 hover:text-white transition-colors text-base font-semibold font-sans">
+              <button className="text-gray-700 hover:text-black transition-colors text-base font-semibold font-sans">
                 Регистрация
               </button>
 
@@ -82,7 +82,7 @@ export default function Home() {
                 <input
                   type="search"
                   placeholder="Поиск товаров..."
-                  className="bg-gray-800 text-white placeholder-gray-400 pl-10 pr-4 py-2 rounded-lg border border-gray-700 focus:border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400/20 transition-colors w-64 text-sm font-sans"
+                  className="bg-gray-100 text-black placeholder-gray-500 pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400/20 transition-colors w-64 text-sm font-sans"
                 />
               </div>
             </div>
