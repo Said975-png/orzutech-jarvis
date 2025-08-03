@@ -250,139 +250,229 @@ export default function Home() {
 
 
         {/* Products Section */}
-        <div className="bg-white p-8 lg:p-16 relative overflow-hidden">
-          {/* Light Effects like in first section */}
-          <div className="absolute -right-32 top-0 bottom-0 w-96 bg-gradient-to-l from-gray-200/10 via-gray-200/5 to-transparent blur-3xl opacity-60"></div>
-          <div className="absolute -right-20 top-1/4 bottom-1/4 w-64 bg-gradient-to-l from-gray-200/20 via-gray-200/8 to-transparent blur-2xl opacity-40"></div>
-          <div className="absolute -right-10 top-1/3 bottom-1/3 w-32 bg-gradient-to-l from-gray-200/30 via-gray-200/10 to-transparent blur-xl opacity-30"></div>
-
-          <div className="max-w-7xl mx-auto relative z-10">
+        <div className="bg-white py-16 px-4 lg:px-8">
+          <div className="max-w-6xl mx-auto">
             {/* Section Header */}
-            <div className="text-center mb-16">
-              <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em] mb-4">
-                КАТАЛОГ ТОВАРОВ
-              </div>
-              <h2 className="text-3xl lg:text-4xl font-black text-black mb-6">
-                НАШИ <span className="text-yellow-400">ПРОДУКТЫ</span>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-light text-gray-900 mb-2 tracking-wide">
+                Каталог товаров
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-black mx-auto"></div>
+              <div className="w-16 h-px bg-gray-400 mx-auto"></div>
+            </div>
+
+            {/* Filter Icons */}
+            <div className="flex justify-center items-center space-x-8 mb-12">
+              <button className="flex flex-col items-center space-y-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 group">
+                <div className="w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <span className="text-xs">Цена</span>
+              </button>
+
+              <button className="flex flex-col items-center space-y-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 group">
+                <div className="w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                  </svg>
+                </div>
+                <span className="text-xs">Рейтинг</span>
+              </button>
+
+              <button className="flex flex-col items-center space-y-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 group">
+                <div className="w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <span className="text-xs">Категория</span>
+              </button>
             </div>
 
             {/* Products Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
               {/* Product 1 */}
-              <div className="group relative rounded-xl transition-all duration-500 hover:transform hover:scale-105">
-                <div className="aspect-square flex items-center justify-center p-8 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-                  <div className="w-40 h-40 bg-gray-100/80 rounded-lg flex items-center justify-center relative z-10 group-hover:bg-yellow-400/20 transition-colors duration-300 border border-gray-300/50 group-hover:border-yellow-400/50">
-                    <svg className="w-20 h-20 text-gray-600 group-hover:text-yellow-400 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
+              <div className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-500 ease-out hover:scale-[1.02] border border-gray-100">
+                <div className="aspect-square bg-gray-50 rounded-t-lg overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
+                  <div className="relative z-10 h-full flex items-center justify-center">
+                    <div className="w-32 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                      <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
 
-                <div className="text-center px-4">
-                  <h3 className="text-black font-bold text-xl mb-3 group-hover:text-yellow-400 transition-colors duration-300">
+                <div className="p-6">
+                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
                     Смарт Телевизор 55"
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                    4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения
                   </p>
-                  <div className="text-yellow-400 font-black text-2xl mb-6">
+                  <div className="text-xl font-semibold text-gray-900 mb-6">
                     ₽ 89,900
                   </div>
 
-                  {/* Action Buttons */}
-                  <div className="flex space-x-4 justify-center">
-                    <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-medium hover:bg-yellow-300 transition-colors duration-300 text-sm">
-                      З��казать
-                    </button>
-                    <button className="w-12 h-12 bg-transparent text-gray-600 rounded-lg flex items-center justify-center hover:bg-yellow-400/10 hover:text-yellow-400 transition-colors duration-300 border border-gray-300 hover:border-yellow-400/50">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m0 0L12 21l7.5-3" />
-                      </svg>
-                    </button>
-                  </div>
+                  <button className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400">
+                    Подробнее
+                  </button>
                 </div>
               </div>
 
               {/* Product 2 */}
-              <div className="group relative rounded-xl transition-all duration-500 hover:transform hover:scale-105">
-                <div className="aspect-square flex items-center justify-center p-8 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-                  <div className="w-40 h-40 bg-gray-100/80 rounded-lg flex items-center justify-center relative z-10 group-hover:bg-yellow-400/20 transition-colors duration-300 border border-gray-300/50 group-hover:border-yellow-400/50">
-                    <svg className="w-20 h-20 text-gray-600 group-hover:text-yellow-400 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                    </svg>
+              <div className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-500 ease-out hover:scale-[1.02] border border-gray-100">
+                <div className="aspect-square bg-gray-50 rounded-t-lg overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
+                  <div className="relative z-10 h-full flex items-center justify-center">
+                    <div className="w-32 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                      <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
 
-                <div className="text-center px-4">
-                  <h3 className="text-black font-bold text-xl mb-3 group-hover:text-yellow-400 transition-colors duration-300">
+                <div className="p-6">
+                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
                     Смартфон Premium
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                    Флагманский смартфон с тройной камерой и быстрой зарядкой 65W
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии
                   </p>
-                  <div className="text-yellow-400 font-black text-2xl mb-6">
+                  <div className="text-xl font-semibold text-gray-900 mb-6">
                     ₽ 59,900
                   </div>
 
-                  <div className="flex space-x-4 justify-center">
-                    <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-medium hover:bg-yellow-300 transition-colors duration-300 text-sm">
-                      Заказать
-                    </button>
-                    <button className="w-12 h-12 bg-transparent text-gray-600 rounded-lg flex items-center justify-center hover:bg-yellow-400/10 hover:text-yellow-400 transition-colors duration-300 border border-gray-300 hover:border-yellow-400/50">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m0 0L12 21l7.5-3" />
-                      </svg>
-                    </button>
-                  </div>
+                  <button className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400">
+                    Подробнее
+                  </button>
                 </div>
               </div>
 
               {/* Product 3 */}
-              <div className="group relative rounded-xl transition-all duration-500 hover:transform hover:scale-105">
-                <div className="aspect-square flex items-center justify-center p-8 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-                  <div className="w-40 h-40 bg-gray-100/80 rounded-lg flex items-center justify-center relative z-10 group-hover:bg-yellow-400/20 transition-colors duration-300 border border-gray-300/50 group-hover:border-yellow-400/50">
-                    <svg className="w-20 h-20 text-gray-600 group-hover:text-yellow-400 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
+              <div className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-500 ease-out hover:scale-[1.02] border border-gray-100">
+                <div className="aspect-square bg-gray-50 rounded-t-lg overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
+                  <div className="relative z-10 h-full flex items-center justify-center">
+                    <div className="w-32 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                      <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
 
-                <div className="text-center px-4">
-                  <h3 className="text-black font-bold text-xl mb-3 group-hover:text-yellow-400 transition-colors duration-300">
+                <div className="p-6">
+                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
                     Игровой Ноутбук
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                    RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе
                   </p>
-                  <div className="text-yellow-400 font-black text-2xl mb-6">
+                  <div className="text-xl font-semibold text-gray-900 mb-6">
                     ₽ 129,900
                   </div>
 
-                  <div className="flex space-x-4 justify-center">
-                    <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-medium hover:bg-yellow-300 transition-colors duration-300 text-sm">
-                      Заказать
-                    </button>
-                    <button className="w-12 h-12 bg-transparent text-gray-600 rounded-lg flex items-center justify-center hover:bg-yellow-400/10 hover:text-yellow-400 transition-colors duration-300 border border-gray-300 hover:border-yellow-400/50">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m0 0L12 21l7.5-3" />
-                      </svg>
-                    </button>
-                  </div>
+                  <button className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400">
+                    Подробнее
+                  </button>
                 </div>
               </div>
-            </div>
 
-            {/* Bottom Action */}
-            <div className="text-center mt-16">
-              <button className="bg-transparent border-2 border-yellow-400 text-yellow-400 px-12 py-4 rounded-lg font-bold hover:bg-yellow-400 hover:text-black transition-all duration-300 uppercase tracking-wide">
-                Смотреть все товары
-              </button>
+              {/* Product 4 */}
+              <div className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-500 ease-out hover:scale-[1.02] border border-gray-100">
+                <div className="aspect-square bg-gray-50 rounded-t-lg overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
+                  <div className="relative z-10 h-full flex items-center justify-center">
+                    <div className="w-32 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                      <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
+                    Беспроводные наушники
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    Premium наушники с активным шумоподавлением и кристально чистым звуком
+                  </p>
+                  <div className="text-xl font-semibold text-gray-900 mb-6">
+                    ₽ 24,900
+                  </div>
+
+                  <button className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400">
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+
+              {/* Product 5 */}
+              <div className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-500 ease-out hover:scale-[1.02] border border-gray-100">
+                <div className="aspect-square bg-gray-50 rounded-t-lg overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
+                  <div className="relative z-10 h-full flex items-center justify-center">
+                    <div className="w-32 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                      <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
+                    Умные часы
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    Современные смарт-часы с мониторингом здоровья и спортивными функциями
+                  </p>
+                  <div className="text-xl font-semibold text-gray-900 mb-6">
+                    ₽ 34,900
+                  </div>
+
+                  <button className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400">
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+
+              {/* Product 6 */}
+              <div className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-500 ease-out hover:scale-[1.02] border border-gray-100">
+                <div className="aspect-square bg-gray-50 rounded-t-lg overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
+                  <div className="relative z-10 h-full flex items-center justify-center">
+                    <div className="w-32 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                      <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m0 0V1a1 1 0 011-1h2a1 1 0 011 1v18a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1h2a1 1 0 011 1v3m0 0V4a1 1 0 011-1h8a1 1 0 011 1v8a4 4 0 01-4 4H8a4 4 0 01-4-4V4z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
+                    Планшет Pro
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    Профессиональный планшет для работы и творчества с поддержкой стилуса
+                  </p>
+                  <div className="text-xl font-semibold text-gray-900 mb-6">
+                    ₽ 79,900
+                  </div>
+
+                  <button className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400">
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
