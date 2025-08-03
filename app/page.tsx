@@ -30,7 +30,7 @@ export default function Home() {
   const products: Product[] = [
     { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
-    { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной п��оизводительности в играх и работе" },
+    { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
@@ -345,7 +345,7 @@ export default function Home() {
 
 
         {/* Products Section */}
-        <div className="bg-white py-16 px-4 lg:px-8">
+        <div className="bg-transparent py-16 px-4 lg:px-8">
           <div className="max-w-6xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12">
@@ -546,7 +546,7 @@ export default function Home() {
 
                 <div className="p-6">
                   <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
-                    Игровой Ноутбук
+                    И��ровой Ноутбук
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе
@@ -654,7 +654,7 @@ export default function Home() {
                     Планшет Pro
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Профессиональный планшет для работы и творчества с поддержкой стил��са
+                    Профессиональный планшет для работы и творчества с поддержкой стилуса
                   </p>
                   <div className="text-xl font-semibold text-gray-900 mb-6">
                     ₽ 79,900
