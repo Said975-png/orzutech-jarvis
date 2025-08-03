@@ -29,11 +29,11 @@ export default function Home() {
 
   const products: Product[] = [
     { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
-    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагмански�� смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
+    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спортивными функциями" },
-    { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
+    { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилус��" }
   ]
 
   const addToCart = (product: Product) => {
@@ -76,7 +76,7 @@ export default function Home() {
 
   const colors = [
     { name: "Белый", color: "bg-white", border: "border-gray-300" },
-    { name: "��ерный", color: "bg-black", border: "border-gray-700" },
+    { name: "��ер��ый", color: "bg-black", border: "border-gray-700" },
     { name: "Серый", color: "bg-gray-400", border: "border-gray-500" }
   ]
 
@@ -231,7 +231,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
-                    <span className="whitespace-nowrap">Профессиональная установка</span>
+                    <span className="whitespace-nowrap">Професси��нальная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
                 </div>
@@ -688,7 +688,7 @@ export default function Home() {
                   </div>
 
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Тройная камера, зарядк�� 65W
+                    Тройная камера, зарядка 65W
                   </p>
 
                   <div className="flex items-center justify-between mb-3">
@@ -716,8 +716,11 @@ export default function Home() {
               </div>
 
               {/* Product 3 */}
-              <div className="group group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
-
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                {/* Discount badge */}
+                <div className="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md z-10">
+                  -20%
+                </div>
 
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
@@ -794,7 +797,7 @@ export default function Home() {
                     Умные часы
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Мониторинг здоровья и с��орт
+                    Монитор��нг здоровья и с��орт
                   </p>
                   <div className="text-lg font-bold text-gray-900">
                     $ 349
