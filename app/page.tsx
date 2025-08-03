@@ -6,25 +6,27 @@ export default function Home() {
       {/* Main Container */}
       <div className="w-full bg-gray-900">
         {/* Navigation */}
-        <nav className="flex items-center justify-between px-8 lg:px-16 py-4 border-b border-gray-800">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-white flex items-center justify-center">
-              <span className="text-black font-black text-lg">OT</span>
+        <nav className="flex items-center justify-center px-8 lg:px-16 py-4 border-b border-gray-800">
+          <div className="flex items-center space-x-12">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-white flex items-center justify-center">
+                <span className="text-black font-black text-lg">OT</span>
+              </div>
+              <span className="text-white font-black text-2xl tracking-tight">ORZUTECH</span>
             </div>
-            <span className="text-white font-black text-2xl tracking-tight">ORZUTECH</span>
+
+            <div className="hidden lg:flex items-center space-x-12 text-gray-300 font-medium">
+              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Главная</a>
+              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">О нас</a>
+              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Каталог</a>
+              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Гарантия</a>
+              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Блог</a>
+            </div>
+
+            <button className="bg-white text-black px-8 py-3 font-bold uppercase tracking-wide hover:bg-gray-100 transition-colors">
+              Контакты
+            </button>
           </div>
-          
-          <div className="hidden lg:flex items-center space-x-12 text-gray-300 font-medium">
-            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Главная</a>
-            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">О нас</a>
-            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Каталог</a>
-            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Гарантия</a>
-            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Блог</a>
-          </div>
-          
-          <button className="bg-white text-black px-8 py-3 font-bold uppercase tracking-wide hover:bg-gray-100 transition-colors">
-            Контакты
-          </button>
         </nav>
 
         {/* Main Content */}
@@ -112,7 +114,7 @@ export default function Home() {
             </div>
             <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">ГАРАНТИЯ КАЧЕСТВА</h3>
             <p className="text-gray-400 leading-relaxed">
-              Полная гарантия на все товары. Сертифицированные устройства.
+              Полная гарантия на все товары. Сер��ифицированные устройства.
             </p>
           </div>
 
