@@ -128,7 +128,7 @@ export default function Home() {
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
               <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-md font-light">
-                Наша деятельность: Продажа Телефонов и аксессуар��в, Планшетов, разных Гаджетов и много много интересного.
+                Наша деятельность: Продажа Телефонов и аксессуар��в, Планшетов, разных Гаджетов и много мно��о интересного.
               </p>
 
               {/* Auto-scrolling slider */}
@@ -259,10 +259,17 @@ export default function Home() {
 
         {/* Products Section */}
         <div className="bg-white p-8 lg:p-16 relative overflow-hidden">
+          {/* Enhanced background depth */}
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-50/40 via-transparent to-gray-50/20 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-radial from-yellow-400/3 via-transparent to-transparent pointer-events-none"></div>
+
           {/* Light Effects like in first section */}
           <div className="absolute -right-32 top-0 bottom-0 w-96 bg-gradient-to-l from-gray-200/10 via-gray-200/5 to-transparent blur-3xl opacity-60"></div>
           <div className="absolute -right-20 top-1/4 bottom-1/4 w-64 bg-gradient-to-l from-gray-200/20 via-gray-200/8 to-transparent blur-2xl opacity-40"></div>
           <div className="absolute -right-10 top-1/3 bottom-1/3 w-32 bg-gradient-to-l from-gray-200/30 via-gray-200/10 to-transparent blur-xl opacity-30"></div>
+
+          {/* Subtle section highlighting */}
+          <div className="absolute top-8 left-8 right-8 bottom-8 bg-gradient-to-br from-white/30 via-transparent to-gray-100/20 rounded-3xl blur-xl opacity-40 pointer-events-none"></div>
 
           <div className="max-w-7xl mx-auto relative z-10">
             {/* Section Header */}
