@@ -49,11 +49,13 @@ export default function Home() {
             </div>
             
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
-              <button className="bg-white text-black px-10 py-4 font-bold text-lg uppercase tracking-wide hover:bg-gray-100 transition-colors">
-                Каталог товаров
+              <button className="relative group bg-white text-black px-10 py-4 font-bold text-lg uppercase tracking-wide overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/20">
+                <span className="relative z-10">Каталог товаров</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
               </button>
-              <button className="border-2 border-white text-white px-10 py-4 font-bold text-lg uppercase tracking-wide hover:bg-white hover:text-black transition-colors">
-                Связаться с нами
+              <button className="relative group border-2 border-white text-white px-10 py-4 font-bold text-lg uppercase tracking-wide overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/10">
+                <span className="relative z-10 group-hover:text-black transition-colors duration-300">Связаться с нами</span>
+                <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
               </button>
             </div>
           </div>
@@ -83,7 +85,7 @@ export default function Home() {
             </div>
             <div>
               <div className="text-4xl font-black text-white mb-2">24/7</div>
-              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Поддержка</div>
+              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Подде��жка</div>
             </div>
             <div>
               <div className="text-4xl font-black text-white mb-2">99%</div>
