@@ -584,7 +584,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные час��', 'Игровые консоли', 'Фотоаппар��ты', 'Аксессуары', 'Все категории'].map((category, index) => (
+                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
@@ -669,19 +669,12 @@ export default function Home() {
               <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
 
 
-                <div className="aspect-[4/3] bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 overflow-hidden relative">
-                  {/* Subtle pattern overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-transparent to-gray-100/40 group-hover:from-white/80 group-hover:to-gray-50/60 transition-all duration-700"></div>
-
-                  <div className="relative z-10 h-full flex items-center justify-center p-8">
-                    <div className="w-full h-full bg-white/70 backdrop-blur-sm rounded-xl shadow-lg flex items-center justify-center group-hover:scale-110 group-hover:bg-white/90 transition-all duration-700 overflow-hidden p-4 border border-white/50">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Игровой Ноутбук"
-                        className="w-full h-full object-cover filter group-hover:brightness-105 transition-all duration-500"
-                      />
-                    </div>
-                  </div>
+                <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                    alt="Игровой Ноутбук"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+                  />
                 </div>
 
                 <div className="p-6 flex flex-col flex-grow">
