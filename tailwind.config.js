@@ -13,6 +13,7 @@ module.exports = {
       animation: {
         'pulse': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'neon-arc': 'neonArc 6s ease-in-out infinite',
+        'scroll': 'scroll 20s linear infinite',
       },
       keyframes: {
         neonArc: {
@@ -23,6 +24,14 @@ module.exports = {
           '50%': {
             transform: 'translateY(-50px) scale(1.2)',
             opacity: '0.8'
+          },
+        },
+        scroll: {
+          '0%': {
+            transform: 'translateX(0)'
+          },
+          '100%': {
+            transform: 'translateX(-50%)'
           },
         },
       },

@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black">
       {/* Main Container */}
-      <div className="w-full bg-gray-900">
+      <div className="w-full bg-black">
         {/* Navigation */}
         <nav className="flex items-center justify-center px-8 lg:px-16 py-4 border-b border-gray-800">
           <div className="flex items-center space-x-12">
@@ -78,35 +78,7 @@ export default function Home() {
           <div className="absolute -left-20 top-1/4 bottom-1/4 w-64 bg-gradient-to-r from-white/20 via-white/8 to-transparent blur-2xl opacity-40"></div>
           <div className="absolute -left-10 top-1/3 bottom-1/3 w-32 bg-gradient-to-r from-white/30 via-white/10 to-transparent blur-xl opacity-30"></div>
 
-          {/* Animated Neon Arc */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="animate-neon-arc">
-              <svg width="400" height="300" viewBox="0 0 400 300" className="opacity-70">
-                <defs>
-                  <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style={{stopColor: '#00f5ff', stopOpacity: 0.8}} />
-                    <stop offset="50%" style={{stopColor: '#ffffff', stopOpacity: 1}} />
-                    <stop offset="100%" style={{stopColor: '#00f5ff', stopOpacity: 0.8}} />
-                  </linearGradient>
-                  <filter id="glow">
-                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                    <feMerge>
-                      <feMergeNode in="coloredBlur"/>
-                      <feMergeNode in="SourceGraphic"/>
-                    </feMerge>
-                  </filter>
-                </defs>
-                <path
-                  d="M 50 250 Q 200 50 350 250"
-                  stroke="url(#neonGradient)"
-                  strokeWidth="3"
-                  fill="none"
-                  filter="url(#glow)"
-                  className="drop-shadow-[0_0_20px_rgba(0,245,255,0.6)]"
-                />
-              </svg>
-            </div>
-          </div>
+
 
           {/* Left Content */}
           <div className="relative flex flex-col justify-center space-y-12 z-10">
@@ -114,17 +86,33 @@ export default function Home() {
               <div className="text-sm text-gray-500 font-bold uppercase tracking-[0.2em]">
                 МАГАЗИН ТЕХНИКИ В БУХАРЕ
               </div>
-              
+
               <h1 className="text-4xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.9] tracking-tight">
                 ORZUTECH
               </h1>
-              
+
               <div className="w-24 h-1 bg-white"></div>
               
               <p className="text-gray-300 text-xl lg:text-2xl leading-relaxed max-w-lg font-light">
-                Профессиональные реше��ия в сфере электроники.
-                Качество, надежн��сть, инновации.
+                Профессиональные решения в сфере электроники.
+                Качество, надежность, инновации.
               </p>
+
+              {/* Auto-scrolling slider */}
+              <div className="relative overflow-hidden max-w-lg h-12">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="flex animate-scroll space-x-8 text-sm text-white font-medium">
+                    <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
+                    <span className="whitespace-nowrap">100% оригинальные устройства</span>
+                    <span className="whitespace-nowrap">Быстрая доставка и установка</span>
+                    <span className="whitespace-nowrap">Полная гарантия на все товары</span>
+                    <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
+                    <span className="whitespace-nowrap">Инновационные решения для дома</span>
+                    <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
+                    <span className="whitespace-nowrap">100% оригинальные устройства</span>
+                  </div>
+                </div>
+              </div>
             </div>
             
 
@@ -132,7 +120,7 @@ export default function Home() {
 
           {/* Right Content */}
           <div className="flex flex-col justify-center items-center space-y-6">
-            <div className="relative w-[280px] lg:w-[360px] h-[280px] lg:h-[360px] overflow-hidden rounded-lg border border-gray-700">
+            <div className="relative w-[280px] lg:w-[360px] h-[280px] lg:h-[360px] overflow-hidden rounded-lg">
               <model-viewer
                 src={models[currentModel].url}
                 alt="3D Model"
@@ -140,10 +128,12 @@ export default function Home() {
                 camera-controls
                 autoplay
                 animation-name=""
-                field-of-view="45deg"
-                camera-orbit="0deg 75deg 105%"
+                field-of-view="30deg"
+                camera-orbit="0deg 75deg 150%"
                 style={{ width: '100%', height: '100%' }}
                 loading="lazy"
+                min-camera-orbit="auto auto 120%"
+                max-camera-orbit="auto auto 200%"
               ></model-viewer>
             </div>
 
@@ -156,7 +146,7 @@ export default function Home() {
                   // Скролл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // Скролл вверх - предыдущая модель
+                  // Скролл в����рх - предыдущая модель
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
@@ -188,11 +178,11 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-black text-white mb-2">500+</div>
-              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Товаров</div>
+              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Това��ов</div>
             </div>
             <div>
               <div className="text-4xl font-black text-white mb-2">150+</div>
-              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Клиентов</div>
+              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Кл��ентов</div>
             </div>
             <div>
               <div className="text-4xl font-black text-white mb-2">24/7</div>
@@ -225,7 +215,7 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">ГАРА��ТИЯ КАЧЕСТВА</h3>
+            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">ГАРАНТИЯ КАЧЕСТВА</h3>
             <p className="text-gray-400 leading-relaxed">
               Полная гарантия на все товары. Сертифицированные устройства.
             </p>
@@ -247,7 +237,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-800 p-8 lg:p-16 text-center">
           <p className="text-gray-500 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА З��ЩИЩЕНЫ.
+            © 2024 ORZUTECH. БУХАРА, УЗБ��КИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
           </p>
         </div>
       </div>
