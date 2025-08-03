@@ -33,7 +33,7 @@ export default function Home() {
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
-    { id: 6, name: "Планшет Pro", price: 79900, description: "Пр��фессиональный планшет для работы и творчества с поддержкой стилуса" }
+    { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
   ]
 
   const addToCart = (product: Product) => {
@@ -175,7 +175,7 @@ export default function Home() {
             {/* Auth buttons */}
             <div className="flex items-center space-x-2">
               <button className="text-yellow-400 hover:text-yellow-500 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
-                Вход
+                Вхо��
               </button>
               <span className="text-yellow-400">|</span>
               <button className="text-yellow-400 hover:text-yellow-500 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
@@ -230,7 +230,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
-                    <span className="whitespace-nowrap">Инновационн��е решения для дома</span>
+                    <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
@@ -292,7 +292,7 @@ export default function Home() {
                   // Скролл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // Скролл вверх - ��редыдущая модель
+                  // Скролл вверх - предыдущая модель
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
@@ -599,40 +599,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Product 5 */}
-              <div className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-500 ease-out hover:scale-[1.02] border border-gray-100">
-                <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
-                  <div className="relative z-10 h-full flex items-center justify-center">
-                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Умные часы"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
 
-                <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
-                    Умные часы
-                  </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Мониторинг здоровья
-                  </p>
-                  <div className="text-xl font-semibold text-gray-900 mb-6">
-                    ₽ 34,900
-                  </div>
-
-                  <button
-                    onClick={() => addToCart(products[4])}
-                    className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400"
-                  >
-                    Заказать
-                  </button>
-                </div>
-              </div>
 
 
 
