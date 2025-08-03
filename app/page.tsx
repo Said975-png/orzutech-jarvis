@@ -64,7 +64,7 @@ export default function Home() {
               <img 
                 src="https://cdn.builder.io/api/v1/image/assets%2F02f225558365433abb0d2ad515b82942%2F52db23e5e3e24501b060c9ae46a778e6?format=webp&width=800"
                 alt="Apple Products"
-                className="max-w-[450px] lg:max-w-[550px] h-auto object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                className="max-w-[300px] lg:max-w-[400px] h-auto object-contain grayscale hover:grayscale-0 transition-all duration-500"
               />
             </div>
           </div>
