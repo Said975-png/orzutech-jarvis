@@ -153,7 +153,7 @@ export default function Home() {
         <nav className="flex items-center justify-between px-8 lg:px-16 py-6 relative z-30">
           {/* Logo */}
           <div className="flex items-center">
-            <span className="text-purple-800 font-bold text-2xl tracking-wide font-sans drop-shadow-sm">ORZUTECH</span>
+            <span className="text-yellow-400 font-bold text-2xl tracking-wide font-sans drop-shadow-sm">ORZUTECH</span>
           </div>
 
           {/* Search Bar */}
@@ -549,7 +549,7 @@ export default function Home() {
                     Игровой Ноутбук
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе
+                    RTX 4060, 16GB RAM и дисплей 144Hz для максимальной пр��изводительности в играх и работе
                   </p>
                   <div className="text-xl font-semibold text-gray-900 mb-6">
                     ₽ 129,900
