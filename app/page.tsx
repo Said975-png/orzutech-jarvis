@@ -1,30 +1,74 @@
 'use client'
 
+import { useEffect, useState } from 'react'
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'model-viewer': any
+    }
+  }
+}
+
 export default function Home() {
+  const [currentModel, setCurrentModel] = useState(0)
+
+  const models = [
+    {
+      url: "https://cdn.builder.io/o/assets%2F08440fd5afb844b5b8c663feab34b3b0%2Fd9f2f51e747245009ee937c94e66654f?alt=media&token=dfd53474-2264-46a1-8202-69e75999c8a5&apiKey=08440fd5afb844b5b8c663feab34b3b0",
+      name: "Модель 1"
+    },
+    {
+      url: "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
+      name: "Астронавт"
+    },
+    {
+      url: "https://modelviewer.dev/shared-assets/models/ShopifyPickup.glb",
+      name: "Машина"
+    },
+    {
+      url: "https://modelviewer.dev/shared-assets/models/reflective-sphere.gltf",
+      name: "Сфера"
+    }
+  ]
+
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.type = 'module'
+    script.src = 'https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js'
+    document.head.appendChild(script)
+
+    return () => {
+      document.head.removeChild(script)
+    }
+  }, [])
+
   return (
     <main className="min-h-screen bg-black">
       {/* Main Container */}
       <div className="w-full bg-gray-900">
         {/* Navigation */}
-        <nav className="flex items-center justify-between px-8 lg:px-16 py-4 border-b border-gray-800">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-white flex items-center justify-center">
-              <span className="text-black font-black text-lg">OT</span>
+        <nav className="flex items-center justify-center px-8 lg:px-16 py-4 border-b border-gray-800">
+          <div className="flex items-center space-x-12">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-white flex items-center justify-center">
+                <span className="text-black font-black text-lg">OT</span>
+              </div>
+              <span className="text-white font-black text-2xl tracking-tight">ORZUTECH</span>
             </div>
-            <span className="text-white font-black text-2xl tracking-tight">ORZUTECH</span>
+
+            <div className="hidden lg:flex items-center space-x-12 text-gray-300 font-medium">
+              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Главная</a>
+              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">О нас</a>
+              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Каталог</a>
+              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Гарантия</a>
+              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Блог</a>
+            </div>
+
+            <button className="bg-white text-black px-8 py-3 font-bold uppercase tracking-wide hover:bg-gray-100 transition-colors">
+              Контакты
+            </button>
           </div>
-          
-          <div className="hidden lg:flex items-center space-x-12 text-gray-300 font-medium">
-            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Главная</a>
-            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">О нас</a>
-            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Каталог</a>
-            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Гарантия</a>
-            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Блог</a>
-          </div>
-          
-          <button className="bg-white text-black px-8 py-3 font-bold uppercase tracking-wide hover:bg-gray-100 transition-colors">
-            Контакты
-          </button>
         </nav>
 
         {/* Main Content */}
@@ -33,6 +77,36 @@ export default function Home() {
           <div className="absolute -left-32 top-0 bottom-0 w-96 bg-gradient-to-r from-white/10 via-white/5 to-transparent blur-3xl opacity-60"></div>
           <div className="absolute -left-20 top-1/4 bottom-1/4 w-64 bg-gradient-to-r from-white/20 via-white/8 to-transparent blur-2xl opacity-40"></div>
           <div className="absolute -left-10 top-1/3 bottom-1/3 w-32 bg-gradient-to-r from-white/30 via-white/10 to-transparent blur-xl opacity-30"></div>
+
+          {/* Animated Neon Arc */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="animate-neon-arc">
+              <svg width="400" height="300" viewBox="0 0 400 300" className="opacity-70">
+                <defs>
+                  <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style={{stopColor: '#00f5ff', stopOpacity: 0.8}} />
+                    <stop offset="50%" style={{stopColor: '#ffffff', stopOpacity: 1}} />
+                    <stop offset="100%" style={{stopColor: '#00f5ff', stopOpacity: 0.8}} />
+                  </linearGradient>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                    <feMerge>
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+                <path
+                  d="M 50 250 Q 200 50 350 250"
+                  stroke="url(#neonGradient)"
+                  strokeWidth="3"
+                  fill="none"
+                  filter="url(#glow)"
+                  className="drop-shadow-[0_0_20px_rgba(0,245,255,0.6)]"
+                />
+              </svg>
+            </div>
+          </div>
 
           {/* Left Content */}
           <div className="relative flex flex-col justify-center space-y-12 z-10">
@@ -48,8 +122,8 @@ export default function Home() {
               <div className="w-24 h-1 bg-white"></div>
               
               <p className="text-gray-300 text-xl lg:text-2xl leading-relaxed max-w-lg font-light">
-                Профессиональные решения в сфере электроники.
-                Качество, надежность, инновации.
+                Профессиональные реше��ия в сфере электроники.
+                Качество, надежн��сть, инновации.
               </p>
             </div>
             
@@ -57,13 +131,54 @@ export default function Home() {
           </div>
 
           {/* Right Content */}
-          <div className="flex justify-center items-center">
-            <div className="relative">
-              <img 
-                src="https://cdn.builder.io/api/v1/image/assets%2F02f225558365433abb0d2ad515b82942%2F52db23e5e3e24501b060c9ae46a778e6?format=webp&width=800"
-                alt="Apple Products"
-                className="max-w-[350px] lg:max-w-[450px] h-auto object-contain grayscale hover:grayscale-0 transition-all duration-500"
-              />
+          <div className="flex flex-col justify-center items-center space-y-6">
+            <div className="relative w-[280px] lg:w-[360px] h-[280px] lg:h-[360px] overflow-hidden rounded-lg border border-gray-700">
+              <model-viewer
+                src={models[currentModel].url}
+                alt="3D Model"
+                auto-rotate
+                camera-controls
+                autoplay
+                animation-name=""
+                field-of-view="45deg"
+                camera-orbit="0deg 75deg 105%"
+                style={{ width: '100%', height: '100%' }}
+                loading="lazy"
+              ></model-viewer>
+            </div>
+
+            {/* Custom Model Selector */}
+            <div
+              className="w-[280px] lg:w-[360px]"
+              onWheel={(e) => {
+                e.preventDefault()
+                if (e.deltaY > 0) {
+                  // Скролл вниз - следующая модель
+                  setCurrentModel((prev) => (prev + 1) % models.length)
+                } else {
+                  // Скролл вверх - предыдущая модель
+                  setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
+                }
+              }}
+            >
+
+              <div className="text-center text-gray-400 text-xs mb-2">
+                Прокрутите для смены модели
+              </div>
+              <div className="flex justify-center space-x-1">
+                {models.map((_, index) => (
+                  <div
+                    key={index}
+                    className={`
+                      w-2 h-2 rounded-full transition-all duration-300
+                      ${currentModel === index
+                        ? 'bg-white'
+                        : 'bg-gray-600'
+                      }
+                    `}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -110,7 +225,7 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">ГАРАНТИЯ КАЧЕСТВА</h3>
+            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">ГАРА��ТИЯ КАЧЕСТВА</h3>
             <p className="text-gray-400 leading-relaxed">
               Полная гарантия на все товары. Сертифицированные устройства.
             </p>
@@ -132,7 +247,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-800 p-8 lg:p-16 text-center">
           <p className="text-gray-500 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
+            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА З��ЩИЩЕНЫ.
           </p>
         </div>
       </div>

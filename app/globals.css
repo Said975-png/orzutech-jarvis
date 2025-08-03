@@ -387,6 +387,16 @@ a:focus {
   }
 }
 
+/* Hide Scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
 /* Print Styles */
 @media print {
   .no-print {
