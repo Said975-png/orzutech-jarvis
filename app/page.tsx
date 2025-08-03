@@ -1,11 +1,14 @@
 'use client'
 
-import dynamic from 'next/dynamic'
+import { useEffect } from 'react'
 
-const Scene3D = dynamic(() => import('./Scene3D'), {
-  ssr: false,
-  loading: () => <div className="w-[350px] lg:w-[450px] h-[350px] lg:h-[450px] bg-gray-800 animate-pulse rounded" />
-})
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'model-viewer': any
+    }
+  }
+}
 
 export default function Home() {
   return (
