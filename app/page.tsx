@@ -95,21 +95,21 @@ export default function Home() {
               
               <p className="text-gray-300 text-xl lg:text-2xl leading-relaxed max-w-lg font-light">
                 Профессиональные решения в сфере электроники.
-                Качество, надежность, инновации.
+                Качество, надежнос��ь, инновации.
               </p>
 
               {/* Auto-scrolling slider */}
-              <div className="relative overflow-hidden max-w-lg h-12 bg-gray-800/30 rounded-lg border border-gray-700/50">
+              <div className="relative overflow-hidden max-w-lg h-12">
                 <div className="absolute inset-0 flex items-center">
-                  <div className="flex animate-scroll space-x-8 text-sm text-gray-400">
-                    <span className="whitespace-nowrap">✨ Самая качественная техника в Бухаре</span>
-                    <span className="whitespace-nowrap">🎯 100% оригинальные устройства</span>
-                    <span className="whitespace-nowrap">⚡ Быстрая доставка и установка</span>
-                    <span className="whitespace-nowrap">🛡️ Полная гарантия на все товары</span>
-                    <span className="whitespace-nowrap">💎 Премиум-сервис и поддержка</span>
-                    <span className="whitespace-nowrap">🚀 Инновационные решения для дома</span>
-                    <span className="whitespace-nowrap">✨ Самая качественная техника в Бухаре</span>
-                    <span className="whitespace-nowrap">🎯 100% оригинальные устройства</span>
+                  <div className="flex animate-scroll space-x-8 text-sm text-white font-medium">
+                    <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
+                    <span className="whitespace-nowrap">100% оригинальные устройства</span>
+                    <span className="whitespace-nowrap">Быстрая доставка и установка</span>
+                    <span className="whitespace-nowrap">Полная гарантия на все товары</span>
+                    <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
+                    <span className="whitespace-nowrap">Инновационные решения для дома</span>
+                    <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
+                    <span className="whitespace-nowrap">100% оригинальные устройства</span>
                   </div>
                 </div>
               </div>
@@ -146,7 +146,7 @@ export default function Home() {
                   // Скролл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // Скролл вв��рх - предыдущая модель
+                  // Скролл в����рх - предыдущая модель
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
