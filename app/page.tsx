@@ -75,7 +75,7 @@ export default function Home() {
   ]
 
   const colors = [
-    { name: "Белый", color: "bg-white", border: "border-gray-300" },
+    { name: "Бел��й", color: "bg-white", border: "border-gray-300" },
     { name: "��ерный", color: "bg-black", border: "border-gray-700" },
     { name: "Серый", color: "bg-gray-400", border: "border-gray-500" }
   ]
@@ -230,7 +230,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
-                    <span className="whitespace-nowrap">Инновационные ре��ения для дома</span>
+                    <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
@@ -808,7 +808,7 @@ export default function Home() {
                     Профессиональный с стилусом
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
-                    ₽ 79,900
+                    $ 799
                   </div>
 
                   <button
@@ -933,7 +933,7 @@ export default function Home() {
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Бес��роводные н��ушники"
+                        alt="Беспров��дные н��ушники"
                         className="w-full h-full object-contain"
                       />
                     </div>
@@ -1018,7 +1018,7 @@ export default function Home() {
                     Профессиональный с стилусом
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
-                    ₽ 79,900
+                    $ 799
                   </div>
 
                   <button
