@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 declare global {
   namespace JSX {
@@ -180,7 +180,7 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">БЫСТРАЯ ДОСТАВКА</h3>
+            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">��ЫСТРАЯ ДОСТАВКА</h3>
             <p className="text-gray-400 leading-relaxed">
               Оперативная доставка по Бухаре. Профессиональное обслуживание.
             </p>
