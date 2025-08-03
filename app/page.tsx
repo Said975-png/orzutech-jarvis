@@ -83,28 +83,15 @@ export default function Home() {
           {/* Left Content */}
           <div className="relative flex flex-col justify-center space-y-12 z-10">
             <div className="space-y-6">
-              {/* Badge with glow */}
-              <div className="inline-block relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 blur-sm rounded-lg"></div>
-                <div className="relative text-sm text-gray-300 font-bold uppercase tracking-[0.2em] px-4 py-2 border border-gray-700/50 rounded-lg bg-black/30 backdrop-blur-sm">
-                  МАГАЗИН ТЕХНИКИ В БУХАРЕ
-                </div>
+              <div className="text-sm text-gray-500 font-bold uppercase tracking-[0.2em]">
+                МАГАЗИН ТЕХНИКИ В БУХАРЕ
               </div>
 
-              {/* Title with subtle glow */}
-              <div className="relative">
-                <h1 className="text-4xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.9] tracking-tight relative z-10">
-                  ORZUTECH
-                </h1>
-                <div className="absolute inset-0 text-4xl lg:text-6xl xl:text-7xl font-black text-white/10 leading-[0.9] tracking-tight blur-sm">
-                  ORZUTECH
-                </div>
-              </div>
+              <h1 className="text-4xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.9] tracking-tight">
+                ORZUTECH
+              </h1>
 
-              {/* Animated divider */}
-              <div className="relative w-24 h-1 bg-gradient-to-r from-white via-cyan-400 to-blue-500 rounded-full">
-                <div className="absolute inset-0 bg-gradient-to-r from-white via-cyan-400 to-blue-500 rounded-full blur-sm opacity-70"></div>
-              </div>
+              <div className="w-24 h-1 bg-white"></div>
               
               <p className="text-gray-300 text-xl lg:text-2xl leading-relaxed max-w-lg font-light">
                 Профессионал��ные решения в сфере электроники.
@@ -234,7 +221,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-800 p-8 lg:p-16 text-center">
           <p className="text-gray-500 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
+            © 2024 ORZUTECH. БУХАРА, УЗБ��КИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
           </p>
         </div>
       </div>
