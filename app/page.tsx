@@ -29,7 +29,7 @@ export default function Home() {
 
   const products: Product[] = [
     { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
-    { id: 2, name: "С��артфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
+    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спортивными функциями" },
@@ -218,7 +218,7 @@ export default function Home() {
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
               <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-md font-light">
-                Наша деятельность: Продажа Телефонов �� аксессуаров, Планшетов, разных Га��жетов и много много инте��е��но��о.
+                Наша деятельность: Продажа Телефонов �� аксессуаров, Планшетов, разных Га��жетов и много много инте��есно��о.
               </p>
 
               {/* Auto-scrolling slider */}
@@ -299,7 +299,7 @@ export default function Home() {
             >
 
               <div className="text-center text-gray-400 text-xs mb-2">
-                Прокрутите для смены модели
+                Прокрутите д��я смены модели
               </div>
               <div className="flex justify-center space-x-1">
                 {models.map((_, index) => (
@@ -613,7 +613,7 @@ export default function Home() {
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                    alt={"Смарт Телеви��ор 55\""}
+                    alt={"Смарт Телевизор 55\""}
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -760,7 +760,7 @@ export default function Home() {
                       onClick={() => addToCart(products[2])}
                       className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
                     >
-                      В к��рзину
+                      В корзину
                     </button>
                     <button className="p-2.5 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                       <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -773,7 +773,10 @@ export default function Home() {
 
               {/* Product 4 */}
               <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
-
+                {/* Discount badge */}
+                <div className="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md z-10">
+                  -25%
+                </div>
 
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
