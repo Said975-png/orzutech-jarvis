@@ -6,7 +6,7 @@ export default function Home() {
       {/* Main Container */}
       <div className="w-full bg-gray-900">
         {/* Navigation */}
-        <nav className="flex items-center justify-between p-8 border-b border-gray-800">
+        <nav className="flex items-center justify-between px-8 lg:px-16 py-6 border-b border-gray-800">
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-white flex items-center justify-center">
               <span className="text-black font-black text-lg">OT</span>
