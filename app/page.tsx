@@ -31,7 +31,7 @@ export default function Home() {
     { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
-    { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
+    { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и крис��ально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
   ]
@@ -62,7 +62,7 @@ export default function Home() {
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
-      name: "А��тронавт"
+      name: "Астронавт"
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/ShopifyPickup.glb",
@@ -208,7 +208,7 @@ export default function Home() {
           <div className="relative flex flex-col justify-center space-y-12 z-10">
             <div className="space-y-6">
               <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em]">
-                СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
+                ��ОВРЕМЕННАЯ ЭЛЕКТРОНИКА
               </div>
 
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
