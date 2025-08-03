@@ -33,7 +33,7 @@ export default function Home() {
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
-    { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
+    { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и твор��ества с поддержкой стилуса" }
   ]
 
   const addToCart = (product: Product) => {
@@ -62,7 +62,7 @@ export default function Home() {
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
-      name: "Астро��авт"
+      name: "Астронавт"
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/ShopifyPickup.glb",
@@ -153,7 +153,7 @@ export default function Home() {
         <nav className="flex items-center justify-between px-8 lg:px-16 py-6 relative z-30">
           {/* Logo */}
           <div className="flex items-center">
-            <span className="text-purple-800 font-bold text-2xl tracking-wide font-sans drop-shadow-sm">ORZUTECH</span>
+            <span className="text-yellow-400 font-bold text-2xl tracking-wide font-sans drop-shadow-sm">ORZUTECH</span>
           </div>
 
           {/* Search Bar */}
@@ -174,21 +174,21 @@ export default function Home() {
           <div className="flex items-center space-x-4">
             {/* Auth buttons */}
             <div className="flex items-center space-x-2">
-              <button className="text-purple-700 hover:text-purple-900 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
+              <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
                 Вход
               </button>
-              <span className="text-purple-400">|</span>
-              <button className="text-purple-700 hover:text-purple-900 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
+              <span className="text-black">|</span>
+              <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
                 Регистрация
               </button>
             </div>
 
             {/* Cart */}
-            <button className="relative p-2 text-purple-700 hover:text-purple-900 transition-colors duration-300 drop-shadow-sm">
+            <button className="relative p-2 text-black hover:text-gray-700 transition-colors duration-300 drop-shadow-sm">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m0 0L12 21l7.5-3" />
               </svg>
-              <span className="absolute -top-1 -right-1 bg-purple-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium shadow-lg">
+              <span className="absolute -top-1 -right-1 bg-yellow-400 text-black text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium shadow-lg">
                 {getTotalItems()}
               </span>
             </button>
@@ -227,7 +227,7 @@ export default function Home() {
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
-                    <span className="whitespace-nowrap">Быстрая доставка и у��тановка</span>
+                    <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
@@ -241,7 +241,7 @@ export default function Home() {
             {/* Color Selection */}
             <div className="flex items-center space-x-4 mt-8">
               <div className="text-gray-400 text-xs uppercase tracking-wide">
-                Выбо�� цве��а
+                Выбор цвета
               </div>
               <div className="flex space-x-3">
                 {colors.map((colorOption, index) => (
@@ -333,7 +333,7 @@ export default function Home() {
             </div>
             <div>
               <div className="text-4xl font-black text-black mb-2">24/7</div>
-              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Поддержк���</div>
+              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Поддержка</div>
             </div>
             <div>
               <div className="text-4xl font-black text-black mb-2">99%</div>
@@ -344,8 +344,152 @@ export default function Home() {
 
 
 
+        {/* Hit Products Section */}
+        <div className="bg-gray-50 py-16 px-4 lg:px-8 overflow-hidden">
+          <div className="max-w-6xl mx-auto">
+            {/* Section Header */}
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-light text-gray-900 mb-2 tracking-wide">
+                Хит продаж
+              </h2>
+              <div className="w-16 h-px bg-gray-400 mx-auto"></div>
+            </div>
+
+            {/* Slider Container */}
+            <div className="relative">
+              <div className="flex animate-scroll space-x-6">
+                {/* Slide 1 - Grooming Kit */}
+                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F4b42886ccd0846e8845f7fea196bdae6?format=webp&width=800"
+                      alt="Grooming Kit Pro"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Grooming Kit Pro</h3>
+                    <p className="text-gray-600 text-sm mb-4">Профессиональный набор для ухода</p>
+                    <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
+                  </div>
+                </div>
+
+                {/* Slide 2 - Apple Watch */}
+                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2Fad77a22293914f76ad5c86b0cc1cb048?format=webp&width=800"
+                      alt="Apple Watch Series 10"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Apple Watch Series 10</h3>
+                    <p className="text-gray-600 text-sm mb-4">Rose Gold, Black 42MM/46MM</p>
+                    <div className="text-2xl font-bold text-red-600">₽ 35,000</div>
+                  </div>
+                </div>
+
+                {/* Slide 3 - PlayStation */}
+                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F593de0ffc9344103bcb253bcf1c49c90?format=webp&width=800"
+                      alt="PlayStation 5 Slim"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">PlayStation 5 Slim</h3>
+                    <p className="text-gray-600 text-sm mb-4">Игровая консоль нового поколения</p>
+                    <div className="text-2xl font-bold text-red-600">₽ 45,000</div>
+                  </div>
+                </div>
+
+                {/* Slide 4 - Samsung Watch */}
+                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F1f88af23807446fbae545f790458cfa0?format=webp&width=800"
+                      alt="Samsung Watch Ultra"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Samsung Watch Ultra</h3>
+                    <p className="text-gray-600 text-sm mb-4">Умные часы с премиум функциями</p>
+                    <div className="text-2xl font-bold text-red-600">₽ 33,500</div>
+                  </div>
+                </div>
+
+                {/* Slide 5 - Huawei Set */}
+                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F61d1bfb408604835a08844fc969d435c?format=webp&width=800"
+                      alt="Huawei Watch Fit 3 + FreeBuds"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Huawei Watch Fit 3</h3>
+                    <p className="text-gray-600 text-sm mb-4">+ FreeBuds SE 3 в подарок</p>
+                    <div className="text-2xl font-bold text-red-600">₽ 12,500</div>
+                  </div>
+                </div>
+
+                {/* Duplicate slides for seamless loop */}
+                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F4b42886ccd0846e8845f7fea196bdae6?format=webp&width=800"
+                      alt="Grooming Kit Pro"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Grooming Kit Pro</h3>
+                    <p className="text-gray-600 text-sm mb-4">Профессиональный набор для ухода</p>
+                    <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
+                  </div>
+                </div>
+
+                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2Fad77a22293914f76ad5c86b0cc1cb048?format=webp&width=800"
+                      alt="Apple Watch Series 10"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Apple Watch Series 10</h3>
+                    <p className="text-gray-600 text-sm mb-4">Rose Gold, Black 42MM/46MM</p>
+                    <div className="text-2xl font-bold text-red-600">₽ 35,000</div>
+                  </div>
+                </div>
+
+                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F593de0ffc9344103bcb253bcf1c49c90?format=webp&width=800"
+                      alt="PlayStation 5 Slim"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">PlayStation 5 Slim</h3>
+                    <p className="text-gray-600 text-sm mb-4">Игровая консоль нового поколения</p>
+                    <div className="text-2xl font-bold text-red-600">₽ 45,000</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Products Section */}
-        <div className="bg-transparent py-16 px-4 lg:px-8">
+        <div className="bg-white py-16 px-4 lg:px-8">
           <div className="max-w-6xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12">
@@ -457,18 +601,18 @@ export default function Home() {
             </div>
 
             {/* Products Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
               {/* Product 1 */}
               <div className="group bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] border border-white/20">
-                <div className="aspect-square bg-gray-50 rounded-t-lg overflow-hidden relative">
+                <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
-                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
+                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt={"Смарт Телевизор 55\""}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   </div>
@@ -479,7 +623,7 @@ export default function Home() {
                     Смарт Телевизор 55"
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения
+                    4K Ultra HD с HDR
                   </p>
                   <div className="text-xl font-semibold text-gray-900 mb-6">
                     ₽ 89,900
@@ -496,14 +640,14 @@ export default function Home() {
 
               {/* Product 2 */}
               <div className="group bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] border border-white/20">
-                <div className="aspect-square bg-gray-50 rounded-t-lg overflow-hidden relative">
+                <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
-                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
+                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Смартфон Premium"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   </div>
@@ -514,7 +658,7 @@ export default function Home() {
                     Смартфон Premium
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии
+                    Тройная камера, зарядка 65W
                   </p>
                   <div className="text-xl font-semibold text-gray-900 mb-6">
                     ₽ 59,900
@@ -531,14 +675,14 @@ export default function Home() {
 
               {/* Product 3 */}
               <div className="group bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] border border-white/20">
-                <div className="aspect-square bg-white/50 rounded-t-lg overflow-hidden relative">
+                <div className="aspect-[4/3] bg-white/50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 group-hover:from-white/40 group-hover:to-white/20 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
-                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
+                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Игровой Ноутбук"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   </div>
@@ -549,7 +693,7 @@ export default function Home() {
                     Игровой Ноутбук
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе
+                    RTX 4060, 16GB RAM, 144Hz
                   </p>
                   <div className="text-xl font-semibold text-gray-900 mb-6">
                     ₽ 129,900
@@ -559,21 +703,21 @@ export default function Home() {
                     onClick={() => addToCart(products[2])}
                     className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400"
                   >
-                    Зак��зать
+                    Заказать
                   </button>
                 </div>
               </div>
 
               {/* Product 4 */}
               <div className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-500 ease-out hover:scale-[1.02] border border-gray-100">
-                <div className="aspect-square bg-gray-50 rounded-t-lg overflow-hidden relative">
+                <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
-                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
+                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Беспроводные наушники"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   </div>
@@ -584,7 +728,7 @@ export default function Home() {
                     Беспроводные наушники
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Premium наушники с активным шумоподавлением и кристально чистым звуком
+                    Premium с шумоподавлением
                   </p>
                   <div className="text-xl font-semibold text-gray-900 mb-6">
                     ₽ 24,900
@@ -599,75 +743,9 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Product 5 */}
-              <div className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-500 ease-out hover:scale-[1.02] border border-gray-100">
-                <div className="aspect-square bg-gray-50 rounded-t-lg overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
-                  <div className="relative z-10 h-full flex items-center justify-center">
-                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Умные часы"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
 
-                <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
-                    Умные часы
-                  </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Современные смарт-часы с мониторингом здоровья и спортивными функциями
-                  </p>
-                  <div className="text-xl font-semibold text-gray-900 mb-6">
-                    ₽ 34,900
-                  </div>
 
-                  <button
-                    onClick={() => addToCart(products[4])}
-                    className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400"
-                  >
-                    Заказать
-                  </button>
-                </div>
-              </div>
 
-              {/* Product 6 */}
-              <div className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-500 ease-out hover:scale-[1.02] border border-gray-100">
-                <div className="aspect-square bg-gray-50 rounded-t-lg overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
-                  <div className="relative z-10 h-full flex items-center justify-center">
-                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Планшет Pro"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
-                    Планшет Pro
-                  </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Профессиональный планшет для работы и творчества с поддержкой стилуса
-                  </p>
-                  <div className="text-xl font-semibold text-gray-900 mb-6">
-                    ₽ 79,900
-                  </div>
-
-                  <button
-                    onClick={() => addToCart(products[5])}
-                    className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400"
-                  >
-                    Заказать
-                  </button>
-                </div>
-              </div>
 
             </div>
           </div>
@@ -676,7 +754,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-200 p-8 lg:p-16 text-center">
           <p className="text-gray-600 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ П��АВА ЗАЩИЩЕНЫ.
+            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
           </p>
         </div>
       </div>
