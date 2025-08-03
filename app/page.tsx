@@ -197,28 +197,6 @@ export default function Home() {
           </div>
         </div>
 
-            {/* Color Selection */}
-            <div className="text-center text-gray-400 text-xs mb-2 mt-4">
-              Выбор цвета
-            </div>
-            <div className="flex justify-center space-x-3">
-              {colors.map((colorOption, index) => (
-                <button
-                  key={index}
-                  onClick={() => setSelectedColor(index)}
-                  className={`
-                    w-4 h-4 rounded-full transition-all duration-300 border-2 cursor-pointer
-                    ${colorOption.color} ${colorOption.border}
-                    ${selectedColor === index
-                      ? 'ring-2 ring-yellow-400 ring-offset-1'
-                      : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1'
-                    }
-                  `}
-                  title={colorOption.name}
-                />
-              ))}
-            </div>
-
         {/* Stats Section */}
         <div className="border-t border-gray-200 p-8 lg:p-16">
           <div className="grid md:grid-cols-4 gap-8 text-center">
