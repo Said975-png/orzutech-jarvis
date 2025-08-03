@@ -25,6 +25,7 @@ export default function Home() {
   const [currentModel, setCurrentModel] = useState(0)
   const [selectedColor, setSelectedColor] = useState(0)
   const [cart, setCart] = useState<CartItem[]>([])
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
   const products: Product[] = [
     { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
@@ -550,7 +551,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-200 p-8 lg:p-16 text-center">
           <p className="text-gray-600 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ П��АВА ЗАЩИЩЕНЫ.
+            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ П��АВА З��ЩИЩЕНЫ.
           </p>
         </div>
       </div>
