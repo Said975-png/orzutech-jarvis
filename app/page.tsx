@@ -138,7 +138,30 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
+
+            {/* Color Selection */}
+            <div className="space-y-3 mt-8">
+              <div className="text-gray-400 text-xs uppercase tracking-wide">
+                Выбор цвета
+              </div>
+              <div className="flex space-x-3">
+                {colors.map((colorOption, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setSelectedColor(index)}
+                    className={`
+                      w-5 h-5 rounded-full transition-all duration-300 border-2 cursor-pointer
+                      ${colorOption.color} ${colorOption.border}
+                      ${selectedColor === index
+                        ? 'ring-2 ring-yellow-400 ring-offset-1'
+                        : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1'
+                      }
+                    `}
+                    title={colorOption.name}
+                  />
+                ))}
+              </div>
+            </div>
 
           </div>
 
@@ -232,7 +255,7 @@ export default function Home() {
             {/* Section Header */}
             <div className="text-center mb-16">
               <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em] mb-4">
-                КАТАЛОГ ТО��АРОВ
+                КАТАЛОГ ТОВАРОВ
               </div>
               <h2 className="text-3xl lg:text-4xl font-black text-black mb-6">
                 НАШИ <span className="text-yellow-400">ПРОДУКТЫ</span>
