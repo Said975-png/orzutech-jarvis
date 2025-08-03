@@ -249,7 +249,7 @@ export default function Home() {
                 </div>
 
                 <div className="text-center px-4">
-                  <h3 className="text-white font-bold text-xl mb-3 group-hover:text-yellow-400 transition-colors duration-300">
+                  <h3 className="text-black font-bold text-xl mb-3 group-hover:text-yellow-400 transition-colors duration-300">
                     Смарт Телевизор 55"
                   </h3>
                   <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -285,7 +285,7 @@ export default function Home() {
                 </div>
 
                 <div className="text-center px-4">
-                  <h3 className="text-white font-bold text-xl mb-3 group-hover:text-yellow-400 transition-colors duration-300">
+                  <h3 className="text-black font-bold text-xl mb-3 group-hover:text-yellow-400 transition-colors duration-300">
                     Смартфон Premium
                   </h3>
                   <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -320,7 +320,7 @@ export default function Home() {
                 </div>
 
                 <div className="text-center px-4">
-                  <h3 className="text-white font-bold text-xl mb-3 group-hover:text-yellow-400 transition-colors duration-300">
+                  <h3 className="text-black font-bold text-xl mb-3 group-hover:text-yellow-400 transition-colors duration-300">
                     Игровой Ноутбук
                   </h3>
                   <p className="text-gray-400 text-sm leading-relaxed mb-6">
