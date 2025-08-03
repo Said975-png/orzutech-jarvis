@@ -66,7 +66,7 @@ export default function Home() {
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/RobotExpressive.glb",
-      name: "Ро��от"
+      name: "Р����от"
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/reflective-sphere.gltf",
@@ -289,7 +289,7 @@ export default function Home() {
               onWheel={(e) => {
                 e.preventDefault()
                 if (e.deltaY > 0) {
-                  // Ск��олл вниз - следующая модель
+                  // Ск��олл вниз - следу��щая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
                   // Скролл вверх - предыдущая модель
@@ -368,7 +368,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-4 border-t border-gray-100">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Grooming Kit Pro</h3>
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Grooming Kit Pro</h3>
                     <p className="text-gray-600 text-sm mb-4">��рофессиональный набор для ухода</p>
                     <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
                   </div>
@@ -384,7 +384,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-4 border-t border-gray-100">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Apple Watch Series 10</h3>
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Apple Watch Series 10</h3>
                     <p className="text-gray-600 text-sm mb-4">Rose Gold, Black 42MM/46MM</p>
                     <div className="text-2xl font-bold text-red-600">₽ 35,000</div>
                   </div>
@@ -400,7 +400,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-4 border-t border-gray-100">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">PlayStation 5 Slim</h3>
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">PlayStation 5 Slim</h3>
                     <p className="text-gray-600 text-sm mb-4">Игровая консоль нового поколения</p>
                     <div className="text-2xl font-bold text-red-600">₽ 45,000</div>
                   </div>
@@ -416,7 +416,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-4 border-t border-gray-100">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Samsung Watch Ultra</h3>
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Samsung Watch Ultra</h3>
                     <p className="text-gray-600 text-sm mb-4">Умные часы с премиум функциями</p>
                     <div className="text-2xl font-bold text-red-600">₽ 33,500</div>
                   </div>
@@ -432,7 +432,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-4 border-t border-gray-100">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Huawei Watch Fit 3</h3>
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Huawei Watch Fit 3</h3>
                     <p className="text-gray-600 text-sm mb-4">+ FreeBuds SE 3 в подарок</p>
                     <div className="text-2xl font-bold text-red-600">₽ 12,500</div>
                   </div>
@@ -448,7 +448,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-4 border-t border-gray-100">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Grooming Kit Pro</h3>
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Grooming Kit Pro</h3>
                     <p className="text-gray-600 text-sm mb-4">Профессиональный набор для ухода</p>
                     <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
                   </div>
@@ -463,7 +463,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-4 border-t border-gray-100">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Apple Watch Series 10</h3>
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Apple Watch Series 10</h3>
                     <p className="text-gray-600 text-sm mb-4">Rose Gold, Black 42MM/46MM</p>
                     <div className="text-2xl font-bold text-red-600">₽ 35,000</div>
                   </div>
@@ -478,7 +478,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-4 border-t border-gray-100">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">PlayStation 5 Slim</h3>
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">PlayStation 5 Slim</h3>
                     <p className="text-gray-600 text-sm mb-4">Игровая консоль нового поколения</p>
                     <div className="text-2xl font-bold text-red-600">₽ 45,000</div>
                   </div>
@@ -584,7 +584,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
+                        {['Смартфоны', 'Телевизо��ы', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
@@ -672,7 +672,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-4 border-t border-gray-100">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                     Смартфон Premium
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
@@ -704,7 +704,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-4 border-t border-gray-100">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                     Игровой Ноутбук
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
@@ -736,7 +736,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-4 border-t border-gray-100">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                     Беспроводные наушники
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
@@ -766,7 +766,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-4 border-t border-gray-100">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                     Умные часы
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
@@ -796,7 +796,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-4 border-t border-gray-100">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                     Планшет Pro
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
@@ -826,7 +826,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-4 border-t border-gray-100">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                     Смарт Телевизор 55"
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
@@ -861,7 +861,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-4 border-t border-gray-100">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                     Смартфон Premium
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
@@ -896,7 +896,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-4 border-t border-gray-100">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                     Игровой Ноутбук
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
@@ -931,7 +931,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-4 border-t border-gray-100">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                     Беспроводные наушники
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
@@ -966,7 +966,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-4 border-t border-gray-100">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                     Умные часы
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
@@ -1001,11 +1001,11 @@ export default function Home() {
                 </div>
 
                 <div className="p-4 border-t border-gray-100">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                     Планшет Pro
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
-                    Профессиональный с стилусом
+                    Профессиональный с ��тилусом
                   </p>
                   <div className="text-2xl font-bold text-red-600 mb-4">
                     $ 799
