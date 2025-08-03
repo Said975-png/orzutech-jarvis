@@ -93,6 +93,33 @@ export default function Home() {
 
 
 
+          {/* Tech Grid Pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0" style={{
+              backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+              backgroundSize: '60px 60px'
+            }}></div>
+          </div>
+
+          {/* Floating Tech Icons */}
+          <div className="absolute inset-0 pointer-events-none z-5">
+            <div className="absolute top-24 left-[5%] opacity-20 animate-pulse" style={{animationDelay: '4s'}}>
+              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <div className="absolute top-40 right-[8%] opacity-15 animate-pulse" style={{animationDelay: '6s'}}>
+              <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <div className="absolute bottom-32 right-[12%] opacity-20 animate-pulse" style={{animationDelay: '8s'}}>
+              <svg className="w-4 h-4 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+          </div>
+
           {/* Left Content */}
           <div className="relative flex flex-col justify-center space-y-12 z-10">
             <div className="space-y-6">
