@@ -33,7 +33,7 @@ export default function Home() {
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
-    { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
+    { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и твор��ества с поддержкой стилуса" }
   ]
 
   const addToCart = (product: Product) => {
@@ -103,17 +103,6 @@ export default function Home() {
       document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [activeDropdown])
-
-  const handleSliderScroll = () => {
-    setIsSliderAnimating(false)
-
-    // Возобновить анимацию через 3 секунды после окончания скролла
-    const timeoutId = setTimeout(() => {
-      setIsSliderAnimating(true)
-    }, 3000)
-
-    return () => clearTimeout(timeoutId)
-  }
 
   return (
     <main className="min-h-screen relative overflow-hidden">
@@ -749,7 +738,7 @@ export default function Home() {
                     onClick={() => addToCart(products[3])}
                     className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400"
                   >
-                    Зака��ать
+                    Заказать
                   </button>
                 </div>
               </div>
