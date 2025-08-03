@@ -10,9 +10,50 @@ declare global {
   }
 }
 
+interface Product {
+  id: number
+  name: string
+  price: number
+  description: string
+}
+
+interface CartItem extends Product {
+  quantity: number
+}
+
 export default function Home() {
   const [currentModel, setCurrentModel] = useState(0)
   const [selectedColor, setSelectedColor] = useState(0)
+  const [cart, setCart] = useState<CartItem[]>([])
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+
+  const products: Product[] = [
+    { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
+    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
+    { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
+    { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
+    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
+    { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
+  ]
+
+  const addToCart = (product: Product) => {
+    setCart(prevCart => {
+      const existingItem = prevCart.find(item => item.id === product.id)
+      if (existingItem) {
+        return prevCart.map(item =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
+      } else {
+        return [...prevCart, { ...product, quantity: 1 }]
+      }
+    })
+  }
+
+  const getTotalItems = () => {
+    return cart.reduce((total, item) => total + item.quantity, 0)
+  }
 
   const models = [
     {
@@ -50,15 +91,69 @@ export default function Home() {
     }
   }, [])
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (activeDropdown && !(event.target as Element).closest('.relative')) {
+        setActiveDropdown(null)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [activeDropdown])
+
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen relative overflow-hidden">
+      {/* Premium Gradient Background */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        {/* Diagonal Gradient Background */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 15%, #C8A2C8 35%, #A78BFA 55%, #8B5CF6 75%, #7C3AED 90%, #6D28D9 100%)'
+          }}
+        ></div>
+
+        {/* Soft overlay for better text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-purple-900/10"></div>
+
+        {/* Premium White Wave from Top */}
+        <div className="absolute top-0 left-0 w-full h-full z-10">
+          <svg
+            className="absolute top-0 left-0 w-full h-full"
+            viewBox="0 0 1200 800"
+            fill="none"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            {/* Main White Wave */}
+            <path
+              d="M0,0 L1200,0 L1200,280 C1000,320 800,340 600,300 C400,260 200,240 0,280 Z"
+              fill="white"
+              className="drop-shadow-sm"
+            />
+            {/* Secondary subtle wave for depth */}
+            <path
+              d="M0,0 L1200,0 L1200,240 C950,280 700,290 450,260 C200,230 100,220 0,250 Z"
+              fill="white"
+              opacity="0.6"
+              className="drop-shadow-xs"
+            />
+          </svg>
+        </div>
+
+        {/* Subtle gradient overlay for premium feel */}
+        <div className="absolute inset-0 bg-gradient-radial from-white/5 via-transparent to-purple-900/5 opacity-50"></div>
+      </div>
+
       {/* Main Container */}
-      <div className="w-full bg-white">
+      <div className="w-full bg-transparent relative z-20">
         {/* Navigation */}
-        <nav className="flex items-center justify-between px-8 lg:px-16 py-4">
+        <nav className="flex items-center justify-between px-8 lg:px-16 py-6 relative z-30">
           {/* Logo */}
           <div className="flex items-center">
-            <span className="text-yellow-400 font-bold text-2xl tracking-wide font-sans">ORZUTECH</span>
+            <span className="text-purple-800 font-bold text-2xl tracking-wide font-sans drop-shadow-sm">ORZUTECH</span>
           </div>
 
           {/* Search Bar */}
@@ -71,7 +166,7 @@ export default function Home() {
             <input
               type="search"
               placeholder="Поиск..."
-              className="w-full bg-gray-100 text-black placeholder-gray-500 pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400/20 transition-colors text-sm font-sans shadow-md"
+              className="w-full bg-white/90 backdrop-blur-sm text-gray-800 placeholder-gray-500 pl-10 pr-4 py-2 rounded-full border border-white/30 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20 transition-colors text-sm font-sans shadow-lg"
             />
           </div>
 
@@ -79,22 +174,22 @@ export default function Home() {
           <div className="flex items-center space-x-4">
             {/* Auth buttons */}
             <div className="flex items-center space-x-2">
-              <button className="text-gray-600 hover:text-yellow-400 transition-colors duration-300 text-sm font-medium">
+              <button className="text-purple-700 hover:text-purple-900 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
                 Вход
               </button>
-              <span className="text-gray-400">|</span>
-              <button className="text-gray-600 hover:text-yellow-400 transition-colors duration-300 text-sm font-medium">
+              <span className="text-purple-400">|</span>
+              <button className="text-purple-700 hover:text-purple-900 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
                 Регистрация
               </button>
             </div>
 
             {/* Cart */}
-            <button className="relative p-2 text-gray-600 hover:text-yellow-400 transition-colors duration-300">
+            <button className="relative p-2 text-purple-700 hover:text-purple-900 transition-colors duration-300 drop-shadow-sm">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m0 0L12 21l7.5-3" />
               </svg>
-              <span className="absolute -top-1 -right-1 bg-yellow-400 text-black text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
-                0
+              <span className="absolute -top-1 -right-1 bg-purple-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium shadow-lg">
+                {getTotalItems()}
               </span>
             </button>
           </div>
@@ -146,7 +241,7 @@ export default function Home() {
             {/* Color Selection */}
             <div className="flex items-center space-x-4 mt-8">
               <div className="text-gray-400 text-xs uppercase tracking-wide">
-                Выбо�� цвета
+                Выбо�� цве��а
               </div>
               <div className="flex space-x-3">
                 {colors.map((colorOption, index) => (
@@ -238,7 +333,7 @@ export default function Home() {
             </div>
             <div>
               <div className="text-4xl font-black text-black mb-2">24/7</div>
-              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Поддержка</div>
+              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Поддержк���</div>
             </div>
             <div>
               <div className="text-4xl font-black text-black mb-2">99%</div>
@@ -250,7 +345,7 @@ export default function Home() {
 
 
         {/* Products Section */}
-        <div className="bg-white py-16 px-4 lg:px-8">
+        <div className="bg-transparent py-16 px-4 lg:px-8">
           <div className="max-w-6xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12">
@@ -260,48 +355,121 @@ export default function Home() {
               <div className="w-16 h-px bg-gray-400 mx-auto"></div>
             </div>
 
-            {/* Filter Icons */}
-            <div className="flex justify-center items-center space-x-8 mb-12">
-              <button className="flex flex-col items-center space-y-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 group">
-                <div className="w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <span className="text-xs">Цена</span>
-              </button>
+            {/* Filter Dropdowns */}
+            <div className="flex justify-center items-center space-x-8 mb-12 relative">
 
-              <button className="flex flex-col items-center space-y-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 group">
-                <div className="w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                  </svg>
-                </div>
-                <span className="text-xs">Рейтинг</span>
-              </button>
+              {/* Price Filter */}
+              <div className="relative">
+                <button
+                  onClick={() => setActiveDropdown(activeDropdown === 'price' ? null : 'price')}
+                  className="flex flex-col items-center space-y-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+                >
+                  <div className="w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <span className="text-xs">Цена</span>
+                </button>
+                {activeDropdown === 'price' && (
+                  <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
+                    <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+                      <div className="p-2">
+                        {['До 25,000 ₽', '25,000 - 50,000 ₽', '50,000 - 75,000 ₽', '75,000 - 100,000 ₽', '100,000 - 150,000 ₽', 'Свыше 150,000 ₽'].map((price, index) => (
+                          <button
+                            key={index}
+                            className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            {price}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
 
-              <button className="flex flex-col items-center space-y-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 group">
-                <div className="w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-                <span className="text-xs">Категория</span>
-              </button>
+              {/* Rating Filter */}
+              <div className="relative">
+                <button
+                  onClick={() => setActiveDropdown(activeDropdown === 'rating' ? null : 'rating')}
+                  className="flex flex-col items-center space-y-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+                >
+                  <div className="w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                    </svg>
+                  </div>
+                  <span className="text-xs">Рейтинг</span>
+                </button>
+                {activeDropdown === 'rating' && (
+                  <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
+                    <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+                      <div className="p-2">
+                        {['5 звезд', '4 звезды и выше', '3 звезды и выше', '2 звезды и выше', '1 звезда и выше', 'Без рейтинга'].map((rating, index) => (
+                          <button
+                            key={index}
+                            className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200 flex items-center"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            <span className="mr-2">⭐</span>
+                            {rating}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Category Filter */}
+              <div className="relative">
+                <button
+                  onClick={() => setActiveDropdown(activeDropdown === 'category' ? null : 'category')}
+                  className="flex flex-col items-center space-y-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+                >
+                  <div className="w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                  <span className="text-xs">Категория</span>
+                </button>
+                {activeDropdown === 'category' && (
+                  <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
+                    <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+                      <div className="p-2">
+                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные часы', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
+                          <button
+                            key={index}
+                            className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            {category}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Products Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
               {/* Product 1 */}
-              <div className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-500 ease-out hover:scale-[1.02] border border-gray-100">
+              <div className="group bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] border border-white/20">
                 <div className="aspect-square bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
-                    <div className="w-32 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                      <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
+                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                        alt={"Смарт Телевизор 55\""}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </div>
@@ -317,21 +485,26 @@ export default function Home() {
                     ₽ 89,900
                   </div>
 
-                  <button className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400">
-                    Подробнее
+                  <button
+                    onClick={() => addToCart(products[0])}
+                    className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400"
+                  >
+                    Заказать
                   </button>
                 </div>
               </div>
 
               {/* Product 2 */}
-              <div className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-500 ease-out hover:scale-[1.02] border border-gray-100">
+              <div className="group bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] border border-white/20">
                 <div className="aspect-square bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
-                    <div className="w-32 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                      <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                      </svg>
+                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                        alt="Смартфон Premium"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </div>
@@ -347,21 +520,26 @@ export default function Home() {
                     ₽ 59,900
                   </div>
 
-                  <button className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400">
-                    Подробнее
+                  <button
+                    onClick={() => addToCart(products[1])}
+                    className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400"
+                  >
+                    Заказать
                   </button>
                 </div>
               </div>
 
               {/* Product 3 */}
-              <div className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-500 ease-out hover:scale-[1.02] border border-gray-100">
-                <div className="aspect-square bg-gray-50 rounded-t-lg overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
+              <div className="group bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] border border-white/20">
+                <div className="aspect-square bg-white/50 rounded-t-lg overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 group-hover:from-white/40 group-hover:to-white/20 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
-                    <div className="w-32 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                      <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                      </svg>
+                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                        alt="Игровой Ноутбук"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </div>
@@ -377,8 +555,11 @@ export default function Home() {
                     ₽ 129,900
                   </div>
 
-                  <button className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400">
-                    Подробнее
+                  <button
+                    onClick={() => addToCart(products[2])}
+                    className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400"
+                  >
+                    Зак��зать
                   </button>
                 </div>
               </div>
@@ -388,10 +569,12 @@ export default function Home() {
                 <div className="aspect-square bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
-                    <div className="w-32 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                      <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                      </svg>
+                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                        alt="Беспроводные наушники"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </div>
@@ -407,8 +590,11 @@ export default function Home() {
                     ₽ 24,900
                   </div>
 
-                  <button className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400">
-                    Подробнее
+                  <button
+                    onClick={() => addToCart(products[3])}
+                    className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400"
+                  >
+                    Заказать
                   </button>
                 </div>
               </div>
@@ -418,10 +604,12 @@ export default function Home() {
                 <div className="aspect-square bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
-                    <div className="w-32 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                      <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
+                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                        alt="Умные часы"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </div>
@@ -437,8 +625,11 @@ export default function Home() {
                     ₽ 34,900
                   </div>
 
-                  <button className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400">
-                    Подробнее
+                  <button
+                    onClick={() => addToCart(products[4])}
+                    className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400"
+                  >
+                    Заказать
                   </button>
                 </div>
               </div>
@@ -448,10 +639,12 @@ export default function Home() {
                 <div className="aspect-square bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
-                    <div className="w-32 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                      <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m0 0V1a1 1 0 011-1h2a1 1 0 011 1v18a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1h2a1 1 0 011 1v3m0 0V4a1 1 0 011-1h8a1 1 0 011 1v8a4 4 0 01-4 4H8a4 4 0 01-4-4V4z" />
-                      </svg>
+                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                        alt="Планшет Pro"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </div>
@@ -467,8 +660,11 @@ export default function Home() {
                     ₽ 79,900
                   </div>
 
-                  <button className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400">
-                    Подробнее
+                  <button
+                    onClick={() => addToCart(products[5])}
+                    className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400"
+                  >
+                    Заказать
                   </button>
                 </div>
               </div>
