@@ -52,14 +52,14 @@ export default function Home() {
           <div className="flex items-center space-x-12">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-white flex items-center justify-center">
-                <span className="text-black font-black text-lg">OT</span>
+                <span className="text-black font-bold text-lg tracking-wider">OT</span>
               </div>
-              <span className="text-white font-black text-2xl tracking-tight">ORZUTECH</span>
+              <span className="text-white font-bold text-2xl tracking-wide font-sans">ORZUTECH</span>
             </div>
 
-            <div className="hidden lg:flex items-center space-x-8 text-gray-300 font-medium">
-              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Каталог</a>
-              <button className="relative hover:text-white transition-colors uppercase tracking-wide">
+            <div className="hidden lg:flex items-center space-x-8 text-gray-300 font-medium font-sans">
+              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide font-medium">Каталог</a>
+              <button className="relative hover:text-white transition-colors">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.68 6.32a1 1 0 00.95 1.32h10.46m-2-8a2 2 0 11-4 0 2 2 0 014 0zm6 0a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
@@ -68,10 +68,10 @@ export default function Home() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <button className="text-gray-300 hover:text-white transition-colors uppercase tracking-wide font-medium">
+              <button className="text-gray-300 hover:text-white transition-colors font-medium font-sans tracking-wide">
                 Вход
               </button>
-              <button className="bg-white text-black px-6 py-2 font-bold uppercase tracking-wide hover:bg-gray-100 transition-colors">
+              <button className="bg-white text-black px-6 py-2 font-semibold font-sans tracking-wide hover:bg-gray-100 transition-colors">
                 Регистрация
               </button>
             </div>
@@ -102,7 +102,7 @@ export default function Home() {
 
               <p className="text-gray-300 text-lg lg:text-xl leading-relaxed max-w-md font-light">
                 Инновационные технологии для вашего дома и офиса.
-                Надежность в каждом устройстве.
+                Надежность в каждом устрой��тве.
               </p>
 
               {/* Auto-scrolling slider */}
