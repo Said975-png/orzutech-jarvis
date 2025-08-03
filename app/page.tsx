@@ -364,7 +364,7 @@ export default function Home() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F4b42886ccd0846e8845f7fea196bdae6?format=webp&width=800"
                       alt="Grooming Kit Pro"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
@@ -380,7 +380,7 @@ export default function Home() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2Fad77a22293914f76ad5c86b0cc1cb048?format=webp&width=800"
                       alt="Apple Watch Series 10"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
@@ -396,7 +396,7 @@ export default function Home() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F593de0ffc9344103bcb253bcf1c49c90?format=webp&width=800"
                       alt="PlayStation 5 Slim"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
@@ -412,7 +412,7 @@ export default function Home() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F1f88af23807446fbae545f790458cfa0?format=webp&width=800"
                       alt="Samsung Watch Ultra"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
@@ -428,7 +428,7 @@ export default function Home() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F61d1bfb408604835a08844fc969d435c?format=webp&width=800"
                       alt="Huawei Watch Fit 3 + FreeBuds"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
@@ -444,7 +444,7 @@ export default function Home() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F4b42886ccd0846e8845f7fea196bdae6?format=webp&width=800"
                       alt="Grooming Kit Pro"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
@@ -459,7 +459,7 @@ export default function Home() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2Fad77a22293914f76ad5c86b0cc1cb048?format=webp&width=800"
                       alt="Apple Watch Series 10"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
@@ -474,7 +474,7 @@ export default function Home() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F593de0ffc9344103bcb253bcf1c49c90?format=webp&width=800"
                       alt="PlayStation 5 Slim"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
@@ -828,7 +828,7 @@ export default function Home() {
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Смартфон Premium"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                       />
                     </div>
                   </div>
@@ -863,7 +863,7 @@ export default function Home() {
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Игровой Ноутбу��"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                       />
                     </div>
                   </div>
@@ -898,7 +898,7 @@ export default function Home() {
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Беспроводные н��ушники"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                       />
                     </div>
                   </div>
@@ -933,7 +933,7 @@ export default function Home() {
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Умные часы"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                       />
                     </div>
                   </div>
@@ -968,7 +968,7 @@ export default function Home() {
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Планшет Pro"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                       />
                     </div>
                   </div>
