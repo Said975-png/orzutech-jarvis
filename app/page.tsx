@@ -48,7 +48,7 @@ export default function Home() {
       {/* Main Container */}
       <div className="w-full bg-black">
         {/* Navigation */}
-        <nav className="flex items-center justify-center px-8 lg:px-16 py-4 border-b border-gray-800">
+        <nav className="flex items-center justify-center px-8 lg:px-16 py-4">
           <div className="flex items-center space-x-12">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-white flex items-center justify-center">
@@ -90,19 +90,19 @@ export default function Home() {
           {/* Left Content */}
           <div className="relative flex flex-col justify-center space-y-12 z-10">
             <div className="space-y-6">
-              <div className="text-sm text-gray-500 font-bold uppercase tracking-[0.2em]">
-                МАГАЗИН ТЕХНИКИ В БУХАРЕ
+              <div className="text-sm text-gray-400 font-medium uppercase tracking-[0.2em]">
+                СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
               </div>
 
-              <h1 className="text-4xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.9] tracking-tight">
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-[0.9] tracking-tight">
                 ORZUTECH
               </h1>
 
-              <div className="w-24 h-1 bg-white"></div>
-              
-              <p className="text-gray-300 text-xl lg:text-2xl leading-relaxed max-w-lg font-light">
-                Профессиональные решения в сфере электроники.
-                Качество, надежность, инновации.
+              <div className="w-16 h-1 bg-gradient-to-r from-white to-gray-300"></div>
+
+              <p className="text-gray-300 text-lg lg:text-xl leading-relaxed max-w-md font-light">
+                Инновационные технологии для вашего дома и офиса.
+                Надежность в каждом устройстве.
               </p>
 
               {/* Auto-scrolling slider */}
@@ -110,9 +110,9 @@ export default function Home() {
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-white font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
-                    <span className="whitespace-nowrap">100% оригинальные устройства</span>
+                    <span className="whitespace-nowrap">100% ори��инальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
-                    <span className="whitespace-nowrap">По��ная гарантия на все товары</span>
+                    <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Самая качественная техника �� Бухаре</span>
