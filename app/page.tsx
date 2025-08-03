@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black">
       {/* Main Container */}
-      <div className="w-full bg-gray-900">
+      <div className="w-full bg-black">
         {/* Navigation */}
         <nav className="flex items-center justify-center px-8 lg:px-16 py-4 border-b border-gray-800">
           <div className="flex items-center space-x-12">
@@ -94,8 +94,8 @@ export default function Home() {
               <div className="w-24 h-1 bg-white"></div>
               
               <p className="text-gray-300 text-xl lg:text-2xl leading-relaxed max-w-lg font-light">
-                Профессиональные решения в сфере электроники.
-                Качество, надежность, инновации.
+                Профессионал��ные решения в сфере электроники.
+                Качество, надежност��, инновации.
               </p>
             </div>
             
@@ -130,7 +130,7 @@ export default function Home() {
                   // Скролл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // Скролл вверх - предыдущая модель
+                  // Скролл вв��рх - предыдущая модель
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
