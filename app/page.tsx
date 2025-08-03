@@ -345,7 +345,7 @@ export default function Home() {
 
 
         {/* Products Section */}
-        <div className="bg-transparent py-16 px-4 lg:px-8">
+        <div className="bg-white py-16 px-4 lg:px-8">
           <div className="max-w-6xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12">
@@ -549,7 +549,7 @@ export default function Home() {
                     Игровой Ноутбук
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производ��тельности в играх и работе
+                    RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе
                   </p>
                   <div className="text-xl font-semibold text-gray-900 mb-6">
                     ₽ 129,900
