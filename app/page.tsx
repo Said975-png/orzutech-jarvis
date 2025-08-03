@@ -226,7 +226,7 @@ export default function Home() {
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
-                    <span className="whitespace-nowrap">100% оригинальные устройства</span>
+                    <span className="whitespace-nowrap">100% ��ригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
@@ -732,7 +732,7 @@ export default function Home() {
               {/* Product 5 */}
               <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
+
                   <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
@@ -767,7 +767,7 @@ export default function Home() {
               {/* Product 6 */}
               <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
+
                   <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
@@ -802,7 +802,7 @@ export default function Home() {
               {/* Product 7 - Duplicate of Product 1 */}
               <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
+
                   <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
@@ -837,7 +837,7 @@ export default function Home() {
               {/* Product 8 - Duplicate of Product 2 */}
               <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
+
                   <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
@@ -907,7 +907,7 @@ export default function Home() {
               {/* Product 10 - Duplicate of Product 4 */}
               <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
+
                   <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
@@ -942,7 +942,7 @@ export default function Home() {
               {/* Product 11 - Duplicate of Product 5 */}
               <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
+
                   <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
@@ -977,7 +977,7 @@ export default function Home() {
               {/* Product 12 - Duplicate of Product 6 */}
               <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
+
                   <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
