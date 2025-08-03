@@ -105,39 +105,50 @@ export default function Home() {
   }, [activeDropdown])
 
   return (
-    <main className="min-h-screen bg-white relative overflow-hidden">
-      {/* Decorative Wave Background */}
+    <main className="min-h-screen relative overflow-hidden">
+      {/* Premium Gradient Background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        {/* Wave Layer 1 */}
+        {/* Diagonal Gradient Background */}
         <div
-          className="absolute bottom-0 left-0 w-full h-2/3 opacity-30"
+          className="absolute inset-0"
           style={{
-            background: 'radial-gradient(ellipse 150% 100% at 50% 100%, #D1D5DB 0%, transparent 50%)',
-            clipPath: 'ellipse(150% 60% at 50% 100%)'
+            background: 'linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 15%, #C8A2C8 35%, #A78BFA 55%, #8B5CF6 75%, #7C3AED 90%, #6D28D9 100%)'
           }}
         ></div>
 
-        {/* Wave Layer 2 */}
-        <div
-          className="absolute bottom-0 left-0 w-full h-1/2 opacity-25"
-          style={{
-            background: 'radial-gradient(ellipse 120% 80% at 30% 100%, #E5E7EB 0%, transparent 60%)',
-            clipPath: 'ellipse(120% 50% at 30% 100%)'
-          }}
-        ></div>
+        {/* Soft overlay for better text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-purple-900/10"></div>
 
-        {/* Wave Layer 3 */}
-        <div
-          className="absolute bottom-0 right-0 w-full h-1/3 opacity-20"
-          style={{
-            background: 'radial-gradient(ellipse 100% 60% at 70% 100%, #F3F4F6 0%, transparent 70%)',
-            clipPath: 'ellipse(100% 40% at 70% 100%)'
-          }}
-        ></div>
+        {/* Premium White Wave from Top */}
+        <div className="absolute top-0 left-0 w-full h-full z-10">
+          <svg
+            className="absolute top-0 left-0 w-full h-full"
+            viewBox="0 0 1200 800"
+            fill="none"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            {/* Main White Wave */}
+            <path
+              d="M0,0 L1200,0 L1200,280 C1000,320 800,340 600,300 C400,260 200,240 0,280 Z"
+              fill="white"
+              className="drop-shadow-sm"
+            />
+            {/* Secondary subtle wave for depth */}
+            <path
+              d="M0,0 L1200,0 L1200,240 C950,280 700,290 450,260 C200,230 100,220 0,250 Z"
+              fill="white"
+              opacity="0.6"
+              className="drop-shadow-xs"
+            />
+          </svg>
+        </div>
+
+        {/* Subtle gradient overlay for premium feel */}
+        <div className="absolute inset-0 bg-gradient-radial from-white/5 via-transparent to-purple-900/5 opacity-50"></div>
       </div>
 
       {/* Main Container */}
-      <div className="w-full bg-transparent relative z-10">
+      <div className="w-full bg-transparent relative z-20">
         {/* Navigation */}
         <nav className="flex items-center justify-between px-8 lg:px-16 py-4">
           {/* Logo */}
@@ -429,7 +440,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные часы', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
+                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные часы', 'Игр��вые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
@@ -456,7 +467,7 @@ export default function Home() {
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt={"��март Телевизор 55\""}
+                        alt={"Смарт Телевизор 55\""}
                         className="w-full h-full object-cover"
                       />
                     </div>
