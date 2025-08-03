@@ -146,26 +146,37 @@ export default function Home() {
             </div>
 
             {/* Custom Model Selector */}
-            <div className="w-[280px] lg:w-[360px]">
+            <div
+              className="w-[280px] lg:w-[360px]"
+              onWheel={(e) => {
+                e.preventDefault()
+                if (e.deltaY > 0) {
+                  // Скролл вниз - следующая модель
+                  setCurrentModel((prev) => (prev + 1) % models.length)
+                } else {
+                  // ��кролл вверх - предыдущая модель
+                  setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
+                }
+              }}
+            >
               <div className="text-white text-center mb-3 text-sm font-medium">
                 {models[currentModel].name}
               </div>
-              <div className="flex space-x-2 overflow-x-auto scrollbar-hide pb-2">
-                {models.map((model, index) => (
-                  <button
+              <div className="text-center text-gray-400 text-xs mb-2">
+                Прокрутите для смены модели
+              </div>
+              <div className="flex justify-center space-x-1">
+                {models.map((_, index) => (
+                  <div
                     key={index}
-                    onClick={() => setCurrentModel(index)}
                     className={`
-                      flex-shrink-0 w-16 h-16 rounded-lg border-2 transition-all duration-300
+                      w-2 h-2 rounded-full transition-all duration-300
                       ${currentModel === index
-                        ? 'border-white bg-white/10'
-                        : 'border-gray-600 bg-gray-800 hover:border-gray-400'
+                        ? 'bg-white'
+                        : 'bg-gray-600'
                       }
-                      flex items-center justify-center text-xs font-bold text-white
                     `}
-                  >
-                    {index + 1}
-                  </button>
+                  />
                 ))}
               </div>
             </div>
