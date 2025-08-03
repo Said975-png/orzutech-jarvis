@@ -32,7 +32,7 @@ export default function Home() {
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
-    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
+    { id: 5, name: "Умные часы", price: 34900, description: "Современные сма��т-часы с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
   ]
 
@@ -227,7 +227,7 @@ export default function Home() {
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
-                    <span className="whitespace-nowrap">Быстрая доставка и ус��ановка</span>
+                    <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
@@ -241,7 +241,7 @@ export default function Home() {
             {/* Color Selection */}
             <div className="flex items-center space-x-4 mt-8">
               <div className="text-gray-400 text-xs uppercase tracking-wide">
-                Выбо�� цве��а
+                Выбор цвета
               </div>
               <div className="flex space-x-3">
                 {colors.map((colorOption, index) => (
@@ -289,7 +289,7 @@ export default function Home() {
               onWheel={(e) => {
                 e.preventDefault()
                 if (e.deltaY > 0) {
-                  // Скролл вниз - следующая модель
+                  // Скролл вн��з - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
                   // Скролл вверх - предыдущая модель
@@ -511,7 +511,7 @@ export default function Home() {
 
                 <div className="p-6">
                   <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
-                    ��мартфон Premium
+                    Смартфон Premium
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии
@@ -572,7 +572,7 @@ export default function Home() {
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Бе��проводные наушники"
+                        alt="Беспроводные наушники"
                         className="w-full h-full object-cover"
                       />
                     </div>
