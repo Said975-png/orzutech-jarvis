@@ -216,164 +216,246 @@ export default function Home() {
 
 
         {/* Products Section */}
-        <div className="bg-gray-50 p-8 lg:p-16">
+        <div className="bg-white p-8 lg:p-20">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
-            <div className="text-center mb-16">
-              <div className="text-sm text-gray-500 font-medium uppercase tracking-[0.2em] mb-4">
-                ПОПУЛЯРНЫЕ ТОВАРЫ
+            <div className="text-center mb-20">
+              <div className="text-sm text-gray-500 font-medium uppercase tracking-[0.3em] mb-6">
+                КАТАЛОГ ТОВАРОВ
               </div>
-              <h2 className="text-3xl lg:text-4xl font-black text-gray-800 mb-6">
-                КАТАЛОГ <span className="text-blue-600">ПРОДУКТОВ</span>
+              <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-8 tracking-tight">
+                Наша Продукция
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
+              <div className="w-20 h-px bg-gray-900 mx-auto"></div>
             </div>
 
-            {/* Products Grid */}
-            <div className="grid lg:grid-cols-4 gap-6">
-              {/* Featured Product - Large Card */}
-              <div className="lg:col-span-2 lg:row-span-2 group relative bg-gradient-to-br from-blue-500 via-purple-600 to-blue-700 rounded-3xl overflow-hidden p-8 text-white hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-500 hover:scale-[1.02]">
-                <div className="flex flex-col h-full justify-between">
-                  <div>
-                    <div className="text-sm opacity-80 mb-2">PORSCHE DESIGN</div>
-                    <div className="text-4xl lg:text-5xl font-black mb-4">$84</div>
-                    <h3 className="text-xl font-bold mb-2">Porsche Design</h3>
-                    <p className="text-sm opacity-90 mb-6">Life racer dip - on design</p>
+            {/* Products Grid - 4 columns */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+              {/* Product 1 */}
+              <div className="group relative bg-white border border-gray-100 hover:border-gray-200 transition-all duration-500 hover:shadow-lg">
+                <div className="aspect-square bg-gray-50 flex items-center justify-center p-8 relative overflow-hidden">
+                  <div className="w-32 h-32 bg-gray-200 rounded-sm flex items-center justify-center">
+                    <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
                   </div>
 
-                  <div className="flex items-center justify-between">
-                    <div className="flex space-x-2">
-                      <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-xs font-bold">5</div>
-                      <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-xs font-bold">7</div>
-                      <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-xs font-bold">8</div>
-                      <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-xs font-bold">9</div>
-                    </div>
-                    <button className="w-12 h-12 bg-white text-blue-600 rounded-2xl flex items-center justify-center hover:bg-gray-100 transition-colors">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                      </svg>
-                    </button>
-                  </div>
+                  {/* Hover Button */}
+                  <button className="absolute inset-0 bg-black/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="bg-black text-white px-6 py-2 text-sm font-medium tracking-wide">ПОДРОБНЕЕ</span>
+                  </button>
                 </div>
 
-                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 opacity-20">
-                  <div className="w-40 h-40 bg-white/10 rounded-full"></div>
-                  <div className="w-24 h-24 bg-white/10 rounded-full absolute top-8 left-8"></div>
+                <div className="p-6">
+                  <h3 className="text-gray-900 font-medium text-lg mb-3 tracking-tight">
+                    Смарт Телевизор 55"
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                    4K Ultra HD разрешение с поддержкой HDR. Современная Smart TV платформа с доступом к популярным сервисам.
+                  </p>
+                  <div className="text-gray-900 font-light text-xl tracking-wide">
+                    ₽ 89,900
+                  </div>
                 </div>
               </div>
 
               {/* Product 2 */}
-              <div className="group relative bg-gradient-to-br from-pink-400 to-pink-600 rounded-3xl p-6 text-white hover:shadow-xl hover:shadow-pink-500/25 transition-all duration-500 hover:scale-105">
-                <div className="flex flex-col h-full justify-between">
-                  <div>
-                    <h3 className="font-bold text-lg mb-2">Porsche sports lite</h3>
-                    <div className="text-2xl font-black mb-4">$84</div>
+              <div className="group relative bg-white border border-gray-100 hover:border-gray-200 transition-all duration-500 hover:shadow-lg">
+                <div className="aspect-square bg-gray-50 flex items-center justify-center p-8 relative overflow-hidden">
+                  <div className="w-32 h-32 bg-gray-200 rounded-sm flex items-center justify-center">
+                    <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <button className="text-sm underline opacity-80 hover:opacity-100">View details</button>
-                    <button className="w-10 h-10 bg-white text-pink-600 rounded-xl flex items-center justify-center hover:bg-gray-100 transition-colors">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                      </svg>
-                    </button>
-                  </div>
+
+                  <button className="absolute inset-0 bg-black/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="bg-black text-white px-6 py-2 text-sm font-medium tracking-wide">ПОДРОБНЕЕ</span>
+                  </button>
                 </div>
-                <div className="absolute right-2 top-1/2 transform -translate-y-1/2 opacity-20">
-                  <div className="w-20 h-20 bg-white/20 rounded-full"></div>
+
+                <div className="p-6">
+                  <h3 className="text-gray-900 font-medium text-lg mb-3 tracking-tight">
+                    Смартфон Premium
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                    Флагманский смартфон с тройной камерой 108MP. Быстрая зарядка 65W и 128GB встроенной памяти.
+                  </p>
+                  <div className="text-gray-900 font-light text-xl tracking-wide">
+                    ₽ 59,900
+                  </div>
                 </div>
               </div>
 
               {/* Product 3 */}
-              <div className="group relative bg-gradient-to-br from-orange-400 to-orange-600 rounded-3xl p-6 text-white hover:shadow-xl hover:shadow-orange-500/25 transition-all duration-500 hover:scale-105">
-                <div className="flex flex-col h-full justify-between">
-                  <div>
-                    <h3 className="font-bold text-lg mb-2">Carrera sports foot</h3>
-                    <div className="text-2xl font-black mb-4">$67</div>
+              <div className="group relative bg-white border border-gray-100 hover:border-gray-200 transition-all duration-500 hover:shadow-lg">
+                <div className="aspect-square bg-gray-50 flex items-center justify-center p-8 relative overflow-hidden">
+                  <div className="w-32 h-32 bg-gray-200 rounded-sm flex items-center justify-center">
+                    <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <button className="text-sm underline opacity-80 hover:opacity-100">View details</button>
-                    <button className="w-10 h-10 bg-white text-orange-600 rounded-xl flex items-center justify-center hover:bg-gray-100 transition-colors">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                      </svg>
-                    </button>
-                  </div>
+
+                  <button className="absolute inset-0 bg-black/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="bg-black text-white px-6 py-2 text-sm font-medium tracking-wide">ПОДРОБНЕЕ</span>
+                  </button>
                 </div>
-                <div className="absolute right-2 top-1/2 transform -translate-y-1/2 opacity-20">
-                  <div className="w-20 h-20 bg-white/20 rounded-full"></div>
+
+                <div className="p-6">
+                  <h3 className="text-gray-900 font-medium text-lg mb-3 tracking-tight">
+                    Игровой Ноутбук
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                    Профессиональный игровой ноутбук с RTX 4060, 16GB RAM и дисплеем 144Hz для максимальной производительности.
+                  </p>
+                  <div className="text-gray-900 font-light text-xl tracking-wide">
+                    ₽ 129,900
+                  </div>
                 </div>
               </div>
 
               {/* Product 4 */}
-              <div className="group relative bg-gradient-to-br from-red-500 to-red-700 rounded-3xl p-6 text-white hover:shadow-xl hover:shadow-red-500/25 transition-all duration-500 hover:scale-105">
-                <div className="flex flex-col h-full justify-between">
-                  <div>
-                    <h3 className="font-bold text-lg mb-2">Porsche sports line</h3>
-                    <div className="text-2xl font-black mb-4">$59</div>
+              <div className="group relative bg-white border border-gray-100 hover:border-gray-200 transition-all duration-500 hover:shadow-lg">
+                <div className="aspect-square bg-gray-50 flex items-center justify-center p-8 relative overflow-hidden">
+                  <div className="w-32 h-32 bg-gray-200 rounded-sm flex items-center justify-center">
+                    <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                    </svg>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <button className="text-sm underline opacity-80 hover:opacity-100">View details</button>
-                    <button className="w-10 h-10 bg-white text-red-600 rounded-xl flex items-center justify-center hover:bg-gray-100 transition-colors">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                      </svg>
-                    </button>
-                  </div>
+
+                  <button className="absolute inset-0 bg-black/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="bg-black text-white px-6 py-2 text-sm font-medium tracking-wide">ПОДРО��НЕЕ</span>
+                  </button>
                 </div>
-                <div className="absolute right-2 top-1/2 transform -translate-y-1/2 opacity-20">
-                  <div className="w-20 h-20 bg-white/20 rounded-full"></div>
+
+                <div className="p-6">
+                  <h3 className="text-gray-900 font-medium text-lg mb-3 tracking-tight">
+                    Беспроводные Наушники
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                    Премиальные наушники с активным шумоподавлением. Bluetooth 5.3 и время работы до 30 часов.
+                  </p>
+                  <div className="text-gray-900 font-light text-xl tracking-wide">
+                    ₽ 19,900
+                  </div>
                 </div>
               </div>
 
               {/* Product 5 */}
-              <div className="group relative bg-gradient-to-br from-green-400 to-green-600 rounded-3xl p-6 text-white hover:shadow-xl hover:shadow-green-500/25 transition-all duration-500 hover:scale-105">
-                <div className="flex flex-col h-full justify-between">
-                  <div>
-                    <h3 className="font-bold text-lg mb-2">Smart Headphones</h3>
-                    <div className="text-2xl font-black mb-4">$199</div>
+              <div className="group relative bg-white border border-gray-100 hover:border-gray-200 transition-all duration-500 hover:shadow-lg">
+                <div className="aspect-square bg-gray-50 flex items-center justify-center p-8 relative overflow-hidden">
+                  <div className="w-32 h-32 bg-gray-200 rounded-sm flex items-center justify-center">
+                    <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <button className="text-sm underline opacity-80 hover:opacity-100">View details</button>
-                    <button className="w-10 h-10 bg-white text-green-600 rounded-xl flex items-center justify-center hover:bg-gray-100 transition-colors">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                      </svg>
-                    </button>
-                  </div>
+
+                  <button className="absolute inset-0 bg-black/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="bg-black text-white px-6 py-2 text-sm font-medium tracking-wide">ПОДРОБНЕЕ</span>
+                  </button>
                 </div>
-                <div className="absolute right-2 top-1/2 transform -translate-y-1/2 opacity-20">
-                  <div className="w-20 h-20 bg-white/20 rounded-full"></div>
+
+                <div className="p-6">
+                  <h3 className="text-gray-900 font-medium text-lg mb-3 tracking-tight">
+                    Экшн Камера 4K
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                    Компактная экшн-камера с записью 4K, водонепроницаемым корпусом и системой стабилизации изображения.
+                  </p>
+                  <div className="text-gray-900 font-light text-xl tracking-wide">
+                    ₽ 29,900
+                  </div>
                 </div>
               </div>
 
               {/* Product 6 */}
-              <div className="group relative bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-3xl p-6 text-white hover:shadow-xl hover:shadow-indigo-500/25 transition-all duration-500 hover:scale-105">
-                <div className="flex flex-col h-full justify-between">
-                  <div>
-                    <h3 className="font-bold text-lg mb-2">Gaming Laptop Pro</h3>
-                    <div className="text-2xl font-black mb-4">$1299</div>
+              <div className="group relative bg-white border border-gray-100 hover:border-gray-200 transition-all duration-500 hover:shadow-lg">
+                <div className="aspect-square bg-gray-50 flex items-center justify-center p-8 relative overflow-hidden">
+                  <div className="w-32 h-32 bg-gray-200 rounded-sm flex items-center justify-center">
+                    <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+                    </svg>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <button className="text-sm underline opacity-80 hover:opacity-100">View details</button>
-                    <button className="w-10 h-10 bg-white text-indigo-600 rounded-xl flex items-center justify-center hover:bg-gray-100 transition-colors">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                      </svg>
-                    </button>
+
+                  <button className="absolute inset-0 bg-black/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="bg-black text-white px-6 py-2 text-sm font-medium tracking-wide">ПОДРОБНЕЕ</span>
+                  </button>
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-gray-900 font-medium text-lg mb-3 tracking-tight">
+                    Wi-Fi 6 Роутер
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                    Профессиональный роутер с поддержкой Wi-Fi 6, Gigabit портами и возможностью подключения до 100 устройств.
+                  </p>
+                  <div className="text-gray-900 font-light text-xl tracking-wide">
+                    ₽ 14,900
                   </div>
                 </div>
-                <div className="absolute right-2 top-1/2 transform -translate-y-1/2 opacity-20">
-                  <div className="w-20 h-20 bg-white/20 rounded-full"></div>
+              </div>
+
+              {/* Product 7 */}
+              <div className="group relative bg-white border border-gray-100 hover:border-gray-200 transition-all duration-500 hover:shadow-lg">
+                <div className="aspect-square bg-gray-50 flex items-center justify-center p-8 relative overflow-hidden">
+                  <div className="w-32 h-32 bg-gray-200 rounded-sm flex items-center justify-center">
+                    <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                    </svg>
+                  </div>
+
+                  <button className="absolute inset-0 bg-black/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="bg-black text-white px-6 py-2 text-sm font-medium tracking-wide">ПОДРОБНЕЕ</span>
+                  </button>
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-gray-900 font-medium text-lg mb-3 tracking-tight">
+                    Умная Колонка
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                    Интеллектуальная колонка с голосовым помощником. Высокое качество звука и управление умным домом.
+                  </p>
+                  <div className="text-gray-900 font-light text-xl tracking-wide">
+                    ₽ 12,900
+                  </div>
+                </div>
+              </div>
+
+              {/* Product 8 */}
+              <div className="group relative bg-white border border-gray-100 hover:border-gray-200 transition-all duration-500 hover:shadow-lg">
+                <div className="aspect-square bg-gray-50 flex items-center justify-center p-8 relative overflow-hidden">
+                  <div className="w-32 h-32 bg-gray-200 rounded-sm flex items-center justify-center">
+                    <svg className="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m3 0H4a1 1 0 00-1 1v16a1 1 0 001 1h16a1 1 0 001-1V5a1 1 0 00-1-1z" />
+                    </svg>
+                  </div>
+
+                  <button className="absolute inset-0 bg-black/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="bg-black text-white px-6 py-2 text-sm font-medium tracking-wide">ПОДРОБНЕЕ</span>
+                  </button>
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-gray-900 font-medium text-lg mb-3 tracking-tight">
+                    Планшет Pro
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                    Профессиональный планшет с 12.9" дисплеем, поддержкой стилуса и производительным процессором для работы.
+                  </p>
+                  <div className="text-gray-900 font-light text-xl tracking-wide">
+                    ₽ 79,900
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Filter Tabs */}
-            <div className="flex justify-center mt-12 space-x-8">
-              <button className="text-gray-400 hover:text-gray-600 transition-colors text-sm">New arrivals</button>
-              <button className="text-gray-400 hover:text-gray-600 transition-colors text-sm">Popular</button>
-              <button className="text-gray-400 hover:text-gray-600 transition-colors text-sm">Recommend</button>
-              <button className="bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium">Next</button>
+            {/* Bottom Action */}
+            <div className="text-center mt-20">
+              <button className="bg-gray-900 text-white px-12 py-4 font-medium tracking-wide hover:bg-gray-800 transition-colors duration-300">
+                ПОСМОТРЕТЬ ВСЕ ТОВАРЫ
+              </button>
             </div>
           </div>
         </div>
