@@ -78,6 +78,19 @@ export default function Home() {
           <div className="absolute -left-20 top-1/4 bottom-1/4 w-64 bg-gradient-to-r from-white/20 via-white/8 to-transparent blur-2xl opacity-40"></div>
           <div className="absolute -left-10 top-1/3 bottom-1/3 w-32 bg-gradient-to-r from-white/30 via-white/10 to-transparent blur-xl opacity-30"></div>
 
+          {/* Floating Particles */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-20 left-[10%] w-2 h-2 bg-white/40 rounded-full animate-pulse"></div>
+            <div className="absolute top-40 left-[20%] w-1 h-1 bg-blue-400/60 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+            <div className="absolute top-32 right-[15%] w-1.5 h-1.5 bg-white/30 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+            <div className="absolute bottom-32 left-[15%] w-2 h-2 bg-cyan-400/50 rounded-full animate-pulse" style={{animationDelay: '3s'}}></div>
+            <div className="absolute bottom-20 right-[25%] w-1 h-1 bg-white/50 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+          </div>
+
+          {/* Glowing Orbs */}
+          <div className="absolute top-16 right-[10%] w-16 h-16 bg-gradient-radial from-blue-400/20 to-transparent rounded-full blur-md animate-pulse"></div>
+          <div className="absolute bottom-24 left-[8%] w-12 h-12 bg-gradient-radial from-cyan-300/15 to-transparent rounded-full blur-lg animate-pulse" style={{animationDelay: '2s'}}></div>
+
 
 
           {/* Left Content */}
