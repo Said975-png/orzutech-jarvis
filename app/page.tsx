@@ -65,6 +65,13 @@ export default function Home() {
             </div>
 
             <div className="flex items-center space-x-6">
+              <button className="text-gray-300 hover:text-white transition-colors text-base font-medium font-sans">
+                Вход
+              </button>
+              <button className="text-gray-300 hover:text-white transition-colors text-base font-semibold font-sans">
+                Регистрация
+              </button>
+
               {/* Search Bar */}
               <div className="relative hidden lg:block">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -78,13 +85,6 @@ export default function Home() {
                   className="bg-gray-800 text-white placeholder-gray-400 pl-10 pr-4 py-2 rounded-lg border border-gray-700 focus:border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400/20 transition-colors w-64 text-sm font-sans"
                 />
               </div>
-
-              <button className="text-gray-300 hover:text-white transition-colors text-base font-medium font-sans">
-                Вход
-              </button>
-              <button className="bg-white text-black px-5 py-2 text-base font-semibold font-sans hover:bg-gray-100 transition-colors">
-                Регистрация
-              </button>
             </div>
           </div>
         </nav>
