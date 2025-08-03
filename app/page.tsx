@@ -21,7 +21,7 @@ export default function Home() {
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
-      name: "Астронавт"
+      name: "Астро��авт"
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/ShopifyPickup.glb",
@@ -98,24 +98,15 @@ export default function Home() {
 
         {/* Main Content */}
         <div className="relative grid lg:grid-cols-2 gap-16 p-8 lg:p-16 min-h-[70vh] overflow-hidden">
-          {/* Enhanced Depth Effects */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-50/30 to-gray-100/50 pointer-events-none"></div>
-          <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-gray-200/20 pointer-events-none"></div>
-
           {/* Light Effect from Left */}
           <div className="absolute -left-32 top-0 bottom-0 w-96 bg-gradient-to-r from-gray-200/10 via-gray-200/5 to-transparent blur-3xl opacity-60"></div>
           <div className="absolute -left-20 top-1/4 bottom-1/4 w-64 bg-gradient-to-r from-gray-200/20 via-gray-200/8 to-transparent blur-2xl opacity-40"></div>
           <div className="absolute -left-10 top-1/3 bottom-1/3 w-32 bg-gradient-to-r from-gray-200/30 via-gray-200/10 to-transparent blur-xl opacity-30"></div>
 
-          {/* Soft ambient lighting */}
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-96 h-32 bg-gradient-to-b from-yellow-400/5 to-transparent blur-2xl opacity-40"></div>
-
 
 
           {/* Left Content */}
           <div className="relative flex flex-col justify-center space-y-12 z-10">
-            {/* Subtle content shadow */}
-            <div className="absolute -inset-8 bg-gradient-to-r from-white/40 via-white/20 to-transparent rounded-3xl blur-xl opacity-60 -z-10"></div>
             <div className="space-y-6">
               <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em]">
                 СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
@@ -128,21 +119,21 @@ export default function Home() {
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
               <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-md font-light">
-                Наша деятельность: Продажа Телефонов и аксессуар��в, Планшетов, разных Гаджетов и много мно��о интересного.
+                Наша деятельность: Продажа Телефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
               </p>
 
               {/* Auto-scrolling slider */}
               <div className="relative overflow-hidden max-w-lg h-12">
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
-                    <span className="whitespace-nowrap">Са��ая качественная техника в Бухаре</span>
+                    <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
-                    <span className="whitespace-nowrap">Качественн��е обслуживание</span>
+                    <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
                 </div>
               </div>
@@ -151,7 +142,7 @@ export default function Home() {
             {/* Color Selection */}
             <div className="flex items-center space-x-4 mt-8">
               <div className="text-gray-400 text-xs uppercase tracking-wide">
-                Выбор цвета
+                Выбо�� цвета
               </div>
               <div className="flex space-x-3">
                 {colors.map((colorOption, index) => (
