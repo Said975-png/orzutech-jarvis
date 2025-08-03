@@ -29,8 +29,8 @@ export default function Home() {
 
   const products: Product[] = [
     { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
-    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
-    { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной про��зводительности в играх и работе" },
+    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профес��иональной фотографии" },
+    { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
@@ -601,7 +601,7 @@ export default function Home() {
 
               {/* Product 5 */}
               <div className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-500 ease-out hover:scale-[1.02] border border-gray-100">
-                <div className="aspect-square bg-gray-50 rounded-t-lg overflow-hidden relative">
+                <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
@@ -619,7 +619,7 @@ export default function Home() {
                     Умные часы
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Современные смарт-часы с мониторингом здоровья и спортивными фу��кциями
+                    Современные смарт-часы с мониторингом здоровья и спортивными функциями
                   </p>
                   <div className="text-xl font-semibold text-gray-900 mb-6">
                     ₽ 34,900
