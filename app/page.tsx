@@ -225,7 +225,7 @@ export default function Home() {
               <div className="relative overflow-hidden max-w-lg h-12">
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
-                    <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
+                    <span className="whitespace-nowrap">Самая качест��енная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
@@ -799,7 +799,7 @@ export default function Home() {
               </div>
 
               {/* Product 6 */}
-              <div className="group bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] border border-white/20">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -834,7 +834,7 @@ export default function Home() {
               </div>
 
               {/* Product 7 - Duplicate of Product 1 */}
-              <div className="group bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] border border-white/20">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -869,7 +869,7 @@ export default function Home() {
               </div>
 
               {/* Product 8 - Duplicate of Product 2 */}
-              <div className="group bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] border border-white/20">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -904,7 +904,7 @@ export default function Home() {
               </div>
 
               {/* Product 9 - Duplicate of Product 3 */}
-              <div className="group bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] border border-white/20">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
                 <div className="aspect-[4/3] bg-white/50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 group-hover:from-white/40 group-hover:to-white/20 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -974,7 +974,7 @@ export default function Home() {
               </div>
 
               {/* Product 11 - Duplicate of Product 5 */}
-              <div className="group bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] border border-white/20">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -1009,7 +1009,7 @@ export default function Home() {
               </div>
 
               {/* Product 12 - Duplicate of Product 6 */}
-              <div className="group bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] border border-white/20">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -1054,7 +1054,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-200 p-8 lg:p-16 text-center">
           <p className="text-gray-600 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
+            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВС�� ПРАВА ЗАЩИЩЕНЫ.
           </p>
         </div>
       </div>
