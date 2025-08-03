@@ -28,12 +28,12 @@ export default function Home() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
   const products: Product[] = [
-    { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
-    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
-    { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
-    { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
-    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
-    { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и твор��ества с поддержкой стилуса" }
+    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
+    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
+    { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
+    { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
+    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спортивными функциями" },
+    { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
   ]
 
   const addToCart = (product: Product) => {
@@ -65,8 +65,8 @@ export default function Home() {
       name: "Астронавт"
     },
     {
-      url: "https://modelviewer.dev/shared-assets/models/ShopifyPickup.glb",
-      name: "Машина"
+      url: "https://modelviewer.dev/shared-assets/models/RobotExpressive.glb",
+      name: "Ро��от"
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/reflective-sphere.gltf",
@@ -76,7 +76,7 @@ export default function Home() {
 
   const colors = [
     { name: "Белый", color: "bg-white", border: "border-gray-300" },
-    { name: "Черный", color: "bg-black", border: "border-gray-700" },
+    { name: "��ерный", color: "bg-black", border: "border-gray-700" },
     { name: "Серый", color: "bg-gray-400", border: "border-gray-500" }
   ]
 
@@ -165,7 +165,7 @@ export default function Home() {
             </div>
             <input
               type="search"
-              placeholder="Поиск..."
+              placeholder="П��иск..."
               className="w-full bg-white/90 backdrop-blur-sm text-gray-800 placeholder-gray-500 pl-10 pr-4 py-2 rounded-full border border-white/30 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20 transition-colors text-sm font-sans shadow-lg"
             />
           </div>
@@ -218,7 +218,7 @@ export default function Home() {
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
               <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-md font-light">
-                Наша деятельность: Продажа Телефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
+                Наша деятельность: Продажа Телефонов �� аксессуаров, Планшетов, разных Га��жетов и много много инте��есно��о.
               </p>
 
               {/* Auto-scrolling slider */}
@@ -226,7 +226,7 @@ export default function Home() {
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
-                    <span className="whitespace-nowrap">100% оригинальные устройства</span>
+                    <span className="whitespace-nowrap">100% ��ригинальные устр��йства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
@@ -289,7 +289,7 @@ export default function Home() {
               onWheel={(e) => {
                 e.preventDefault()
                 if (e.deltaY > 0) {
-                  // Скролл вниз - следующая модель
+                  // Ск��олл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
                   // Скролл вверх - предыдущая модель
@@ -325,7 +325,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-black text-black mb-2">500+</div>
-              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Товаров</div>
+              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Товаро��</div>
             </div>
             <div>
               <div className="text-4xl font-black text-black mb-2">150+</div>
@@ -337,7 +337,7 @@ export default function Home() {
             </div>
             <div>
               <div className="text-4xl font-black text-black mb-2">99%</div>
-              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Качество</div>
+              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Качеств��</div>
             </div>
           </div>
         </div>
@@ -350,7 +350,7 @@ export default function Home() {
             {/* Section Header */}
             <div className="text-center mb-12">
               <h2 className="text-3xl font-light text-gray-900 mb-2 tracking-wide">
-                Хит продаж
+                Хит прода��
               </h2>
               <div className="w-16 h-px bg-gray-400 mx-auto"></div>
             </div>
@@ -359,127 +359,127 @@ export default function Home() {
             <div className="relative">
               <div className="flex animate-scroll space-x-6">
                 {/* Slide 1 - Grooming Kit */}
-                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
+                <div className="flex-shrink-0 w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F4b42886ccd0846e8845f7fea196bdae6?format=webp&width=800"
                       alt="Grooming Kit Pro"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Grooming Kit Pro</h3>
-                    <p className="text-gray-600 text-sm mb-4">Профессиональный набор для ухода</p>
-                    <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
+                  <div className="p-4 border-t border-gray-100">
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Grooming Kit Pro</h3>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">��рофессиональный набор для ухода</p>
+                    <div className="text-2xl font-bold text-red-600">�� 8,900</div>
                   </div>
                 </div>
 
                 {/* Slide 2 - Apple Watch */}
-                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
+                <div className="flex-shrink-0 w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2Fad77a22293914f76ad5c86b0cc1cb048?format=webp&width=800"
                       alt="Apple Watch Series 10"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Apple Watch Series 10</h3>
-                    <p className="text-gray-600 text-sm mb-4">Rose Gold, Black 42MM/46MM</p>
+                  <div className="p-4 border-t border-gray-100">
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Apple Watch Series 10</h3>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Rose Gold, Black 42MM/46MM</p>
                     <div className="text-2xl font-bold text-red-600">₽ 35,000</div>
                   </div>
                 </div>
 
                 {/* Slide 3 - PlayStation */}
-                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
+                <div className="flex-shrink-0 w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F593de0ffc9344103bcb253bcf1c49c90?format=webp&width=800"
                       alt="PlayStation 5 Slim"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">PlayStation 5 Slim</h3>
-                    <p className="text-gray-600 text-sm mb-4">Игровая консоль нового поколения</p>
+                  <div className="p-4 border-t border-gray-100">
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">PlayStation 5 Slim</h3>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консоль нового поколения</p>
                     <div className="text-2xl font-bold text-red-600">₽ 45,000</div>
                   </div>
                 </div>
 
                 {/* Slide 4 - Samsung Watch */}
-                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
+                <div className="flex-shrink-0 w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F1f88af23807446fbae545f790458cfa0?format=webp&width=800"
                       alt="Samsung Watch Ultra"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Samsung Watch Ultra</h3>
-                    <p className="text-gray-600 text-sm mb-4">Умные часы с премиум функциями</p>
+                  <div className="p-4 border-t border-gray-100">
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Samsung Watch Ultra</h3>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Умные часы с премиум функциями</p>
                     <div className="text-2xl font-bold text-red-600">₽ 33,500</div>
                   </div>
                 </div>
 
                 {/* Slide 5 - Huawei Set */}
-                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
+                <div className="flex-shrink-0 w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F61d1bfb408604835a08844fc969d435c?format=webp&width=800"
                       alt="Huawei Watch Fit 3 + FreeBuds"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Huawei Watch Fit 3</h3>
-                    <p className="text-gray-600 text-sm mb-4">+ FreeBuds SE 3 в подарок</p>
+                  <div className="p-4 border-t border-gray-100">
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Huawei Watch Fit 3</h3>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">+ FreeBuds SE 3 в подарок</p>
                     <div className="text-2xl font-bold text-red-600">₽ 12,500</div>
                   </div>
                 </div>
 
                 {/* Duplicate slides for seamless loop */}
-                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
+                <div className="flex-shrink-0 w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F4b42886ccd0846e8845f7fea196bdae6?format=webp&width=800"
                       alt="Grooming Kit Pro"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Grooming Kit Pro</h3>
-                    <p className="text-gray-600 text-sm mb-4">Профессиональный набор для ухода</p>
+                  <div className="p-4 border-t border-gray-100">
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Grooming Kit Pro</h3>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональный набор для ухода</p>
                     <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
                   </div>
                 </div>
 
-                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
+                <div className="flex-shrink-0 w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2Fad77a22293914f76ad5c86b0cc1cb048?format=webp&width=800"
                       alt="Apple Watch Series 10"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Apple Watch Series 10</h3>
-                    <p className="text-gray-600 text-sm mb-4">Rose Gold, Black 42MM/46MM</p>
+                  <div className="p-4 border-t border-gray-100">
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Apple Watch Series 10</h3>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Rose Gold, Black 42MM/46MM</p>
                     <div className="text-2xl font-bold text-red-600">₽ 35,000</div>
                   </div>
                 </div>
 
-                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
+                <div className="flex-shrink-0 w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F593de0ffc9344103bcb253bcf1c49c90?format=webp&width=800"
                       alt="PlayStation 5 Slim"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">PlayStation 5 Slim</h3>
-                    <p className="text-gray-600 text-sm mb-4">Игровая консоль нового поколения</p>
+                  <div className="p-4 border-t border-gray-100">
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">PlayStation 5 Slim</h3>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консоль нового поколения</p>
                     <div className="text-2xl font-bold text-red-600">₽ 45,000</div>
                   </div>
                 </div>
@@ -584,7 +584,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные часы', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
+                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
@@ -601,144 +601,493 @@ export default function Home() {
             </div>
 
             {/* Products Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 border-t border-gray-100">
 
               {/* Product 1 */}
-              <div className="group bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] border border-white/20">
-                <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
-                  <div className="relative z-10 h-full flex items-center justify-center">
-                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt={"Смарт Телевизор 55\""}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                  </div>
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                {/* Discount badge */}
+                <div className="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md z-10">
+                  -10%
                 </div>
 
-                <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
+                <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                    alt={"Смарт Телевизор 55\""}
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="p-4 border-t border-gray-100">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                     Смарт Телевизор 55"
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+
+                  {/* Rating */}
+                  <div className="flex items-center mb-2">
+                    <div className="flex text-yellow-400 text-sm">
+                      {"★".repeat(5)}
+                    </div>
+                    <span className="text-xs text-gray-500 ml-2">(24)</span>
+                  </div>
+
+                  <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     4K Ultra HD с HDR
                   </p>
-                  <div className="text-xl font-semibold text-gray-900 mb-6">
-                    ₽ 89,900
+
+                  <div className="flex items-center justify-between mb-3">
+                    <div>
+                      <div className="text-sm text-gray-400 line-through">$ 999</div>
+                      <div className="text-lg font-bold text-gray-900">$ 899</div>
+                    </div>
+                    <div className="text-xs text-green-600 font-medium">В наличии</div>
+                  </div>
+
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => addToCart(products[0])}
+                      className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
+                    >
+                      В корзину
+                    </button>
+                    <button className="p-2.5 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                      <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Product 2 */}
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                {/* Discount badge */}
+                <div className="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md z-10">
+                  -15%
+                </div>
+
+                <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                    alt="Смартфон Premium"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="p-4 border-t border-gray-100">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
+                    Смартфон Premium
+                  </h3>
+
+                  {/* Rating */}
+                  <div className="flex items-center mb-2">
+                    <div className="flex text-yellow-400 text-sm">
+                      {"★".repeat(5)}
+                    </div>
+                    <span className="text-xs text-gray-500 ml-2">(18)</span>
+                  </div>
+
+                  <p className="text-xs text-gray-600 mb-3 line-clamp-2">
+                    Тройная камера, зарядка 65W
+                  </p>
+
+                  <div className="flex items-center justify-between mb-3">
+                    <div>
+                      <div className="text-sm text-gray-400 line-through">$ 699</div>
+                      <div className="text-lg font-bold text-gray-900">$ 599</div>
+                    </div>
+                    <div className="text-xs text-green-600 font-medium">В наличии</div>
+                  </div>
+
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => addToCart(products[1])}
+                      className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
+                    >
+                      В корзину
+                    </button>
+                    <button className="p-2.5 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                      <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Product 3 */}
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                {/* Discount badge */}
+                <div className="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md z-10">
+                  -20%
+                </div>
+
+                <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                    alt="Игровой Ноутбук"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="p-4 border-t border-gray-100">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
+                    Игровой Ноутбук
+                  </h3>
+
+                  {/* Rating */}
+                  <div className="flex items-center mb-2">
+                    <div className="flex text-yellow-400 text-sm">
+                      {"★".repeat(5)}
+                    </div>
+                    <span className="text-xs text-gray-500 ml-2">(12)</span>
+                  </div>
+
+                  <p className="text-xs text-gray-600 mb-3 line-clamp-2">
+                    RTX 4060, 16GB RAM, 144Hz
+                  </p>
+
+                  <div className="flex items-center justify-between mb-3">
+                    <div>
+                      <div className="text-sm text-gray-400 line-through">$ 1,499</div>
+                      <div className="text-lg font-bold text-gray-900">$ 1,299</div>
+                    </div>
+                    <div className="text-xs text-green-600 font-medium">В наличии</div>
+                  </div>
+
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => addToCart(products[2])}
+                      className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
+                    >
+                      В корзину
+                    </button>
+                    <button className="p-2.5 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                      <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Product 4 */}
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                {/* Discount badge */}
+                <div className="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md z-10">
+                  -25%
+                </div>
+
+                <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                    alt="Беспроводные н��ушники"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="p-4 border-t border-gray-100">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
+                    Беспроводные наушники
+                  </h3>
+
+                  {/* Rating */}
+                  <div className="flex items-center mb-2">
+                    <div className="flex text-yellow-400 text-sm">
+                      {"★".repeat(4)}★
+                    </div>
+                    <span className="text-xs text-gray-500 ml-2">(35)</span>
+                  </div>
+
+                  <p className="text-xs text-gray-600 mb-3 line-clamp-2">
+                    Premium с шумоподавлением
+                  </p>
+
+                  <div className="flex items-center justify-between mb-3">
+                    <div>
+                      <div className="text-sm text-gray-400 line-through">$ 329</div>
+                      <div className="text-lg font-bold text-gray-900">$ 249</div>
+                    </div>
+                    <div className="text-xs text-green-600 font-medium">В наличии</div>
+                  </div>
+
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => addToCart(products[3])}
+                      className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
+                    >
+                      В корзину
+                    </button>
+                    <button className="p-2.5 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                      <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Product 5 */}
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                    alt="Умные часы"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="p-4 border-t border-gray-100">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
+                    Умные часы
+                  </h3>
+                  <p className="text-xs text-gray-600 mb-3 line-clamp-2">
+                    Мониторинг здоровья и с��орт
+                  </p>
+                  <div className="text-lg font-bold text-gray-900">
+                    $ 349
                   </div>
 
                   <button
-                    onClick={() => addToCart(products[0])}
-                    className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400"
+                    onClick={() => addToCart(products[4])}
+                    className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
+                  >
+                    Заказ��ть
+                  </button>
+                </div>
+              </div>
+
+              {/* Product 6 */}
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                    alt="Планшет Pro"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="p-4 border-t border-gray-100">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
+                    Планшет Pro
+                  </h3>
+                  <p className="text-xs text-gray-600 mb-3 line-clamp-2">
+                    Профессиональный с стилусом
+                  </p>
+                  <div className="text-lg font-bold text-gray-900">
+                    $ 799
+                  </div>
+
+                  <button
+                    onClick={() => addToCart(products[5])}
+                    className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
                   >
                     Заказать
                   </button>
                 </div>
               </div>
 
-              {/* Product 2 */}
-              <div className="group bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] border border-white/20">
-                <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
+              {/* Product 7 - Duplicate of Product 1 */}
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                    alt={"Смарт Телевизор 55\""}
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="p-4 border-t border-gray-100">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
+                    См��рт Телевизор 55"
+                  </h3>
+                  <p className="text-xs text-gray-600 mb-3 line-clamp-2">
+                    4K Ultra HD с HDR
+                  </p>
+                  <div className="text-lg font-bold text-gray-900">
+                    $ 899
+                  </div>
+
+                  <button
+                    onClick={() => addToCart(products[0])}
+                    className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
+                  >
+                    ��аказать
+                  </button>
+                </div>
+              </div>
+
+              {/* Product 8 - Duplicate of Product 2 */}
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
+
                   <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Смартфон Premium"
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
+                <div className="p-4 border-t border-gray-100">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                     Смартфон Premium
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                  <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     Тройная камера, зарядка 65W
                   </p>
-                  <div className="text-xl font-semibold text-gray-900 mb-6">
-                    ₽ 59,900
+                  <div className="text-lg font-bold text-gray-900">
+                    $ 599
                   </div>
 
                   <button
                     onClick={() => addToCart(products[1])}
-                    className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400"
+                    className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
                   >
                     Заказать
                   </button>
                 </div>
               </div>
 
-              {/* Product 3 */}
-              <div className="group bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] border border-white/20">
+              {/* Product 9 - Duplicate of Product 3 */}
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                 <div className="aspect-[4/3] bg-white/50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 group-hover:from-white/40 group-hover:to-white/20 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Игровой Ноутбук"
-                        className="w-full h-full object-contain"
+                        alt="Игровой Ноутбу��"
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
+                <div className="p-4 border-t border-gray-100">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                     Игровой Ноутбук
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                  <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     RTX 4060, 16GB RAM, 144Hz
                   </p>
-                  <div className="text-xl font-semibold text-gray-900 mb-6">
-                    ₽ 129,900
+                  <div className="text-lg font-bold text-gray-900">
+                    $ 1,299
                   </div>
 
                   <button
                     onClick={() => addToCart(products[2])}
-                    className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400"
+                    className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
                   >
                     Заказать
                   </button>
                 </div>
               </div>
 
-              {/* Product 4 */}
-              <div className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-500 ease-out hover:scale-[1.02] border border-gray-100">
-                <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
+              {/* Product 10 - Duplicate of Product 4 */}
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
+
                   <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Беспроводные наушники"
-                        className="w-full h-full object-contain"
+                        alt="Беспроводные н��ушники"
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
+                <div className="p-4 border-t border-gray-100">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                     Беспроводные наушники
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Premium с шумоподавлением
+                  <p className="text-xs text-gray-600 mb-3 line-clamp-2">
+                    Premium с шумоп��давлением
                   </p>
-                  <div className="text-xl font-semibold text-gray-900 mb-6">
-                    ₽ 24,900
+                  <div className="text-lg font-bold text-gray-900">
+                    $ 249
                   </div>
 
                   <button
                     onClick={() => addToCart(products[3])}
-                    className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400"
+                    className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
                   >
                     Заказать
+                  </button>
+                </div>
+              </div>
+
+              {/* Product 11 - Duplicate of Product 5 */}
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
+
+                  <div className="relative z-10 h-full flex items-center justify-center">
+                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                        alt="Умные часы"
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-4 border-t border-gray-100">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
+                    Умные часы
+                  </h3>
+                  <p className="text-xs text-gray-600 mb-3 line-clamp-2">
+                    Мониторинг здоровья и спорт
+                  </p>
+                  <div className="text-lg font-bold text-gray-900">
+                    $ 349
+                  </div>
+
+                  <button
+                    onClick={() => addToCart(products[4])}
+                    className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
+                  >
+                    Заказать
+                  </button>
+                </div>
+              </div>
+
+              {/* Product 12 - Duplicate of Product 6 */}
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
+
+                  <div className="relative z-10 h-full flex items-center justify-center">
+                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                        alt="Планшет Pro"
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-4 border-t border-gray-100">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
+                    Планшет Pro
+                  </h3>
+                  <p className="text-xs text-gray-600 mb-3 line-clamp-2">
+                    Профессиональный с стилусом
+                  </p>
+                  <div className="text-lg font-bold text-gray-900">
+                    $ 799
+                  </div>
+
+                  <button
+                    onClick={() => addToCart(products[5])}
+                    className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
+                  >
+                    Зака��ать
                   </button>
                 </div>
               </div>
@@ -754,7 +1103,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-200 p-8 lg:p-16 text-center">
           <p className="text-gray-600 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
+            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕ��Ы.
           </p>
         </div>
       </div>
