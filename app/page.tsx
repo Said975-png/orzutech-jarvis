@@ -785,7 +785,7 @@ export default function Home() {
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     Мониторинг здоровья и спорт
                   </p>
-                  <div className="text-xl font-semibold text-gray-900 mb-6">
+                  <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
                     ₽ 34,900
                   </div>
 
@@ -820,7 +820,7 @@ export default function Home() {
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     Профессиональный с стилусом
                   </p>
-                  <div className="text-xl font-semibold text-gray-900 mb-6">
+                  <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
                     ₽ 79,900
                   </div>
 
@@ -855,7 +855,7 @@ export default function Home() {
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     4K Ultra HD с HDR
                   </p>
-                  <div className="text-xl font-semibold text-gray-900 mb-6">
+                  <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
                     ₽ 89,900
                   </div>
 
@@ -890,7 +890,7 @@ export default function Home() {
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     Тройная камера, зарядка 65W
                   </p>
-                  <div className="text-xl font-semibold text-gray-900 mb-6">
+                  <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
                     ₽ 59,900
                   </div>
 
@@ -925,7 +925,7 @@ export default function Home() {
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     RTX 4060, 16GB RAM, 144Hz
                   </p>
-                  <div className="text-xl font-semibold text-gray-900 mb-6">
+                  <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
                     ₽ 129,900
                   </div>
 
@@ -960,7 +960,7 @@ export default function Home() {
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     Premium с шумоп��давлением
                   </p>
-                  <div className="text-xl font-semibold text-gray-900 mb-6">
+                  <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
                     ₽ 24,900
                   </div>
 
@@ -995,7 +995,7 @@ export default function Home() {
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     Мониторинг здоровья и спорт
                   </p>
-                  <div className="text-xl font-semibold text-gray-900 mb-6">
+                  <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
                     ₽ 34,900
                   </div>
 
@@ -1030,7 +1030,7 @@ export default function Home() {
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     Профессиональный с стилусом
                   </p>
-                  <div className="text-xl font-semibold text-gray-900 mb-6">
+                  <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
                     ₽ 79,900
                   </div>
 
