@@ -119,7 +119,7 @@ export default function Home() {
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
               <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-md font-light">
-                Наша деятельность: Продажа Телефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
+                Наша деятельность: Продажа Телефонов и аксессуаров, Планшетов, разных Гадже��ов и много много интересного.
               </p>
 
               {/* Auto-scrolling slider */}
@@ -193,6 +193,32 @@ export default function Home() {
                   />
                 ))}
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Color Selection Scroll */}
+        <div className="border-t border-gray-200 py-4">
+          <div className="text-center text-gray-400 text-xs mb-3">
+            Выбор цвета
+          </div>
+          <div className="overflow-x-auto">
+            <div className="flex justify-center space-x-4 px-4 min-w-max">
+              {colors.map((colorOption, index) => (
+                <button
+                  key={index}
+                  onClick={() => setSelectedColor(index)}
+                  className={`
+                    w-5 h-5 rounded-full transition-all duration-300 border-2 cursor-pointer flex-shrink-0
+                    ${colorOption.color} ${colorOption.border}
+                    ${selectedColor === index
+                      ? 'ring-2 ring-yellow-400 ring-offset-1 scale-110'
+                      : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1 hover:scale-105'
+                    }
+                  `}
+                  title={colorOption.name}
+                />
+              ))}
             </div>
           </div>
         </div>
