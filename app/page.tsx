@@ -32,7 +32,7 @@ export default function Home() {
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
-    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спортивными функциям��" },
+    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
   ]
 
@@ -772,7 +772,7 @@ export default function Home() {
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     Мониторинг здоровья и с��орт
                   </p>
-                  <div className="text-2xl font-bold text-red-600 mb-4">
+                  <div className="text-lg font-bold text-gray-900">
                     $ 349
                   </div>
 
@@ -802,7 +802,7 @@ export default function Home() {
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     Профессиональный с стилусом
                   </p>
-                  <div className="text-2xl font-bold text-red-600 mb-4">
+                  <div className="text-lg font-bold text-gray-900">
                     $ 799
                   </div>
 
@@ -832,7 +832,7 @@ export default function Home() {
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     4K Ultra HD с HDR
                   </p>
-                  <div className="text-2xl font-bold text-red-600 mb-4">
+                  <div className="text-lg font-bold text-gray-900">
                     $ 899
                   </div>
 
@@ -867,7 +867,7 @@ export default function Home() {
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     Тройная камера, зарядка 65W
                   </p>
-                  <div className="text-2xl font-bold text-red-600 mb-4">
+                  <div className="text-lg font-bold text-gray-900">
                     $ 599
                   </div>
 
@@ -902,7 +902,7 @@ export default function Home() {
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     RTX 4060, 16GB RAM, 144Hz
                   </p>
-                  <div className="text-2xl font-bold text-red-600 mb-4">
+                  <div className="text-lg font-bold text-gray-900">
                     $ 1,299
                   </div>
 
@@ -937,7 +937,7 @@ export default function Home() {
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     Premium с шумоп��давлением
                   </p>
-                  <div className="text-2xl font-bold text-red-600 mb-4">
+                  <div className="text-lg font-bold text-gray-900">
                     $ 249
                   </div>
 
@@ -972,7 +972,7 @@ export default function Home() {
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     Мониторинг здоровья и спорт
                   </p>
-                  <div className="text-2xl font-bold text-red-600 mb-4">
+                  <div className="text-lg font-bold text-gray-900">
                     $ 349
                   </div>
 
@@ -1007,7 +1007,7 @@ export default function Home() {
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     Профессиональный с стилусом
                   </p>
-                  <div className="text-2xl font-bold text-red-600 mb-4">
+                  <div className="text-lg font-bold text-gray-900">
                     $ 799
                   </div>
 
