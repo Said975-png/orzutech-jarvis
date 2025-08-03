@@ -92,16 +92,16 @@ export default function Home() {
         {/* Main Content */}
         <div className="relative grid lg:grid-cols-2 gap-16 p-8 lg:p-16 min-h-[70vh] overflow-hidden">
           {/* Light Effect from Left */}
-          <div className="absolute -left-32 top-0 bottom-0 w-96 bg-gradient-to-r from-white/10 via-white/5 to-transparent blur-3xl opacity-60"></div>
-          <div className="absolute -left-20 top-1/4 bottom-1/4 w-64 bg-gradient-to-r from-white/20 via-white/8 to-transparent blur-2xl opacity-40"></div>
-          <div className="absolute -left-10 top-1/3 bottom-1/3 w-32 bg-gradient-to-r from-white/30 via-white/10 to-transparent blur-xl opacity-30"></div>
+          <div className="absolute -left-32 top-0 bottom-0 w-96 bg-gradient-to-r from-gray-200/10 via-gray-200/5 to-transparent blur-3xl opacity-60"></div>
+          <div className="absolute -left-20 top-1/4 bottom-1/4 w-64 bg-gradient-to-r from-gray-200/20 via-gray-200/8 to-transparent blur-2xl opacity-40"></div>
+          <div className="absolute -left-10 top-1/3 bottom-1/3 w-32 bg-gradient-to-r from-gray-200/30 via-gray-200/10 to-transparent blur-xl opacity-30"></div>
 
 
 
           {/* Left Content */}
           <div className="relative flex flex-col justify-center space-y-12 z-10">
             <div className="space-y-6">
-              <div className="text-sm text-gray-400 font-medium uppercase tracking-[0.2em]">
+              <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em]">
                 СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
               </div>
 
@@ -109,17 +109,17 @@ export default function Home() {
                 ORZUTECH
               </h1>
 
-              <div className="w-16 h-1 bg-gradient-to-r from-white to-gray-300"></div>
+              <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
-              <p className="text-gray-300 text-lg lg:text-xl leading-relaxed max-w-md font-light">
-                Инновационные технологии для вашего дома и офиса.
+              <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-md font-light">
+                Инновационные технологии для вашег�� дома и офиса.
                 Надежность в каждом устройстве.
               </p>
 
               {/* Auto-scrolling slider */}
               <div className="relative overflow-hidden max-w-lg h-12">
                 <div className="absolute inset-0 flex items-center">
-                  <div className="flex animate-scroll space-x-8 text-sm text-white font-medium">
+                  <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
@@ -127,7 +127,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
-                    <span className="whitespace-nowrap">Качественное обслуживание</span>
+                    <span className="whitespace-nowrap">Качественно�� обслуживание</span>
                   </div>
                 </div>
               </div>
@@ -196,7 +196,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-black text-white mb-2">500+</div>
-              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Товаров</div>
+              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">��оваров</div>
             </div>
             <div>
               <div className="text-4xl font-black text-white mb-2">150+</div>
@@ -347,7 +347,7 @@ export default function Home() {
             {/* Bottom Action */}
             <div className="text-center mt-16">
               <button className="bg-transparent border-2 border-yellow-400 text-yellow-400 px-12 py-4 rounded-lg font-bold hover:bg-yellow-400 hover:text-black transition-all duration-300 uppercase tracking-wide">
-                Смотреть все товары
+                Смотреть вс�� товары
               </button>
             </div>
           </div>
