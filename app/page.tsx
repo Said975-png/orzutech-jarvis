@@ -48,16 +48,7 @@ export default function Home() {
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
-              <button className="relative group bg-white text-black px-10 py-5 font-bold text-lg uppercase tracking-wide overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/20 rounded-xl border-2 border-transparent hover:border-gray-300">
-                <span className="relative z-10">Каталог товаров</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-xl"></div>
-              </button>
-              <button className="relative group border-2 border-white text-white px-10 py-5 font-bold text-lg uppercase tracking-wide overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/10 rounded-xl hover:border-gray-300">
-                <span className="relative z-10 group-hover:text-black transition-colors duration-300">Связаться с нами</span>
-                <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-xl"></div>
-              </button>
-            </div>
+
           </div>
 
           {/* Right Content */}
