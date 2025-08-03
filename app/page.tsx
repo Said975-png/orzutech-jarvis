@@ -28,9 +28,9 @@ export default function Home() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
   const products: Product[] = [
-    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для мак��имального качества изображения" },
+    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
-    { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
+    { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительно��ти в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
@@ -369,7 +369,7 @@ export default function Home() {
                   </div>
                   <div className="p-7 bg-gradient-to-b from-white to-gray-50/30">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Grooming Kit Pro</h3>
-                    <p className="text-gray-600 text-sm mb-4">Профессиональный набор для ухода</p>
+                    <p className="text-gray-600 text-sm mb-4">Профес��иональный набор для ухода</p>
                     <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
                   </div>
                 </div>
@@ -635,8 +635,7 @@ export default function Home() {
 
               {/* Product 2 */}
               <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
-                {/* Top accent line */}
-                <div className="h-1 bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
+
 
                 <div className="aspect-[4/3] bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 overflow-hidden relative">
                   {/* Subtle pattern overlay */}
@@ -686,7 +685,7 @@ export default function Home() {
                     <div className="w-full h-full bg-white/70 backdrop-blur-sm rounded-xl shadow-lg flex items-center justify-center group-hover:scale-110 group-hover:bg-white/90 transition-all duration-700 overflow-hidden p-4 border border-white/50">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Игровой Ноутбук"
+                        alt="И��ровой Ноутбук"
                         className="w-full h-full object-contain filter group-hover:brightness-105 transition-all duration-500"
                       />
                     </div>
@@ -1021,7 +1020,7 @@ export default function Home() {
                     Профессиональный с стилусом
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
-                    ₽ 79,900
+                    �� 79,900
                   </div>
 
                   <button
@@ -1044,7 +1043,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-200 p-8 lg:p-16 text-center">
           <p className="text-gray-600 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВ�� ЗАЩИЩЕНЫ.
+            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
           </p>
         </div>
       </div>
