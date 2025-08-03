@@ -32,7 +32,7 @@ export default function Home() {
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
-    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с м��ниторингом здоровья и спортивными функциями" },
+    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
   ]
 
@@ -360,14 +360,14 @@ export default function Home() {
               <div className="flex animate-scroll space-x-6">
                 {/* Slide 1 - Grooming Kit */}
                 <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6 flex flex-col flex-grow">
+                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F4b42886ccd0846e8845f7fea196bdae6?format=webp&width=800"
                       alt="Grooming Kit Pro"
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <div className="p-6 flex flex-col flex-grow">
+                  <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Grooming Kit Pro</h3>
                     <p className="text-gray-600 text-sm mb-4">��рофессиональный набор для ухода</p>
                     <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
@@ -376,14 +376,14 @@ export default function Home() {
 
                 {/* Slide 2 - Apple Watch */}
                 <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6 flex flex-col flex-grow">
+                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2Fad77a22293914f76ad5c86b0cc1cb048?format=webp&width=800"
                       alt="Apple Watch Series 10"
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <div className="p-6 flex flex-col flex-grow">
+                  <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Apple Watch Series 10</h3>
                     <p className="text-gray-600 text-sm mb-4">Rose Gold, Black 42MM/46MM</p>
                     <div className="text-2xl font-bold text-red-600">₽ 35,000</div>
@@ -392,14 +392,14 @@ export default function Home() {
 
                 {/* Slide 3 - PlayStation */}
                 <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6 flex flex-col flex-grow">
+                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F593de0ffc9344103bcb253bcf1c49c90?format=webp&width=800"
                       alt="PlayStation 5 Slim"
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <div className="p-6 flex flex-col flex-grow">
+                  <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">PlayStation 5 Slim</h3>
                     <p className="text-gray-600 text-sm mb-4">Игровая консоль нового поколения</p>
                     <div className="text-2xl font-bold text-red-600">₽ 45,000</div>
@@ -408,14 +408,14 @@ export default function Home() {
 
                 {/* Slide 4 - Samsung Watch */}
                 <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6 flex flex-col flex-grow">
+                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F1f88af23807446fbae545f790458cfa0?format=webp&width=800"
                       alt="Samsung Watch Ultra"
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <div className="p-6 flex flex-col flex-grow">
+                  <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Samsung Watch Ultra</h3>
                     <p className="text-gray-600 text-sm mb-4">Умные часы с премиум функциями</p>
                     <div className="text-2xl font-bold text-red-600">₽ 33,500</div>
@@ -424,14 +424,14 @@ export default function Home() {
 
                 {/* Slide 5 - Huawei Set */}
                 <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6 flex flex-col flex-grow">
+                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F61d1bfb408604835a08844fc969d435c?format=webp&width=800"
                       alt="Huawei Watch Fit 3 + FreeBuds"
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <div className="p-6 flex flex-col flex-grow">
+                  <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Huawei Watch Fit 3</h3>
                     <p className="text-gray-600 text-sm mb-4">+ FreeBuds SE 3 в подарок</p>
                     <div className="text-2xl font-bold text-red-600">₽ 12,500</div>
@@ -440,14 +440,14 @@ export default function Home() {
 
                 {/* Duplicate slides for seamless loop */}
                 <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6 flex flex-col flex-grow">
+                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F4b42886ccd0846e8845f7fea196bdae6?format=webp&width=800"
                       alt="Grooming Kit Pro"
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <div className="p-6 flex flex-col flex-grow">
+                  <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Grooming Kit Pro</h3>
                     <p className="text-gray-600 text-sm mb-4">Профессиональный набор для ухода</p>
                     <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
@@ -455,14 +455,14 @@ export default function Home() {
                 </div>
 
                 <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6 flex flex-col flex-grow">
+                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2Fad77a22293914f76ad5c86b0cc1cb048?format=webp&width=800"
                       alt="Apple Watch Series 10"
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <div className="p-6 flex flex-col flex-grow">
+                  <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Apple Watch Series 10</h3>
                     <p className="text-gray-600 text-sm mb-4">Rose Gold, Black 42MM/46MM</p>
                     <div className="text-2xl font-bold text-red-600">₽ 35,000</div>
@@ -470,14 +470,14 @@ export default function Home() {
                 </div>
 
                 <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6 flex flex-col flex-grow">
+                  <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F593de0ffc9344103bcb253bcf1c49c90?format=webp&width=800"
                       alt="PlayStation 5 Slim"
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <div className="p-6 flex flex-col flex-grow">
+                  <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">PlayStation 5 Slim</h3>
                     <p className="text-gray-600 text-sm mb-4">Игровая консоль нового поколения</p>
                     <div className="text-2xl font-bold text-red-600">₽ 45,000</div>
@@ -601,7 +601,7 @@ export default function Home() {
             </div>
 
             {/* Products Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 flex flex-col flex-grow">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
               {/* Product 1 */}
               <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -637,7 +637,7 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Смартфон Premium
                   </h3>
@@ -669,7 +669,7 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Игровой Ноутбук
                   </h3>
@@ -701,7 +701,7 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Беспроводные наушники
                   </h3>
@@ -731,7 +731,7 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Умные часы
                   </h3>
@@ -761,7 +761,7 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Планшет Pro
                   </h3>
@@ -791,7 +791,7 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Смарт Телевизор 55"
                   </h3>
@@ -826,7 +826,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Смартфон Premium
                   </h3>
@@ -861,7 +861,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Игровой Ноутбук
                   </h3>
@@ -896,7 +896,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Беспроводные наушники
                   </h3>
@@ -931,7 +931,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Умные часы
                   </h3>
@@ -966,7 +966,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Планшет Pro
                   </h3>
