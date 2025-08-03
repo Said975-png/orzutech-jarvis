@@ -31,7 +31,7 @@ export default function Home() {
     { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
-    { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
+    { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым зву��ом" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
   ]
@@ -208,7 +208,7 @@ export default function Home() {
           <div className="relative flex flex-col justify-center space-y-12 z-10">
             <div className="space-y-6">
               <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em]">
-                СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
+                СОВ��ЕМЕННАЯ ЭЛЕКТРОНИКА
               </div>
 
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
@@ -227,7 +227,7 @@ export default function Home() {
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
-                    <span className="whitespace-nowrap">Быстрая доставка и уста��овка</span>
+                    <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
@@ -713,8 +713,7 @@ export default function Home() {
 
               {/* Product 4 */}
               <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
-                {/* Top accent line */}
-                <div className="h-1 bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
+
 
                 <div className="aspect-[4/3] bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 overflow-hidden relative">
                   {/* Subtle pattern overlay */}
