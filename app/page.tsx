@@ -140,7 +140,7 @@ export default function Home() {
             </div>
 
             {/* Color Selection */}
-            <div className="space-y-3 mt-8">
+            <div className="flex items-center space-x-4 mt-8">
               <div className="text-gray-400 text-xs uppercase tracking-wide">
                 Выбор цвета
               </div>
