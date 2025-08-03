@@ -604,7 +604,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 bg-gradient-to-b from-white to-gray-50/30">
 
               {/* Product 1 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full flex flex-col h-full">
                 <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
@@ -634,7 +634,7 @@ export default function Home() {
               </div>
 
               {/* Product 2 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
 
 
                 <div className="aspect-[4/3] bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 overflow-hidden relative">
@@ -673,7 +673,7 @@ export default function Home() {
               </div>
 
               {/* Product 3 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
 
 
                 <div className="aspect-[4/3] bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 overflow-hidden relative">
@@ -712,7 +712,7 @@ export default function Home() {
               </div>
 
               {/* Product 4 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
 
 
                 <div className="aspect-[4/3] bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 overflow-hidden relative">
@@ -751,7 +751,7 @@ export default function Home() {
               </div>
 
               {/* Product 5 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -786,7 +786,7 @@ export default function Home() {
               </div>
 
               {/* Product 6 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -805,7 +805,7 @@ export default function Home() {
                     Планшет Pro
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-5 font-medium">
-                    Профессиональный с стилусом
+                    Проф��ссиональный с стилусом
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
                     $ 799
@@ -821,7 +821,7 @@ export default function Home() {
               </div>
 
               {/* Product 7 - Duplicate of Product 1 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -856,7 +856,7 @@ export default function Home() {
               </div>
 
               {/* Product 8 - Duplicate of Product 2 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -891,7 +891,7 @@ export default function Home() {
               </div>
 
               {/* Product 9 - Duplicate of Product 3 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-white/50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 group-hover:from-white/40 group-hover:to-white/20 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -926,7 +926,7 @@ export default function Home() {
               </div>
 
               {/* Product 10 - Duplicate of Product 4 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -961,7 +961,7 @@ export default function Home() {
               </div>
 
               {/* Product 11 - Duplicate of Product 5 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -996,7 +996,7 @@ export default function Home() {
               </div>
 
               {/* Product 12 - Duplicate of Product 6 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
