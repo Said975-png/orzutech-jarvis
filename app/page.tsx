@@ -29,7 +29,7 @@ export default function Home() {
 
   const products: Product[] = [
     { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
-    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
+    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спортивными функциями" },
@@ -299,7 +299,7 @@ export default function Home() {
             >
 
               <div className="text-center text-gray-400 text-xs mb-2">
-                Прокрутите д��я смены модели
+                Прокрутите для смены модели
               </div>
               <div className="flex justify-center space-x-1">
                 {models.map((_, index) => (
@@ -790,19 +790,40 @@ export default function Home() {
                   <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                     Беспроводные наушники
                   </h3>
+
+                  {/* Rating */}
+                  <div className="flex items-center mb-2">
+                    <div className="flex text-yellow-400 text-sm">
+                      {"★".repeat(4)}★
+                    </div>
+                    <span className="text-xs text-gray-500 ml-2">(35)</span>
+                  </div>
+
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     Premium с шумоподавлением
                   </p>
-                  <div className="text-2xl font-bold text-gray-900 mb-6  transition-colors duration-300">
-                    $ 249
+
+                  <div className="flex items-center justify-between mb-3">
+                    <div>
+                      <div className="text-sm text-gray-400 line-through">$ 329</div>
+                      <div className="text-lg font-bold text-gray-900">$ 249</div>
+                    </div>
+                    <div className="text-xs text-green-600 font-medium">В наличии</div>
                   </div>
 
-                  <button
-                    onClick={() => addToCart(products[3])}
-                    className="w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white py-4 px-6 rounded-xl text-sm font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all duration-400 shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 border-0"
-                  >
-                    Заказать
-                  </button>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => addToCart(products[3])}
+                      className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
+                    >
+                      В корзину
+                    </button>
+                    <button className="p-2.5 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                      <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -831,7 +852,7 @@ export default function Home() {
                     onClick={() => addToCart(products[4])}
                     className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
                   >
-                    Заказать
+                    Заказ��ть
                   </button>
                 </div>
               </div>
@@ -878,7 +899,7 @@ export default function Home() {
 
                 <div className="p-4 border-t border-gray-100">
                   <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
-                    Смарт Телевизор 55"
+                    См��рт Телевизор 55"
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     4K Ultra HD с HDR
