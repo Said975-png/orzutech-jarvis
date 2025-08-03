@@ -13,7 +13,7 @@ module.exports = {
       animation: {
         'pulse': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'neon-arc': 'neonArc 6s ease-in-out infinite',
-        'scroll': 'scroll 20s linear infinite',
+        'scroll': 'scroll 30s linear infinite',
       },
       keyframes: {
         neonArc: {
