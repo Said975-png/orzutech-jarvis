@@ -224,6 +224,114 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Catalog Section */}
+        <div className="bg-gray-50 p-8 lg:p-16 relative">
+          <div className="max-w-7xl mx-auto">
+            {/* Section Header */}
+            <div className="text-center mb-12">
+              <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em] mb-4">
+                КАТЕГОРИИ ТОВАРОВ
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-black text-black mb-6">
+                ПОПУЛЯРНЫЕ <span className="text-yellow-400">КАТЕГОРИИ</span>
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-black mx-auto"></div>
+            </div>
+
+            {/* Categories Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+              {/* Phones Category */}
+              <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:transform hover:scale-105 border border-gray-100">
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-black mb-3 group-hover:text-yellow-400 transition-colors duration-300">
+                    Смартфоны
+                  </h3>
+
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                    iPhone, Samsung, Xiaomi и другие флагманские модели с гарантией качества
+                  </p>
+
+                  <div className="text-yellow-400 font-bold text-lg mb-4">
+                    200+ моделей
+                  </div>
+
+                  <button className="w-full bg-gray-100 text-black py-3 rounded-lg font-medium hover:bg-yellow-400 hover:text-black transition-all duration-300 group-hover:bg-yellow-400">
+                    Смотреть все
+                  </button>
+                </div>
+              </div>
+
+              {/* Watches Category */}
+              <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:transform hover:scale-105 border border-gray-100">
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-black mb-3 group-hover:text-yellow-400 transition-colors duration-300">
+                    Умные часы
+                  </h3>
+
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                    Apple Watch, Samsung Galaxy Watch, фитнес-трекеры для здорового образа жизни
+                  </p>
+
+                  <div className="text-yellow-400 font-bold text-lg mb-4">
+                    80+ моделей
+                  </div>
+
+                  <button className="w-full bg-gray-100 text-black py-3 rounded-lg font-medium hover:bg-yellow-400 hover:text-black transition-all duration-300 group-hover:bg-yellow-400">
+                    Смотреть все
+                  </button>
+                </div>
+              </div>
+
+              {/* Headphones Category */}
+              <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:transform hover:scale-105 border border-gray-100">
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                    </svg>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-black mb-3 group-hover:text-yellow-400 transition-colors duration-300">
+                    Наушники
+                  </h3>
+
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                    AirPods, Sony, JBL - беспроводные и проводные наушники премиум класса
+                  </p>
+
+                  <div className="text-yellow-400 font-bold text-lg mb-4">
+                    120+ моделей
+                  </div>
+
+                  <button className="w-full bg-gray-100 text-black py-3 rounded-lg font-medium hover:bg-yellow-400 hover:text-black transition-all duration-300 group-hover:bg-yellow-400">
+                    Смотреть все
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
         {/* Stats Section */}
         <div className="border-t border-gray-200 p-8 lg:p-16">
           <div className="grid md:grid-cols-4 gap-8 text-center">
