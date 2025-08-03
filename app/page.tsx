@@ -66,7 +66,7 @@ export default function Home() {
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/RobotExpressive.glb",
-      name: "Робот"
+      name: "Ро��от"
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/reflective-sphere.gltf",
@@ -75,7 +75,7 @@ export default function Home() {
   ]
 
   const colors = [
-    { name: "Бел��й", color: "bg-white", border: "border-gray-300" },
+    { name: "Белый", color: "bg-white", border: "border-gray-300" },
     { name: "��ерный", color: "bg-black", border: "border-gray-700" },
     { name: "Серый", color: "bg-gray-400", border: "border-gray-500" }
   ]
@@ -843,7 +843,7 @@ export default function Home() {
                     4K Ultra HD с HDR
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
-                    ₽ 89,900
+                    $ 899
                   </div>
 
                   <button
@@ -933,7 +933,7 @@ export default function Home() {
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Беспров��дные н��ушники"
+                        alt="Беспроводные н��ушники"
                         className="w-full h-full object-contain"
                       />
                     </div>
@@ -1041,7 +1041,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-200 p-8 lg:p-16 text-center">
           <p className="text-gray-600 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
+            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕ��Ы.
           </p>
         </div>
       </div>
