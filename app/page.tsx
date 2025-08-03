@@ -12,6 +12,7 @@ declare global {
 
 export default function Home() {
   const [currentModel, setCurrentModel] = useState(0)
+  const [selectedColor, setSelectedColor] = useState(0)
 
   const models = [
     {
@@ -20,7 +21,7 @@ export default function Home() {
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
-      name: "Астронавт"
+      name: "Астро��авт"
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/ShopifyPickup.glb",
@@ -30,6 +31,12 @@ export default function Home() {
       url: "https://modelviewer.dev/shared-assets/models/reflective-sphere.gltf",
       name: "Сфера"
     }
+  ]
+
+  const colors = [
+    { name: "Белый", color: "bg-white", border: "border-gray-300" },
+    { name: "Черный", color: "bg-black", border: "border-gray-700" },
+    { name: "Серый", color: "bg-gray-400", border: "border-gray-500" }
   ]
 
   useEffect(() => {
@@ -48,45 +55,28 @@ export default function Home() {
       {/* Main Container */}
       <div className="w-full bg-white">
         {/* Navigation */}
-        <nav className="flex items-center justify-center px-8 lg:px-16 py-4">
-          <div className="flex items-center space-x-12">
-            <div className="flex items-center">
-              <span className="text-yellow-400 font-bold text-2xl tracking-wide font-sans">ORZUTECH</span>
-            </div>
-
-            <div className="hidden lg:flex items-center space-x-8 text-gray-700 font-medium font-sans">
-              <a href="#" className="hover:text-black transition-colors text-base font-medium tracking-normal">Каталог</a>
-              <button className="relative hover:text-black transition-colors">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l-1 7H6L5 9z" />
-                </svg>
-                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
-              </button>
-            </div>
-
-            <div className="flex items-center space-x-6">
-              <button className="text-gray-700 hover:text-black transition-colors text-base font-medium font-sans">
-                Вход
-              </button>
-              <button className="text-gray-700 hover:text-black transition-colors text-base font-semibold font-sans">
-                Регистрация
-              </button>
-
-              {/* Search Bar */}
-              <div className="relative hidden lg:block">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </div>
-                <input
-                  type="search"
-                  placeholder="Поиск товаров..."
-                  className="bg-gray-100 text-black placeholder-gray-500 pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400/20 transition-colors w-64 text-sm font-sans"
-                />
-              </div>
-            </div>
+        <nav className="flex items-center justify-between px-8 lg:px-16 py-4">
+          {/* Logo */}
+          <div className="flex items-center">
+            <span className="text-yellow-400 font-bold text-2xl tracking-wide font-sans">ORZUTECH</span>
           </div>
+
+          {/* Search Bar */}
+          <div className="relative flex-1 max-w-2xl mx-8">
+            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+              <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+            <input
+              type="search"
+              placeholder="Поиск товаров..."
+              className="w-full bg-gray-100 text-black placeholder-gray-500 pl-12 pr-4 py-3 rounded-lg border border-gray-300 focus:border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400/20 transition-colors text-sm font-sans shadow-md"
+            />
+          </div>
+
+          {/* Right side spacer */}
+          <div className="w-24"></div>
         </nav>
 
         {/* Main Content */}
@@ -121,7 +111,7 @@ export default function Home() {
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
-                    <span className="whitespace-nowrap">Быстрая доставка и установка</span>
+                    <span className="whitespace-nowrap">Быстрая доставка и у��тановка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
@@ -131,7 +121,30 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
+
+            {/* Color Selection */}
+            <div className="flex items-center space-x-4 mt-8">
+              <div className="text-gray-400 text-xs uppercase tracking-wide">
+                Выбо�� цвета
+              </div>
+              <div className="flex space-x-3">
+                {colors.map((colorOption, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setSelectedColor(index)}
+                    className={`
+                      w-5 h-5 rounded-full transition-all duration-300 border-2 cursor-pointer
+                      ${colorOption.color} ${colorOption.border}
+                      ${selectedColor === index
+                        ? 'ring-2 ring-yellow-400 ring-offset-1'
+                        : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1'
+                      }
+                    `}
+                    title={colorOption.name}
+                  />
+                ))}
+              </div>
+            </div>
 
           </div>
 
@@ -163,7 +176,7 @@ export default function Home() {
                   // Скролл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // Скролл в��ерх - предыдущая модель
+                  // Скролл вверх - предыдущая модель
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
@@ -355,7 +368,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-200 p-8 lg:p-16 text-center">
           <p className="text-gray-600 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
+            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ П��АВА ЗАЩИЩЕНЫ.
           </p>
         </div>
       </div>
