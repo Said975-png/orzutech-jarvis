@@ -21,7 +21,7 @@ export default function Home() {
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
-      name: "��стронавт"
+      name: "Астронавт"
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/ShopifyPickup.glb",
@@ -177,9 +177,9 @@ export default function Home() {
             >
 
               <div className="text-center text-gray-400 text-xs mb-2">
-                Прокрутите для смены модели
+                Прокрутите для с��ены модели
               </div>
-              <div className="flex justify-center space-x-1 mb-4">
+              <div className="flex justify-center space-x-1">
                 {models.map((_, index) => (
                   <div
                     key={index}
@@ -190,28 +190,6 @@ export default function Home() {
                         : 'bg-gray-600'
                       }
                     `}
-                  />
-                ))}
-              </div>
-
-              {/* Color Selection */}
-              <div className="text-center text-gray-400 text-xs mb-2">
-                Выбор цвета
-              </div>
-              <div className="flex justify-center space-x-2">
-                {colors.map((colorOption, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setSelectedColor(index)}
-                    className={`
-                      w-4 h-4 rounded-full transition-all duration-300 border-2 cursor-pointer
-                      ${colorOption.color} ${colorOption.border}
-                      ${selectedColor === index
-                        ? 'ring-2 ring-yellow-400 ring-offset-1'
-                        : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1'
-                      }
-                    `}
-                    title={colorOption.name}
                   />
                 ))}
               </div>
@@ -384,7 +362,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-200 p-8 lg:p-16 text-center">
           <p className="text-gray-600 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
+            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВ�� ЗАЩИЩЕНЫ.
           </p>
         </div>
       </div>
