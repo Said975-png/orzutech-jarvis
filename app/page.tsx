@@ -32,7 +32,7 @@ export default function Home() {
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
-    { id: 5, name: "Умные часы", price: 34900, description: "Современные см��рт-часы с мониторингом здоровья и спортивными функциями" },
+    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
   ]
 
@@ -107,26 +107,26 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white relative overflow-hidden">
       {/* Decorative Wave Background */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 pointer-events-none">
         <svg
-          className="absolute bottom-0 left-0 w-full h-full opacity-5"
+          className="absolute bottom-0 left-0 w-full h-full opacity-20"
           viewBox="0 0 1200 800"
           fill="none"
           preserveAspectRatio="xMidYMid slice"
         >
           <path
             d="M0,320 C300,280 600,240 900,280 C1050,300 1150,320 1200,340 L1200,800 L0,800 Z"
-            fill="#6B7280"
+            fill="#E5E7EB"
           />
           <path
             d="M0,400 C250,360 500,320 750,360 C950,380 1100,400 1200,420 L1200,800 L0,800 Z"
-            fill="#9CA3AF"
-            opacity="0.6"
+            fill="#F3F4F6"
+            opacity="0.8"
           />
           <path
-            d="M0,480 C200,440 400,400 600,440 C800,460 1000,480 1200,500 L1200,800 L0,800 Z"
-            fill="#D1D5DB"
-            opacity="0.4"
+            d="M0,500 C200,460 400,420 600,460 C800,480 1000,500 1200,520 L1200,800 L0,800 Z"
+            fill="#F9FAFB"
+            opacity="0.6"
           />
         </svg>
       </div>
@@ -209,11 +209,11 @@ export default function Home() {
               <div className="relative overflow-hidden max-w-lg h-12">
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
-                    <span className="whitespace-nowrap">Са��ая качественная техника в Бухаре</span>
+                    <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и у��тановка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
-                    <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
+                    <span className="whitespace-nowrap">Премиум-сервис �� поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
@@ -498,7 +498,7 @@ export default function Home() {
                     Смартфон Premium
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии
+                    Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для ��рофессиональной фотографии
                   </p>
                   <div className="text-xl font-semibold text-gray-900 mb-6">
                     ₽ 59,900
@@ -638,7 +638,7 @@ export default function Home() {
                     Планшет Pro
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Профессиональный планшет для работы и творчес��ва с поддержкой стилуса
+                    Профессиональный планшет для работы и творчества с поддержкой стилуса
                   </p>
                   <div className="text-xl font-semibold text-gray-900 mb-6">
                     ₽ 79,900
