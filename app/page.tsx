@@ -99,12 +99,15 @@ export default function Home() {
 
           {/* Right Content */}
           <div className="flex justify-center items-center">
-            <div className="relative">
-              <img 
-                src="https://cdn.builder.io/api/v1/image/assets%2F02f225558365433abb0d2ad515b82942%2F52db23e5e3e24501b060c9ae46a778e6?format=webp&width=800"
-                alt="Apple Products"
-                className="max-w-[350px] lg:max-w-[450px] h-auto object-contain grayscale hover:grayscale-0 transition-all duration-500"
-              />
+            <div className="relative w-[350px] lg:w-[450px] h-[350px] lg:h-[450px]">
+              <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
+                <ambientLight intensity={0.5} />
+                <directionalLight position={[10, 10, 5]} intensity={1} />
+                <Suspense fallback={null}>
+                  <Model />
+                </Suspense>
+                <OrbitControls enableZoom={false} enablePan={false} />
+              </Canvas>
             </div>
           </div>
         </div>
@@ -141,7 +144,7 @@ export default function Home() {
             </div>
             <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">ОБМЕН УСТРОЙСТВ</h3>
             <p className="text-gray-400 leading-relaxed">
-              Выгодный обмен старых устройств на но��ые модели с доплатой.
+              Выгодный обмен старых устройств на новые модели с доплатой.
             </p>
           </div>
 
@@ -151,7 +154,7 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">ГАРАНТИЯ КАЧЕСТВА</h3>
+            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">ГАРА��ТИЯ КАЧЕСТВА</h3>
             <p className="text-gray-400 leading-relaxed">
               Полная гарантия на все товары. Сертифицированные устройства.
             </p>
@@ -173,7 +176,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-800 p-8 lg:p-16 text-center">
           <p className="text-gray-500 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
+            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА З��ЩИЩЕНЫ.
           </p>
         </div>
       </div>
