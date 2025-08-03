@@ -75,8 +75,29 @@ export default function Home() {
             />
           </div>
 
-          {/* Right side spacer */}
-          <div className="w-24"></div>
+          {/* Auth and Cart */}
+          <div className="flex items-center space-x-4">
+            {/* Auth buttons */}
+            <div className="flex items-center space-x-2">
+              <button className="text-gray-600 hover:text-yellow-400 transition-colors duration-300 text-sm font-medium">
+                Вход
+              </button>
+              <span className="text-gray-400">|</span>
+              <button className="text-gray-600 hover:text-yellow-400 transition-colors duration-300 text-sm font-medium">
+                Регистрация
+              </button>
+            </div>
+
+            {/* Cart */}
+            <button className="relative p-2 text-gray-600 hover:text-yellow-400 transition-colors duration-300">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m0 0L12 21l7.5-3" />
+              </svg>
+              <span className="absolute -top-1 -right-1 bg-yellow-400 text-black text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
+                0
+              </span>
+            </button>
+          </div>
         </nav>
 
         {/* Main Content */}
@@ -113,7 +134,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и у��тановка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
-                    <span className="whitespace-nowrap">Премиу��-сервис и поддержка</span>
+                    <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
