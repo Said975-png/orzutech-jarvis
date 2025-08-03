@@ -62,7 +62,7 @@ export default function Home() {
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
-      name: "Астронавт"
+      name: "��стронавт"
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/RobotExpressive.glb",
@@ -208,7 +208,7 @@ export default function Home() {
           <div className="relative flex flex-col justify-center space-y-12 z-10">
             <div className="space-y-6">
               <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em]">
-                СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
+                СОВРЕМЕННАЯ ЭЛ��КТРОНИКА
               </div>
 
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
@@ -778,7 +778,7 @@ export default function Home() {
 
                   <button
                     onClick={() => addToCart(products[4])}
-                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
+                    className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
                   >
                     Заказать
                   </button>
@@ -790,7 +790,7 @@ export default function Home() {
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                    alt="Планшет Pro"
+                    alt="Планш��т Pro"
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -808,7 +808,7 @@ export default function Home() {
 
                   <button
                     onClick={() => addToCart(products[5])}
-                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
+                    className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
                   >
                     Заказать
                   </button>
@@ -838,7 +838,7 @@ export default function Home() {
 
                   <button
                     onClick={() => addToCart(products[0])}
-                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
+                    className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
                   >
                     Заказать
                   </button>
@@ -873,7 +873,7 @@ export default function Home() {
 
                   <button
                     onClick={() => addToCart(products[1])}
-                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
+                    className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
                   >
                     Заказать
                   </button>
@@ -908,7 +908,7 @@ export default function Home() {
 
                   <button
                     onClick={() => addToCart(products[2])}
-                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
+                    className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
                   >
                     Заказать
                   </button>
@@ -943,7 +943,7 @@ export default function Home() {
 
                   <button
                     onClick={() => addToCart(products[3])}
-                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
+                    className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
                   >
                     Заказать
                   </button>
@@ -978,7 +978,7 @@ export default function Home() {
 
                   <button
                     onClick={() => addToCart(products[4])}
-                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
+                    className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
                   >
                     Заказать
                   </button>
@@ -1013,7 +1013,7 @@ export default function Home() {
 
                   <button
                     onClick={() => addToCart(products[5])}
-                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
+                    className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
                   >
                     Зака��ать
                   </button>
