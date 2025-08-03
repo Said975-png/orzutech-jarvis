@@ -357,7 +357,7 @@ export default function Home() {
 
             {/* Slider Container */}
             <div className="relative">
-              <div className="flex animate-scroll space-x-6 overflow-x-auto scroll-smooth pb-4 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+              <div className="flex animate-scroll space-x-6 overflow-x-auto scroll-smooth pb-4 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:animate-none">
                 {/* Slide 1 - Grooming Kit */}
                 <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
