@@ -36,11 +36,8 @@ export default function Home() {
                 МАГАЗИН ТЕХНИКИ В БУХАРЕ
               </div>
               
-              <h1 className="text-5xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.9] tracking-tight">
-                ORZU
-                <span className="block text-white">
-                  TECH
-                </span>
+              <h1 className="text-4xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.9] tracking-tight">
+                ORZUTECH
               </h1>
               
               <div className="w-24 h-1 bg-white"></div>
