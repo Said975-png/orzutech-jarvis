@@ -122,7 +122,7 @@ export default function Home() {
               <div className="w-24 h-1 bg-white"></div>
               
               <p className="text-gray-300 text-xl lg:text-2xl leading-relaxed max-w-lg font-light">
-                Профессиональные решения в сфере электроники.
+                Профессиональные реше��ия в сфере электроники.
                 Качество, надежн��сть, инновации.
               </p>
             </div>
@@ -132,7 +132,7 @@ export default function Home() {
 
           {/* Right Content */}
           <div className="flex flex-col justify-center items-center space-y-6">
-            <div className="relative w-[280px] lg:w-[360px] h-[280px] lg:h-[360px]">
+            <div className="relative w-[280px] lg:w-[360px] h-[280px] lg:h-[360px] overflow-hidden rounded-lg border border-gray-700">
               <model-viewer
                 src={models[currentModel].url}
                 alt="3D Model"
@@ -140,6 +140,8 @@ export default function Home() {
                 camera-controls
                 autoplay
                 animation-name=""
+                field-of-view="45deg"
+                camera-orbit="0deg 75deg 105%"
                 style={{ width: '100%', height: '100%' }}
                 loading="lazy"
               ></model-viewer>
