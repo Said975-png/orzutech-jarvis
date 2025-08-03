@@ -11,6 +11,17 @@ declare global {
 }
 
 export default function Home() {
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.type = 'module'
+    script.src = 'https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js'
+    document.head.appendChild(script)
+
+    return () => {
+      document.head.removeChild(script)
+    }
+  }, [])
+
   return (
     <main className="min-h-screen bg-black">
       {/* Main Container */}
