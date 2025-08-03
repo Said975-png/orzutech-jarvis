@@ -12,6 +12,7 @@ declare global {
 
 export default function Home() {
   const [currentModel, setCurrentModel] = useState(0)
+  const [selectedColor, setSelectedColor] = useState(0)
 
   const models = [
     {
