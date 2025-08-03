@@ -26,11 +26,10 @@ export default function Home() {
   const [selectedColor, setSelectedColor] = useState(0)
   const [cart, setCart] = useState<CartItem[]>([])
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-  const [isSliderAnimating, setIsSliderAnimating] = useState(true)
 
   const products: Product[] = [
     { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
-    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский ��мартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
+    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
@@ -750,7 +749,7 @@ export default function Home() {
                     onClick={() => addToCart(products[3])}
                     className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400"
                   >
-                    Заказать
+                    Зака��ать
                   </button>
                 </div>
               </div>
