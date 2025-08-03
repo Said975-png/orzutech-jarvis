@@ -102,7 +102,7 @@ export default function Home() {
           <div className="relative flex flex-col justify-center space-y-12 z-10">
             <div className="space-y-6">
               <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em]">
-                СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
+                СОВРЕ��ЕННАЯ ЭЛЕКТРОНИКА
               </div>
 
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
@@ -112,7 +112,7 @@ export default function Home() {
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
               <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-md font-light">
-                Инновационные технологии для вашег�� дома и офиса.
+                Инновационные технологии для вашего дома и офиса.
                 Надежность в каждом устройстве.
               </p>
 
@@ -127,7 +127,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
-                    <span className="whitespace-nowrap">Качественно�� обслуживание</span>
+                    <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
                 </div>
               </div>
@@ -192,23 +192,23 @@ export default function Home() {
         </div>
 
         {/* Stats Section */}
-        <div className="border-t border-gray-800 p-8 lg:p-16">
+        <div className="border-t border-gray-200 p-8 lg:p-16">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-black text-white mb-2">500+</div>
-              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">��оваров</div>
+              <div className="text-4xl font-black text-black mb-2">500+</div>
+              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Товаров</div>
             </div>
             <div>
-              <div className="text-4xl font-black text-white mb-2">150+</div>
-              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Клиентов</div>
+              <div className="text-4xl font-black text-black mb-2">150+</div>
+              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Клиентов</div>
             </div>
             <div>
-              <div className="text-4xl font-black text-white mb-2">24/7</div>
-              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Поддержка</div>
+              <div className="text-4xl font-black text-black mb-2">24/7</div>
+              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Поддержка</div>
             </div>
             <div>
-              <div className="text-4xl font-black text-white mb-2">99%</div>
-              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Качество</div>
+              <div className="text-4xl font-black text-black mb-2">99%</div>
+              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Качество</div>
             </div>
           </div>
         </div>
@@ -347,7 +347,7 @@ export default function Home() {
             {/* Bottom Action */}
             <div className="text-center mt-16">
               <button className="bg-transparent border-2 border-yellow-400 text-yellow-400 px-12 py-4 rounded-lg font-bold hover:bg-yellow-400 hover:text-black transition-all duration-300 uppercase tracking-wide">
-                Смотреть вс�� товары
+                Смотреть все товары
               </button>
             </div>
           </div>
