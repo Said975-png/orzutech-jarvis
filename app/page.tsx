@@ -791,7 +791,7 @@ export default function Home() {
 
               {/* Product 7 - Duplicate of Product 1 */}
               <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
-                <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
+                <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
 
                   <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
@@ -826,7 +826,7 @@ export default function Home() {
 
               {/* Product 8 - Duplicate of Product 2 */}
               <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
-                <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
+                <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
 
                   <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
@@ -896,7 +896,7 @@ export default function Home() {
 
               {/* Product 10 - Duplicate of Product 4 */}
               <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
-                <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
+                <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
 
                   <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
@@ -931,7 +931,7 @@ export default function Home() {
 
               {/* Product 11 - Duplicate of Product 5 */}
               <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
-                <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
+                <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
 
                   <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
@@ -966,7 +966,7 @@ export default function Home() {
 
               {/* Product 12 - Duplicate of Product 6 */}
               <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
-                <div className="aspect-[4/3] bg-gray-50 rounded-t-lg overflow-hidden relative">
+                <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
 
                   <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
