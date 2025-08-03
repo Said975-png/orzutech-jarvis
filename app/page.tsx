@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black">
       {/* Main Container */}
-      <div className="max-w-7xl mx-auto bg-gray-900 border border-gray-800">
+      <div className="w-full bg-gray-900">
         {/* Navigation */}
         <nav className="flex items-center justify-between p-8 border-b border-gray-800">
           <div className="flex items-center space-x-3">
