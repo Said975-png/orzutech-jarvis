@@ -120,7 +120,7 @@ export default function Home() {
               <div className="relative overflow-hidden max-w-lg h-12">
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-white font-medium">
-                    <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
+                    <span className="whitespace-nowrap">Самая качественная техника в ��ухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
@@ -213,44 +213,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Services Section */}
-        <div className="border-t border-gray-800 grid md:grid-cols-3">
-          <div className="p-8 lg:p-12 border-r border-gray-800 hover:bg-gray-800 transition-colors">
-            <div className="w-16 h-16 bg-white flex items-center justify-center mb-6">
-              <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-              </svg>
-            </div>
-            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">ОБМЕН УСТРОЙСТВ</h3>
-            <p className="text-gray-400 leading-relaxed">
-              Выгодный обмен старых устройств на новые модели с доплатой.
-            </p>
-          </div>
 
-          <div className="p-8 lg:p-12 border-r border-gray-800 hover:bg-gray-800 transition-colors">
-            <div className="w-16 h-16 bg-white flex items-center justify-center mb-6">
-              <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">ГАРАНТИЯ КАЧЕСТВА</h3>
-            <p className="text-gray-400 leading-relaxed">
-              Полная гарантия на все товары. Сертифицированные устройства.
-            </p>
-          </div>
-
-          <div className="p-8 lg:p-12 hover:bg-gray-800 transition-colors">
-            <div className="w-16 h-16 bg-white flex items-center justify-center mb-6">
-              <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">БЫСТРАЯ ДОСТАВКА</h3>
-            <p className="text-gray-400 leading-relaxed">
-              Оперативная доставка по Бухаре. Профессиональное обслуживание.
-            </p>
-          </div>
-        </div>
 
         {/* Footer */}
         <div className="border-t border-gray-800 p-8 lg:p-16 text-center">
