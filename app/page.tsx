@@ -28,9 +28,9 @@ export default function Home() {
         </nav>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-16 p-8 lg:p-16">
+        <div className="grid lg:grid-cols-2 gap-16 p-8 lg:p-16 min-h-[70vh]">
           {/* Left Content */}
-          <div className="space-y-12">
+          <div className="flex flex-col justify-center space-y-12">
             <div className="space-y-6">
               <div className="text-sm text-gray-500 font-bold uppercase tracking-[0.2em]">
                 МАГАЗИН ТЕХНИКИ В БУХАРЕ
