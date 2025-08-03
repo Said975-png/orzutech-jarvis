@@ -491,7 +491,7 @@ export default function Home() {
 
                   <button
                     onClick={() => addToCart(products[4])}
-                    className="w-full bg-yellow-400 text-black py-3 px-6 rounded-md text-sm font-medium hover:bg-yellow-500 transition-all duration-300"
+                    className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400"
                   >
                     Заказать
                   </button>
