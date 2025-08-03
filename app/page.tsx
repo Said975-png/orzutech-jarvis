@@ -31,7 +31,7 @@ export default function Home() {
     { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
-    { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium науш��ики с активным шумоподавлением и кристально чистым звуком" },
+    { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
   ]
@@ -779,7 +779,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
                     Умные часы
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
@@ -814,7 +814,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
                     Планшет Pro
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
@@ -849,7 +849,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
                     Смарт Телевизор 55"
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
@@ -884,7 +884,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
                     Смартфон Premium
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
@@ -919,7 +919,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
                     Игровой Ноутбук
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
@@ -954,8 +954,8 @@ export default function Home() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
-                    Беспроводные ��аушники
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
+                    Беспроводные наушники
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     Premium с шумоп��давлением
@@ -989,7 +989,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
                     Умные часы
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
@@ -1024,7 +1024,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
                     Планшет Pro
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
