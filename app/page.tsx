@@ -167,11 +167,7 @@ export default function Home() {
 
           {/* Right Content */}
           <div className="flex flex-col justify-center items-center space-y-6">
-            {/* Model viewer container with enhanced depth */}
             <div className="relative w-[280px] lg:w-[360px] h-[280px] lg:h-[360px] overflow-hidden rounded-lg">
-              {/* Glow effect behind model */}
-              <div className="absolute -inset-4 bg-gradient-to-b from-yellow-400/10 via-gray-200/10 to-gray-400/10 rounded-2xl blur-2xl opacity-50"></div>
-              <div className="absolute -inset-2 bg-gradient-to-tr from-white/30 via-transparent to-gray-300/20 rounded-xl opacity-60"></div>
               <model-viewer
                 src={models[currentModel].url}
                 alt="3D Model"
