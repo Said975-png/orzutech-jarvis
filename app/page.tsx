@@ -11,6 +11,27 @@ declare global {
 }
 
 export default function Home() {
+  const [currentModel, setCurrentModel] = useState(0)
+
+  const models = [
+    {
+      url: "https://cdn.builder.io/o/assets%2F08440fd5afb844b5b8c663feab34b3b0%2Fd9f2f51e747245009ee937c94e66654f?alt=media&token=dfd53474-2264-46a1-8202-69e75999c8a5&apiKey=08440fd5afb844b5b8c663feab34b3b0",
+      name: "Модель 1"
+    },
+    {
+      url: "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
+      name: "Астронавт"
+    },
+    {
+      url: "https://modelviewer.dev/shared-assets/models/ShopifyPickup.glb",
+      name: "Машина"
+    },
+    {
+      url: "https://modelviewer.dev/shared-assets/models/reflective-sphere.gltf",
+      name: "Сфера"
+    }
+  ]
+
   useEffect(() => {
     const script = document.createElement('script')
     script.type = 'module'
@@ -180,7 +201,7 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">��ЫСТРАЯ ДОСТАВКА</h3>
+            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">БЫСТРАЯ ДОСТАВКА</h3>
             <p className="text-gray-400 leading-relaxed">
               Оперативная доставка по Бухаре. Профессиональное обслуживание.
             </p>
