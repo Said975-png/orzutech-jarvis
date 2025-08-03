@@ -604,24 +604,58 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
               {/* Product 1 */}
-              <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                {/* Discount badge */}
+                <div className="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md z-10">
+                  -10%
+                </div>
+
+                <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                     alt={"Смарт Телевизор 55\""}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Смарт Телевизор 55"</h3>
-                  <p className="text-gray-600 text-sm mb-4">4K Ultra HD с HDR</p>
-                  <div className="text-2xl font-bold text-red-600 mb-4">$ 899</div>
-                  <button
-                    onClick={() => addToCart(products[0])}
-                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
-                  >
-                    Заказать
-                  </button>
+
+                <div className="p-4 border-t border-gray-100">
+                  <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
+                    Смарт Телевизор 55"
+                  </h3>
+
+                  {/* Rating */}
+                  <div className="flex items-center mb-2">
+                    <div className="flex text-yellow-400 text-sm">
+                      {"★".repeat(5)}
+                    </div>
+                    <span className="text-xs text-gray-500 ml-2">(24)</span>
+                  </div>
+
+                  <p className="text-xs text-gray-600 mb-3 line-clamp-2">
+                    4K Ultra HD с HDR
+                  </p>
+
+                  <div className="flex items-center justify-between mb-3">
+                    <div>
+                      <div className="text-sm text-gray-400 line-through">$ 999</div>
+                      <div className="text-lg font-bold text-gray-900">$ 899</div>
+                    </div>
+                    <div className="text-xs text-green-600 font-medium">В наличии</div>
+                  </div>
+
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => addToCart(products[0])}
+                      className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
+                    >
+                      В корзину
+                    </button>
+                    <button className="p-2.5 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                      <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
 
