@@ -12,6 +12,19 @@ module.exports = {
       },
       animation: {
         'pulse': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'neon-arc': 'neonArc 6s ease-in-out infinite',
+      },
+      keyframes: {
+        neonArc: {
+          '0%, 100%': {
+            transform: 'translateY(100px) scale(0.8)',
+            opacity: '0.3'
+          },
+          '50%': {
+            transform: 'translateY(-50px) scale(1.2)',
+            opacity: '0.8'
+          },
+        },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
