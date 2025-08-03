@@ -32,7 +32,7 @@ export default function Home() {
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
-    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
+    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторинг��м здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
   ]
 
@@ -228,7 +228,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% ��ригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
-                    <span className="whitespace-nowrap">Полная гарантия на все товар��</span>
+                    <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
@@ -289,7 +289,7 @@ export default function Home() {
               onWheel={(e) => {
                 e.preventDefault()
                 if (e.deltaY > 0) {
-                  // Скролл вниз - следующая модель
+                  // Скролл вниз - следу��щая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
                   // Скролл вверх - предыдущая модель
@@ -641,7 +641,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     Смартфон Premium
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
+                  <p className="text-gray-600 text-sm mb-4">
                     Тройная камера, зарядка 65W
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6  transition-colors duration-300">
@@ -652,7 +652,7 @@ export default function Home() {
                     onClick={() => addToCart(products[1])}
                     className="w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white py-4 px-6 rounded-xl text-sm font-semibold hover:from-green-600 hover:to-teal-600 transition-all duration-400 shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 border-0"
                   >
-                    Заказ��ть
+                    Заказать
                   </button>
                 </div>
               </div>
@@ -673,7 +673,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     Игровой Ноутбук
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
+                  <p className="text-gray-600 text-sm mb-4">
                     RTX 4060, 16GB RAM, 144Hz
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6  transition-colors duration-300">
@@ -705,7 +705,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     Беспроводные наушники
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
+                  <p className="text-gray-600 text-sm mb-4">
                     Premium с шумоподавлением
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6  transition-colors duration-300">
@@ -735,7 +735,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     Умные часы
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
+                  <p className="text-gray-600 text-sm mb-4">
                     Мониторинг здоровья и с��орт
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
@@ -765,7 +765,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     Планшет Pro
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
+                  <p className="text-gray-600 text-sm mb-4">
                     Профессиональный с стилусом
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
@@ -795,7 +795,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     Смарт Телевизор 55"
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
+                  <p className="text-gray-600 text-sm mb-4">
                     4K Ultra HD с HDR
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
@@ -830,7 +830,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     Смартфон Premium
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
+                  <p className="text-gray-600 text-sm mb-4">
                     Тройная камера, зарядка 65W
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
@@ -865,7 +865,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     Игровой Ноутбук
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
+                  <p className="text-gray-600 text-sm mb-4">
                     RTX 4060, 16GB RAM, 144Hz
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
@@ -900,7 +900,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     Беспроводные наушники
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
+                  <p className="text-gray-600 text-sm mb-4">
                     Premium с шумоп��давлением
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
@@ -935,7 +935,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     Умные часы
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
+                  <p className="text-gray-600 text-sm mb-4">
                     Мониторинг здоровья и спорт
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
@@ -970,7 +970,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     Планшет Pro
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
+                  <p className="text-gray-600 text-sm mb-4">
                     Профессиональный с стилусом
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
