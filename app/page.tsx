@@ -326,7 +326,9 @@ export default function Home() {
 
               {/* Product 2 */}
               <div className="group relative rounded-xl transition-all duration-500 hover:transform hover:scale-105">
-                <div className="aspect-square flex items-center justify-center p-8 relative overflow-hidden">
+                {/* Soft card shadow */}
+                <div className="absolute -inset-2 bg-gradient-to-b from-gray-200/20 via-gray-100/10 to-gray-300/30 rounded-2xl blur-lg opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+                <div className="aspect-square flex items-center justify-center p-8 relative overflow-hidden bg-white/60 backdrop-blur-sm rounded-xl">
                   <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
                   <div className="w-40 h-40 bg-gray-100/80 rounded-lg flex items-center justify-center relative z-10 group-hover:bg-yellow-400/20 transition-colors duration-300 border border-gray-300/50 group-hover:border-yellow-400/50">
                     <svg className="w-20 h-20 text-gray-600 group-hover:text-yellow-400 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -361,7 +363,9 @@ export default function Home() {
 
               {/* Product 3 */}
               <div className="group relative rounded-xl transition-all duration-500 hover:transform hover:scale-105">
-                <div className="aspect-square flex items-center justify-center p-8 relative overflow-hidden">
+                {/* Soft card shadow */}
+                <div className="absolute -inset-2 bg-gradient-to-b from-gray-200/20 via-gray-100/10 to-gray-300/30 rounded-2xl blur-lg opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+                <div className="aspect-square flex items-center justify-center p-8 relative overflow-hidden bg-white/60 backdrop-blur-sm rounded-xl">
                   <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
                   <div className="w-40 h-40 bg-gray-100/80 rounded-lg flex items-center justify-center relative z-10 group-hover:bg-yellow-400/20 transition-colors duration-300 border border-gray-300/50 group-hover:border-yellow-400/50">
                     <svg className="w-20 h-20 text-gray-600 group-hover:text-yellow-400 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
