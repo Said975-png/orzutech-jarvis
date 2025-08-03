@@ -31,7 +31,7 @@ export default function Home() {
     { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
-    { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
+    { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
   ]
@@ -301,34 +301,105 @@ export default function Home() {
               <div className="w-16 h-px bg-gray-400 mx-auto"></div>
             </div>
 
-            {/* Filter Icons */}
-            <div className="flex justify-center items-center space-x-8 mb-12">
-              <button className="flex flex-col items-center space-y-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 group">
-                <div className="w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <span className="text-xs">Цена</span>
-              </button>
+            {/* Filter Dropdowns */}
+            <div className="flex justify-center items-center space-x-8 mb-12 relative">
 
-              <button className="flex flex-col items-center space-y-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 group">
-                <div className="w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                  </svg>
-                </div>
-                <span className="text-xs">Рейтинг</span>
-              </button>
+              {/* Price Filter */}
+              <div className="relative">
+                <button
+                  onClick={() => setActiveDropdown(activeDropdown === 'price' ? null : 'price')}
+                  className="flex flex-col items-center space-y-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+                >
+                  <div className="w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <span className="text-xs">Цена</span>
+                </button>
+                {activeDropdown === 'price' && (
+                  <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
+                    <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+                      <div className="p-2">
+                        {['До 25,000 ₽', '25,000 - 50,000 ₽', '50,000 - 75,000 ₽', '75,000 - 100,000 ₽', '100,000 - 150,000 ₽', 'Свыше 150,000 ₽'].map((price, index) => (
+                          <button
+                            key={index}
+                            className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            {price}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
 
-              <button className="flex flex-col items-center space-y-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 group">
-                <div className="w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-                <span className="text-xs">Категория</span>
-              </button>
+              {/* Rating Filter */}
+              <div className="relative">
+                <button
+                  onClick={() => setActiveDropdown(activeDropdown === 'rating' ? null : 'rating')}
+                  className="flex flex-col items-center space-y-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+                >
+                  <div className="w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                    </svg>
+                  </div>
+                  <span className="text-xs">Рейтинг</span>
+                </button>
+                {activeDropdown === 'rating' && (
+                  <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
+                    <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+                      <div className="p-2">
+                        {['5 звезд', '4 звезды и выше', '3 звезды и выше', '2 звезды и выше', '1 звезда и выше', 'Без рейтинга'].map((rating, index) => (
+                          <button
+                            key={index}
+                            className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200 flex items-center"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            <span className="mr-2">⭐</span>
+                            {rating}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Category Filter */}
+              <div className="relative">
+                <button
+                  onClick={() => setActiveDropdown(activeDropdown === 'category' ? null : 'category')}
+                  className="flex flex-col items-center space-y-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+                >
+                  <div className="w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                  <span className="text-xs">Категория</span>
+                </button>
+                {activeDropdown === 'category' && (
+                  <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
+                    <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+                      <div className="p-2">
+                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные часы', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
+                          <button
+                            key={index}
+                            className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            {category}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Products Grid */}
@@ -551,7 +622,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-200 p-8 lg:p-16 text-center">
           <p className="text-gray-600 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ П��АВА З��ЩИЩЕНЫ.
+            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ П��АВА ЗАЩИЩЕНЫ.
           </p>
         </div>
       </div>
