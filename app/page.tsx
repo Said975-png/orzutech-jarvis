@@ -226,7 +226,7 @@ export default function Home() {
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
-                    <span className="whitespace-nowrap">100% ��ригинальные устр��йства</span>
+                    <span className="whitespace-nowrap">100% ��ригинальные устр���йства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
@@ -359,7 +359,7 @@ export default function Home() {
             <div className="relative">
               <div className="flex animate-scroll space-x-6">
                 {/* Slide 1 - Grooming Kit */}
-                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="flex-shrink-0 w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F4b42886ccd0846e8845f7fea196bdae6?format=webp&width=800"
@@ -375,7 +375,7 @@ export default function Home() {
                 </div>
 
                 {/* Slide 2 - Apple Watch */}
-                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="flex-shrink-0 w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2Fad77a22293914f76ad5c86b0cc1cb048?format=webp&width=800"
@@ -391,7 +391,7 @@ export default function Home() {
                 </div>
 
                 {/* Slide 3 - PlayStation */}
-                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="flex-shrink-0 w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F593de0ffc9344103bcb253bcf1c49c90?format=webp&width=800"
@@ -407,7 +407,7 @@ export default function Home() {
                 </div>
 
                 {/* Slide 4 - Samsung Watch */}
-                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="flex-shrink-0 w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F1f88af23807446fbae545f790458cfa0?format=webp&width=800"
@@ -423,7 +423,7 @@ export default function Home() {
                 </div>
 
                 {/* Slide 5 - Huawei Set */}
-                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="flex-shrink-0 w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F61d1bfb408604835a08844fc969d435c?format=webp&width=800"
@@ -439,7 +439,7 @@ export default function Home() {
                 </div>
 
                 {/* Duplicate slides for seamless loop */}
-                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="flex-shrink-0 w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F4b42886ccd0846e8845f7fea196bdae6?format=webp&width=800"
@@ -454,7 +454,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="flex-shrink-0 w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2Fad77a22293914f76ad5c86b0cc1cb048?format=webp&width=800"
@@ -469,7 +469,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="flex-shrink-0 w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F593de0ffc9344103bcb253bcf1c49c90?format=webp&width=800"
@@ -660,7 +660,7 @@ export default function Home() {
               </div>
 
               {/* Product 2 */}
-              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="group group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
 
 
                 <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
@@ -692,7 +692,7 @@ export default function Home() {
               </div>
 
               {/* Product 3 */}
-              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="group group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
 
 
                 <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
@@ -724,7 +724,7 @@ export default function Home() {
               </div>
 
               {/* Product 4 */}
-              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="group group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
 
 
                 <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
@@ -756,7 +756,7 @@ export default function Home() {
               </div>
 
               {/* Product 5 */}
-              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="group group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                 <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
@@ -786,7 +786,7 @@ export default function Home() {
               </div>
 
               {/* Product 6 */}
-              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="group group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                 <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
@@ -816,7 +816,7 @@ export default function Home() {
               </div>
 
               {/* Product 7 - Duplicate of Product 1 */}
-              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="group group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                 <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
@@ -846,7 +846,7 @@ export default function Home() {
               </div>
 
               {/* Product 8 - Duplicate of Product 2 */}
-              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="group group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                 <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
 
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -881,7 +881,7 @@ export default function Home() {
               </div>
 
               {/* Product 9 - Duplicate of Product 3 */}
-              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="group group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                 <div className="aspect-[4/3] bg-white/50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 group-hover:from-white/40 group-hover:to-white/20 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -916,7 +916,7 @@ export default function Home() {
               </div>
 
               {/* Product 10 - Duplicate of Product 4 */}
-              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="group group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                 <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
 
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -951,7 +951,7 @@ export default function Home() {
               </div>
 
               {/* Product 11 - Duplicate of Product 5 */}
-              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="group group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                 <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
 
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -986,7 +986,7 @@ export default function Home() {
               </div>
 
               {/* Product 12 - Duplicate of Product 6 */}
-              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="group group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                 <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
 
                   <div className="relative z-10 h-full flex items-center justify-center">
