@@ -51,7 +51,7 @@ export default function Home() {
         <nav className="flex items-center justify-center px-8 lg:px-16 py-4">
           <div className="flex items-center space-x-12">
             <div className="flex items-center">
-              <span className="text-white font-bold text-2xl tracking-wide font-sans">ORZUTECH</span>
+              <span className="text-yellow-400 font-bold text-2xl tracking-wide font-sans">ORZUTECH</span>
             </div>
 
             <div className="hidden lg:flex items-center space-x-8 text-gray-300 font-medium font-sans">
@@ -91,7 +91,7 @@ export default function Home() {
                 СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
               </div>
 
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-[0.9] tracking-tight">
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
                 ORZUTECH
               </h1>
 
