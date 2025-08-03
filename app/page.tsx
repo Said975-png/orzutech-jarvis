@@ -179,7 +179,7 @@ export default function Home() {
               <div className="text-center text-gray-400 text-xs mb-2">
                 Прокрутите для смены модели
               </div>
-              <div className="flex justify-center space-x-1 mb-4">
+              <div className="flex justify-center space-x-1">
                 {models.map((_, index) => (
                   <div
                     key={index}
@@ -190,28 +190,6 @@ export default function Home() {
                         : 'bg-gray-600'
                       }
                     `}
-                  />
-                ))}
-              </div>
-
-              {/* Color Selection */}
-              <div className="text-center text-gray-400 text-xs mb-2">
-                Выбор цвета
-              </div>
-              <div className="flex justify-center space-x-3">
-                {colors.map((colorOption, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setSelectedColor(index)}
-                    className={`
-                      w-4 h-4 rounded-full transition-all duration-300 border-2 cursor-pointer
-                      ${colorOption.color} ${colorOption.border}
-                      ${selectedColor === index
-                        ? 'ring-2 ring-yellow-400 ring-offset-1'
-                        : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1'
-                      }
-                    `}
-                    title={colorOption.name}
                   />
                 ))}
               </div>
@@ -254,7 +232,7 @@ export default function Home() {
             {/* Section Header */}
             <div className="text-center mb-16">
               <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em] mb-4">
-                КАТАЛОГ ТОВАРОВ
+                КАТАЛОГ ТО��АРОВ
               </div>
               <h2 className="text-3xl lg:text-4xl font-black text-black mb-6">
                 НАШИ <span className="text-yellow-400">ПРОДУКТЫ</span>
