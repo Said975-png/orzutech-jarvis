@@ -29,9 +29,9 @@ export default function Home() {
 
   const products: Product[] = [
     { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
-    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессио��альной фотографии" },
+    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
-    { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
+    { id: 4, name: "Беспроводные н��ушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
   ]
@@ -226,7 +226,7 @@ export default function Home() {
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
-                    <span className="whitespace-nowrap">100% ��ригинальные устройства</span>
+                    <span className="whitespace-nowrap">100% ��р��гинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
@@ -479,7 +479,7 @@ export default function Home() {
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">PlayStation 5 Slim</h3>
-                    <p className="text-gray-600 text-sm mb-4">Игровая консоль нового поколения</p>
+                    <p className="text-gray-600 text-sm mb-4">Игровая консоль нового п��коления</p>
                     <div className="text-2xl font-bold text-red-600">₽ 45,000</div>
                   </div>
                 </div>
@@ -584,7 +584,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
+                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксес��уары', 'Все категории'].map((category, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
@@ -626,7 +626,7 @@ export default function Home() {
               </div>
 
               {/* Product 2 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
+              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
 
 
                 <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
@@ -658,7 +658,7 @@ export default function Home() {
               </div>
 
               {/* Product 3 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
+              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
 
 
                 <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
@@ -690,7 +690,7 @@ export default function Home() {
               </div>
 
               {/* Product 4 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
+              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
 
 
                 <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
@@ -722,7 +722,7 @@ export default function Home() {
               </div>
 
               {/* Product 5 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
+              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
@@ -752,7 +752,7 @@ export default function Home() {
               </div>
 
               {/* Product 6 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
+              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
@@ -782,7 +782,7 @@ export default function Home() {
               </div>
 
               {/* Product 7 - Duplicate of Product 1 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
+              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
@@ -812,7 +812,7 @@ export default function Home() {
               </div>
 
               {/* Product 8 - Duplicate of Product 2 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
+              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
 
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -847,7 +847,7 @@ export default function Home() {
               </div>
 
               {/* Product 9 - Duplicate of Product 3 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
+              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="aspect-[4/3] bg-white/50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 group-hover:from-white/40 group-hover:to-white/20 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -882,7 +882,7 @@ export default function Home() {
               </div>
 
               {/* Product 10 - Duplicate of Product 4 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
+              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
 
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -917,7 +917,7 @@ export default function Home() {
               </div>
 
               {/* Product 11 - Duplicate of Product 5 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
+              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
 
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -952,7 +952,7 @@ export default function Home() {
               </div>
 
               {/* Product 12 - Duplicate of Product 6 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
+              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
 
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -971,7 +971,7 @@ export default function Home() {
                     Планшет Pro
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
-                    Профессиональный �� стилусом
+                    Профессиональный с стилусом
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
                     $ 799
