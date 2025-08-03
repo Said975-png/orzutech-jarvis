@@ -131,10 +131,10 @@ export default function Home() {
           </div>
 
           {/* Right Content */}
-          <div className="flex justify-center items-center">
+          <div className="flex flex-col justify-center items-center space-y-6">
             <div className="relative w-[280px] lg:w-[360px] h-[280px] lg:h-[360px]">
               <model-viewer
-                src="https://cdn.builder.io/o/assets%2F08440fd5afb844b5b8c663feab34b3b0%2Fd9f2f51e747245009ee937c94e66654f?alt=media&token=dfd53474-2264-46a1-8202-69e75999c8a5&apiKey=08440fd5afb844b5b8c663feab34b3b0"
+                src={models[currentModel].url}
                 alt="3D Model"
                 auto-rotate
                 camera-controls
@@ -143,6 +143,31 @@ export default function Home() {
                 style={{ width: '100%', height: '100%' }}
                 loading="lazy"
               ></model-viewer>
+            </div>
+
+            {/* Custom Model Selector */}
+            <div className="w-[280px] lg:w-[360px]">
+              <div className="text-white text-center mb-3 text-sm font-medium">
+                {models[currentModel].name}
+              </div>
+              <div className="flex space-x-2 overflow-x-auto scrollbar-hide pb-2">
+                {models.map((model, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentModel(index)}
+                    className={`
+                      flex-shrink-0 w-16 h-16 rounded-lg border-2 transition-all duration-300
+                      ${currentModel === index
+                        ? 'border-white bg-white/10'
+                        : 'border-gray-600 bg-gray-800 hover:border-gray-400'
+                      }
+                      flex items-center justify-center text-xs font-bold text-white
+                    `}
+                  >
+                    {index + 1}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
