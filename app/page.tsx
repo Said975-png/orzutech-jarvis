@@ -33,6 +33,12 @@ export default function Home() {
     }
   ]
 
+  const colors = [
+    { name: "Белый", color: "bg-white", border: "border-gray-300" },
+    { name: "Черный", color: "bg-black", border: "border-gray-700" },
+    { name: "Серый", color: "bg-gray-400", border: "border-gray-500" }
+  ]
+
   useEffect(() => {
     const script = document.createElement('script')
     script.type = 'module'
