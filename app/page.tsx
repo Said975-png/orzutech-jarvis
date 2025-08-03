@@ -28,7 +28,7 @@ export default function Home() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
   const products: Product[] = [
-    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
+    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для мак��имального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
@@ -604,39 +604,29 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 bg-gradient-to-b from-white to-gray-50/30">
 
               {/* Product 1 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden">
-                {/* Top accent line */}
-                <div className="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                <div className="aspect-[4/3] bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 overflow-hidden relative">
-                  {/* Subtle pattern overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-transparent to-gray-100/40 group-hover:from-white/80 group-hover:to-gray-50/60 transition-all duration-700"></div>
-
-                  <div className="relative z-10 h-full flex items-center justify-center p-8">
-                    <div className="w-full h-full bg-white/70 backdrop-blur-sm rounded-xl shadow-lg flex items-center justify-center group-hover:scale-110 group-hover:bg-white/90 transition-all duration-700 overflow-hidden p-4 border border-white/50">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt={"Смарт Телевизор 55\""}
-                        className="w-full h-full object-contain filter group-hover:brightness-105 transition-all duration-500"
-                      />
-                    </div>
-                  </div>
+              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
+                <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                    alt={"Смарт Телевизор 55\""}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+                  />
                 </div>
 
-                <div className="p-7 bg-gradient-to-b from-white to-gray-50/30">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-700 transition-colors duration-300 leading-tight">
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 transition-colors duration-300 leading-tight">
                     Смарт Телевизор 55"
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-5 font-medium">
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
                     4K Ultra HD с HDR
                   </p>
-                  <div className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-blue-600 transition-colors duration-300">
-                    ₽ 89,900
+                  <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
+                    $ 899
                   </div>
 
                   <button
                     onClick={() => addToCart(products[0])}
-                    className="w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white py-4 px-6 rounded-xl text-sm font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-400 shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 border-0"
+                    className="w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white py-4 px-6 rounded-xl text-sm font-semibold hover:from-gray-700 hover:to-gray-600 transition-all duration-400 shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 border-0 mt-auto"
                   >
                     Заказать
                   </button>
@@ -1054,7 +1044,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-200 p-8 lg:p-16 text-center">
           <p className="text-gray-600 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
+            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВ�� ЗАЩИЩЕНЫ.
           </p>
         </div>
       </div>
