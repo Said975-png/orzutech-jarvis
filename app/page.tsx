@@ -122,7 +122,7 @@ export default function Home() {
               <div className="w-24 h-1 bg-white"></div>
               
               <p className="text-gray-300 text-xl lg:text-2xl leading-relaxed max-w-lg font-light">
-                Профессиональные реше��ия в сфере электроники.
+                Профессиональные реше����ия в сфере электроники.
                 Качество, надежн��сть, инновации.
               </p>
             </div>
@@ -140,10 +140,12 @@ export default function Home() {
                 camera-controls
                 autoplay
                 animation-name=""
-                field-of-view="45deg"
-                camera-orbit="0deg 75deg 105%"
+                field-of-view="30deg"
+                camera-orbit="0deg 75deg 150%"
                 style={{ width: '100%', height: '100%' }}
                 loading="lazy"
+                min-camera-orbit="auto auto 120%"
+                max-camera-orbit="auto auto 200%"
               ></model-viewer>
             </div>
 
