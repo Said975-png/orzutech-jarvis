@@ -1,120 +1,140 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-
 export default function Home() {
-  const [currentTime, setCurrentTime] = useState('')
-
-  useEffect(() => {
-    const updateTime = () => {
-      setCurrentTime(new Date().toLocaleTimeString())
-    }
-    
-    updateTime()
-    const interval = setInterval(updateTime, 1000)
-    
-    return () => clearInterval(interval)
-  }, [])
-
   return (
-    <main className="h-screen w-screen bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 overflow-hidden">
-      {/* Main Card */}
-      <div className="relative w-full h-full">
-        {/* Background Card */}
-        <div className="bg-gray-900 h-full w-full p-8 relative overflow-hidden shadow-2xl">
-          {/* Top Left Brand */}
-          <div className="absolute top-8 left-8 text-gray-400 text-sm font-light tracking-widest">
-            Электроника будущего
+    <main className="min-h-screen bg-black">
+      {/* Main Container */}
+      <div className="w-full bg-gray-900">
+        {/* Navigation */}
+        <nav className="flex items-center justify-between px-8 lg:px-16 py-4 border-b border-gray-800">
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-white flex items-center justify-center">
+              <span className="text-black font-black text-lg">OT</span>
+            </div>
+            <span className="text-white font-black text-2xl tracking-tight">ORZUTECH</span>
           </div>
-
-          {/* Top Right Company */}
-          <div className="absolute top-8 right-8 text-gray-400 text-sm font-light tracking-wider">
-            ORZU INC.
+          
+          <div className="hidden lg:flex items-center space-x-12 text-gray-300 font-medium">
+            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Главная</a>
+            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">О нас</a>
+            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Каталог</a>
+            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Гарантия</a>
+            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Блог</a>
           </div>
+          
+          <button className="bg-white text-black px-8 py-3 font-bold uppercase tracking-wide hover:bg-gray-100 transition-colors">
+            Контакты
+          </button>
+        </nav>
 
-          {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center mt-16">
-            {/* Left Content */}
-            <div className="space-y-8 z-10 relative">
-              <h1 className="text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 leading-tight">
+        {/* Main Content */}
+        <div className="relative grid lg:grid-cols-2 gap-16 p-8 lg:p-16 min-h-[70vh] overflow-hidden">
+          {/* Light Effect from Left */}
+          <div className="absolute -left-32 top-0 bottom-0 w-96 bg-gradient-to-r from-white/10 via-white/5 to-transparent blur-3xl opacity-60"></div>
+          <div className="absolute -left-20 top-1/4 bottom-1/4 w-64 bg-gradient-to-r from-white/20 via-white/8 to-transparent blur-2xl opacity-40"></div>
+          <div className="absolute -left-10 top-1/3 bottom-1/3 w-32 bg-gradient-to-r from-white/30 via-white/10 to-transparent blur-xl opacity-30"></div>
+
+          {/* Left Content */}
+          <div className="relative flex flex-col justify-center space-y-12 z-10">
+            <div className="space-y-6">
+              <div className="text-sm text-gray-500 font-bold uppercase tracking-[0.2em]">
+                МАГАЗИН ТЕХНИКИ В БУХАРЕ
+              </div>
+              
+              <h1 className="text-4xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.9] tracking-tight">
                 ORZUTECH
               </h1>
-
-              <p className="text-gray-300 text-lg leading-relaxed max-w-md">
-                Революционные технологии для нового поколения. 
-                Откройте для себя будущее электроники уже сегодня.
+              
+              <div className="w-24 h-1 bg-white"></div>
+              
+              <p className="text-gray-300 text-xl lg:text-2xl leading-relaxed max-w-lg font-light">
+                Профессиональные решения в сфере электроники.
+                Качество, надежность, инновации.
               </p>
-
-              <div className="flex space-x-4">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
-                  Каталог
-                </button>
-                <button className="border border-gray-500 text-gray-300 hover:text-white hover:border-white px-8 py-3 rounded-full font-semibold transition-all duration-300">
-                  Подписаться
-                </button>
-              </div>
-
-              {/* Stats */}
-              <div className="flex space-x-12 pt-8">
-                <div>
-                  <div className="text-2xl font-bold text-white">5000+</div>
-                  <div className="text-sm text-gray-500">товаров</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-white">24 часа</div>
-                  <div className="text-sm text-gray-500">поддержка</div>
-                </div>
-              </div>
             </div>
+            
 
-            {/* Right Content - Product Showcase */}
+          </div>
+
+          {/* Right Content */}
+          <div className="flex justify-center items-center">
             <div className="relative">
-              {/* Large Number */}
-              <div className="absolute -top-8 -right-8 text-8xl font-black text-gray-800 opacity-50 z-0">
-                7+
-              </div>
-
-
-
-              {/* Floating Elements */}
-              <div className="absolute top-1/4 -left-8 w-16 h-16 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
-
-              <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-purple-500/20 rounded-full blur-xl animate-pulse animation-delay-500"></div>
+              <img 
+                src="https://cdn.builder.io/api/v1/image/assets%2F02f225558365433abb0d2ad515b82942%2F52db23e5e3e24501b060c9ae46a778e6?format=webp&width=800"
+                alt="Apple Products"
+                className="max-w-[350px] lg:max-w-[450px] h-auto object-contain grayscale hover:grayscale-0 transition-all duration-500"
+              />
             </div>
           </div>
+        </div>
 
-          {/* Bottom Right Stats Card */}
-          <div className="absolute bottom-8 right-8 bg-black/50 backdrop-blur-md rounded-2xl p-4 border border-gray-700">
-            <div className="text-center space-y-2">
-              <div className="text-xs text-gray-400">В наличии</div>
-              <div className="text-2xl font-bold text-white">15K+</div>
-              <div className="text-xs text-gray-500">устройств</div>
+        {/* Stats Section */}
+        <div className="border-t border-gray-800 p-8 lg:p-16">
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl font-black text-white mb-2">500+</div>
+              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Товаров</div>
+            </div>
+            <div>
+              <div className="text-4xl font-black text-white mb-2">150+</div>
+              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Клиентов</div>
+            </div>
+            <div>
+              <div className="text-4xl font-black text-white mb-2">24/7</div>
+              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Поддержка</div>
+            </div>
+            <div>
+              <div className="text-4xl font-black text-white mb-2">99%</div>
+              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Качество</div>
             </div>
           </div>
-
-          {/* Decorative Elements */}
-
-          <div className="absolute bottom-1/3 left-1/3 w-1 h-1 bg-cyan-400 rounded-full animate-ping animation-delay-700"></div>
-          <div className="absolute top-1/2 left-1/6 w-1.5 h-1.5 bg-purple-400 rounded-full animate-ping animation-delay-1500"></div>
         </div>
 
-        {/* Floating Status Card */}
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-black px-6 py-2 rounded-full font-bold text-sm shadow-lg">
-          🟢 СИСТЕМА АКТИВНА
+        {/* Services Section */}
+        <div className="border-t border-gray-800 grid md:grid-cols-3">
+          <div className="p-8 lg:p-12 border-r border-gray-800 hover:bg-gray-800 transition-colors">
+            <div className="w-16 h-16 bg-white flex items-center justify-center mb-6">
+              <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+            </div>
+            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">ОБМЕН УСТРОЙСТВ</h3>
+            <p className="text-gray-400 leading-relaxed">
+              Выгодный обмен старых устройств на новые модели с доплатой.
+            </p>
+          </div>
+
+          <div className="p-8 lg:p-12 border-r border-gray-800 hover:bg-gray-800 transition-colors">
+            <div className="w-16 h-16 bg-white flex items-center justify-center mb-6">
+              <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">ГАРАНТИЯ КАЧЕСТВА</h3>
+            <p className="text-gray-400 leading-relaxed">
+              Полная гарантия на все товары. Сертифицированные устройства.
+            </p>
+          </div>
+
+          <div className="p-8 lg:p-12 hover:bg-gray-800 transition-colors">
+            <div className="w-16 h-16 bg-white flex items-center justify-center mb-6">
+              <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">БЫСТРАЯ ДОСТАВКА</h3>
+            <p className="text-gray-400 leading-relaxed">
+              Оперативная доставка по Бухаре. Профессиональное обслуживание.
+            </p>
+          </div>
         </div>
 
-        {/* Side Elements */}
-        <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 bg-white/10 backdrop-blur-md rounded-full p-4 text-white">
-          <div className="text-2xl">⚡</div>
+        {/* Footer */}
+        <div className="border-t border-gray-800 p-8 lg:p-16 text-center">
+          <p className="text-gray-500 uppercase tracking-wide text-sm">
+            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
+          </p>
         </div>
-        
-
-      </div>
-
-      {/* Background Pattern */}
-      <div className="fixed inset-0 pointer-events-none opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-300 rounded-full blur-3xl"></div>
       </div>
     </main>
   )
