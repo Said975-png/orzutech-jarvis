@@ -189,7 +189,7 @@ export default function Home() {
             </div>
             <div>
               <div className="text-4xl font-black text-white mb-2">150+</div>
-              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Кл��ентов</div>
+              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Клиентов</div>
             </div>
             <div>
               <div className="text-4xl font-black text-white mb-2">24/7</div>
