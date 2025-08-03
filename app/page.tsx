@@ -230,7 +230,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
-                    <span className="whitespace-nowrap">Инновационные решения для дома</span>
+                    <span className="whitespace-nowrap">Инновационные ре��ения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
@@ -292,7 +292,7 @@ export default function Home() {
                   // Скролл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // Скролл вверх - предыдущая ��одель
+                  // Скролл вверх - предыдущая модель
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
@@ -773,7 +773,7 @@ export default function Home() {
                     Мониторинг здоровья и с��орт
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
-                    ₽ 34,900
+                    $ 349
                   </div>
 
                   <button
@@ -837,7 +837,7 @@ export default function Home() {
 
                 <div className="p-7 bg-gradient-to-b from-white to-gray-50/30">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
-                    Смарт ��елевизор 55"
+                    Смарт Телевизор 55"
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-5 font-medium">
                     4K Ultra HD с HDR
@@ -933,7 +933,7 @@ export default function Home() {
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Беспроводные н��ушники"
+                        alt="Бес��роводные н��ушники"
                         className="w-full h-full object-contain"
                       />
                     </div>
@@ -983,7 +983,7 @@ export default function Home() {
                     Мониторинг здоровья и спорт
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
-                    ₽ 34,900
+                    $ 349
                   </div>
 
                   <button
