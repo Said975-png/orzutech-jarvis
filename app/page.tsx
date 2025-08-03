@@ -230,7 +230,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
-                    <span className="whitespace-nowrap">Ин��овационные решения для дома</span>
+                    <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
@@ -292,7 +292,7 @@ export default function Home() {
                   // Скролл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // Скро��л вверх - предыдущая модель
+                  // Скролл вверх - предыдущая ��одель
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
@@ -450,7 +450,7 @@ export default function Home() {
                   <div className="p-7 bg-gradient-to-b from-white to-gray-50/30">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Grooming Kit Pro</h3>
                     <p className="text-gray-600 text-sm mb-4">Профессиональный набор для ухода</p>
-                    <div className="text-2xl font-bold text-red-600">��� 8,900</div>
+                    <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
                   </div>
                 </div>
 
@@ -494,7 +494,7 @@ export default function Home() {
             {/* Section Header */}
             <div className="text-center mb-12">
               <h2 className="text-3xl font-light text-gray-900 mb-2 tracking-wide">
-                ��аталог товаров
+                Каталог товаров
               </h2>
               <div className="w-16 h-px bg-gray-400 mx-auto"></div>
             </div>
@@ -738,7 +738,7 @@ export default function Home() {
                     Premium с шумоподавлением
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-purple-600 transition-colors duration-300">
-                    ₽ 24,900
+                    $ 249
                   </div>
 
                   <button
@@ -837,7 +837,7 @@ export default function Home() {
 
                 <div className="p-7 bg-gradient-to-b from-white to-gray-50/30">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
-                    Смарт Телевизор 55"
+                    Смарт ��елевизор 55"
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-5 font-medium">
                     4K Ultra HD с HDR
@@ -948,7 +948,7 @@ export default function Home() {
                     Premium с шумоп��давлением
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
-                    ₽ 24,900
+                    $ 249
                   </div>
 
                   <button
