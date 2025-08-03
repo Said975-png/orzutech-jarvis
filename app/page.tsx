@@ -95,7 +95,7 @@ export default function Home() {
               
               <p className="text-gray-300 text-xl lg:text-2xl leading-relaxed max-w-lg font-light">
                 Профессиональные решения в сфере электроники.
-                Качество, надежнос��ь, инновации.
+                Качество, надежность, инновации.
               </p>
 
               {/* Auto-scrolling slider */}
@@ -178,7 +178,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-black text-white mb-2">500+</div>
-              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Товаров</div>
+              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Това��ов</div>
             </div>
             <div>
               <div className="text-4xl font-black text-white mb-2">150+</div>
