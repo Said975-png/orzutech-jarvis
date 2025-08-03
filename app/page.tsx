@@ -32,7 +32,7 @@ export default function Home() {
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
-    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мон��торингом здоровья и спортивными функциями" },
+    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
   ]
 
@@ -230,7 +230,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
-                    <span className="whitespace-nowrap">Инновационные решения для дома</span>
+                    <span className="whitespace-nowrap">Ин��овационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
@@ -289,10 +289,10 @@ export default function Home() {
               onWheel={(e) => {
                 e.preventDefault()
                 if (e.deltaY > 0) {
-                  // Скролл вниз - сл��дующая модель
+                  // Скролл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // Скролл вверх - предыдущая модель
+                  // Скро��л вверх - предыдущая модель
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
@@ -450,7 +450,7 @@ export default function Home() {
                   <div className="p-7 bg-gradient-to-b from-white to-gray-50/30">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Grooming Kit Pro</h3>
                     <p className="text-gray-600 text-sm mb-4">Профессиональный набор для ухода</p>
-                    <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
+                    <div className="text-2xl font-bold text-red-600">��� 8,900</div>
                   </div>
                 </div>
 
@@ -494,7 +494,7 @@ export default function Home() {
             {/* Section Header */}
             <div className="text-center mb-12">
               <h2 className="text-3xl font-light text-gray-900 mb-2 tracking-wide">
-                Каталог товаров
+                ��аталог товаров
               </h2>
               <div className="w-16 h-px bg-gray-400 mx-auto"></div>
             </div>
@@ -699,7 +699,7 @@ export default function Home() {
                     RTX 4060, 16GB RAM, 144Hz
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-orange-600 transition-colors duration-300">
-                    ₽ 129,900
+                    $ 1,299
                   </div>
 
                   <button
@@ -913,7 +913,7 @@ export default function Home() {
                     RTX 4060, 16GB RAM, 144Hz
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
-                    ₽ 129,900
+                    $ 1,299
                   </div>
 
                   <button
