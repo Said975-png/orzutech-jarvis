@@ -31,7 +31,7 @@ export default function Home() {
     { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
-    { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
+    { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звук��м" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
   ]
@@ -174,17 +174,17 @@ export default function Home() {
           <div className="flex items-center space-x-4">
             {/* Auth buttons */}
             <div className="flex items-center space-x-2">
-              <button className="text-gray-600 hover:text-yellow-400 transition-colors duration-300 text-sm font-medium">
+              <button className="text-purple-700 hover:text-purple-900 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
                 Вход
               </button>
-              <span className="text-gray-400">|</span>
-              <button className="text-gray-600 hover:text-yellow-400 transition-colors duration-300 text-sm font-medium">
+              <span className="text-purple-400">|</span>
+              <button className="text-purple-700 hover:text-purple-900 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
                 Регистрация
               </button>
             </div>
 
             {/* Cart */}
-            <button className="relative p-2 text-gray-600 hover:text-yellow-400 transition-colors duration-300">
+            <button className="relative p-2 text-purple-700 hover:text-purple-900 transition-colors duration-300 drop-shadow-sm">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m0 0L12 21l7.5-3" />
               </svg>
@@ -208,7 +208,7 @@ export default function Home() {
           <div className="relative flex flex-col justify-center space-y-12 z-10">
             <div className="space-y-6">
               <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em]">
-                СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
+                СОВРЕМЕ��НАЯ ЭЛЕКТРОНИКА
               </div>
 
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
