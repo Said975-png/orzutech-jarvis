@@ -44,9 +44,9 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-white">
       {/* Main Container */}
-      <div className="w-full bg-black">
+      <div className="w-full bg-white">
         {/* Navigation */}
         <nav className="flex items-center justify-center px-8 lg:px-16 py-4">
           <div className="flex items-center space-x-12">
@@ -347,7 +347,7 @@ export default function Home() {
             {/* Bottom Action */}
             <div className="text-center mt-16">
               <button className="bg-transparent border-2 border-yellow-400 text-yellow-400 px-12 py-4 rounded-lg font-bold hover:bg-yellow-400 hover:text-black transition-all duration-300 uppercase tracking-wide">
-                Смотре��ь все товары
+                Смотреть все товары
               </button>
             </div>
           </div>
