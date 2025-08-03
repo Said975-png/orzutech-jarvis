@@ -154,14 +154,12 @@ export default function Home() {
                   // Скролл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // ��кролл вверх - предыдущая модель
+                  // Скролл вверх - предыдущая модель
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
             >
-              <div className="text-white text-center mb-3 text-sm font-medium">
-                {models[currentModel].name}
-              </div>
+
               <div className="text-center text-gray-400 text-xs mb-2">
                 Прокрутите для смены модели
               </div>
