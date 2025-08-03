@@ -98,14 +98,7 @@ export default function Home() {
           {/* Right Content */}
           <div className="flex justify-center items-center">
             <div className="relative w-[350px] lg:w-[450px] h-[350px] lg:h-[450px]">
-              <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
-                <ambientLight intensity={0.5} />
-                <directionalLight position={[10, 10, 5]} intensity={1} />
-                <Suspense fallback={null}>
-                  <Model />
-                </Suspense>
-                <OrbitControls enableZoom={false} enablePan={false} />
-              </Canvas>
+              <Scene3D />
             </div>
           </div>
         </div>
