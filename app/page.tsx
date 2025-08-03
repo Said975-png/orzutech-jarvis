@@ -184,7 +184,7 @@ export default function Home() {
             </div>
 
             {/* Cart */}
-            <button className="relative p-2 text-purple-700 hover:text-purple-900 transition-colors duration-300 drop-shadow-sm">
+            <button className="relative p-2 text-yellow-400 hover:text-yellow-500 transition-colors duration-300 drop-shadow-sm">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m0 0L12 21l7.5-3" />
               </svg>
@@ -227,7 +227,7 @@ export default function Home() {
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
-                    <span className="whitespace-nowrap">Быстрая доставка и у��тановка</span>
+                    <span className="whitespace-nowrap">Быстрая доста��ка и у��тановка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
