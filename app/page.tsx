@@ -230,7 +230,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
-                    <span className="whitespace-nowrap">Инно��ационные решения для дома</span>
+                    <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
@@ -325,7 +325,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-black text-black mb-2">500+</div>
-              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Товаров</div>
+              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Товаро��</div>
             </div>
             <div>
               <div className="text-4xl font-black text-black mb-2">150+</div>
@@ -494,7 +494,7 @@ export default function Home() {
             {/* Section Header */}
             <div className="text-center mb-12">
               <h2 className="text-3xl font-light text-gray-900 mb-2 tracking-wide">
-                Ката��ог товаров
+                Каталог товаров
               </h2>
               <div className="w-16 h-px bg-gray-400 mx-auto"></div>
             </div>
@@ -782,8 +782,8 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
                     Умные часы
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Мониторинг здоровья и спорт
+                  <p className="text-sm text-gray-600 leading-relaxed mb-5 font-medium">
+                    Мониторинг здоровья и с��орт
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
                     ₽ 34,900
@@ -817,7 +817,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
                     Планшет Pro
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                  <p className="text-sm text-gray-600 leading-relaxed mb-5 font-medium">
                     Профессиональный с стилусом
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
@@ -852,7 +852,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
                     Смарт Телевизор 55"
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                  <p className="text-sm text-gray-600 leading-relaxed mb-5 font-medium">
                     4K Ultra HD с HDR
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
@@ -885,9 +885,9 @@ export default function Home() {
 
                 <div className="p-7 bg-gradient-to-b from-white to-gray-50/30">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
-                    Смар��фон Premium
+                    Смартфон Premium
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                  <p className="text-sm text-gray-600 leading-relaxed mb-5 font-medium">
                     Тройная камера, зарядка 65W
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
@@ -922,7 +922,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
                     Игровой Ноутбук
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                  <p className="text-sm text-gray-600 leading-relaxed mb-5 font-medium">
                     RTX 4060, 16GB RAM, 144Hz
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
@@ -957,7 +957,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
                     Беспроводные наушники
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                  <p className="text-sm text-gray-600 leading-relaxed mb-5 font-medium">
                     Premium с шумоп��давлением
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
@@ -992,7 +992,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
                     Умные часы
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                  <p className="text-sm text-gray-600 leading-relaxed mb-5 font-medium">
                     Мониторинг здоровья и спорт
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
@@ -1027,7 +1027,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
                     Планшет Pro
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                  <p className="text-sm text-gray-600 leading-relaxed mb-5 font-medium">
                     Профессиональный с стилусом
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
