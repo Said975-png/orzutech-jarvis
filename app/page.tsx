@@ -33,7 +33,7 @@ export default function Home() {
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
-    { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
+    { id: 6, name: "Планшет Pro", price: 79900, description: "Профессионал��ный планшет для работы и творчества с поддержкой стилуса" }
   ]
 
   const addToCart = (product: Product) => {
@@ -174,11 +174,11 @@ export default function Home() {
           <div className="flex items-center space-x-4">
             {/* Auth buttons */}
             <div className="flex items-center space-x-2">
-              <button className="text-yellow-400 hover:text-yellow-500 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
-                Вхо��
+              <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
+                Вход
               </button>
-              <span className="text-yellow-400">|</span>
-              <button className="text-yellow-400 hover:text-yellow-500 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
+              <span className="text-black">|</span>
+              <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
                 Регистрация
               </button>
             </div>
@@ -225,7 +225,7 @@ export default function Home() {
               <div className="relative overflow-hidden max-w-lg h-12">
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
-                    <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
+                    <span className="whitespace-nowrap">Самая качественная техника в Бу��аре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
@@ -476,7 +476,7 @@ export default function Home() {
 
                 <div className="p-6">
                   <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
-                    Смарт Телевизор 55"
+                    Смарт Тел��визор 55"
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     4K Ultra HD с HDR
