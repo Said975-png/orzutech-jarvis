@@ -225,7 +225,7 @@ export default function Home() {
               <div className="relative overflow-hidden max-w-lg h-12">
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
-                    <span className="whitespace-nowrap">Сам��я качественная техника в Бухаре</span>
+                    <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
@@ -440,7 +440,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные часы', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
+                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные часы', 'Игровые консоли', 'Фотоа��параты', 'Аксессуары', 'Все категории'].map((category, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
@@ -502,7 +502,7 @@ export default function Home() {
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Смартфон Premium"
+                        alt="Смарт��он Premium"
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -531,7 +531,7 @@ export default function Home() {
 
               {/* Product 3 */}
               <div className="group bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] border border-white/20">
-                <div className="aspect-square bg-white/50 rounded-t-lg overflow-hidden relative">
+                <div className="aspect-[4/3] bg-white/50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 group-hover:from-white/40 group-hover:to-white/20 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
