@@ -185,7 +185,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-black text-white mb-2">500+</div>
-              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Това��ов</div>
+              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Товаров</div>
             </div>
             <div>
               <div className="text-4xl font-black text-white mb-2">150+</div>
