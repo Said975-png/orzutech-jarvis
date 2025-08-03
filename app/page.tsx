@@ -1,141 +1,146 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 p-4 lg:p-8">
-      {/* Main Dark Card */}
-      <div className="max-w-7xl mx-auto bg-black/40 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl overflow-hidden">
+    <main className="min-h-screen bg-black">
+      {/* Main Container */}
+      <div className="max-w-7xl mx-auto bg-gray-900 border border-gray-800">
         {/* Navigation */}
-        <nav className="flex items-center justify-between p-6 lg:p-8 border-b border-white/10">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">OT</span>
+        <nav className="flex items-center justify-between p-8 border-b border-gray-800">
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-white flex items-center justify-center">
+              <span className="text-black font-black text-lg">OT</span>
             </div>
-            <span className="text-white font-bold text-xl">ORZUTECH</span>
+            <span className="text-white font-black text-2xl tracking-tight">ORZUTECH</span>
           </div>
           
-          <div className="hidden lg:flex items-center space-x-8 text-gray-300">
-            <a href="#" className="hover:text-white transition-colors">Главная</a>
-            <a href="#" className="hover:text-white transition-colors">О нас</a>
-            <a href="#" className="hover:text-white transition-colors">Каталог</a>
-            <a href="#" className="hover:text-white transition-colors">Гарантия</a>
-            <a href="#" className="hover:text-white transition-colors">Блог</a>
+          <div className="hidden lg:flex items-center space-x-12 text-gray-300 font-medium">
+            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Главная</a>
+            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">О нас</a>
+            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Каталог</a>
+            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Гарантия</a>
+            <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Блог</a>
           </div>
           
-          <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+          <button className="bg-white text-black px-8 py-3 font-bold uppercase tracking-wide hover:bg-gray-100 transition-colors">
             Контакты
           </button>
         </nav>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-12 p-6 lg:p-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 p-8 lg:p-16">
           {/* Left Content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <div className="text-sm text-gray-400 font-medium tracking-wider uppercase">
-                150+ довольных клиентов
+          <div className="space-y-12">
+            <div className="space-y-6">
+              <div className="text-sm text-gray-500 font-bold uppercase tracking-[0.2em]">
+                МАГАЗИН ТЕХНИКИ В БУХАРЕ
               </div>
               
-              <h1 className="text-4xl lg:text-6xl xl:text-7xl font-black text-white leading-tight">
-                Покупки с нами
-                <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  Без Границ
+              <h1 className="text-5xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.9] tracking-tight">
+                ORZU
+                <span className="block text-white">
+                  TECH
                 </span>
               </h1>
               
-              <p className="text-gray-300 text-lg lg:text-xl leading-relaxed max-w-lg">
-                Упрощенная покупка техники с 
-                беспрецедентным доступом к рынку через ORZUTECH
+              <div className="w-24 h-1 bg-white"></div>
+              
+              <p className="text-gray-300 text-xl lg:text-2xl leading-relaxed max-w-lg font-light">
+                Профессиональные решения в сфере электроники.
+                Качество, надежность, инновации.
               </p>
             </div>
             
-            <button className="group bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center space-x-2">
-              <span>Начать покупки</span>
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+              <button className="bg-white text-black px-10 py-4 font-bold text-lg uppercase tracking-wide hover:bg-gray-100 transition-colors">
+                Каталог товаров
+              </button>
+              <button className="border-2 border-white text-white px-10 py-4 font-bold text-lg uppercase tracking-wide hover:bg-white hover:text-black transition-colors">
+                Связаться с нами
+              </button>
+            </div>
           </div>
 
-          {/* Right Content - 3D Product Display */}
-          <div className="flex justify-center items-center relative">
+          {/* Right Content */}
+          <div className="flex justify-center items-center">
             <div className="relative">
-              {/* Main Product Image */}
               <img 
                 src="https://cdn.builder.io/api/v1/image/assets%2F02f225558365433abb0d2ad515b82942%2F52db23e5e3e24501b060c9ae46a778e6?format=webp&width=800"
                 alt="Apple Products"
-                className="max-w-[400px] lg:max-w-[500px] h-auto object-contain relative z-10 drop-shadow-2xl"
+                className="max-w-[450px] lg:max-w-[550px] h-auto object-contain grayscale hover:grayscale-0 transition-all duration-500"
               />
-              
-              {/* Floating 3D Elements */}
-              <div className="absolute top-10 -left-10 w-20 h-20 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-2xl backdrop-blur-sm border border-white/10 rotate-12 animate-float"></div>
-              <div className="absolute top-32 -right-8 w-16 h-16 bg-gradient-to-r from-purple-400/20 to-pink-500/20 rounded-xl backdrop-blur-sm border border-white/10 -rotate-12 animate-float animation-delay-500"></div>
-              <div className="absolute bottom-20 -left-6 w-12 h-12 bg-gradient-to-r from-blue-400/20 to-cyan-500/20 rounded-lg backdrop-blur-sm border border-white/10 rotate-45 animate-float animation-delay-1000"></div>
-              
-              {/* Glow Effects */}
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 via-transparent to-blue-500/30 rounded-full blur-3xl opacity-50"></div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-full blur-3xl"></div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Feature Cards */}
-        <div className="grid md:grid-cols-3 gap-6 p-6 lg:p-12 pt-0">
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-            <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mb-4">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        {/* Stats Section */}
+        <div className="border-t border-gray-800 p-8 lg:p-16">
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl font-black text-white mb-2">500+</div>
+              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Товаров</div>
+            </div>
+            <div>
+              <div className="text-4xl font-black text-white mb-2">150+</div>
+              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Клиентов</div>
+            </div>
+            <div>
+              <div className="text-4xl font-black text-white mb-2">24/7</div>
+              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Поддержка</div>
+            </div>
+            <div>
+              <div className="text-4xl font-black text-white mb-2">99%</div>
+              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Качество</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Services Section */}
+        <div className="border-t border-gray-800 grid md:grid-cols-3">
+          <div className="p-8 lg:p-12 border-r border-gray-800 hover:bg-gray-800 transition-colors">
+            <div className="w-16 h-16 bg-white flex items-center justify-center mb-6">
+              <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
               </svg>
             </div>
-            <h3 className="text-white font-bold text-lg mb-2">Быстрый обмен</h3>
-            <p className="text-gray-400 text-sm">
-              Быст��ый обмен старых устройств на новые с реальными мировыми брендами.
+            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">ОБМЕН УСТРОЙСТВ</h3>
+            <p className="text-gray-400 leading-relaxed">
+              Выгодный обмен старых устройств на новые модели с доплатой.
             </p>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-            <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-4">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-            </div>
-            <h3 className="text-white font-bold text-lg mb-2">Общая гарантия</h3>
-            <p className="text-gray-400 text-sm">
-              Гарантия через проверенных партнеров на фракционализацию физических активов.
-            </p>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-            <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="p-8 lg:p-12 border-r border-gray-800 hover:bg-gray-800 transition-colors">
+            <div className="w-16 h-16 bg-white flex items-center justify-center mb-6">
+              <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 className="text-white font-bold text-lg mb-2">Честность продаж</h3>
-            <p className="text-gray-400 text-sm">
-              Прозрачность в каждой транзакции, подкрепленная аудиторскими проверками.
+            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">ГАРАНТИЯ КАЧЕСТВА</h3>
+            <p className="text-gray-400 leading-relaxed">
+              Полная гарантия на все товары. Сертифицированные устройства.
+            </p>
+          </div>
+
+          <div className="p-8 lg:p-12 hover:bg-gray-800 transition-colors">
+            <div className="w-16 h-16 bg-white flex items-center justify-center mb-6">
+              <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-wide">БЫСТРАЯ ДОСТАВКА</h3>
+            <p className="text-gray-400 leading-relaxed">
+              Оперативная доставка по Бухаре. Профессиональное обслуживание.
             </p>
           </div>
         </div>
-      </div>
 
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-10px) rotate(5deg); }
-        }
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-        .animation-delay-500 {
-          animation-delay: 0.5s;
-        }
-        .animation-delay-1000 {
-          animation-delay: 1s;
-        }
-      `}</style>
+        {/* Footer */}
+        <div className="border-t border-gray-800 p-8 lg:p-16 text-center">
+          <p className="text-gray-500 uppercase tracking-wide text-sm">
+            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
+          </p>
+        </div>
+      </div>
     </main>
   )
 }
