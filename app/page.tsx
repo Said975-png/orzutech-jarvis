@@ -153,7 +153,7 @@ export default function Home() {
           <div className="relative flex flex-col justify-center space-y-12 z-10">
             <div className="space-y-6">
               <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em]">
-                СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
+                СОВРЕМЕННА�� ЭЛЕКТРОНИКА
               </div>
 
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
@@ -173,7 +173,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и у��тановка</span>
-                    <span className="whitespace-nowrap">П��лная гарантия на все товары</span>
+                    <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
@@ -447,7 +447,7 @@ export default function Home() {
 
                 <div className="p-6">
                   <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
-                    Беспроводные наушники
+                    Бес��роводные наушники
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     Premium наушники с активным шумоподавлением и кристально чистым звуком
@@ -456,8 +456,11 @@ export default function Home() {
                     ₽ 24,900
                   </div>
 
-                  <button className="w-full border border-gray-300 text-gray-700 py-3 px-6 rounded-md text-sm font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 group-hover:border-gray-400">
-                    Подробнее
+                  <button
+                    onClick={() => addToCart(products[3])}
+                    className="w-full bg-yellow-400 text-black py-3 px-6 rounded-md text-sm font-medium hover:bg-yellow-500 transition-all duration-300"
+                  >
+                    Заказать
                   </button>
                 </div>
               </div>
@@ -529,7 +532,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-200 p-8 lg:p-16 text-center">
           <p className="text-gray-600 uppercase tracking-wide text-sm">
-            �� 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ П��АВА ЗАЩИЩЕНЫ.
+            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ П��АВА ЗАЩИЩЕНЫ.
           </p>
         </div>
       </div>
