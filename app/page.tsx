@@ -29,7 +29,7 @@ export default function Home() {
 
   const products: Product[] = [
     { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
-    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой заря��кой 65W для профессиональной фотографии" },
+    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
@@ -108,27 +108,32 @@ export default function Home() {
     <main className="min-h-screen bg-white relative overflow-hidden">
       {/* Decorative Wave Background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <svg
-          className="absolute bottom-0 left-0 w-full h-full opacity-60"
-          viewBox="0 0 1200 800"
-          fill="none"
-          preserveAspectRatio="xMidYMid slice"
-        >
-          <path
-            d="M0,320 C300,280 600,240 900,280 C1050,300 1150,320 1200,340 L1200,800 L0,800 Z"
-            fill="#D1D5DB"
-          />
-          <path
-            d="M0,400 C250,360 500,320 750,360 C950,380 1100,400 1200,420 L1200,800 L0,800 Z"
-            fill="#E5E7EB"
-            opacity="0.9"
-          />
-          <path
-            d="M0,500 C200,460 400,420 600,460 C800,480 1000,500 1200,520 L1200,800 L0,800 Z"
-            fill="#F3F4F6"
-            opacity="0.8"
-          />
-        </svg>
+        {/* Wave Layer 1 */}
+        <div
+          className="absolute bottom-0 left-0 w-full h-2/3 opacity-30"
+          style={{
+            background: 'radial-gradient(ellipse 150% 100% at 50% 100%, #D1D5DB 0%, transparent 50%)',
+            clipPath: 'ellipse(150% 60% at 50% 100%)'
+          }}
+        ></div>
+
+        {/* Wave Layer 2 */}
+        <div
+          className="absolute bottom-0 left-0 w-full h-1/2 opacity-25"
+          style={{
+            background: 'radial-gradient(ellipse 120% 80% at 30% 100%, #E5E7EB 0%, transparent 60%)',
+            clipPath: 'ellipse(120% 50% at 30% 100%)'
+          }}
+        ></div>
+
+        {/* Wave Layer 3 */}
+        <div
+          className="absolute bottom-0 right-0 w-full h-1/3 opacity-20"
+          style={{
+            background: 'radial-gradient(ellipse 100% 60% at 70% 100%, #F3F4F6 0%, transparent 70%)',
+            clipPath: 'ellipse(100% 40% at 70% 100%)'
+          }}
+        ></div>
       </div>
 
       {/* Main Container */}
@@ -451,7 +456,7 @@ export default function Home() {
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt={"Смарт Телевизор 55\""}
+                        alt={"��март Телевизор 55\""}
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -565,7 +570,7 @@ export default function Home() {
 
                 <div className="p-6">
                   <h3 className="text-lg font-medium text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
-                    Беспроводн��е наушники
+                    Беспроводные наушники
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     Premium наушники с активным шумоподавлением и кристально чистым звуком
