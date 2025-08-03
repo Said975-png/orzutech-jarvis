@@ -112,7 +112,14 @@ export default function Home() {
           {/* Right Content */}
           <div className="flex justify-center items-center">
             <div className="relative w-[350px] lg:w-[450px] h-[350px] lg:h-[450px]">
-              <Scene3D />
+              <model-viewer
+                src="https://cdn.builder.io/o/assets%2F08440fd5afb844b5b8c663feab34b3b0%2Fd9f2f51e747245009ee937c94e66654f?alt=media&token=dfd53474-2264-46a1-8202-69e75999c8a5&apiKey=08440fd5afb844b5b8c663feab34b3b0"
+                alt="3D Model"
+                auto-rotate
+                camera-controls
+                style={{ width: '100%', height: '100%' }}
+                loading="lazy"
+              ></model-viewer>
             </div>
           </div>
         </div>
