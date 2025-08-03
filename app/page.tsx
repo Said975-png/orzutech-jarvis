@@ -120,7 +120,7 @@ export default function Home() {
               <div className="relative overflow-hidden max-w-lg h-12">
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
-                    <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
+                    <span className="whitespace-nowrap">Самая качественная техн��ка в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
@@ -264,7 +264,7 @@ export default function Home() {
                     <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-medium hover:bg-yellow-300 transition-colors duration-300 text-sm">
                       Заказать
                     </button>
-                    <button className="w-12 h-12 bg-transparent text-gray-300 rounded-lg flex items-center justify-center hover:bg-yellow-400/10 hover:text-yellow-400 transition-colors duration-300 border border-gray-700 hover:border-yellow-400/50">
+                    <button className="w-12 h-12 bg-transparent text-gray-600 rounded-lg flex items-center justify-center hover:bg-yellow-400/10 hover:text-yellow-400 transition-colors duration-300 border border-gray-700 hover:border-yellow-400/50">
                       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m0 0L12 21l7.5-3" />
                       </svg>
@@ -299,7 +299,7 @@ export default function Home() {
                     <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-medium hover:bg-yellow-300 transition-colors duration-300 text-sm">
                       Заказать
                     </button>
-                    <button className="w-12 h-12 bg-transparent text-gray-300 rounded-lg flex items-center justify-center hover:bg-yellow-400/10 hover:text-yellow-400 transition-colors duration-300 border border-gray-700 hover:border-yellow-400/50">
+                    <button className="w-12 h-12 bg-transparent text-gray-600 rounded-lg flex items-center justify-center hover:bg-yellow-400/10 hover:text-yellow-400 transition-colors duration-300 border border-gray-700 hover:border-yellow-400/50">
                       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m0 0L12 21l7.5-3" />
                       </svg>
@@ -334,7 +334,7 @@ export default function Home() {
                     <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-medium hover:bg-yellow-300 transition-colors duration-300 text-sm">
                       Заказать
                     </button>
-                    <button className="w-12 h-12 bg-transparent text-gray-300 rounded-lg flex items-center justify-center hover:bg-yellow-400/10 hover:text-yellow-400 transition-colors duration-300 border border-gray-700 hover:border-yellow-400/50">
+                    <button className="w-12 h-12 bg-transparent text-gray-600 rounded-lg flex items-center justify-center hover:bg-yellow-400/10 hover:text-yellow-400 transition-colors duration-300 border border-gray-700 hover:border-yellow-400/50">
                       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m0 0L12 21l7.5-3" />
                       </svg>
