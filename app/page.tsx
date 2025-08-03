@@ -62,7 +62,7 @@ export default function Home() {
           </div>
 
           {/* Search Bar */}
-          <div className="relative max-w-2xl mx-8">
+          <div className="relative flex-1 max-w-4xl mx-8">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -359,7 +359,7 @@ export default function Home() {
             {/* Bottom Action */}
             <div className="text-center mt-16">
               <button className="bg-transparent border-2 border-yellow-400 text-yellow-400 px-12 py-4 rounded-lg font-bold hover:bg-yellow-400 hover:text-black transition-all duration-300 uppercase tracking-wide">
-                Смо��реть все товары
+                Смотреть все товары
               </button>
             </div>
           </div>
