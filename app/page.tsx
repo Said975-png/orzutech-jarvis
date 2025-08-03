@@ -179,7 +179,7 @@ export default function Home() {
               </button>
               <span className="text-yellow-400">|</span>
               <button className="text-yellow-400 hover:text-yellow-500 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
-                Регистрация
+                ��егистрация
               </button>
             </div>
 
@@ -457,7 +457,7 @@ export default function Home() {
             </div>
 
             {/* Products Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
 
               {/* Product 1 */}
               <div className="group bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] border border-white/20">
