@@ -62,7 +62,7 @@ export default function Home() {
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
-      name: "Астронавт"
+      name: "А��тронавт"
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/ShopifyPickup.glb",
@@ -619,7 +619,7 @@ export default function Home() {
                     Умные часы
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Современные смарт-час�� с мониторингом здоровья и спортивными функциями
+                    Современные смарт-часы с мониторингом здоровья и спортивными функциями
                   </p>
                   <div className="text-xl font-semibold text-gray-900 mb-6">
                     ₽ 34,900
@@ -676,7 +676,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-200 p-8 lg:p-16 text-center">
           <p className="text-gray-600 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ П��АВА ЗАЩИЩЕНЫ.
+            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
           </p>
         </div>
       </div>
