@@ -174,11 +174,11 @@ export default function Home() {
           <div className="flex items-center space-x-4">
             {/* Auth buttons */}
             <div className="flex items-center space-x-2">
-              <button className="text-purple-700 hover:text-purple-900 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
+              <button className="text-yellow-400 hover:text-yellow-500 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
                 Вход
               </button>
-              <span className="text-purple-400">|</span>
-              <button className="text-purple-700 hover:text-purple-900 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
+              <span className="text-yellow-400">|</span>
+              <button className="text-yellow-400 hover:text-yellow-500 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
                 Регистрация
               </button>
             </div>
@@ -549,7 +549,7 @@ export default function Home() {
                     Игровой Ноутбук
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    RTX 4060, 16GB RAM и дисплей 144Hz для максимальной пр��изводительности в играх и работе
+                    RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе
                   </p>
                   <div className="text-xl font-semibold text-gray-900 mb-6">
                     ₽ 129,900
