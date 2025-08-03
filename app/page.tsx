@@ -29,7 +29,7 @@ export default function Home() {
 
   const products: Product[] = [
     { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
-    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
+    { id: 2, name: "С��артфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спортивными функциями" },
@@ -218,7 +218,7 @@ export default function Home() {
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
               <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-md font-light">
-                Наша деятельность: Продажа Телефонов �� аксессуаров, Планшетов, разных Га��жетов и много много инте��есно��о.
+                Наша деятельность: Продажа Телефонов �� аксессуаров, Планшетов, разных Га��жетов и много много инте��е��но��о.
               </p>
 
               {/* Auto-scrolling slider */}
@@ -613,7 +613,7 @@ export default function Home() {
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                    alt={"Смарт Телевизор 55\""}
+                    alt={"Смарт Телеви��ор 55\""}
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -734,19 +734,40 @@ export default function Home() {
                   <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                     Игровой Ноутбук
                   </h3>
+
+                  {/* Rating */}
+                  <div className="flex items-center mb-2">
+                    <div className="flex text-yellow-400 text-sm">
+                      {"★".repeat(5)}
+                    </div>
+                    <span className="text-xs text-gray-500 ml-2">(12)</span>
+                  </div>
+
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     RTX 4060, 16GB RAM, 144Hz
                   </p>
-                  <div className="text-2xl font-bold text-gray-900 mb-6  transition-colors duration-300">
-                    $ 1,299
+
+                  <div className="flex items-center justify-between mb-3">
+                    <div>
+                      <div className="text-sm text-gray-400 line-through">$ 1,499</div>
+                      <div className="text-lg font-bold text-gray-900">$ 1,299</div>
+                    </div>
+                    <div className="text-xs text-green-600 font-medium">В наличии</div>
                   </div>
 
-                  <button
-                    onClick={() => addToCart(products[2])}
-                    className="w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white py-4 px-6 rounded-xl text-sm font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-400 shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 border-0"
-                  >
-                    Заказать
-                  </button>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => addToCart(products[2])}
+                      className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
+                    >
+                      В к��рзину
+                    </button>
+                    <button className="p-2.5 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                      <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
 
