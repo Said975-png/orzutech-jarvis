@@ -102,7 +102,7 @@ export default function Home() {
           <div className="relative flex flex-col justify-center space-y-12 z-10">
             <div className="space-y-6">
               <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em]">
-                СОВРЕ��ЕННАЯ ЭЛЕКТРОНИКА
+                СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
               </div>
 
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
@@ -216,22 +216,22 @@ export default function Home() {
 
 
         {/* Products Section */}
-        <div className="bg-black p-8 lg:p-16 relative overflow-hidden">
+        <div className="bg-white p-8 lg:p-16 relative overflow-hidden">
           {/* Light Effects like in first section */}
-          <div className="absolute -right-32 top-0 bottom-0 w-96 bg-gradient-to-l from-white/10 via-white/5 to-transparent blur-3xl opacity-60"></div>
-          <div className="absolute -right-20 top-1/4 bottom-1/4 w-64 bg-gradient-to-l from-white/20 via-white/8 to-transparent blur-2xl opacity-40"></div>
-          <div className="absolute -right-10 top-1/3 bottom-1/3 w-32 bg-gradient-to-l from-white/30 via-white/10 to-transparent blur-xl opacity-30"></div>
+          <div className="absolute -right-32 top-0 bottom-0 w-96 bg-gradient-to-l from-gray-200/10 via-gray-200/5 to-transparent blur-3xl opacity-60"></div>
+          <div className="absolute -right-20 top-1/4 bottom-1/4 w-64 bg-gradient-to-l from-gray-200/20 via-gray-200/8 to-transparent blur-2xl opacity-40"></div>
+          <div className="absolute -right-10 top-1/3 bottom-1/3 w-32 bg-gradient-to-l from-gray-200/30 via-gray-200/10 to-transparent blur-xl opacity-30"></div>
 
           <div className="max-w-7xl mx-auto relative z-10">
             {/* Section Header */}
             <div className="text-center mb-16">
-              <div className="text-sm text-gray-400 font-medium uppercase tracking-[0.2em] mb-4">
+              <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em] mb-4">
                 КАТАЛОГ ТОВАРОВ
               </div>
-              <h2 className="text-3xl lg:text-4xl font-black text-white mb-6">
+              <h2 className="text-3xl lg:text-4xl font-black text-black mb-6">
                 НАШИ <span className="text-yellow-400">ПРОДУКТЫ</span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-white mx-auto"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-black mx-auto"></div>
             </div>
 
             {/* Products Grid */}
