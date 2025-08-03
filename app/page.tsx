@@ -364,7 +364,7 @@ export default function Home() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F4b42886ccd0846e8845f7fea196bdae6?format=webp&width=800"
                       alt="Grooming Kit Pro"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="p-7 bg-gradient-to-b from-white to-gray-50/30">
@@ -380,7 +380,7 @@ export default function Home() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2Fad77a22293914f76ad5c86b0cc1cb048?format=webp&width=800"
                       alt="Apple Watch Series 10"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="p-7 bg-gradient-to-b from-white to-gray-50/30">
@@ -396,7 +396,7 @@ export default function Home() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F593de0ffc9344103bcb253bcf1c49c90?format=webp&width=800"
                       alt="PlayStation 5 Slim"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="p-7 bg-gradient-to-b from-white to-gray-50/30">
@@ -412,7 +412,7 @@ export default function Home() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F1f88af23807446fbae545f790458cfa0?format=webp&width=800"
                       alt="Samsung Watch Ultra"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="p-7 bg-gradient-to-b from-white to-gray-50/30">
@@ -428,7 +428,7 @@ export default function Home() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F61d1bfb408604835a08844fc969d435c?format=webp&width=800"
                       alt="Huawei Watch Fit 3 + FreeBuds"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="p-7 bg-gradient-to-b from-white to-gray-50/30">
@@ -444,12 +444,12 @@ export default function Home() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F4b42886ccd0846e8845f7fea196bdae6?format=webp&width=800"
                       alt="Grooming Kit Pro"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="p-7 bg-gradient-to-b from-white to-gray-50/30">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Grooming Kit Pro</h3>
-                    <p className="text-gray-600 text-sm mb-4">Профессиональный набор для ухода</p>
+                    <p className="text-gray-600 text-sm mb-4">��рофессиональный набор для ухода</p>
                     <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
                   </div>
                 </div>
@@ -459,7 +459,7 @@ export default function Home() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2Fad77a22293914f76ad5c86b0cc1cb048?format=webp&width=800"
                       alt="Apple Watch Series 10"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="p-7 bg-gradient-to-b from-white to-gray-50/30">
@@ -474,7 +474,7 @@ export default function Home() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F593de0ffc9344103bcb253bcf1c49c90?format=webp&width=800"
                       alt="PlayStation 5 Slim"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="p-7 bg-gradient-to-b from-white to-gray-50/30">
@@ -646,7 +646,7 @@ export default function Home() {
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Смартфон Premium"
-                        className="w-full h-full object-contain filter group-hover:brightness-105 transition-all duration-500"
+                        className="w-full h-full object-cover filter group-hover:brightness-105 transition-all duration-500"
                       />
                     </div>
                   </div>
@@ -685,7 +685,7 @@ export default function Home() {
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Игровой Ноутбук"
-                        className="w-full h-full object-contain filter group-hover:brightness-105 transition-all duration-500"
+                        className="w-full h-full object-cover filter group-hover:brightness-105 transition-all duration-500"
                       />
                     </div>
                   </div>
@@ -724,7 +724,7 @@ export default function Home() {
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Беспроводные наушники"
-                        className="w-full h-full object-contain filter group-hover:brightness-105 transition-all duration-500"
+                        className="w-full h-full object-cover filter group-hover:brightness-105 transition-all duration-500"
                       />
                     </div>
                   </div>
@@ -732,7 +732,7 @@ export default function Home() {
 
                 <div className="p-7 bg-gradient-to-b from-white to-gray-50/30">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-purple-700 transition-colors duration-300 leading-tight">
-                    Беспроводные наушники
+                    Беспр��водные наушники
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-5 font-medium">
                     Premium с шумоподавлением
@@ -759,7 +759,7 @@ export default function Home() {
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Умные часы"
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
@@ -794,7 +794,7 @@ export default function Home() {
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Планшет Pro"
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
@@ -805,7 +805,7 @@ export default function Home() {
                     Планшет Pro
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-5 font-medium">
-                    Проф��ссиональный с стилусом
+                    Профессиональный с стилусом
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
                     $ 799
@@ -829,7 +829,7 @@ export default function Home() {
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt={"Смарт Телевизор 55\""}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
@@ -864,7 +864,7 @@ export default function Home() {
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Смартфон Premium"
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
@@ -899,7 +899,7 @@ export default function Home() {
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Игровой Ноутбук"
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
@@ -934,7 +934,7 @@ export default function Home() {
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Беспроводные н��ушники"
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
@@ -969,7 +969,7 @@ export default function Home() {
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Умные часы"
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
@@ -1004,7 +1004,7 @@ export default function Home() {
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                         alt="Планшет Pro"
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
