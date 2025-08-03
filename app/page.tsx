@@ -30,7 +30,7 @@ export default function Home() {
   const products: Product[] = [
     { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
-    { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
+    { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
@@ -62,7 +62,7 @@ export default function Home() {
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
-      name: "��стронавт"
+      name: "Астронавт"
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/RobotExpressive.glb",
@@ -208,7 +208,7 @@ export default function Home() {
           <div className="relative flex flex-col justify-center space-y-12 z-10">
             <div className="space-y-6">
               <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em]">
-                СОВРЕМЕННАЯ ЭЛ��КТРОНИКА
+                СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
               </div>
 
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
@@ -660,8 +660,11 @@ export default function Home() {
               </div>
 
               {/* Product 2 */}
-              <div className="group group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
-
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                {/* Discount badge */}
+                <div className="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md z-10">
+                  -15%
+                </div>
 
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
@@ -790,7 +793,7 @@ export default function Home() {
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                    alt="Планш��т Pro"
+                    alt="Планшет Pro"
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
