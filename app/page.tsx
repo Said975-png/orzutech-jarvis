@@ -29,7 +29,7 @@ export default function Home() {
 
   const products: Product[] = [
     { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
-    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
+    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессио��альной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
@@ -604,29 +604,21 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 flex flex-col flex-grow">
 
               {/* Product 1 */}
-              <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full flex flex-col h-full">
-                <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
+              <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg overflow-hidden p-6">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
                     alt={"Смарт Телевизор 55\""}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+                    className="w-full h-full object-contain"
                   />
                 </div>
-
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 transition-colors duration-300 leading-tight">
-                    Смарт Телевизор 55"
-                  </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
-                    4K Ultra HD с HDR
-                  </p>
-                  <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
-                    $ 899
-                  </div>
-
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Смарт Телевизор 55"</h3>
+                  <p className="text-gray-600 text-sm mb-4">4K Ultra HD с HDR</p>
+                  <div className="text-2xl font-bold text-red-600 mb-4">$ 899</div>
                   <button
                     onClick={() => addToCart(products[0])}
-                    className="w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white py-4 px-6 rounded-xl text-sm font-semibold hover:from-gray-700 hover:to-gray-600 transition-all duration-400 shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 border-0 mt-auto mt-auto"
+                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
                   >
                     Заказать
                   </button>
@@ -979,7 +971,7 @@ export default function Home() {
                     Планшет Pro
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
-                    Профессиональный с стилусом
+                    Профессиональный �� стилусом
                   </p>
                   <div className="text-2xl font-bold text-gray-900 mb-6 transition-colors duration-300">
                     $ 799
