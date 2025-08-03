@@ -252,7 +252,7 @@ export default function Home() {
                   <h3 className="text-black font-bold text-xl mb-3 group-hover:text-yellow-400 transition-colors duration-300">
                     Смарт Телевизор 55"
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
                     4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями
                   </p>
                   <div className="text-yellow-400 font-black text-2xl mb-6">
@@ -288,7 +288,7 @@ export default function Home() {
                   <h3 className="text-black font-bold text-xl mb-3 group-hover:text-yellow-400 transition-colors duration-300">
                     Смартфон Premium
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
                     Флагманский смартфон с тройной камерой и быстрой зарядкой 65W
                   </p>
                   <div className="text-yellow-400 font-black text-2xl mb-6">
@@ -323,7 +323,7 @@ export default function Home() {
                   <h3 className="text-black font-bold text-xl mb-3 group-hover:text-yellow-400 transition-colors duration-300">
                     Игровой Ноутбук
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
                     RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности
                   </p>
                   <div className="text-yellow-400 font-black text-2xl mb-6">
