@@ -32,7 +32,7 @@ export default function Home() {
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
-    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
+    { id: 5, name: "Умные часы", price: 34900, description: "Современные см��рт-часы с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
   ]
 
@@ -105,9 +105,34 @@ export default function Home() {
   }, [activeDropdown])
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white relative overflow-hidden">
+      {/* Decorative Wave Background */}
+      <div className="absolute inset-0 z-0">
+        <svg
+          className="absolute bottom-0 left-0 w-full h-full opacity-5"
+          viewBox="0 0 1200 800"
+          fill="none"
+          preserveAspectRatio="xMidYMid slice"
+        >
+          <path
+            d="M0,320 C300,280 600,240 900,280 C1050,300 1150,320 1200,340 L1200,800 L0,800 Z"
+            fill="#6B7280"
+          />
+          <path
+            d="M0,400 C250,360 500,320 750,360 C950,380 1100,400 1200,420 L1200,800 L0,800 Z"
+            fill="#9CA3AF"
+            opacity="0.6"
+          />
+          <path
+            d="M0,480 C200,440 400,400 600,440 C800,460 1000,480 1200,500 L1200,800 L0,800 Z"
+            fill="#D1D5DB"
+            opacity="0.4"
+          />
+        </svg>
+      </div>
+
       {/* Main Container */}
-      <div className="w-full bg-white">
+      <div className="w-full bg-transparent relative z-10">
         {/* Navigation */}
         <nav className="flex items-center justify-between px-8 lg:px-16 py-4">
           {/* Logo */}
@@ -184,7 +209,7 @@ export default function Home() {
               <div className="relative overflow-hidden max-w-lg h-12">
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
-                    <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
+                    <span className="whitespace-nowrap">Са��ая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и у��тановка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
@@ -399,7 +424,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные часы', 'Игровые консоли', 'Фотоа��параты', 'Аксессуары', 'Все категории'].map((category, index) => (
+                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные часы', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
@@ -543,7 +568,7 @@ export default function Home() {
                     Беспроводные наушники
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Premium наушники с активным шумоподавлением и кристально чист��м звуком
+                    Premium наушники с активным шумоподавлением и кристально чистым звуком
                   </p>
                   <div className="text-xl font-semibold text-gray-900 mb-6">
                     ₽ 24,900
@@ -613,7 +638,7 @@ export default function Home() {
                     Планшет Pro
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Профессиональный планшет для работы и творчества с поддержкой стилуса
+                    Профессиональный планшет для работы и творчес��ва с поддержкой стилуса
                   </p>
                   <div className="text-xl font-semibold text-gray-900 mb-6">
                     ₽ 79,900
