@@ -740,7 +740,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Умные часы
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
@@ -770,7 +770,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Планшет Pro
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
@@ -800,7 +800,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Смарт Телевизор 55"
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
@@ -835,7 +835,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Смартфон Premium
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
@@ -870,7 +870,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Игровой Ноутбук
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
@@ -905,7 +905,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Беспроводные наушники
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
@@ -940,7 +940,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Умные часы
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
@@ -975,7 +975,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Планшет Pro
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
