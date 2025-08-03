@@ -369,7 +369,7 @@ export default function Home() {
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Grooming Kit Pro</h3>
-                    <p className="text-gray-600 text-sm mb-4">Профессиональный набор для ухода</p>
+                    <p className="text-gray-600 text-sm mb-4">��рофессиональный набор для ухода</p>
                     <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
                   </div>
                 </div>
@@ -701,19 +701,12 @@ export default function Home() {
               <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
 
 
-                <div className="aspect-[4/3] bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 overflow-hidden relative">
-                  {/* Subtle pattern overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-transparent to-gray-100/40 group-hover:from-white/80 group-hover:to-gray-50/60 transition-all duration-700"></div>
-
-                  <div className="relative z-10 h-full flex items-center justify-center p-8">
-                    <div className="w-full h-full bg-white/70 backdrop-blur-sm rounded-xl shadow-lg flex items-center justify-center group-hover:scale-110 group-hover:bg-white/90 transition-all duration-700 overflow-hidden p-4 border border-white/50">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Беспроводные наушники"
-                        className="w-full h-full object-cover filter group-hover:brightness-105 transition-all duration-500"
-                      />
-                    </div>
-                  </div>
+                <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                    alt="Беспроводные наушники"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+                  />
                 </div>
 
                 <div className="p-6 flex flex-col flex-grow">
