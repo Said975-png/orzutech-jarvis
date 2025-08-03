@@ -32,7 +32,7 @@ export default function Home() {
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
-    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторин��ом здоровья и спортивными функциями" },
+    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
   ]
 
@@ -226,7 +226,7 @@ export default function Home() {
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
-                    <span className="whitespace-nowrap">100% ��ригинальные устройства</span>
+                    <span className="whitespace-nowrap">100% ��ригинальные устр��йства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
@@ -289,7 +289,7 @@ export default function Home() {
               onWheel={(e) => {
                 e.preventDefault()
                 if (e.deltaY > 0) {
-                  // Скролл вниз - след��ющая модель
+                  // Скролл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
                   // Скролл вверх - предыдущая модель
@@ -350,7 +350,7 @@ export default function Home() {
             {/* Section Header */}
             <div className="text-center mb-12">
               <h2 className="text-3xl font-light text-gray-900 mb-2 tracking-wide">
-                Хит продаж
+                Хит прода��
               </h2>
               <div className="w-16 h-px bg-gray-400 mx-auto"></div>
             </div>
@@ -744,7 +744,7 @@ export default function Home() {
 
                   <button
                     onClick={() => addToCart(products[4])}
-                    className="w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white py-4 px-6 rounded-xl text-sm font-semibold hover:from-gray-700 hover:to-gray-600 transition-all duration-400 shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 border-0 mt-auto"
+                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
                   >
                     Заказать
                   </button>
@@ -774,7 +774,7 @@ export default function Home() {
 
                   <button
                     onClick={() => addToCart(products[5])}
-                    className="w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white py-4 px-6 rounded-xl text-sm font-semibold hover:from-gray-700 hover:to-gray-600 transition-all duration-400 shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 border-0 mt-auto"
+                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
                   >
                     Заказать
                   </button>
@@ -804,7 +804,7 @@ export default function Home() {
 
                   <button
                     onClick={() => addToCart(products[0])}
-                    className="w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white py-4 px-6 rounded-xl text-sm font-semibold hover:from-gray-700 hover:to-gray-600 transition-all duration-400 shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 border-0 mt-auto"
+                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
                   >
                     Заказать
                   </button>
@@ -839,7 +839,7 @@ export default function Home() {
 
                   <button
                     onClick={() => addToCart(products[1])}
-                    className="w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white py-4 px-6 rounded-xl text-sm font-semibold hover:from-gray-700 hover:to-gray-600 transition-all duration-400 shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 border-0 mt-auto"
+                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
                   >
                     Заказать
                   </button>
@@ -874,7 +874,7 @@ export default function Home() {
 
                   <button
                     onClick={() => addToCart(products[2])}
-                    className="w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white py-4 px-6 rounded-xl text-sm font-semibold hover:from-gray-700 hover:to-gray-600 transition-all duration-400 shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 border-0 mt-auto"
+                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
                   >
                     Заказать
                   </button>
@@ -909,7 +909,7 @@ export default function Home() {
 
                   <button
                     onClick={() => addToCart(products[3])}
-                    className="w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white py-4 px-6 rounded-xl text-sm font-semibold hover:from-gray-700 hover:to-gray-600 transition-all duration-400 shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 border-0 mt-auto"
+                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
                   >
                     Заказать
                   </button>
@@ -944,7 +944,7 @@ export default function Home() {
 
                   <button
                     onClick={() => addToCart(products[4])}
-                    className="w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white py-4 px-6 rounded-xl text-sm font-semibold hover:from-gray-700 hover:to-gray-600 transition-all duration-400 shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 border-0 mt-auto"
+                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
                   >
                     Заказать
                   </button>
@@ -979,7 +979,7 @@ export default function Home() {
 
                   <button
                     onClick={() => addToCart(products[5])}
-                    className="w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white py-4 px-6 rounded-xl text-sm font-semibold hover:from-gray-700 hover:to-gray-600 transition-all duration-400 shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 border-0 mt-auto"
+                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
                   >
                     Зака��ать
                   </button>
