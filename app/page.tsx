@@ -48,26 +48,44 @@ export default function Home() {
       {/* Main Container */}
       <div className="w-full bg-black">
         {/* Navigation */}
-        <nav className="flex items-center justify-center px-8 lg:px-16 py-4 border-b border-gray-800">
+        <nav className="flex items-center justify-center px-8 lg:px-16 py-4">
           <div className="flex items-center space-x-12">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-white flex items-center justify-center">
-                <span className="text-black font-black text-lg">OT</span>
+            <div className="flex items-center">
+              <span className="text-yellow-400 font-bold text-2xl tracking-wide font-sans">ORZUTECH</span>
+            </div>
+
+            <div className="hidden lg:flex items-center space-x-8 text-gray-300 font-medium font-sans">
+              <a href="#" className="hover:text-white transition-colors text-base font-medium tracking-normal">Каталог</a>
+              <button className="relative hover:text-white transition-colors">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l-1 7H6L5 9z" />
+                </svg>
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+              </button>
+            </div>
+
+            <div className="flex items-center space-x-6">
+              <button className="text-gray-300 hover:text-white transition-colors text-base font-medium font-sans">
+                Вход
+              </button>
+              <button className="text-gray-300 hover:text-white transition-colors text-base font-semibold font-sans">
+                Регистрация
+              </button>
+
+              {/* Search Bar */}
+              <div className="relative hidden lg:block">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  placeholder="Поиск товаров..."
+                  className="bg-gray-800 text-white placeholder-gray-400 pl-10 pr-4 py-2 rounded-lg border border-gray-700 focus:border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400/20 transition-colors w-64 text-sm font-sans"
+                />
               </div>
-              <span className="text-white font-black text-2xl tracking-tight">ORZUTECH</span>
             </div>
-
-            <div className="hidden lg:flex items-center space-x-12 text-gray-300 font-medium">
-              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Главная</a>
-              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">О нас</a>
-              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Каталог</a>
-              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Гарантия</a>
-              <a href="#" className="hover:text-white transition-colors uppercase tracking-wide">Блог</a>
-            </div>
-
-            <button className="bg-white text-black px-8 py-3 font-bold uppercase tracking-wide hover:bg-gray-100 transition-colors">
-              Контакты
-            </button>
           </div>
         </nav>
 
@@ -83,19 +101,19 @@ export default function Home() {
           {/* Left Content */}
           <div className="relative flex flex-col justify-center space-y-12 z-10">
             <div className="space-y-6">
-              <div className="text-sm text-gray-500 font-bold uppercase tracking-[0.2em]">
-                МАГАЗИН ТЕХНИКИ В БУХАРЕ
+              <div className="text-sm text-gray-400 font-medium uppercase tracking-[0.2em]">
+                СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
               </div>
 
-              <h1 className="text-4xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.9] tracking-tight">
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
                 ORZUTECH
               </h1>
 
-              <div className="w-24 h-1 bg-white"></div>
-              
-              <p className="text-gray-300 text-xl lg:text-2xl leading-relaxed max-w-lg font-light">
-                Профессиональные решения в сфере электроники.
-                Качество, надежность, инновации.
+              <div className="w-16 h-1 bg-gradient-to-r from-white to-gray-300"></div>
+
+              <p className="text-gray-300 text-lg lg:text-xl leading-relaxed max-w-md font-light">
+                Инновационные технологии для вашего дома и офиса.
+                Надежность в каждом устройстве.
               </p>
 
               {/* Auto-scrolling slider */}
@@ -108,8 +126,8 @@ export default function Home() {
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
-                    <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
-                    <span className="whitespace-nowrap">100% оригинальные устройства</span>
+                    <span className="whitespace-nowrap">Профессиональная установка</span>
+                    <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
                 </div>
               </div>
@@ -146,7 +164,7 @@ export default function Home() {
                   // Скролл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // Скролл в����рх - предыдущая модель
+                  // Скролл вверх - предыдущая модель
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
@@ -178,11 +196,11 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-black text-white mb-2">500+</div>
-              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Това��ов</div>
+              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Товаров</div>
             </div>
             <div>
               <div className="text-4xl font-black text-white mb-2">150+</div>
-              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Кл��ентов</div>
+              <div className="text-gray-500 uppercase tracking-wide text-sm font-medium">Клиентов</div>
             </div>
             <div>
               <div className="text-4xl font-black text-white mb-2">24/7</div>
@@ -237,7 +255,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-800 p-8 lg:p-16 text-center">
           <p className="text-gray-500 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХАРА, УЗБ��КИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
+            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
           </p>
         </div>
       </div>
