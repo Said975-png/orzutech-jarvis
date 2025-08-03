@@ -120,7 +120,7 @@ export default function Home() {
               <div className="relative overflow-hidden max-w-lg h-12">
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
-                    <span className="whitespace-nowrap">Самая качественная тех��ика в Бухаре</span>
+                    <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
@@ -354,8 +354,8 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <div className="border-t border-gray-800 p-8 lg:p-16 text-center">
-          <p className="text-gray-500 uppercase tracking-wide text-sm">
+        <div className="border-t border-gray-200 p-8 lg:p-16 text-center">
+          <p className="text-gray-600 uppercase tracking-wide text-sm">
             © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
           </p>
         </div>
