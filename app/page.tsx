@@ -62,7 +62,7 @@ export default function Home() {
           </div>
 
           {/* Search Bar */}
-          <div className="relative flex-1 max-w-3xl mx-8">
+          <div className="relative flex-1 max-w-2xl mx-8">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -113,7 +113,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и у��тановка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
-                    <span className="whitespace-nowrap">Премиум-сервис и п��ддержка</span>
+                    <span className="whitespace-nowrap">Премиу��-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
@@ -336,7 +336,7 @@ export default function Home() {
                     Игровой Ноутбук
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                    RTX 4060, 16GB RAM �� дисплей 144Hz для максимальной производительности
+                    RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности
                   </p>
                   <div className="text-yellow-400 font-black text-2xl mb-6">
                     ₽ 129,900
