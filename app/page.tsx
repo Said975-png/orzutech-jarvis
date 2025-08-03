@@ -98,24 +98,15 @@ export default function Home() {
 
         {/* Main Content */}
         <div className="relative grid lg:grid-cols-2 gap-16 p-8 lg:p-16 min-h-[70vh] overflow-hidden">
-          {/* Enhanced Depth Effects */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-50/30 to-gray-100/50 pointer-events-none"></div>
-          <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-gray-200/20 pointer-events-none"></div>
-
           {/* Light Effect from Left */}
           <div className="absolute -left-32 top-0 bottom-0 w-96 bg-gradient-to-r from-gray-200/10 via-gray-200/5 to-transparent blur-3xl opacity-60"></div>
           <div className="absolute -left-20 top-1/4 bottom-1/4 w-64 bg-gradient-to-r from-gray-200/20 via-gray-200/8 to-transparent blur-2xl opacity-40"></div>
           <div className="absolute -left-10 top-1/3 bottom-1/3 w-32 bg-gradient-to-r from-gray-200/30 via-gray-200/10 to-transparent blur-xl opacity-30"></div>
 
-          {/* Soft ambient lighting */}
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-96 h-32 bg-gradient-to-b from-yellow-400/5 to-transparent blur-2xl opacity-40"></div>
-
 
 
           {/* Left Content */}
           <div className="relative flex flex-col justify-center space-y-12 z-10">
-            {/* Subtle content shadow */}
-            <div className="absolute -inset-8 bg-gradient-to-r from-white/40 via-white/20 to-transparent rounded-3xl blur-xl opacity-60 -z-10"></div>
             <div className="space-y-6">
               <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em]">
                 СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
@@ -128,7 +119,7 @@ export default function Home() {
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
               <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-md font-light">
-                Наша деятельность: Продажа Телефонов и аксессуар��в, Планшетов, разных Гаджетов и много мно��о интересного.
+                Наша деятельность: Продажа Телефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
               </p>
 
               {/* Auto-scrolling slider */}
@@ -142,7 +133,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
-                    <span className="whitespace-nowrap">Качественн��е обслуживание</span>
+                    <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
                 </div>
               </div>
@@ -176,11 +167,7 @@ export default function Home() {
 
           {/* Right Content */}
           <div className="flex flex-col justify-center items-center space-y-6">
-            {/* Model viewer container with enhanced depth */}
             <div className="relative w-[280px] lg:w-[360px] h-[280px] lg:h-[360px] overflow-hidden rounded-lg">
-              {/* Glow effect behind model */}
-              <div className="absolute -inset-4 bg-gradient-to-b from-yellow-400/10 via-gray-200/10 to-gray-400/10 rounded-2xl blur-2xl opacity-50"></div>
-              <div className="absolute -inset-2 bg-gradient-to-tr from-white/30 via-transparent to-gray-300/20 rounded-xl opacity-60"></div>
               <model-viewer
                 src={models[currentModel].url}
                 alt="3D Model"
@@ -259,17 +246,10 @@ export default function Home() {
 
         {/* Products Section */}
         <div className="bg-white p-8 lg:p-16 relative overflow-hidden">
-          {/* Enhanced background depth */}
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-50/40 via-transparent to-gray-50/20 pointer-events-none"></div>
-          <div className="absolute inset-0 bg-gradient-radial from-yellow-400/3 via-transparent to-transparent pointer-events-none"></div>
-
           {/* Light Effects like in first section */}
           <div className="absolute -right-32 top-0 bottom-0 w-96 bg-gradient-to-l from-gray-200/10 via-gray-200/5 to-transparent blur-3xl opacity-60"></div>
           <div className="absolute -right-20 top-1/4 bottom-1/4 w-64 bg-gradient-to-l from-gray-200/20 via-gray-200/8 to-transparent blur-2xl opacity-40"></div>
           <div className="absolute -right-10 top-1/3 bottom-1/3 w-32 bg-gradient-to-l from-gray-200/30 via-gray-200/10 to-transparent blur-xl opacity-30"></div>
-
-          {/* Subtle section highlighting */}
-          <div className="absolute top-8 left-8 right-8 bottom-8 bg-gradient-to-br from-white/30 via-transparent to-gray-100/20 rounded-3xl blur-xl opacity-40 pointer-events-none"></div>
 
           <div className="max-w-7xl mx-auto relative z-10">
             {/* Section Header */}
@@ -288,9 +268,7 @@ export default function Home() {
 
               {/* Product 1 */}
               <div className="group relative rounded-xl transition-all duration-500 hover:transform hover:scale-105">
-                {/* Soft card shadow */}
-                <div className="absolute -inset-2 bg-gradient-to-b from-gray-200/20 via-gray-100/10 to-gray-300/30 rounded-2xl blur-lg opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
-                <div className="aspect-square flex items-center justify-center p-8 relative overflow-hidden bg-white/60 backdrop-blur-sm rounded-xl">
+                <div className="aspect-square flex items-center justify-center p-8 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
                   <div className="w-40 h-40 bg-gray-100/80 rounded-lg flex items-center justify-center relative z-10 group-hover:bg-yellow-400/20 transition-colors duration-300 border border-gray-300/50 group-hover:border-yellow-400/50">
                     <svg className="w-20 h-20 text-gray-600 group-hover:text-yellow-400 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -326,9 +304,7 @@ export default function Home() {
 
               {/* Product 2 */}
               <div className="group relative rounded-xl transition-all duration-500 hover:transform hover:scale-105">
-                {/* Soft card shadow */}
-                <div className="absolute -inset-2 bg-gradient-to-b from-gray-200/20 via-gray-100/10 to-gray-300/30 rounded-2xl blur-lg opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
-                <div className="aspect-square flex items-center justify-center p-8 relative overflow-hidden bg-white/60 backdrop-blur-sm rounded-xl">
+                <div className="aspect-square flex items-center justify-center p-8 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
                   <div className="w-40 h-40 bg-gray-100/80 rounded-lg flex items-center justify-center relative z-10 group-hover:bg-yellow-400/20 transition-colors duration-300 border border-gray-300/50 group-hover:border-yellow-400/50">
                     <svg className="w-20 h-20 text-gray-600 group-hover:text-yellow-400 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -363,9 +339,7 @@ export default function Home() {
 
               {/* Product 3 */}
               <div className="group relative rounded-xl transition-all duration-500 hover:transform hover:scale-105">
-                {/* Soft card shadow */}
-                <div className="absolute -inset-2 bg-gradient-to-b from-gray-200/20 via-gray-100/10 to-gray-300/30 rounded-2xl blur-lg opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
-                <div className="aspect-square flex items-center justify-center p-8 relative overflow-hidden bg-white/60 backdrop-blur-sm rounded-xl">
+                <div className="aspect-square flex items-center justify-center p-8 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
                   <div className="w-40 h-40 bg-gray-100/80 rounded-lg flex items-center justify-center relative z-10 group-hover:bg-yellow-400/20 transition-colors duration-300 border border-gray-300/50 group-hover:border-yellow-400/50">
                     <svg className="w-20 h-20 text-gray-600 group-hover:text-yellow-400 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
