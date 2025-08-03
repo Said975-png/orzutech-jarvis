@@ -792,16 +792,11 @@ export default function Home() {
               {/* Product 7 - Duplicate of Product 1 */}
               <div className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 border border-gray-100/70 overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
-
-                  <div className="relative z-10 h-full flex items-center justify-center">
-                    <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt={"Смарт Телевизор 55\""}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
+                    alt={"Смарт Телевизор 55\""}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+                  />
                 </div>
 
                 <div className="p-6 flex flex-col flex-grow">
