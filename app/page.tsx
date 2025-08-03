@@ -29,7 +29,7 @@ export default function Home() {
 
   const products: Product[] = [
     { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
-    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой �� быстрой зарядкой 65W для профессиональной фотографии" },
+    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
@@ -166,7 +166,7 @@ export default function Home() {
             <input
               type="search"
               placeholder="Поиск..."
-              className="w-full bg-gray-100 text-black placeholder-gray-500 pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400/20 transition-colors text-sm font-sans shadow-md"
+              className="w-full bg-white/90 backdrop-blur-sm text-gray-800 placeholder-gray-500 pl-10 pr-4 py-2 rounded-full border border-white/30 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20 transition-colors text-sm font-sans shadow-lg"
             />
           </div>
 
@@ -241,7 +241,7 @@ export default function Home() {
             {/* Color Selection */}
             <div className="flex items-center space-x-4 mt-8">
               <div className="text-gray-400 text-xs uppercase tracking-wide">
-                ��ыбо�� цве��а
+                Выбо�� цве��а
               </div>
               <div className="flex space-x-3">
                 {colors.map((colorOption, index) => (
