@@ -433,7 +433,7 @@ export default function Home() {
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Huawei Watch Fit 3</h3>
-                    <p className="text-gray-600 text-sm mb-4">+ FreeBuds SE 3 �� подарок</p>
+                    <p className="text-gray-600 text-sm mb-4">+ FreeBuds SE 3 в подарок</p>
                     <div className="text-2xl font-bold text-red-600">₽ 12,500</div>
                   </div>
                 </div>
@@ -551,7 +551,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['5 звезд', '4 звезды и выше', '3 звезды и выше', '2 звезды и выше', '1 звезда и выше', 'Без ��ейтинга'].map((rating, index) => (
+                        {['5 звезд', '4 звезды и выше', '3 звезды и выше', '2 звезды и выше', '1 звезда и выше', 'Без рейтинга'].map((rating, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200 flex items-center"
@@ -731,7 +731,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-purple-700 transition-colors duration-300 leading-tight">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3  transition-colors duration-300 leading-tight">
                     Беспроводные наушники
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-5 font-medium">
