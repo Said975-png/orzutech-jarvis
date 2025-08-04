@@ -46,7 +46,7 @@ export default function Home() {
   const [currentMessage, setCurrentMessage] = useState('')
 
   const products: Product[] = [
-    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
+    { id: 1, name: "Смарт Т��л��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тр��йной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
@@ -89,7 +89,7 @@ export default function Home() {
       setTimeout(() => {
         const jarvisResponse: ChatMessage = {
           id: Date.now() + 1,
-          text: "Спасибо за ваш вопрос! Я обрабатываю ваш запрос и скоро дам детальн��й ответ.",
+          text: "Спасибо за ваш вопрос! Я обрабатываю ваш запрос и скоро дам детальный ответ.",
           isUser: false,
           timestamp: new Date()
         }
@@ -293,7 +293,7 @@ export default function Home() {
                 СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
               </div>
 
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
                 ORZUTECH
               </h1>
 
