@@ -38,7 +38,7 @@ export default function Home() {
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
     {
       id: 1,
-      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором техники или ответить на воп����о��ы о ма��азине.",
+      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором техники или ответить на во������о��ы о ма��азине.",
       isUser: false,
       timestamp: new Date()
     }
@@ -50,7 +50,7 @@ export default function Home() {
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тр��йной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
-    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мони��о��инг��м здоровья и спортивными функциями" },
+    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с ��они��о��инг��м здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
   ]
 
@@ -89,7 +89,7 @@ export default function Home() {
       setTimeout(() => {
         const jarvisResponse: ChatMessage = {
           id: Date.now() + 1,
-          text: "Спасиб�� за ��аш вопрос! Я обра��атываю ваш запрос и скоро дам детальный ответ.",
+          text: "��пасиб�� за ��аш вопрос! Я обра��атываю ваш запрос и скоро дам детальный ответ.",
           isUser: false,
           timestamp: new Date()
         }
@@ -870,7 +870,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['Смартфоны', 'Телевизор��', 'Ноутбуки', 'Планшет��', 'Нау��ники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
+                        {['Смарт��оны', 'Телевизор��', 'Ноутбуки', 'Планшет��', 'Нау��ники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
@@ -1098,15 +1098,15 @@ export default function Home() {
                   </div>
 
                   <div className="flex gap-2">
+                    <button className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200">
+                      Заказать
+                    </button>
                     <button
                       onClick={() => addToCart(products[3])}
-                      className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
+                      className="p-2.5 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
                     >
-                      В корзину
-                    </button>
-                    <button className="p-2.5 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                       <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m0 0L12 21l7.5-3" />
                       </svg>
                     </button>
                   </div>
@@ -1373,7 +1373,7 @@ export default function Home() {
                     onClick={() => addToCart(products[5])}
                     className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
                   >
-                    Зака��ать
+                    Зака��а��ь
                   </button>
                 </div>
               </div>
