@@ -46,7 +46,7 @@ export default function Home() {
   const [currentMessage, setCurrentMessage] = useState('')
 
   const products: Product[] = [
-    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
+    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для макси��ального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тр��йной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
@@ -425,8 +425,8 @@ export default function Home() {
           </div>
 
           {/* Left Content */}
-          <div className="relative flex flex-col justify-center space-y-8 lg:space-y-12 z-10 order-2 lg:order-1">
-            <div className="space-y-6">
+          <div className="relative flex flex-col justify-center items-center lg:items-start space-y-8 lg:space-y-12 z-10 order-2 lg:order-1">
+            <div className="space-y-6 text-center lg:text-left">
               <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em]">
                 СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
               </div>
@@ -435,14 +435,14 @@ export default function Home() {
                 ORZUTECH
               </h1>
 
-              <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
+              <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600 mx-auto lg:mx-0"></div>
 
               <p className="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed max-w-md font-light">
                 Наша деятельность: Продажа Телефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
               </p>
 
               {/* Auto-scrolling slider */}
-              <div className="relative overflow-hidden max-w-lg h-12">
+              <div className="relative overflow-hidden max-w-lg h-12 mx-auto lg:mx-0">
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в ��ухар��</span>
@@ -1518,7 +1518,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="text-xs text-gray-500 text-center mt-2">
-                Джарвис может делать ошибки. Проверяйте важную информацию.
+                Джа��вис может делать ошибки. Проверяйте важную информацию.
               </div>
             </div>
           </div>
