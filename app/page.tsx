@@ -192,6 +192,19 @@ export default function Home() {
 
           {/* Auth and Cart */}
           <div className="flex items-center space-x-4">
+            {/* Search Icon */}
+            <button
+              onClick={() => setIsSearchOpen(true)}
+              className={`
+                p-2 text-black hover:text-gray-700 transition-all duration-300 drop-shadow-sm
+                ${isSearchOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}
+              `}
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </button>
+
             {/* Auth buttons */}
             <div className="flex items-center space-x-2">
               <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
@@ -248,7 +261,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Самая качественная техника в ��ухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
-                    <span className="whitespace-nowrap">Полная гарантия на все товары</span>
+                    <span className="whitespace-nowrap">Полная гар��нтия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
