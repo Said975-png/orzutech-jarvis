@@ -448,7 +448,7 @@ export default function Home() {
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
-                    <span className="whitespace-nowrap">100% оригинальные ус����ройства</span>
+                    <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
@@ -1032,7 +1032,7 @@ export default function Home() {
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                    alt="Смартфон Premium"
+                    alt="Смар��фон Premium"
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -1101,7 +1101,7 @@ export default function Home() {
                   {/* Rating */}
                   <div className="flex items-center mb-2">
                     <div className="flex text-yellow-400 text-sm">
-                      {"���".repeat(5)}
+                      {"★".repeat(5)}
                     </div>
                     <span className="text-xs text-gray-500 ml-2">(12)</span>
                   </div>
