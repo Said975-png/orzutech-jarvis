@@ -14,6 +14,7 @@ module.exports = {
         'pulse': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'neon-arc': 'neonArc 6s ease-in-out infinite',
         'scroll': 'scroll 8s linear infinite',
+        'scroll-fast': 'scroll 5s linear infinite',
       },
       keyframes: {
         neonArc: {
