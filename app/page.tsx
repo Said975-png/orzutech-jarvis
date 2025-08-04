@@ -51,7 +51,7 @@ export default function Home() {
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
-    { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчест��а с поддержкой стилуса" }
+    { id: 6, name: "Планшет Pro", price: 79900, description: "Професси��нальный планшет для работы и творчества с поддержкой стилуса" }
   ]
 
   const addToCart = (product: Product) => {
@@ -1537,7 +1537,7 @@ export default function Home() {
                     Умные часы
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Мониторинг здоровья и спорт
+                    Мони��оринг здоровья и спорт
                   </p>
                   <div className="text-lg font-bold text-gray-900">
                     $ 349
