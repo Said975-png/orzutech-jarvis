@@ -51,7 +51,7 @@ export default function Home() {
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
-    { id: 6, name: "Планшет Pro", price: 79900, description: "Професси��нальный планшет для работы и творчества с поддержкой стилуса" }
+    { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
   ]
 
   const addToCart = (product: Product) => {
@@ -507,7 +507,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
-                    <span className="whitespace-nowrap">Премиум-сервис и ��оддержка</span>
+                    <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
@@ -731,7 +731,7 @@ export default function Home() {
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Apple Watch Series 10</h3>
                     <p className="text-xs text-gray-600 mb-3 line-clamp-2">Rose Gold, Black 42MM/46MM</p>
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
-                      Подробнее
+                      Под��обнее
                     </button>
                   </div>
                 </div>
@@ -1328,7 +1328,7 @@ export default function Home() {
                     Планшет Pro
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Профессиональный с стилусом
+                    П��офессиональный с стилусом
                   </p>
 
                   <div className="flex items-center justify-between mb-3">
@@ -1537,7 +1537,7 @@ export default function Home() {
                     Умные часы
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Мони��оринг здоровья и спорт
+                    Мониторинг здоровья и спорт
                   </p>
                   <div className="text-lg font-bold text-gray-900">
                     $ 349
