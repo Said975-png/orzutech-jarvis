@@ -292,7 +292,7 @@ export default function Home() {
                   // Ск��олл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // Скролл вверх - предыдущая моде��ь
+                  // Скролл вверх - предыдущая модель
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
@@ -329,13 +329,13 @@ export default function Home() {
           >
             {/* Main Golden Wave flowing diagonally */}
             <path
-              d="M1200,0 L1200,120 C1000,160 800,180 600,140 C400,100 200,80 0,120 L0,300 L1200,300 Z"
+              d="M1200,0 L1200,40 C1000,80 800,100 600,80 C400,60 200,50 0,80 L0,300 L1200,300 Z"
               fill="url(#goldGradient)"
               className="drop-shadow-lg"
             />
             {/* Secondary wave for depth and flow effect */}
             <path
-              d="M1200,0 L1200,80 C950,120 700,130 450,100 C200,70 100,60 0,90 L0,300 L1200,300 Z"
+              d="M1200,0 L1200,20 C950,60 700,70 450,50 C200,30 100,25 0,45 L0,300 L1200,300 Z"
               fill="url(#goldGradient2)"
               opacity="0.7"
             />
