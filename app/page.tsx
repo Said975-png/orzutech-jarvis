@@ -769,6 +769,37 @@ export default function Home() {
                     <div className="text-2xl font-bold text-red-600">₽ 45,000</div>
                   </div>
                 </div>
+
+                {/* Additional duplicates for better mobile looping */}
+                <div className="flex-shrink-0 w-72 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F1f88af23807446fbae545f790458cfa0?format=webp&width=800"
+                      alt="Samsung Watch Ultra"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Samsung Watch Ultra</h3>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Умные часы с премиум функциями</p>
+                    <div className="text-2xl font-bold text-red-600">₽ 33,500</div>
+                  </div>
+                </div>
+
+                <div className="flex-shrink-0 w-72 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F61d1bfb408604835a08844fc969d435c?format=webp&width=800"
+                      alt="Huawei Watch Fit 3 + FreeBuds"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Huawei Watch Fit 3</h3>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">+ FreeBuds SE 3 в подарок</p>
+                    <div className="text-2xl font-bold text-red-600">₽ 12,500</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1232,7 +1263,7 @@ export default function Home() {
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Смартфон Premium"
+                        alt="См��ртфон Premium"
                         className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
