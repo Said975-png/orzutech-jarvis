@@ -47,10 +47,10 @@ export default function Home() {
 
   const products: Product[] = [
     { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
-    { id: 2, name: "��мартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
+    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
-    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и сп��ртивными функциями" },
+    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
   ]
 
@@ -506,7 +506,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
-                    <span className="whitespace-nowrap">Полная гарантия на все товары</span>
+                    <span className="whitespace-nowrap">Полная гарант��я на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
@@ -711,7 +711,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Grooming Kit Pro</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональный набор для ухода</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессион��льный набор для ухода</p>
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
                       Подробнее
                     </button>
@@ -996,7 +996,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['5 звезд', '4 звезды и выше', '3 звезды и вы��е', '2 звезды и выше', '1 звезда и выше', 'Без рейтинга'].map((rating, index) => (
+                        {['5 звезд', '4 звезды и выше', '3 звезды и выше', '2 звезды и выше', '1 звезда и выше', 'Без рейтинга'].map((rating, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200 flex items-center"
@@ -1366,7 +1366,7 @@ export default function Home() {
 
                 <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                   <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
-                    Смарт Телевизор 55"
+                    Смарт Т��левизор 55"
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     4K Ultra HD с HDR
@@ -1492,7 +1492,7 @@ export default function Home() {
 
                 <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                   <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
-                    Беспроводны�� наушники
+                    Беспроводные наушники
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     Premium с шумоподавлением
