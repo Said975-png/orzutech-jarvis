@@ -38,7 +38,7 @@ export default function Home() {
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
     {
       id: 1,
-      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором техники или ответить на вопросы о магазине.",
+      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором техники или ответить на вопросы о ма��азине.",
       isUser: false,
       timestamp: new Date()
     }
@@ -89,7 +89,7 @@ export default function Home() {
       setTimeout(() => {
         const jarvisResponse: ChatMessage = {
           id: Date.now() + 1,
-          text: "Спасибо за ваш вопрос! Я обрабатываю ваш запрос и скоро дам детальный ответ.",
+          text: "Спасибо за ваш вопрос! Я обра��атываю ваш запрос и скоро дам детальный ответ.",
           isUser: false,
           timestamp: new Date()
         }
@@ -445,12 +445,12 @@ export default function Home() {
               <div className="relative overflow-hidden max-w-lg h-12">
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
-                    <span className="whitespace-nowrap">Самая качественная техника в ��ухаре</span>
+                    <span className="whitespace-nowrap">Самая качественная техника в ��ухар��</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все то��ары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
-                    <span className="whitespace-nowrap">Инно��ационные решения для дома</span>
+                    <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессио��альная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
@@ -484,8 +484,8 @@ export default function Home() {
 
           </div>
 
-          {/* Right Content */}
-          <div className="flex flex-col justify-center items-center space-y-6">
+          {/* Right Content - Desktop Only */}
+          <div className="hidden lg:flex flex-col justify-center items-center space-y-6 order-2">
             <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
               <div className="relative w-[240px] md:w-[280px] lg:w-[360px] h-[240px] md:h-[280px] lg:h-[360px] overflow-hidden rounded-lg">
                 <model-viewer
@@ -603,7 +603,7 @@ export default function Home() {
                   // Ск��олл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // С����олл вверх - предыдущая модель
+                  // Ск��олл вверх - предыдущая модель
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
