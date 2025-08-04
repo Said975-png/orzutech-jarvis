@@ -46,7 +46,7 @@ export default function Home() {
   const [currentMessage, setCurrentMessage] = useState('')
 
   const products: Product[] = [
-    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для макси��ального качества изображения" },
+    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разре��ение с поддержкой HDR и Smart TV функциями для макси��ального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тр��йной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
@@ -442,7 +442,7 @@ export default function Home() {
               </p>
 
               {/* Auto-scrolling slider */}
-              <div className="relative overflow-hidden max-w-lg h-12 mx-auto lg:mx-0">
+              <div className="relative overflow-hidden max-w-lg h-12">
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в ��ухар��</span>
@@ -835,7 +835,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['5 звезд', '4 звезды и выше', '3 звезды и выше', '2 звезды и ��ыше', '1 звезда и в��ше', 'Без рейтинга'].map((rating, index) => (
+                        {['5 звезд', '4 звезды и выше', '3 звезды и выше', '2 звезды и выше', '1 звезда и в���ше', 'Без рейтинга'].map((rating, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200 flex items-center"
@@ -1387,7 +1387,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-200 p-4 md:p-8 lg:p-16 text-center">
           <p className="text-gray-600 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХА��А, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕ��Ы.
+            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕ���Ы.
           </p>
         </div>
       </div>
