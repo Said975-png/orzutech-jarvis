@@ -46,7 +46,7 @@ export default function Home() {
   const [currentMessage, setCurrentMessage] = useState('')
 
   const products: Product[] = [
-    { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максим��льного качества изображения" },
+    { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
@@ -780,7 +780,7 @@ export default function Home() {
             {/* Section Header */}
             <div className="text-center mb-12">
               <h2 className="text-3xl font-light text-gray-900 mb-2 tracking-wide">
-                Каталог товаров
+                Каталог това��ов
               </h2>
               <div className="w-16 h-px bg-gray-400 mx-auto"></div>
             </div>
@@ -931,7 +931,7 @@ export default function Home() {
 
                   <div className="flex gap-2">
                     <button className="flex-1 bg-white text-black py-2.5 px-4 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200">
-                      Заказать
+                      За��азать
                     </button>
                     <button
                       onClick={() => addToCart(products[0])}
@@ -1316,7 +1316,7 @@ export default function Home() {
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Беспро��одные н��ушники"
+                        alt="Беспроводные н��ушники"
                         className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
@@ -1576,7 +1576,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="text-xs text-gray-500 text-center mt-2">
-                Джа��вис может делать ошибки. ��роверяйте важную информацию.
+                Джарвис может делать ошибки. Проверяйте важную информацию.
               </div>
             </div>
           </div>
