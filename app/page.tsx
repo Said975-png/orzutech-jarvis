@@ -89,7 +89,7 @@ export default function Home() {
       setTimeout(() => {
         const jarvisResponse: ChatMessage = {
           id: Date.now() + 1,
-          text: "Спасибо за ваш вопрос! Я обрабатываю ваш запрос и скоро дам детальный ответ.",
+          text: "Спасибо за ваш вопрос! Я обрабатываю ваш запрос и скоро дам детальн��й ответ.",
           isUser: false,
           timestamp: new Date()
         }
@@ -278,7 +278,7 @@ export default function Home() {
         </nav>
 
         {/* Main Content */}
-        <div className="relative grid lg:grid-cols-2 gap-16 p-8 lg:p-16 min-h-[70vh] overflow-hidden">
+        <div className="relative grid lg:grid-cols-2 gap-8 md:gap-16 p-4 md:p-8 lg:p-16 min-h-[60vh] md:min-h-[70vh] overflow-hidden">
           {/* Light Effect from Left */}
           <div className="absolute -left-32 top-0 bottom-0 w-96 bg-gradient-to-r from-gray-200/10 via-gray-200/5 to-transparent blur-3xl opacity-60"></div>
           <div className="absolute -left-20 top-1/4 bottom-1/4 w-64 bg-gradient-to-r from-gray-200/20 via-gray-200/8 to-transparent blur-2xl opacity-40"></div>
@@ -547,7 +547,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">PlayStation 5 Slim</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консоль нового по����оления</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консоль нового по��оления</p>
                     <div className="text-2xl font-bold text-red-600">₽ 45,000</div>
                   </div>
                 </div>
