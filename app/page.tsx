@@ -46,7 +46,7 @@ export default function Home() {
   const [currentMessage, setCurrentMessage] = useState('')
 
   const products: Product[] = [
-    { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
+    { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества из��бражения" },
     { id: 2, name: "��мартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
@@ -1263,8 +1263,12 @@ export default function Home() {
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     Мониторинг здоровья и спорт
                   </p>
-                  <div className="text-lg font-bold text-gray-900">
-                    $ 349
+
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="text-lg font-bold text-gray-900">
+                      $ 349
+                    </div>
+                    <div className="text-xs text-green-600 font-medium">В н��личии</div>
                   </div>
 
                   <div className="flex gap-2 mt-auto">
