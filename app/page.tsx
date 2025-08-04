@@ -46,7 +46,7 @@ export default function Home() {
   const [currentMessage, setCurrentMessage] = useState('')
 
   const products: Product[] = [
-    { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разр��шение с поддержкой HDR и Smart TV функциями для максимального к��чества изображения" },
+    { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального к��чества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
@@ -201,80 +201,136 @@ export default function Home() {
       <div className="w-full bg-transparent relative z-20">
         {/* Navigation */}
         <nav className="flex items-center justify-between px-4 md:px-8 lg:px-16 py-4 md:py-6 relative z-30">
-          {/* Logo */}
-          <div className="flex items-center">
-            <span className="text-yellow-400 font-bold text-xl md:text-2xl tracking-wide font-sans drop-shadow-sm">ORZUTECH</span>
-          </div>
-
-          {/* Animated Search Bar */}
-          <div className="relative flex-1 max-w-2xl mx-4 md:mx-8">
-            <div
-              className={`
-                relative transition-all duration-500 ease-in-out overflow-hidden
-                ${isSearchOpen
-                  ? 'w-full opacity-100'
-                  : 'w-0 opacity-0'
-                }
-              `}
-            >
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
+          {/* Mobile Search Mode */}
+          {isSearchOpen && (
+            <div className="flex md:hidden w-full items-center">
+              <div className="flex-1 relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  placeholder="Поиск..."
+                  className="w-full bg-white/90 backdrop-blur-sm text-gray-800 placeholder-gray-500 pl-10 pr-10 py-2 rounded-full border border-gray-300 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20 transition-colors text-sm font-sans shadow-lg"
+                  autoFocus={isSearchOpen}
+                />
               </div>
-              <input
-                type="search"
-                placeholder="Поиск..."
-                className="w-full bg-white/90 backdrop-blur-sm text-gray-800 placeholder-gray-500 pl-10 pr-10 py-2 rounded-full border border-gray-300 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20 transition-colors text-sm font-sans shadow-lg"
-                autoFocus={isSearchOpen}
-              />
               <button
                 onClick={() => setIsSearchOpen(false)}
-                className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 transition-colors"
+                className="ml-3 p-2 text-gray-400 hover:text-gray-600 transition-colors"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
-          </div>
+          )}
 
-          {/* Auth and Cart */}
-          <div className="flex items-center space-x-2 md:space-x-4">
-            {/* Search Icon */}
-            <button
-              onClick={() => setIsSearchOpen(true)}
-              className={`
-                p-2 text-black hover:text-gray-700 transition-all duration-300 drop-shadow-sm
-                ${isSearchOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}
-              `}
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </button>
+          {/* Normal Navigation */}
+          {!isSearchOpen && (
+            <>
+              {/* Logo */}
+              <div className="flex items-center">
+                <span className="text-yellow-400 font-bold text-xl md:text-2xl tracking-wide font-sans drop-shadow-sm">ORZUTECH</span>
+              </div>
 
-            {/* Auth buttons */}
-            <div className="hidden sm:flex items-center space-x-2">
-              <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
-                Вход
-              </button>
-              <span className="text-black">|</span>
-              <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
-                Регистрация
-              </button>
+              {/* Desktop Search Bar */}
+              <div className="relative flex-1 max-w-2xl mx-4 md:mx-8 hidden md:block">
+                <div
+                  className={`
+                    relative transition-all duration-500 ease-in-out overflow-hidden
+                    ${isSearchOpen
+                      ? 'w-full opacity-100'
+                      : 'w-0 opacity-0'
+                    }
+                  `}
+                >
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  </div>
+                  <input
+                    type="search"
+                    placeholder="Поиск..."
+                    className="w-full bg-white/90 backdrop-blur-sm text-gray-800 placeholder-gray-500 pl-10 pr-10 py-2 rounded-full border border-gray-300 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20 transition-colors text-sm font-sans shadow-lg"
+                    autoFocus={isSearchOpen}
+                  />
+                  <button
+                    onClick={() => setIsSearchOpen(false)}
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 transition-colors"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              {/* Auth and Cart */}
+              <div className="flex items-center space-x-2 md:space-x-4">
+                {/* Search Icon */}
+                <button
+                  onClick={() => setIsSearchOpen(true)}
+                  className="p-2 text-black hover:text-gray-700 transition-all duration-300 drop-shadow-sm"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </button>
+
+                {/* Auth buttons */}
+                <div className="hidden sm:flex items-center space-x-2">
+                  <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
+                    Вход
+                  </button>
+                  <span className="text-black">|</span>
+                  <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
+                    Регистрация
+                  </button>
+                </div>
+
+                {/* Cart */}
+                <button className="relative p-2 text-black hover:text-gray-700 transition-colors duration-300 drop-shadow-sm">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m0 0L12 21l7.5-3" />
+                  </svg>
+                  <span className="absolute -top-1 -right-1 bg-yellow-400 text-black text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium shadow-lg">
+                    {getTotalItems()}
+                  </span>
+                </button>
+              </div>
+            </>
+          )}
+
+          {/* Desktop Search Mode */}
+          {isSearchOpen && (
+            <div className="hidden md:flex w-full items-center">
+              <div className="flex-1 relative max-w-2xl mx-8">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  placeholder="Поиск..."
+                  className="w-full bg-white/90 backdrop-blur-sm text-gray-800 placeholder-gray-500 pl-10 pr-10 py-2 rounded-full border border-gray-300 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20 transition-colors text-sm font-sans shadow-lg"
+                  autoFocus={isSearchOpen}
+                />
+                <button
+                  onClick={() => setIsSearchOpen(false)}
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
             </div>
-
-            {/* Cart */}
-            <button className="relative p-2 text-black hover:text-gray-700 transition-colors duration-300 drop-shadow-sm">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m0 0L12 21l7.5-3" />
-              </svg>
-              <span className="absolute -top-1 -right-1 bg-yellow-400 text-black text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium shadow-lg">
-                {getTotalItems()}
-              </span>
-            </button>
-          </div>
+          )}
         </nav>
 
         {/* Main Content */}
@@ -941,7 +997,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
                     </svg>
                   </div>
-                  <span className="text-xs">Кат��гория</span>
+                  <span className="text-xs">Категория</span>
                 </button>
                 {activeDropdown === 'category' && (
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
