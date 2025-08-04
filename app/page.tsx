@@ -440,7 +440,7 @@ export default function Home() {
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
               <p className="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed max-w-md font-light">
-                Наша деятельность: Продажа Телефонов и аксессуаров, Планшет��в, разных Гаджетов и много много интересного.
+                Наша деятельность: Продажа Телефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
               </p>
 
               {/* Auto-scrolling slider */}
@@ -450,7 +450,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные ус����ройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
-                    <span className="whitespace-nowrap">Полная ��арантия на все товары</span>
+                    <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
@@ -591,7 +591,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="text-gray-300 text-xs text-center">
-                  потяни��е<br/>для смены
+                  потяните<br/>для смены
                 </div>
               </div>
             </div>
@@ -1101,7 +1101,7 @@ export default function Home() {
                   {/* Rating */}
                   <div className="flex items-center mb-2">
                     <div className="flex text-yellow-400 text-sm">
-                      {"★".repeat(5)}
+                      {"���".repeat(5)}
                     </div>
                     <span className="text-xs text-gray-500 ml-2">(12)</span>
                   </div>
@@ -1205,7 +1205,7 @@ export default function Home() {
                     Умные часы
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    ��ониторинг здоровья и спорт
+                    Мониторинг здоровья и спорт
                   </p>
                   <div className="text-lg font-bold text-gray-900">
                     $ 349
