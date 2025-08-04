@@ -46,7 +46,7 @@ export default function Home() {
   const [currentMessage, setCurrentMessage] = useState('')
 
   const products: Product[] = [
-    { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разр��шение с поддержкой HDR и Smart TV функциями для максимального к��чества изображения" },
+    { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
@@ -89,7 +89,7 @@ export default function Home() {
       setTimeout(() => {
         const jarvisResponse: ChatMessage = {
           id: Date.now() + 1,
-          text: "Спасибо за ваш вопрос! Я обрабатываю ваш запрос и скоро дам детальный от��ет.",
+          text: "Спасибо за ваш вопрос! Я обрабатываю ваш запрос и скоро дам детальный отв��т.",
           isUser: false,
           timestamp: new Date()
         }
