@@ -405,7 +405,7 @@ export default function Home() {
               }}
             >
               <div className="text-center text-gray-400 text-xs mb-2">
-                Прок��утите для смены модели
+                Прок��утите для с��ены модели
               </div>
               <div className="flex justify-center space-x-1">
                 {models.map((_, index) => (
@@ -450,7 +450,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Самая качественная техника в ��ухар��</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
-                    <span className="whitespace-nowrap">Полн��я ��арантия на все то����ары</span>
+                    <span className="whitespace-nowrap">Полн��я ��арантия на все то����а��ы</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решени�� для дома</span>
                     <span className="whitespace-nowrap">Профессио��альная установка</span>
@@ -1418,12 +1418,19 @@ export default function Home() {
                     $ 799
                   </div>
 
-                  <button
-                    onClick={() => addToCart(products[5])}
-                    className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
-                  >
-                    Зака��а��ь
-                  </button>
+                  <div className="flex gap-2">
+                    <button className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200">
+                      Заказать
+                    </button>
+                    <button
+                      onClick={() => addToCart(products[5])}
+                      className="p-2.5 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+                    >
+                      <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m0 0L12 21l7.5-3" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -1438,7 +1445,7 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-200 p-4 md:p-8 lg:p-16 text-center">
           <p className="text-gray-600 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕ��Ы.
+            © 2024 ORZUTECH. БУХАРА, УЗ��ЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕ��Ы.
           </p>
         </div>
       </div>
