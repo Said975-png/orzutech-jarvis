@@ -310,7 +310,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Самая качественная техника в ��ухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
-                    <span className="whitespace-nowrap">Полная гарантия на все товары</span>
+                    <span className="whitespace-nowrap">Полная гарантия на все то��ары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессио��альная установка</span>
@@ -494,27 +494,7 @@ export default function Home() {
 
 
 
-        {/* Stats Section */}
-        <div className="border-t border-gray-200 p-8 lg:p-16">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-black text-black mb-2">500+</div>
-              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Товаров</div>
-            </div>
-            <div>
-              <div className="text-4xl font-black text-black mb-2">150+</div>
-              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Клиентов</div>
-            </div>
-            <div>
-              <div className="text-4xl font-black text-black mb-2">24/7</div>
-              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Поддержка</div>
-            </div>
-            <div>
-              <div className="text-4xl font-black text-black mb-2">99%</div>
-              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Качества</div>
-            </div>
-          </div>
-        </div>
+
 
 
 
