@@ -313,7 +313,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
-                    <span className="whitespace-nowrap">Профессиональная установка</span>
+                    <span className="whitespace-nowrap">Профессио��альная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
                 </div>
@@ -472,7 +472,7 @@ export default function Home() {
             >
 
               <div className="text-center text-gray-400 text-xs mb-2">
-                Прокрутите ��ля смены модели
+                Прокрутите для смены модели
               </div>
               <div className="flex justify-center space-x-1">
                 {models.map((_, index) => (
@@ -758,7 +758,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
+                        {['Смартфоны', 'Телевизор��', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
@@ -1046,7 +1046,7 @@ export default function Home() {
                     Пл��ншет Pro
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Профессиональный с стилусом
+                    Про��ессиональный с стилусом
                   </p>
                   <div className="text-lg font-bold text-gray-900">
                     $ 799
@@ -1330,7 +1330,7 @@ export default function Home() {
           </div>
 
           {/* Chat Messages Area */}
-          <div className="flex-1 overflow-y-auto bg-gray-50" style={{ height: 'calc(100vh - 140px)' }}>
+          <div className="flex-1 overflow-y-auto bg-gray-50" style={{ height: 'calc(100vh - 200px)' }}>
             <div className="max-w-4xl mx-auto px-4 py-6">
               {chatMessages.map((message) => (
                 <div key={message.id} className="mb-6">
