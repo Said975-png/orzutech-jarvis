@@ -605,7 +605,7 @@ export default function Home() {
                   // Скролл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // Ск��олл в��ерх - предыдущая модель
+                  // Скролл вверх - предыдущая модель
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
