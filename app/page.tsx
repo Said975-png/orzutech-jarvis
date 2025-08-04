@@ -89,7 +89,7 @@ export default function Home() {
       setTimeout(() => {
         const jarvisResponse: ChatMessage = {
           id: Date.now() + 1,
-          text: "Спасибо за ваш вопрос! Я обрабатываю ваш запрос и скоро дам детальный отв��т.",
+          text: "Спасибо за ваш вопрос! Я обрабатываю ваш запрос и скоро дам детальный ответ.",
           isUser: false,
           timestamp: new Date()
         }
@@ -508,7 +508,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
-                    <span className="whitespace-nowrap">Инновацио��ные решения для дома</span>
+                    <span className="whitespace-nowrap">Инно��ационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
