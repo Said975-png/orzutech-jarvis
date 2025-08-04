@@ -38,7 +38,7 @@ export default function Home() {
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
     {
       id: 1,
-      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором техники или ответить на вопросы о магазине.",
+      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором те��ники или ответить на вопросы о магазине.",
       isUser: false,
       timestamp: new Date()
     }
@@ -127,7 +127,7 @@ export default function Home() {
   const colors = [
     { name: "Белый", color: "bg-white", border: "border-gray-300" },
     { name: "��ерный", color: "bg-black", border: "border-gray-700" },
-    { name: "Серый", color: "bg-gray-400", border: "border-gray-500" }
+    { name: "��ерый", color: "bg-gray-400", border: "border-gray-500" }
   ]
 
   useEffect(() => {
@@ -313,7 +313,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Полная гарантия на все то��ары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
-                    <span className="whitespace-nowrap">��рофессио��альная установка</span>
+                    <span className="whitespace-nowrap">Профессио��аль��ая установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
                 </div>
@@ -1310,8 +1310,8 @@ export default function Home() {
                     // User Message
                     <div className="flex items-start space-x-3 justify-end">
                       <div className="flex-1 flex justify-end">
-                        <div className="bg-green-500 text-white rounded-2xl rounded-tr-lg px-4 py-3 shadow-sm max-w-2xl">
-                          <p className="leading-relaxed">
+                        <div className="bg-green-500 text-white rounded-2xl rounded-tr-lg px-3 md:px-4 py-2 md:py-3 shadow-sm max-w-xs md:max-w-2xl">
+                          <p className="leading-relaxed text-sm md:text-base">
                             {message.text}
                           </p>
                         </div>
