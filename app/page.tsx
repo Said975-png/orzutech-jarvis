@@ -46,7 +46,7 @@ export default function Home() {
   const [currentMessage, setCurrentMessage] = useState('')
 
   const products: Product[] = [
-    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимал��ного качества изображения" },
+    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тр��йной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
@@ -278,16 +278,154 @@ export default function Home() {
         </nav>
 
         {/* Main Content */}
-        <div className="relative grid lg:grid-cols-2 gap-8 md:gap-16 p-4 md:p-8 lg:p-16 min-h-[60vh] md:min-h-[70vh] overflow-hidden">
+        <div className="relative flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-16 p-4 md:p-8 lg:p-16 min-h-[60vh] md:min-h-[70vh] overflow-hidden">
           {/* Light Effect from Left */}
           <div className="absolute -left-32 top-0 bottom-0 w-96 bg-gradient-to-r from-gray-200/10 via-gray-200/5 to-transparent blur-3xl opacity-60"></div>
           <div className="absolute -left-20 top-1/4 bottom-1/4 w-64 bg-gradient-to-r from-gray-200/20 via-gray-200/8 to-transparent blur-2xl opacity-40"></div>
           <div className="absolute -left-10 top-1/3 bottom-1/3 w-32 bg-gradient-to-r from-gray-200/30 via-gray-200/10 to-transparent blur-xl opacity-30"></div>
 
+          {/* Mobile: 3D Model Section First */}
+          <div className="flex flex-col justify-center items-center space-y-6 lg:hidden order-1">
+            <div className="flex flex-col items-center space-y-4">
+              <div className="relative w-[240px] h-[240px] overflow-hidden rounded-lg">
+                <model-viewer
+                  src={models[currentModel].url}
+                  alt="3D Model"
+                  auto-rotate
+                  camera-controls
+                  autoplay
+                  animation-name=""
+                  field-of-view="30deg"
+                  camera-orbit="0deg 75deg 150%"
+                  style={{ width: '100%', height: '100%' }}
+                  loading="lazy"
+                  min-camera-orbit="auto auto 120%"
+                  max-camera-orbit="auto auto 200%"
+                ></model-viewer>
+              </div>
 
+              {/* Model Color Selection - Mobile */}
+              <div className="flex flex-col items-center space-y-4">
+                <div className="text-gray-400 text-xs uppercase tracking-wide text-center">
+                  Цвет<br/>модели
+                </div>
+                <div
+                  className="flex flex-col space-y-4 cursor-grab active:cursor-grabbing"
+                  onMouseDown={(e) => {
+                    const startY = e.clientY;
+                    let isDragging = false;
+
+                    const handleMouseMove = (e: MouseEvent) => {
+                      const deltaY = e.clientY - startY;
+                      if (Math.abs(deltaY) > 20 && !isDragging) {
+                        isDragging = true;
+                        if (deltaY > 0) {
+                          setSelectedColor(1);
+                        } else {
+                          setSelectedColor(0);
+                        }
+                      }
+                    };
+
+                    const handleMouseUp = () => {
+                      document.removeEventListener('mousemove', handleMouseMove);
+                      document.removeEventListener('mouseup', handleMouseUp);
+                    };
+
+                    document.addEventListener('mousemove', handleMouseMove);
+                    document.addEventListener('mouseup', handleMouseUp);
+                  }}
+                  onTouchStart={(e) => {
+                    const startY = e.touches[0].clientY;
+                    let isDragging = false;
+
+                    const handleTouchMove = (e: TouchEvent) => {
+                      const deltaY = e.touches[0].clientY - startY;
+                      if (Math.abs(deltaY) > 20 && !isDragging) {
+                        isDragging = true;
+                        if (deltaY > 0) {
+                          setSelectedColor(1);
+                        } else {
+                          setSelectedColor(0);
+                        }
+                      }
+                    };
+
+                    const handleTouchEnd = () => {
+                      document.removeEventListener('touchmove', handleTouchMove);
+                      document.removeEventListener('touchend', handleTouchEnd);
+                    };
+
+                    document.addEventListener('touchmove', handleTouchMove);
+                    document.addEventListener('touchend', handleTouchEnd);
+                  }}
+                >
+                  <button
+                    onClick={() => setSelectedColor(0)}
+                    className={`
+                      w-6 h-6 rounded-full transition-all duration-300 border-2 cursor-pointer
+                      bg-white border-gray-300
+                      ${selectedColor === 0
+                        ? 'ring-2 ring-yellow-400 ring-offset-1 scale-110'
+                        : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1 hover:scale-105'
+                      }
+                    `}
+                    title="Белый"
+                  />
+                  <div className="text-gray-300 text-xs">⇅</div>
+                  <button
+                    onClick={() => setSelectedColor(1)}
+                    className={`
+                      w-6 h-6 rounded-full transition-all duration-300 border-2 cursor-pointer
+                      bg-black border-gray-700
+                      ${selectedColor === 1
+                        ? 'ring-2 ring-yellow-400 ring-offset-1 scale-110'
+                        : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1 hover:scale-105'
+                      }
+                    `}
+                    title="Черный"
+                  />
+                </div>
+                <div className="text-gray-300 text-xs text-center">
+                  потяните<br/>для смены
+                </div>
+              </div>
+            </div>
+
+            {/* Custom Model Selector - Mobile */}
+            <div
+              className="w-[240px]"
+              onWheel={(e) => {
+                e.preventDefault()
+                if (e.deltaY > 0) {
+                  setCurrentModel((prev) => (prev + 1) % models.length)
+                } else {
+                  setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
+                }
+              }}
+            >
+              <div className="text-center text-gray-400 text-xs mb-2">
+                Прокрутите для смены модели
+              </div>
+              <div className="flex justify-center space-x-1">
+                {models.map((_, index) => (
+                  <div
+                    key={index}
+                    className={`
+                      w-2 h-2 rounded-full transition-all duration-300
+                      ${currentModel === index
+                        ? 'bg-white'
+                        : 'bg-gray-600'
+                      }
+                    `}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
 
           {/* Left Content */}
-          <div className="relative flex flex-col justify-center space-y-12 z-10">
+          <div className="relative flex flex-col justify-center space-y-8 lg:space-y-12 z-10 order-2 lg:order-1">
             <div className="space-y-6">
               <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em]">
                 СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
@@ -312,7 +450,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все то��ары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
-                    <span className="whitespace-nowrap">Инновационные решения для дома</span>
+                    <span className="whitespace-nowrap">Инно��ационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессио��альная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
@@ -465,7 +603,7 @@ export default function Home() {
                   // Ск��олл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // Ск��олл вверх - предыдущая модель
+                  // С����олл вверх - предыдущая модель
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
