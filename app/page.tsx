@@ -26,10 +26,12 @@ export default function Home() {
   const [selectedColor, setSelectedColor] = useState(0)
   const [cart, setCart] = useState<CartItem[]>([])
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [isChatOpen, setIsChatOpen] = useState(false)
 
   const products: Product[] = [
     { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
-    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
+    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тр��йной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спортивными функциями" },
@@ -156,22 +158,54 @@ export default function Home() {
             <span className="text-yellow-400 font-bold text-2xl tracking-wide font-sans drop-shadow-sm">ORZUTECH</span>
           </div>
 
-          {/* Search Bar */}
+          {/* Animated Search Bar */}
           <div className="relative flex-1 max-w-2xl mx-8">
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
+            <div
+              className={`
+                relative transition-all duration-500 ease-in-out overflow-hidden
+                ${isSearchOpen
+                  ? 'w-full opacity-100'
+                  : 'w-0 opacity-0'
+                }
+              `}
+            >
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <input
+                type="search"
+                placeholder="Поиск..."
+                className="w-full bg-white/90 backdrop-blur-sm text-gray-800 placeholder-gray-500 pl-10 pr-10 py-2 rounded-full border border-gray-300 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20 transition-colors text-sm font-sans shadow-lg"
+                autoFocus={isSearchOpen}
+              />
+              <button
+                onClick={() => setIsSearchOpen(false)}
+                className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
-            <input
-              type="search"
-              placeholder="П��иск..."
-              className="w-full bg-white/90 backdrop-blur-sm text-gray-800 placeholder-gray-500 pl-10 pr-4 py-2 rounded-full border border-white/30 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20 transition-colors text-sm font-sans shadow-lg"
-            />
           </div>
 
           {/* Auth and Cart */}
           <div className="flex items-center space-x-4">
+            {/* Search Icon */}
+            <button
+              onClick={() => setIsSearchOpen(true)}
+              className={`
+                p-2 text-black hover:text-gray-700 transition-all duration-300 drop-shadow-sm
+                ${isSearchOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}
+              `}
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </button>
+
             {/* Auth buttons */}
             <div className="flex items-center space-x-2">
               <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
@@ -218,15 +252,15 @@ export default function Home() {
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
               <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-md font-light">
-                Наша деятельность: Продажа Телефонов �� аксессуаров, Планшетов, разных Га��жетов и много много инте��есно��о.
+                Наша деятельность: Продажа Телефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
               </p>
 
               {/* Auto-scrolling slider */}
               <div className="relative overflow-hidden max-w-lg h-12">
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
-                    <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
-                    <span className="whitespace-nowrap">100% ��ригинальные устр��йства</span>
+                    <span className="whitespace-nowrap">Самая качественная техника в ��ухаре</span>
+                    <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
@@ -266,21 +300,112 @@ export default function Home() {
 
           {/* Right Content */}
           <div className="flex flex-col justify-center items-center space-y-6">
-            <div className="relative w-[280px] lg:w-[360px] h-[280px] lg:h-[360px] overflow-hidden rounded-lg">
-              <model-viewer
-                src={models[currentModel].url}
-                alt="3D Model"
-                auto-rotate
-                camera-controls
-                autoplay
-                animation-name=""
-                field-of-view="30deg"
-                camera-orbit="0deg 75deg 150%"
-                style={{ width: '100%', height: '100%' }}
-                loading="lazy"
-                min-camera-orbit="auto auto 120%"
-                max-camera-orbit="auto auto 200%"
-              ></model-viewer>
+            <div className="flex items-center space-x-6">
+              <div className="relative w-[280px] lg:w-[360px] h-[280px] lg:h-[360px] overflow-hidden rounded-lg">
+                <model-viewer
+                  src={models[currentModel].url}
+                  alt="3D Model"
+                  auto-rotate
+                  camera-controls
+                  autoplay
+                  animation-name=""
+                  field-of-view="30deg"
+                  camera-orbit="0deg 75deg 150%"
+                  style={{ width: '100%', height: '100%' }}
+                  loading="lazy"
+                  min-camera-orbit="auto auto 120%"
+                  max-camera-orbit="auto auto 200%"
+                ></model-viewer>
+              </div>
+
+              {/* Model Color Selection - Right side */}
+              <div className="flex flex-col items-center space-y-4">
+                <div className="text-gray-400 text-xs uppercase tracking-wide text-center">
+                  Цвет<br/>модели
+                </div>
+                <div
+                  className="flex flex-col space-y-4 cursor-grab active:cursor-grabbing"
+                  onMouseDown={(e) => {
+                    const startY = e.clientY;
+                    let isDragging = false;
+
+                    const handleMouseMove = (e: MouseEvent) => {
+                      const deltaY = e.clientY - startY;
+                      if (Math.abs(deltaY) > 20 && !isDragging) {
+                        isDragging = true;
+                        if (deltaY > 0) {
+                          // Drag down - switch to black
+                          setSelectedColor(1);
+                        } else {
+                          // Drag up - switch to white
+                          setSelectedColor(0);
+                        }
+                      }
+                    };
+
+                    const handleMouseUp = () => {
+                      document.removeEventListener('mousemove', handleMouseMove);
+                      document.removeEventListener('mouseup', handleMouseUp);
+                    };
+
+                    document.addEventListener('mousemove', handleMouseMove);
+                    document.addEventListener('mouseup', handleMouseUp);
+                  }}
+                  onTouchStart={(e) => {
+                    const startY = e.touches[0].clientY;
+                    let isDragging = false;
+
+                    const handleTouchMove = (e: TouchEvent) => {
+                      const deltaY = e.touches[0].clientY - startY;
+                      if (Math.abs(deltaY) > 20 && !isDragging) {
+                        isDragging = true;
+                        if (deltaY > 0) {
+                          setSelectedColor(1);
+                        } else {
+                          setSelectedColor(0);
+                        }
+                      }
+                    };
+
+                    const handleTouchEnd = () => {
+                      document.removeEventListener('touchmove', handleTouchMove);
+                      document.removeEventListener('touchend', handleTouchEnd);
+                    };
+
+                    document.addEventListener('touchmove', handleTouchMove);
+                    document.addEventListener('touchend', handleTouchEnd);
+                  }}
+                >
+                  <button
+                    onClick={() => setSelectedColor(0)}
+                    className={`
+                      w-6 h-6 rounded-full transition-all duration-300 border-2 cursor-pointer
+                      bg-white border-gray-300
+                      ${selectedColor === 0
+                        ? 'ring-2 ring-yellow-400 ring-offset-1 scale-110'
+                        : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1 hover:scale-105'
+                      }
+                    `}
+                    title="Б��лый"
+                  />
+                  <div className="text-gray-300 text-xs">⇅</div>
+                  <button
+                    onClick={() => setSelectedColor(1)}
+                    className={`
+                      w-6 h-6 rounded-full transition-all duration-300 border-2 cursor-pointer
+                      bg-black border-gray-700
+                      ${selectedColor === 1
+                        ? 'ring-2 ring-yellow-400 ring-offset-1 scale-110'
+                        : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1 hover:scale-105'
+                      }
+                    `}
+                    title="Черный"
+                  />
+                </div>
+                <div className="text-gray-300 text-xs text-center">
+                  потяните<br/>для смены
+                </div>
+              </div>
             </div>
 
             {/* Custom Model Selector */}
@@ -292,7 +417,7 @@ export default function Home() {
                   // Ск��олл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // Скролл вверх - предыдущая модель
+                  // Ск��олл вверх - предыдущая модель
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
@@ -320,12 +445,13 @@ export default function Home() {
         </div>
 
 
+
         {/* Stats Section */}
         <div className="border-t border-gray-200 p-8 lg:p-16">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-black text-black mb-2">500+</div>
-              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Товаро��</div>
+              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Товаров</div>
             </div>
             <div>
               <div className="text-4xl font-black text-black mb-2">150+</div>
@@ -337,7 +463,7 @@ export default function Home() {
             </div>
             <div>
               <div className="text-4xl font-black text-black mb-2">99%</div>
-              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Качеств��</div>
+              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Качества</div>
             </div>
           </div>
         </div>
@@ -350,7 +476,7 @@ export default function Home() {
             {/* Section Header */}
             <div className="text-center mb-12">
               <h2 className="text-3xl font-light text-gray-900 mb-2 tracking-wide">
-                Хит прода��
+                Хит продаж
               </h2>
               <div className="w-16 h-px bg-gray-400 mx-auto"></div>
             </div>
@@ -369,8 +495,8 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Grooming Kit Pro</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">��рофессиональный набор для ухода</p>
-                    <div className="text-2xl font-bold text-red-600">�� 8,900</div>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональный набор для ухода</p>
+                    <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
                   </div>
                 </div>
 
@@ -401,7 +527,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">PlayStation 5 Slim</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консоль нового поколения</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консоль нового по��оления</p>
                     <div className="text-2xl font-bold text-red-600">₽ 45,000</div>
                   </div>
                 </div>
@@ -449,7 +575,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Grooming Kit Pro</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональный набор для ухода</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональн��й набор для ухода</p>
                     <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
                   </div>
                 </div>
@@ -551,7 +677,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['5 звезд', '4 звезды и выше', '3 звезды и выше', '2 звезды и выше', '1 звезда и выше', 'Без рейтинга'].map((rating, index) => (
+                        {['5 звезд', '4 звезды и выше', '3 звезды и выше', '2 звезды и выше', '1 звезда и в��ше', 'Без рейтинга'].map((rating, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200 flex items-center"
@@ -688,7 +814,7 @@ export default function Home() {
                   </div>
 
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Тройная камера, зарядка 65W
+                    Тройная камера, з��рядка 65W
                   </p>
 
                   <div className="flex items-center justify-between mb-3">
@@ -869,7 +995,7 @@ export default function Home() {
 
                 <div className="p-4 border-t border-gray-100">
                   <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
-                    Планшет Pro
+                    Пл��ншет Pro
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     Профессиональный с стилусом
@@ -1107,6 +1233,88 @@ export default function Home() {
           </p>
         </div>
       </div>
+
+      {/* Jarvis AI Chat */}
+      {!isChatOpen && (
+        <button
+          onClick={() => setIsChatOpen(true)}
+          className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 group"
+        >
+          <div className="relative">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+            <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+          </div>
+          <div className="absolute -top-12 right-0 bg-black text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+            Чат с Джарвисом
+          </div>
+        </button>
+      )}
+
+      {/* Fullscreen Chat Interface */}
+      {isChatOpen && (
+        <div className="fixed inset-0 z-50 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
+          {/* Chat Header */}
+          <div className="flex items-center justify-between p-6 bg-black/20 backdrop-blur-sm border-b border-white/10">
+            <div className="flex items-center space-x-3">
+              <div className="relative">
+                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-slate-900"></div>
+              </div>
+              <div>
+                <h2 className="text-xl font-bold text-white">Джарвис ИИ</h2>
+                <p className="text-sm text-gray-300">Ваш умный помощник</p>
+              </div>
+            </div>
+            <button
+              onClick={() => setIsChatOpen(false)}
+              className="p-2 text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Chat Messages Area */}
+          <div className="flex-1 overflow-y-auto p-6 space-y-4" style={{ height: 'calc(100vh - 140px)' }}>
+            {/* Welcome Message */}
+            <div className="flex items-start space-x-3">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl rounded-tl-md p-4 max-w-md">
+                <p className="text-white">Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором техники или ответить на вопросы о магазине.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Chat Input */}
+          <div className="p-6 bg-black/20 backdrop-blur-sm border-t border-white/10">
+            <div className="flex items-center space-x-4">
+              <div className="flex-1 relative">
+                <input
+                  type="text"
+                  placeholder="Напишите ваш вопрос..."
+                  className="w-full bg-white/10 backdrop-blur-sm text-white placeholder-gray-300 px-4 py-3 rounded-2xl border border-white/20 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/20 transition-colors"
+                />
+              </div>
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white p-3 rounded-2xl transition-all duration-200 hover:scale-105">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   )
 }
