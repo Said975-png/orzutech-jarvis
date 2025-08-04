@@ -449,7 +449,7 @@ export default function Home() {
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
-                    <span className="whitespace-nowrap">Быстрая д��ставка и установка</span>
+                    <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
@@ -1151,7 +1151,7 @@ export default function Home() {
 
                 <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                   <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
-                    Беспроводные наушни��и
+                    Беспроводные наушники
                   </h3>
 
                   {/* Rating */}
@@ -1477,7 +1477,7 @@ export default function Home() {
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Планш��т Pro"
+                        alt="Планшет Pro"
                         className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
