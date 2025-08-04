@@ -38,7 +38,7 @@ export default function Home() {
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
     {
       id: 1,
-      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором техники или ответить на вопросы о магазине.",
+      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Мо��у рассказать о товарах, помочь с выбором техники или ответить на вопросы о магазине.",
       isUser: false,
       timestamp: new Date()
     }
@@ -645,7 +645,7 @@ export default function Home() {
             <div className="relative">
               <div className="flex animate-scroll-fast space-x-6">
                 {/* Slide 1 - Grooming Kit */}
-                <div className="flex-shrink-0 w-72 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <div className="flex-shrink-0 w-64 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F4b42886ccd0846e8845f7fea196bdae6?format=webp&width=800"
@@ -661,7 +661,7 @@ export default function Home() {
                 </div>
 
                 {/* Slide 2 - Apple Watch */}
-                <div className="flex-shrink-0 w-72 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <div className="flex-shrink-0 w-64 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2Fad77a22293914f76ad5c86b0cc1cb048?format=webp&width=800"
@@ -677,7 +677,7 @@ export default function Home() {
                 </div>
 
                 {/* Slide 3 - PlayStation */}
-                <div className="flex-shrink-0 w-72 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <div className="flex-shrink-0 w-64 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F593de0ffc9344103bcb253bcf1c49c90?format=webp&width=800"
@@ -693,7 +693,7 @@ export default function Home() {
                 </div>
 
                 {/* Slide 4 - Samsung Watch */}
-                <div className="flex-shrink-0 w-72 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <div className="flex-shrink-0 w-64 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F1f88af23807446fbae545f790458cfa0?format=webp&width=800"
@@ -709,7 +709,7 @@ export default function Home() {
                 </div>
 
                 {/* Slide 5 - Huawei Set */}
-                <div className="flex-shrink-0 w-72 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <div className="flex-shrink-0 w-64 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F61d1bfb408604835a08844fc969d435c?format=webp&width=800"
@@ -725,7 +725,7 @@ export default function Home() {
                 </div>
 
                 {/* Duplicate slides for seamless loop */}
-                <div className="flex-shrink-0 w-72 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <div className="flex-shrink-0 w-64 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F4b42886ccd0846e8845f7fea196bdae6?format=webp&width=800"
@@ -740,7 +740,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex-shrink-0 w-72 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <div className="flex-shrink-0 w-64 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2Fad77a22293914f76ad5c86b0cc1cb048?format=webp&width=800"
@@ -755,7 +755,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex-shrink-0 w-72 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <div className="flex-shrink-0 w-64 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F593de0ffc9344103bcb253bcf1c49c90?format=webp&width=800"
@@ -771,7 +771,7 @@ export default function Home() {
                 </div>
 
                 {/* Additional duplicates for better mobile looping */}
-                <div className="flex-shrink-0 w-72 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <div className="flex-shrink-0 w-64 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F1f88af23807446fbae545f790458cfa0?format=webp&width=800"
@@ -786,7 +786,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex-shrink-0 w-72 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <div className="flex-shrink-0 w-64 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F61d1bfb408604835a08844fc969d435c?format=webp&width=800"
@@ -1263,7 +1263,7 @@ export default function Home() {
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="См��ртфон Premium"
+                        alt="Смартфон Premium"
                         className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
