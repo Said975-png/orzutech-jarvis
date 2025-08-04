@@ -38,7 +38,7 @@ export default function Home() {
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
     {
       id: 1,
-      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором те��ники или ответить на вопросы о магазине.",
+      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать �� товарах, помочь с выбором техники или ответить на вопросы о магазине.",
       isUser: false,
       timestamp: new Date()
     }
@@ -127,7 +127,7 @@ export default function Home() {
   const colors = [
     { name: "Белый", color: "bg-white", border: "border-gray-300" },
     { name: "��ерный", color: "bg-black", border: "border-gray-700" },
-    { name: "��ерый", color: "bg-gray-400", border: "border-gray-500" }
+    { name: "Серый", color: "bg-gray-400", border: "border-gray-500" }
   ]
 
   useEffect(() => {
@@ -313,7 +313,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Полная гарантия на все то��ары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
-                    <span className="whitespace-nowrap">Профессио��аль��ая установка</span>
+                    <span className="whitespace-nowrap">Профессио��альная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
                 </div>
@@ -462,7 +462,7 @@ export default function Home() {
               onWheel={(e) => {
                 e.preventDefault()
                 if (e.deltaY > 0) {
-                  // Ск��олл вниз - следующая модель
+                  // Ск���олл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
                   // Ск��олл вверх - предыдущая модель
@@ -871,7 +871,7 @@ export default function Home() {
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                    alt="Игровой Ноутбук"
+                    alt="Игровой ��оутбук"
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -1038,7 +1038,7 @@ export default function Home() {
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                    alt={"Смарт Телевизор 55\""}
+                    alt={"С��арт Телевизор 55\""}
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -1331,8 +1331,8 @@ export default function Home() {
                         </svg>
                       </div>
                       <div className="flex-1">
-                        <div className="bg-white rounded-2xl rounded-tl-lg px-4 py-3 shadow-sm border border-gray-200 max-w-2xl">
-                          <p className="text-gray-800 leading-relaxed">
+                        <div className="bg-white rounded-2xl rounded-tl-lg px-3 md:px-4 py-2 md:py-3 shadow-sm border border-gray-200 max-w-xs md:max-w-2xl">
+                          <p className="text-gray-800 leading-relaxed text-sm md:text-base">
                             {message.text}
                           </p>
                         </div>
