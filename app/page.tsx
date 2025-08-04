@@ -46,7 +46,7 @@ export default function Home() {
   const [currentMessage, setCurrentMessage] = useState('')
 
   const products: Product[] = [
-    { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD раз��ешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
+    { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD раз��еш��ние с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
@@ -257,7 +257,7 @@ export default function Home() {
             {/* Auth buttons */}
             <div className="hidden sm:flex items-center space-x-2">
               <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
-                Вход
+                ��ход
               </button>
               <span className="text-black">|</span>
               <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
@@ -643,7 +643,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             {/* Slider Container */}
             <div className="relative">
-              <div className="flex animate-scroll-fast space-x-6">
+              <div className="flex animate-scroll-fast md:animate-scroll-fast sm:animate-scroll-mobile animate-scroll-mobile space-x-6">
                 {/* Slide 1 - Grooming Kit */}
                 <div className="flex-shrink-0 w-56 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
