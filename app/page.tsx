@@ -1328,7 +1328,7 @@ export default function Home() {
                     Беспроводные наушники
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Premium с шумоп��давлением
+                    Premium с шумоподавлением
                   </p>
                   <div className="text-lg font-bold text-gray-900">
                     $ 249
