@@ -448,7 +448,7 @@ export default function Home() {
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
-                    <span className="whitespace-nowrap">100% оригинальные ус��ройства</span>
+                    <span className="whitespace-nowrap">100% оригинальные ус����ройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
@@ -643,7 +643,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             {/* Slider Container */}
             <div className="relative">
-              <div className="flex animate-scroll space-x-6">
+              <div className="flex animate-scroll-fast space-x-6">
                 {/* Slide 1 - Grooming Kit */}
                 <div className="flex-shrink-0 w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
@@ -703,7 +703,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Samsung Watch Ultra</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Умные часы с премиум функциями</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Умные часы с премиум фун��циями</p>
                     <div className="text-2xl font-bold text-red-600">₽ 33,500</div>
                   </div>
                 </div>
