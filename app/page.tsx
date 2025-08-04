@@ -292,7 +292,7 @@ export default function Home() {
                   // Ск��олл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // Скролл вверх - предыдущая модель
+                  // Скролл вверх - предыдущая моде��ь
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
@@ -319,26 +319,39 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Bottom Wave after main section */}
-        <div className="relative w-full h-24 overflow-hidden bg-transparent">
+        {/* Flowing Golden Wave from Top Right to Bottom Left */}
+        <div className="relative w-full h-32 overflow-hidden bg-transparent">
           <svg
-            className="absolute bottom-0 left-0 w-full h-full transform scale-110"
-            viewBox="0 0 1200 200"
+            className="absolute top-0 left-0 w-full h-full"
+            viewBox="0 0 1200 300"
             fill="none"
             preserveAspectRatio="none"
           >
-            {/* Main White Wave from Bottom */}
+            {/* Main Golden Wave flowing diagonally */}
             <path
-              d="M0,200 L1200,200 L1200,80 C1000,40 800,20 600,60 C400,100 200,120 0,80 Z"
-              fill="#ffffff"
+              d="M1200,0 L1200,120 C1000,160 800,180 600,140 C400,100 200,80 0,120 L0,300 L1200,300 Z"
+              fill="url(#goldGradient)"
               className="drop-shadow-lg"
             />
-            {/* Secondary wave for depth */}
+            {/* Secondary wave for depth and flow effect */}
             <path
-              d="M0,200 L1200,200 L1200,100 C950,60 700,50 450,80 C200,110 100,120 0,100 Z"
-              fill="#f8f9fa"
-              opacity="0.8"
+              d="M1200,0 L1200,80 C950,120 700,130 450,100 C200,70 100,60 0,90 L0,300 L1200,300 Z"
+              fill="url(#goldGradient2)"
+              opacity="0.7"
             />
+            {/* Gradient definitions */}
+            <defs>
+              <linearGradient id="goldGradient" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#FDE047" />
+                <stop offset="50%" stopColor="#FACC15" />
+                <stop offset="100%" stopColor="#EAB308" />
+              </linearGradient>
+              <linearGradient id="goldGradient2" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#FEF3C7" />
+                <stop offset="50%" stopColor="#FDE047" />
+                <stop offset="100%" stopColor="#FACC15" />
+              </linearGradient>
+            </defs>
           </svg>
         </div>
 
