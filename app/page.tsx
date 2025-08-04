@@ -50,7 +50,7 @@ export default function Home() {
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тр��йной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
-    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спо��тивными функциями" },
+    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
   ]
 
@@ -125,7 +125,7 @@ export default function Home() {
   ]
 
   const colors = [
-    { name: "Белый", color: "bg-white", border: "border-gray-300" },
+    { name: "Бе��ый", color: "bg-white", border: "border-gray-300" },
     { name: "��ерный", color: "bg-black", border: "border-gray-700" },
     { name: "Серый", color: "bg-gray-400", border: "border-gray-500" }
   ]
@@ -286,7 +286,7 @@ export default function Home() {
 
           {/* Mobile: 3D Model Section First */}
           <div className="flex flex-col justify-center items-center space-y-6 lg:hidden order-1">
-            <div className="flex flex-col items-center space-y-4">
+            <div className="flex items-center space-x-6">
               <div className="relative w-[240px] h-[240px] overflow-hidden rounded-lg">
                 <model-viewer
                   src={models[currentModel].url}
@@ -304,7 +304,7 @@ export default function Home() {
                 ></model-viewer>
               </div>
 
-              {/* Model Color Selection - Mobile */}
+              {/* Model Color Selection - Mobile Right Side */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="text-gray-400 text-xs uppercase tracking-wide text-center">
                   Цвет<br/>модели
@@ -445,7 +445,7 @@ export default function Home() {
               <div className="relative overflow-hidden max-w-lg h-12 mx-auto lg:mx-0">
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
-                    <span className="whitespace-nowrap">Самая каче��твенная техника в ��ухар��</span>
+                    <span className="whitespace-nowrap">Самая качественная техника в ��ухар��</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все то��ары</span>
@@ -603,7 +603,7 @@ export default function Home() {
                   // Ск��олл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // Ск��олл вверх - предыдущая модель
+                  // Ск��олл в��ерх - предыдущая модель
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
@@ -717,7 +717,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Huawei Watch Fit 3</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">+ FreeBuds SE 3 в под��рок</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">+ FreeBuds SE 3 в подарок</p>
                     <div className="text-2xl font-bold text-red-600">₽ 12,500</div>
                   </div>
                 </div>
