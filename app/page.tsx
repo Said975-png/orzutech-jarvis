@@ -51,7 +51,7 @@ export default function Home() {
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спортивными функциями" },
-    { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
+    { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планше�� для работы и тво����ества с поддержкой стилуса" }
   ]
 
   const addToCart = (product: Product) => {
@@ -300,7 +300,7 @@ export default function Home() {
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
               <p className="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed max-w-md font-light">
-                Наша деятельность: Продажа Телефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
+                Наша деятель��ость: Продажа Телефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
               </p>
 
               {/* Auto-scrolling slider */}
@@ -348,8 +348,8 @@ export default function Home() {
 
           {/* Right Content */}
           <div className="flex flex-col justify-center items-center space-y-6">
-            <div className="flex items-center space-x-6">
-              <div className="relative w-[280px] lg:w-[360px] h-[280px] lg:h-[360px] overflow-hidden rounded-lg">
+            <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
+              <div className="relative w-[240px] md:w-[280px] lg:w-[360px] h-[240px] md:h-[280px] lg:h-[360px] overflow-hidden rounded-lg">
                 <model-viewer
                   src={models[currentModel].url}
                   alt="3D Model"
@@ -625,7 +625,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">PlayStation 5 Slim</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консоль н��вого поколения</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консоль нового поколения</p>
                     <div className="text-2xl font-bold text-red-600">₽ 45,000</div>
                   </div>
                 </div>
@@ -730,7 +730,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['Смартфоны', 'Телевизор��', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
+                        {['Смартфоны', 'Телевизор��', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные час����', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
@@ -1176,7 +1176,7 @@ export default function Home() {
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Умные час��"
+                        alt="Умные часы"
                         className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
