@@ -125,7 +125,7 @@ export default function Home() {
   ]
 
   const colors = [
-    { name: "Бе��ый", color: "bg-white", border: "border-gray-300" },
+    { name: "Белый", color: "bg-white", border: "border-gray-300" },
     { name: "��ерный", color: "bg-black", border: "border-gray-700" },
     { name: "Серый", color: "bg-gray-400", border: "border-gray-500" }
   ]
@@ -363,7 +363,7 @@ export default function Home() {
                   <button
                     onClick={() => setSelectedColor(0)}
                     className={`
-                      w-6 h-6 rounded-full transition-all duration-300 border-2 cursor-pointer
+                      w-4 h-4 rounded-full transition-all duration-300 border-2 cursor-pointer
                       bg-white border-gray-300
                       ${selectedColor === 0
                         ? 'ring-2 ring-yellow-400 ring-offset-1 scale-110'
@@ -376,7 +376,7 @@ export default function Home() {
                   <button
                     onClick={() => setSelectedColor(1)}
                     className={`
-                      w-6 h-6 rounded-full transition-all duration-300 border-2 cursor-pointer
+                      w-4 h-4 rounded-full transition-all duration-300 border-2 cursor-pointer
                       bg-black border-gray-700
                       ${selectedColor === 1
                         ? 'ring-2 ring-yellow-400 ring-offset-1 scale-110'
