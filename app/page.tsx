@@ -431,7 +431,7 @@ export default function Home() {
                 СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
               </div>
 
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
+              <h1 className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
                 ORZUTECH
               </h1>
 
@@ -924,7 +924,7 @@ export default function Home() {
                       <div className="text-sm text-gray-400 line-through">$ 999</div>
                       <div className="text-lg font-bold text-gray-900">$ 899</div>
                     </div>
-                    <div className="text-xs text-green-600 font-medium">В нали��ии</div>
+                    <div className="text-xs text-green-600 font-medium">В наличии</div>
                   </div>
 
                   <div className="flex gap-2">
@@ -972,7 +972,7 @@ export default function Home() {
                   </div>
 
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Тройная ��амера, з��рядка 65W
+                    Тройная камера, з��рядка 65W
                   </p>
 
                   <div className="flex items-center justify-between mb-3">
@@ -1065,7 +1065,7 @@ export default function Home() {
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                    alt="Беспроводн��е н��ушники"
+                    alt="Беспроводные н��ушники"
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -1426,7 +1426,7 @@ export default function Home() {
               </div>
               <div>
                 <h2 className="text-lg font-semibold text-gray-900">Джарвис ИИ</h2>
-                <p className="text-sm text-gray-500">Онлайн</p>
+                <p className="text-sm text-gray-500">Он��айн</p>
               </div>
             </div>
             <button
