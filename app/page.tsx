@@ -46,7 +46,7 @@ export default function Home() {
   const [currentMessage, setCurrentMessage] = useState('')
 
   const products: Product[] = [
-    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
+    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями д��я максимального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тр��йной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
@@ -472,7 +472,7 @@ export default function Home() {
             >
 
               <div className="text-center text-gray-400 text-xs mb-2">
-                Прокрутите для смены модели
+                Прокр��тите для смены модели
               </div>
               <div className="flex justify-center space-x-1">
                 {models.map((_, index) => (
@@ -635,7 +635,7 @@ export default function Home() {
         </div>
 
         {/* Products Section */}
-        <div className="bg-white py-16 px-4 lg:px-8">
+        <div className="bg-white py-8 md:py-16 px-3 md:px-4 lg:px-8">
           <div className="max-w-6xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12">
@@ -730,7 +730,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['Смартфоны', 'Телевизор��', 'Ноутбуки', '��ланшеты', 'Наушники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
+                        {['Смартфоны', 'Телевизор��', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
@@ -1018,7 +1018,7 @@ export default function Home() {
                     Пл��ншет Pro
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Про��ессиональн��й с стилусом
+                    Про��ессиональный с стилусом
                   </p>
                   <div className="text-lg font-bold text-gray-900">
                     $ 799
