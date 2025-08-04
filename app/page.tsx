@@ -929,7 +929,7 @@ export default function Home() {
                     <div className="text-xs text-green-600 font-medium">В наличии</div>
                   </div>
 
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 mt-auto">
                     <button className="flex-1 bg-white text-black py-2.5 px-4 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200">
                       Заказать
                     </button>
@@ -985,7 +985,7 @@ export default function Home() {
                     <div className="text-xs text-green-600 font-medium">В наличии</div>
                   </div>
 
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 mt-auto">
                     <button className="flex-1 bg-white text-black py-2.5 px-4 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200">
                       Заказать
                     </button>
@@ -1041,7 +1041,7 @@ export default function Home() {
                     <div className="text-xs text-green-600 font-medium">В наличии</div>
                   </div>
 
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 mt-auto">
                     <button className="flex-1 bg-white text-black py-2.5 px-4 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200">
                       Заказать
                     </button>
@@ -1097,7 +1097,7 @@ export default function Home() {
                     <div className="text-xs text-green-600 font-medium">В наличии</div>
                   </div>
 
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 mt-auto">
                     <button className="flex-1 bg-white text-black py-2.5 px-4 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200">
                       Заказать
                     </button>
@@ -1134,7 +1134,7 @@ export default function Home() {
                     $ 349
                   </div>
 
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 mt-auto">
                     <button className="flex-1 bg-white text-black py-2.5 px-4 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200">
                       Заказать
                     </button>
@@ -1171,7 +1171,7 @@ export default function Home() {
                     $ 799
                   </div>
 
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 mt-auto">
                     <button className="flex-1 bg-white text-black py-2.5 px-4 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200">
                       Заказать
                     </button>
@@ -1208,7 +1208,7 @@ export default function Home() {
                     $ 899
                   </div>
 
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 mt-auto">
                     <button className="flex-1 bg-white text-black py-2.5 px-4 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200">
                       Заказать
                     </button>
@@ -1250,7 +1250,7 @@ export default function Home() {
                     $ 599
                   </div>
 
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 mt-auto">
                     <button className="flex-1 bg-white text-black py-2.5 px-4 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200">
                       Заказать
                     </button>
@@ -1292,7 +1292,7 @@ export default function Home() {
                     $ 1,299
                   </div>
 
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 mt-auto">
                     <button className="flex-1 bg-white text-black py-2.5 px-4 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200">
                       Заказать
                     </button>
@@ -1334,7 +1334,7 @@ export default function Home() {
                     $ 249
                   </div>
 
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 mt-auto">
                     <button className="flex-1 bg-white text-black py-2.5 px-4 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200">
                       Заказать
                     </button>
@@ -1376,7 +1376,7 @@ export default function Home() {
                     $ 349
                   </div>
 
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 mt-auto">
                     <button className="flex-1 bg-white text-black py-2.5 px-4 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200">
                       Заказать
                     </button>
@@ -1418,7 +1418,7 @@ export default function Home() {
                     $ 799
                   </div>
 
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 mt-auto">
                     <button className="flex-1 bg-white text-black py-2.5 px-4 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200">
                       Заказать
                     </button>
