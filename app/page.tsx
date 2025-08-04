@@ -496,7 +496,7 @@ export default function Home() {
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
               <p className="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed max-w-md font-light">
-                Наша деятельность: Продажа Телефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
+                Наша деятельность: ��родажа Телефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
               </p>
 
               {/* Auto-scrolling slider */}
@@ -731,7 +731,7 @@ export default function Home() {
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Apple Watch Series 10</h3>
                     <p className="text-xs text-gray-600 mb-3 line-clamp-2">Rose Gold, Black 42MM/46MM</p>
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
-                      Под��обнее
+                      Подробнее
                     </button>
                   </div>
                 </div>
@@ -835,7 +835,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">PlayStation 5 Slim</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консоль нового поколения</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая ко��соль нового поколения</p>
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
                       Подробнее
                     </button>
@@ -888,7 +888,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Grooming Kit Pro</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональный набор для ухода</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональный набор ��ля ухода</p>
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
                       Подробнее
                     </button>
@@ -1146,7 +1146,7 @@ export default function Home() {
 
                   <div className="flex gap-2 mt-auto">
                     <button className="flex-1 bg-white text-black py-2.5 px-4 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200">
-                      Заказать
+                      Заказат��
                     </button>
                     <button
                       onClick={() => addToCart(products[1])}
@@ -1328,7 +1328,7 @@ export default function Home() {
                     Планшет Pro
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    П��офессиональный с стилусом
+                    Профессиональный с стилусом
                   </p>
 
                   <div className="flex items-center justify-between mb-3">
@@ -1366,7 +1366,7 @@ export default function Home() {
 
                 <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                   <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
-                    Смарт Те��евизор 55"
+                    Смарт Телевизор 55"
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     4K Ultra HD с HDR
@@ -1743,7 +1743,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="text-xs text-gray-500 text-center mt-2">
-                Джарвис может делать ошибки. Проверяйте важную информацию.
+                Джарви�� может делать ошибки. Проверяйте важную информацию.
               </div>
             </div>
           </div>
