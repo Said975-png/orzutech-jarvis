@@ -38,7 +38,7 @@ export default function Home() {
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
     {
       id: 1,
-      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Мо��у рассказать о товарах, помочь с выбором техники или ответить на вопросы о магазине.",
+      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором техники или ответить на вопросы о магазине.",
       isUser: false,
       timestamp: new Date()
     }
@@ -46,7 +46,7 @@ export default function Home() {
   const [currentMessage, setCurrentMessage] = useState('')
 
   const products: Product[] = [
-    { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD раз��ешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
+    { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
@@ -201,80 +201,136 @@ export default function Home() {
       <div className="w-full bg-transparent relative z-20">
         {/* Navigation */}
         <nav className="flex items-center justify-between px-4 md:px-8 lg:px-16 py-4 md:py-6 relative z-30">
-          {/* Logo */}
-          <div className="flex items-center">
-            <span className="text-yellow-400 font-bold text-xl md:text-2xl tracking-wide font-sans drop-shadow-sm">ORZUTECH</span>
-          </div>
-
-          {/* Animated Search Bar */}
-          <div className="relative flex-1 max-w-2xl mx-4 md:mx-8">
-            <div
-              className={`
-                relative transition-all duration-500 ease-in-out overflow-hidden
-                ${isSearchOpen
-                  ? 'w-full opacity-100'
-                  : 'w-0 opacity-0'
-                }
-              `}
-            >
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
+          {/* Mobile Search Mode */}
+          {isSearchOpen && (
+            <div className="flex md:hidden w-full items-center">
+              <div className="flex-1 relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  placeholder="Поиск..."
+                  className="w-full bg-white/90 backdrop-blur-sm text-gray-800 placeholder-gray-500 pl-10 pr-10 py-2 rounded-full border border-gray-300 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20 transition-colors text-sm font-sans shadow-lg"
+                  autoFocus={isSearchOpen}
+                />
               </div>
-              <input
-                type="search"
-                placeholder="Поиск..."
-                className="w-full bg-white/90 backdrop-blur-sm text-gray-800 placeholder-gray-500 pl-10 pr-10 py-2 rounded-full border border-gray-300 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20 transition-colors text-sm font-sans shadow-lg"
-                autoFocus={isSearchOpen}
-              />
               <button
                 onClick={() => setIsSearchOpen(false)}
-                className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 transition-colors"
+                className="ml-3 p-2 text-gray-400 hover:text-gray-600 transition-colors"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
-          </div>
+          )}
 
-          {/* Auth and Cart */}
-          <div className="flex items-center space-x-2 md:space-x-4">
-            {/* Search Icon */}
-            <button
-              onClick={() => setIsSearchOpen(true)}
-              className={`
-                p-2 text-black hover:text-gray-700 transition-all duration-300 drop-shadow-sm
-                ${isSearchOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}
-              `}
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </button>
+          {/* Normal Navigation */}
+          {!isSearchOpen && (
+            <>
+              {/* Logo */}
+              <div className="flex items-center">
+                <span className="text-yellow-400 font-bold text-xl md:text-2xl tracking-wide font-sans drop-shadow-sm">JARVIS MAX</span>
+              </div>
 
-            {/* Auth buttons */}
-            <div className="hidden sm:flex items-center space-x-2">
-              <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
-                Вход
-              </button>
-              <span className="text-black">|</span>
-              <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
-                Регистрация
-              </button>
+              {/* Desktop Search Bar */}
+              <div className="relative flex-1 max-w-2xl mx-4 md:mx-8 hidden md:block">
+                <div
+                  className={`
+                    relative transition-all duration-500 ease-in-out overflow-hidden
+                    ${isSearchOpen
+                      ? 'w-full opacity-100'
+                      : 'w-0 opacity-0'
+                    }
+                  `}
+                >
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  </div>
+                  <input
+                    type="search"
+                    placeholder="Поиск..."
+                    className="w-full bg-white/90 backdrop-blur-sm text-gray-800 placeholder-gray-500 pl-10 pr-10 py-2 rounded-full border border-gray-300 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20 transition-colors text-sm font-sans shadow-lg"
+                    autoFocus={isSearchOpen}
+                  />
+                  <button
+                    onClick={() => setIsSearchOpen(false)}
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 transition-colors"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              {/* Auth and Cart */}
+              <div className="flex items-center space-x-2 md:space-x-4">
+                {/* Search Icon */}
+                <button
+                  onClick={() => setIsSearchOpen(true)}
+                  className="p-2 text-black hover:text-gray-700 transition-all duration-300 drop-shadow-sm"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </button>
+
+                {/* Auth buttons */}
+                <div className="hidden sm:flex items-center space-x-2">
+                  <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
+                    Вход
+                  </button>
+                  <span className="text-black">|</span>
+                  <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
+                    Регистрация
+                  </button>
+                </div>
+
+                {/* Cart */}
+                <button className="relative p-2 text-black hover:text-gray-700 transition-colors duration-300 drop-shadow-sm">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m0 0L12 21l7.5-3" />
+                  </svg>
+                  <span className="absolute -top-1 -right-1 bg-yellow-400 text-black text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium shadow-lg">
+                    {getTotalItems()}
+                  </span>
+                </button>
+              </div>
+            </>
+          )}
+
+          {/* Desktop Search Mode */}
+          {isSearchOpen && (
+            <div className="hidden md:flex w-full items-center">
+              <div className="flex-1 relative max-w-2xl mx-8">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  placeholder="Поиск..."
+                  className="w-full bg-white/90 backdrop-blur-sm text-gray-800 placeholder-gray-500 pl-10 pr-10 py-2 rounded-full border border-gray-300 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20 transition-colors text-sm font-sans shadow-lg"
+                  autoFocus={isSearchOpen}
+                />
+                <button
+                  onClick={() => setIsSearchOpen(false)}
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
             </div>
-
-            {/* Cart */}
-            <button className="relative p-2 text-black hover:text-gray-700 transition-colors duration-300 drop-shadow-sm">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m0 0L12 21l7.5-3" />
-              </svg>
-              <span className="absolute -top-1 -right-1 bg-yellow-400 text-black text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium shadow-lg">
-                {getTotalItems()}
-              </span>
-            </button>
-          </div>
+          )}
         </nav>
 
         {/* Main Content */}
@@ -440,7 +496,7 @@ export default function Home() {
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
               <p className="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed max-w-md font-light">
-                Наша деятельность: Продажа Телефонов и аксессуаров, Планшет��в, разных Гаджетов и много много интересного.
+                Наша деятельность: Продажа Телефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
               </p>
 
               {/* Auto-scrolling slider */}
@@ -448,7 +504,7 @@ export default function Home() {
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
-                    <span className="whitespace-nowrap">100% оригинальные ус����ройства</span>
+                    <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
@@ -643,7 +699,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             {/* Slider Container */}
             <div className="relative">
-              <div className="flex animate-scroll-fast space-x-6">
+              <div className="flex animate-scroll-fast md:animate-scroll-fast sm:animate-scroll-mobile animate-scroll-mobile space-x-6">
                 {/* Slide 1 - Grooming Kit */}
                 <div className="flex-shrink-0 w-56 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
@@ -656,7 +712,9 @@ export default function Home() {
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Grooming Kit Pro</h3>
                     <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональный набор для ухода</p>
-                    <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+                      Подробнее
+                    </button>
                   </div>
                 </div>
 
@@ -672,7 +730,9 @@ export default function Home() {
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Apple Watch Series 10</h3>
                     <p className="text-xs text-gray-600 mb-3 line-clamp-2">Rose Gold, Black 42MM/46MM</p>
-                    <div className="text-2xl font-bold text-red-600">₽ 35,000</div>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+                      Подробнее
+                    </button>
                   </div>
                 </div>
 
@@ -688,7 +748,9 @@ export default function Home() {
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">PlayStation 5 Slim</h3>
                     <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консоль нового поколения</p>
-                    <div className="text-2xl font-bold text-red-600">₽ 45,000</div>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+                      Подробнее
+                    </button>
                   </div>
                 </div>
 
@@ -703,8 +765,10 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Samsung Watch Ultra</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Умные часы с премиум фун��циями</p>
-                    <div className="text-2xl font-bold text-red-600">₽ 33,500</div>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Умные часы с премиум функциями</p>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+                      Подробнее
+                    </button>
                   </div>
                 </div>
 
@@ -720,7 +784,9 @@ export default function Home() {
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Huawei Watch Fit 3</h3>
                     <p className="text-xs text-gray-600 mb-3 line-clamp-2">+ FreeBuds SE 3 в подарок</p>
-                    <div className="text-2xl font-bold text-red-600">₽ 12,500</div>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+                      Подробнее
+                    </button>
                   </div>
                 </div>
 
@@ -736,7 +802,9 @@ export default function Home() {
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Grooming Kit Pro</h3>
                     <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональный набор для ухода</p>
-                    <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+                      Подробнее
+                    </button>
                   </div>
                 </div>
 
@@ -751,7 +819,9 @@ export default function Home() {
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Apple Watch Series 10</h3>
                     <p className="text-xs text-gray-600 mb-3 line-clamp-2">Rose Gold, Black 42MM/46MM</p>
-                    <div className="text-2xl font-bold text-red-600">₽ 35,000</div>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+                      Подробнее
+                    </button>
                   </div>
                 </div>
 
@@ -766,7 +836,9 @@ export default function Home() {
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">PlayStation 5 Slim</h3>
                     <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консоль нового поколения</p>
-                    <div className="text-2xl font-bold text-red-600">₽ 45,000</div>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+                      Подробнее
+                    </button>
                   </div>
                 </div>
 
@@ -782,7 +854,9 @@ export default function Home() {
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Samsung Watch Ultra</h3>
                     <p className="text-xs text-gray-600 mb-3 line-clamp-2">Умные часы с премиум функциями</p>
-                    <div className="text-2xl font-bold text-red-600">₽ 33,500</div>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+                      Подробнее
+                    </button>
                   </div>
                 </div>
 
@@ -797,7 +871,9 @@ export default function Home() {
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Huawei Watch Fit 3</h3>
                     <p className="text-xs text-gray-600 mb-3 line-clamp-2">+ FreeBuds SE 3 в подарок</p>
-                    <div className="text-2xl font-bold text-red-600">₽ 12,500</div>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+                      Подробнее
+                    </button>
                   </div>
                 </div>
 
@@ -813,7 +889,9 @@ export default function Home() {
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Grooming Kit Pro</h3>
                     <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональный набор для ухода</p>
-                    <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+                      Подробнее
+                    </button>
                   </div>
                 </div>
 
@@ -828,7 +906,9 @@ export default function Home() {
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Apple Watch Series 10</h3>
                     <p className="text-xs text-gray-600 mb-3 line-clamp-2">Rose Gold, Black 42MM/46MM</p>
-                    <div className="text-2xl font-bold text-red-600">₽ 35,000</div>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+                      Подробнее
+                    </button>
                   </div>
                 </div>
 
@@ -843,7 +923,9 @@ export default function Home() {
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">PlayStation 5 Slim</h3>
                     <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консоль нового поколения</p>
-                    <div className="text-2xl font-bold text-red-600">₽ 45,000</div>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+                      Подробнее
+                    </button>
                   </div>
                 </div>
               </div>
@@ -947,7 +1029,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['Смарт��оны', 'Телевизор��', 'Ноутбуки', 'Планшет��', 'Нау��ники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
+                        {['Смарт��оны', 'Телевизор���', 'Ноутбуки', 'Планшет��', 'Нау��ники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
@@ -1207,8 +1289,12 @@ export default function Home() {
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     Мониторинг здоровья и спорт
                   </p>
-                  <div className="text-lg font-bold text-gray-900">
-                    $ 349
+
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="text-lg font-bold text-gray-900">
+                      $ 349
+                    </div>
+                    <div className="text-xs text-green-600 font-medium">В наличии</div>
                   </div>
 
                   <div className="flex gap-2 mt-auto">
@@ -1244,8 +1330,12 @@ export default function Home() {
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     Профессиональный с стилусом
                   </p>
-                  <div className="text-lg font-bold text-gray-900">
-                    $ 799
+
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="text-lg font-bold text-gray-900">
+                      $ 799
+                    </div>
+                    <div className="text-xs text-green-600 font-medium">В наличии</div>
                   </div>
 
                   <div className="flex gap-2 mt-auto">
@@ -1393,7 +1483,7 @@ export default function Home() {
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Беспр��водные наушники"
+                        alt="Беспроводные наушники"
                         className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
@@ -1477,7 +1567,7 @@ export default function Home() {
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Планш��т Pro"
+                        alt="Планшет Pro"
                         className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
@@ -1520,9 +1610,9 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <div className="border-t border-gray-200 p-4 md:p-8 lg:p-16 text-center">
-          <p className="text-gray-600 uppercase tracking-wide text-sm">
-            © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. В��Е ПРАВА ЗАЩИЩЕНЫ.
+        <div className="border-t border-gray-200 p-4 md:p-8 lg:p-16 text-center bg-white">
+          <p className="text-black uppercase tracking-wide text-sm">
+            created by <a href="https://jarvis-max.vercel.app" target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-600 underline transition-colors">jarvis-max.vercel.app</a>
           </p>
         </div>
       </div>

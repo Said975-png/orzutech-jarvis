@@ -14,7 +14,8 @@ module.exports = {
         'pulse': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'neon-arc': 'neonArc 6s ease-in-out infinite',
         'scroll': 'scroll 8s linear infinite',
-        'scroll-fast': 'scroll 5s linear infinite',
+        'scroll-fast': 'scroll 15s linear infinite',
+        'scroll-mobile': 'scrollMobile 8s linear infinite',
       },
       keyframes: {
         neonArc: {
@@ -35,6 +36,15 @@ module.exports = {
             transform: 'translateX(-50%)'
           },
         },
+        scrollMobile: {
+          '0%': {
+            transform: 'translateX(0)'
+          },
+          '100%': {
+            transform: 'translateX(-100%)'
+          },
+        },
+
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
