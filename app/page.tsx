@@ -427,7 +427,7 @@ export default function Home() {
           {/* Left Content */}
           <div className="relative flex flex-col justify-center items-start space-y-8 lg:space-y-12 z-10 order-2 lg:order-1">
             <div className="space-y-6 text-left">
-              <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em]">
+              <div className="text-xs md:text-sm text-gray-600 font-medium uppercase tracking-[0.2em]">
                 СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
               </div>
 
@@ -835,7 +835,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['5 звезд', '4 звезды и выше', '3 звезды и выше', '2 ��везды и выше', '1 звезда и в��ше', 'Без рейтинга'].map((rating, index) => (
+                        {['5 звезд', '4 звезды и выше', '3 звезды и выше', '2 звезды и выше', '1 звезда и в��ше', 'Без рейтинга'].map((rating, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200 flex items-center"
@@ -924,7 +924,7 @@ export default function Home() {
                       <div className="text-sm text-gray-400 line-through">$ 999</div>
                       <div className="text-lg font-bold text-gray-900">$ 899</div>
                     </div>
-                    <div className="text-xs text-green-600 font-medium">В наличии</div>
+                    <div className="text-xs text-green-600 font-medium">В нали��ии</div>
                   </div>
 
                   <div className="flex gap-2">
@@ -972,7 +972,7 @@ export default function Home() {
                   </div>
 
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Тройная камера, з��рядка 65W
+                    Тройная ��амера, з��рядка 65W
                   </p>
 
                   <div className="flex items-center justify-between mb-3">
@@ -1065,7 +1065,7 @@ export default function Home() {
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                    alt="Беспроводные н��ушники"
+                    alt="Беспроводн��е н��ушники"
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
