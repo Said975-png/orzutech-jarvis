@@ -428,11 +428,13 @@ export default function Home() {
           <div className="relative flex flex-col justify-center items-start space-y-8 lg:space-y-12 z-10 order-2 lg:order-1">
             <div className="space-y-6 text-left">
               <div className="text-xs md:text-sm text-gray-600 font-medium uppercase tracking-[0.2em]">
-                СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
+                <span className="block md:hidden">ORZUTECH</span>
+                <span className="hidden md:block">СОВРЕМЕННАЯ ЭЛЕКТРОНИКА</span>
               </div>
 
               <h1 className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
-                ORZUTECH
+                <span className="block md:hidden">СОВРЕМЕННАЯ ЭЛЕКТРОНИКА</span>
+                <span className="hidden md:block">ORZUTECH</span>
               </h1>
 
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
@@ -450,7 +452,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все то��ары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
-                    <span className="whitespace-nowrap">Инновационные решения для дома</span>
+                    <span className="whitespace-nowrap">Инновационные решени�� для дома</span>
                     <span className="whitespace-nowrap">Профессио��альная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
@@ -507,7 +509,7 @@ export default function Home() {
               {/* Model Color Selection - Right side */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="text-gray-400 text-xs uppercase tracking-wide text-center">
-                  Цвет<br/>модели
+                  ��вет<br/>модели
                 </div>
                 <div
                   className="flex flex-col space-y-4 cursor-grab active:cursor-grabbing"
