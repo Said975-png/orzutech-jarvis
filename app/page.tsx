@@ -29,7 +29,7 @@ export default function Home() {
 
   const products: Product[] = [
     { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
-    { id: 2, name: "Смартфо�� Premium", price: 59900, description: "Флагман��кий смарт��он с тр��йной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
+    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тр��йной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спортивными функциями" },
@@ -345,20 +345,20 @@ export default function Home() {
                   <button
                     onClick={() => setSelectedColor(0)}
                     className={`
-                      w-8 h-8 rounded-full transition-all duration-300 border-2 cursor-pointer
+                      w-6 h-6 rounded-full transition-all duration-300 border-2 cursor-pointer
                       bg-white border-gray-300
                       ${selectedColor === 0
                         ? 'ring-2 ring-yellow-400 ring-offset-1 scale-110'
                         : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1 hover:scale-105'
                       }
                     `}
-                    title="Белый"
+                    title="Б��лый"
                   />
                   <div className="text-gray-300 text-xs">⇅</div>
                   <button
                     onClick={() => setSelectedColor(1)}
                     className={`
-                      w-8 h-8 rounded-full transition-all duration-300 border-2 cursor-pointer
+                      w-6 h-6 rounded-full transition-all duration-300 border-2 cursor-pointer
                       bg-black border-gray-700
                       ${selectedColor === 1
                         ? 'ring-2 ring-yellow-400 ring-offset-1 scale-110'
@@ -383,7 +383,7 @@ export default function Home() {
                   // Ск��олл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // Скролл вверх - предыдущая модель
+                  // Ск��олл вверх - предыдущая модель
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
@@ -873,7 +873,7 @@ export default function Home() {
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                    alt="Беспроводные н��ушн��ки"
+                    alt="Беспроводные н��ушники"
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -961,7 +961,7 @@ export default function Home() {
 
                 <div className="p-4 border-t border-gray-100">
                   <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
-                    Планшет Pro
+                    Пл��ншет Pro
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     Профессиональный с стилусом
