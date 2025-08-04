@@ -319,56 +319,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Realistic Flowing Golden Wave */}
-        <div className="relative w-full h-40 overflow-hidden bg-transparent">
-          <svg
-            className="absolute top-0 left-0 w-full h-full"
-            viewBox="0 0 1400 400"
-            fill="none"
-            preserveAspectRatio="none"
-          >
-            {/* Main Golden Wave with realistic curves */}
-            <path
-              d="M1400,0 L1400,60 C1200,100 1050,120 900,90 C750,60 600,80 450,70 C300,60 150,45 0,65 L0,400 L1400,400 Z"
-              fill="url(#realisticGoldGradient)"
-              className="drop-shadow-2xl"
-            />
-            {/* Secondary wave for depth */}
-            <path
-              d="M1400,0 L1400,30 C1150,70 1000,85 850,65 C700,45 550,60 400,55 C250,50 100,35 0,50 L0,400 L1400,400 Z"
-              fill="url(#lightGoldGradient)"
-              opacity="0.8"
-            />
-            {/* Subtle third wave for more realism */}
-            <path
-              d="M1400,0 L1400,15 C1100,45 950,55 800,40 C650,25 500,35 350,30 C200,25 50,20 0,35 L0,400 L1400,400 Z"
-              fill="url(#shimmerGradient)"
-              opacity="0.6"
-            />
-            {/* Gradient definitions for realistic gold flow */}
-            <defs>
-              <linearGradient id="realisticGoldGradient" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#FEF08A" />
-                <stop offset="25%" stopColor="#FDE047" />
-                <stop offset="50%" stopColor="#FACC15" />
-                <stop offset="75%" stopColor="#EAB308" />
-                <stop offset="100%" stopColor="#CA8A04" />
-              </linearGradient>
-              <linearGradient id="lightGoldGradient" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#FFFBEB" />
-                <stop offset="30%" stopColor="#FEF3C7" />
-                <stop offset="60%" stopColor="#FDE047" />
-                <stop offset="100%" stopColor="#FACC15" />
-              </linearGradient>
-              <linearGradient id="shimmerGradient" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#FFFFFF" />
-                <stop offset="40%" stopColor="#FFFBEB" />
-                <stop offset="80%" stopColor="#FEF3C7" />
-                <stop offset="100%" stopColor="#FDE047" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
+
 
         {/* Stats Section */}
         <div className="border-t border-gray-200 p-8 lg:p-16">
@@ -922,7 +873,7 @@ export default function Home() {
                     Планшет Pro
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Профессиональный с стилусом
+                    Професс��ональный с стилусом
                   </p>
                   <div className="text-lg font-bold text-gray-900">
                     $ 799
@@ -1080,7 +1031,7 @@ export default function Home() {
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Умные часы"
+                        alt="У��ные часы"
                         className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
