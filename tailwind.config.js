@@ -36,6 +36,14 @@ module.exports = {
             transform: 'translateX(-50%)'
           },
         },
+        scrollMobile: {
+          '0%': {
+            transform: 'translateX(0)'
+          },
+          '100%': {
+            transform: 'translateX(-100%)'
+          },
+        },
 
       },
       backgroundImage: {
