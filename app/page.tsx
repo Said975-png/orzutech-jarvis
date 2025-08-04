@@ -38,7 +38,7 @@ export default function Home() {
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
     {
       id: 1,
-      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором техники или ответить на вопросы о магазине.",
+      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором техники или ответить на вопросы о м��газине.",
       isUser: false,
       timestamp: new Date()
     }
@@ -50,7 +50,7 @@ export default function Home() {
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
-    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
+    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными ф��нкциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
   ]
 
@@ -735,7 +735,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Grooming Kit Pro</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональный набор для ухода</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональный набор дл�� ухода</p>
                     <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
                   </div>
                 </div>
@@ -870,7 +870,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['Смарт��оны', 'Телевизор��', 'Ноутбуки', 'Планшет��', 'Нау��ники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
+                        {['Смарт��оны', 'Телевизор��', 'Ноутбуки', 'Планшет��', 'Нау��ники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'В��е категории'].map((category, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
@@ -890,7 +890,7 @@ export default function Home() {
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 border-t border-gray-100">
 
               {/* Product 1 */}
-              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col h-full">
                 {/* Discount badge */}
                 <div className="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md z-10">
                   -10%
@@ -946,7 +946,7 @@ export default function Home() {
               </div>
 
               {/* Product 2 */}
-              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col h-full">
                 {/* Discount badge */}
                 <div className="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md z-10">
                   -15%
@@ -1002,7 +1002,7 @@ export default function Home() {
               </div>
 
               {/* Product 3 */}
-              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col h-full">
                 {/* Discount badge */}
                 <div className="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md z-10">
                   -20%
@@ -1058,7 +1058,7 @@ export default function Home() {
               </div>
 
               {/* Product 4 */}
-              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col h-full">
                 {/* Discount badge */}
                 <div className="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md z-10">
                   -25%
@@ -1114,7 +1114,7 @@ export default function Home() {
               </div>
 
               {/* Product 5 */}
-              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
@@ -1151,7 +1151,7 @@ export default function Home() {
               </div>
 
               {/* Product 6 */}
-              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
@@ -1188,7 +1188,7 @@ export default function Home() {
               </div>
 
               {/* Product 7 - Duplicate of Product 1 */}
-              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
@@ -1225,7 +1225,7 @@ export default function Home() {
               </div>
 
               {/* Product 8 - Duplicate of Product 2 */}
-              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
 
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -1267,7 +1267,7 @@ export default function Home() {
               </div>
 
               {/* Product 9 - Duplicate of Product 3 */}
-              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-white/50 rounded-t-lg overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 group-hover:from-white/40 group-hover:to-white/20 transition-all duration-500"></div>
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -1309,7 +1309,7 @@ export default function Home() {
               </div>
 
               {/* Product 10 - Duplicate of Product 4 */}
-              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
 
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -1351,7 +1351,7 @@ export default function Home() {
               </div>
 
               {/* Product 11 - Duplicate of Product 5 */}
-              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
 
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -1393,7 +1393,7 @@ export default function Home() {
               </div>
 
               {/* Product 12 - Duplicate of Product 6 */}
-              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+              <div className="group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col h-full">
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
 
                   <div className="relative z-10 h-full flex items-center justify-center">
@@ -1576,7 +1576,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="text-xs text-gray-500 text-center mt-2">
-                Джарвис может делать ошибки. Проверяйте важную информацию.
+                Джарвис может делать оши��ки. Проверяйте важную информацию.
               </div>
             </div>
           </div>
