@@ -31,7 +31,7 @@ export default function Home() {
     { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
-    { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
+    { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��сты�� звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
   ]
@@ -227,7 +227,7 @@ export default function Home() {
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% ��ригинальные устр��йства</span>
-                    <span className="whitespace-nowrap">Быстрая доставка и установка</span>
+                    <span className="whitespace-nowrap">Быстрая доставка и уст��новка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
@@ -319,6 +319,29 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Bottom Wave after main section */}
+        <div className="relative w-full h-32 overflow-hidden">
+          <svg
+            className="absolute bottom-0 left-0 w-full h-full"
+            viewBox="0 0 1200 400"
+            fill="none"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            {/* Main White Wave from Bottom */}
+            <path
+              d="M0,400 L1200,400 L1200,120 C1000,80 800,60 600,100 C400,140 200,160 0,120 Z"
+              fill="white"
+              className="drop-shadow-sm"
+            />
+            {/* Secondary subtle wave for depth */}
+            <path
+              d="M0,400 L1200,400 L1200,160 C950,120 700,110 450,140 C200,170 100,180 0,150 Z"
+              fill="white"
+              opacity="0.6"
+              className="drop-shadow-xs"
+            />
+          </svg>
+        </div>
 
         {/* Stats Section */}
         <div className="border-t border-gray-200 p-8 lg:p-16">
@@ -584,7 +607,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
+                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Ак��ессуары', 'Все категории'].map((category, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
