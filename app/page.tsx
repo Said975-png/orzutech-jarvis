@@ -26,6 +26,7 @@ export default function Home() {
   const [selectedColor, setSelectedColor] = useState(0)
   const [cart, setCart] = useState<CartItem[]>([])
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   const products: Product[] = [
     { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
@@ -218,7 +219,7 @@ export default function Home() {
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
               <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-md font-light">
-                Наша деятельн��сть: Продажа Телефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
+                Наша деятельность: Продажа Телефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
               </p>
 
               {/* Auto-scrolling slider */}
@@ -1061,7 +1062,7 @@ export default function Home() {
 
                 <div className="p-4 border-t border-gray-100">
                   <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
-                    Игровой Ноутбук
+                    Игровой Ноут��ук
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     RTX 4060, 16GB RAM, 144Hz
@@ -1134,7 +1135,7 @@ export default function Home() {
                     Умные часы
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Мониторинг здоровья и спорт
+                    Мониторинг здоровь�� и спорт
                   </p>
                   <div className="text-lg font-bold text-gray-900">
                     $ 349
