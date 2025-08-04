@@ -38,7 +38,7 @@ export default function Home() {
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
     {
       id: 1,
-      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором техники или ответить на во������о��ы о ма��азине.",
+      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором техники или ответить на вопросы о магазине.",
       isUser: false,
       timestamp: new Date()
     }
@@ -46,12 +46,12 @@ export default function Home() {
   const [currentMessage, setCurrentMessage] = useState('')
 
   const products: Product[] = [
-    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для макси��ального качества изображения" },
-    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тр��йной камерой и быстрой зарядкой 65W для п��офессиональной фотографии" },
-    { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
-    { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
-    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с ��они��о��инг��м здоровья и спортивными функциями" },
-    { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
+    { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
+    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
+    { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
+    { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
+    { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
+    { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
   ]
 
   const addToCart = (product: Product) => {
@@ -433,7 +433,7 @@ export default function Home() {
               </div>
 
               <h1 className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
-                <span className="block md:hidden">СОВРЕМЕНН��Я ЭЛЕКТРОНИКА</span>
+                <span className="block md:hidden">СОВРЕМЕННАЯ ЭЛЕКТРОНИКА</span>
                 <span className="hidden md:block">ORZUTECH</span>
               </h1>
 
@@ -1210,7 +1210,7 @@ export default function Home() {
 
                   <div className="flex gap-2">
                     <button className="flex-1 bg-white text-black py-2.5 px-4 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200">
-                      Заказать
+                      Заказ��ть
                     </button>
                     <button
                       onClick={() => addToCart(products[0])}
