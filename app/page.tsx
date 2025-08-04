@@ -574,7 +574,7 @@ export default function Home() {
                         : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1 hover:scale-105'
                       }
                     `}
-                    title="Б��лый"
+                    title="Белый"
                   />
                   <div className="text-gray-300 text-xs">⇅</div>
                   <button
@@ -780,7 +780,7 @@ export default function Home() {
             {/* Section Header */}
             <div className="text-center mb-12">
               <h2 className="text-3xl font-light text-gray-900 mb-2 tracking-wide">
-                Каталог това��ов
+                Каталог товаров
               </h2>
               <div className="w-16 h-px bg-gray-400 mx-auto"></div>
             </div>
@@ -931,7 +931,7 @@ export default function Home() {
 
                   <div className="flex gap-2">
                     <button className="flex-1 bg-white text-black py-2.5 px-4 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200">
-                      За��азать
+                      Заказать
                     </button>
                     <button
                       onClick={() => addToCart(products[0])}
