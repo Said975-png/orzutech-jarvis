@@ -38,7 +38,7 @@ export default function Home() {
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
     {
       id: 1,
-      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором техники или ответить на вопросы о магазине.",
+      text: "Привет! Я Джарвис, ваш ��И-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором техники или ответить на вопросы о магазине.",
       isUser: false,
       timestamp: new Date()
     }
@@ -775,7 +775,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Huawei Watch Fit 3</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">+ FreeBuds SE 3 в подарок</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">+ FreeBuds SE 3 �� подарок</p>
                     <div className="text-2xl font-bold text-red-600">₽ 12,500</div>
                   </div>
                 </div>
@@ -1576,9 +1576,9 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <div className="border-t border-gray-200 p-4 md:p-8 lg:p-16 text-center">
-          <p className="text-gray-600 uppercase tracking-wide text-sm">
-            created by jarvis-max.vercel.app
+        <div className="border-t border-gray-200 p-4 md:p-8 lg:p-16 text-center bg-white">
+          <p className="text-black uppercase tracking-wide text-sm">
+            created by <a href="https://jarvis-max.vercel.app" target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-600 underline transition-colors">jarvis-max.vercel.app</a>
           </p>
         </div>
       </div>
