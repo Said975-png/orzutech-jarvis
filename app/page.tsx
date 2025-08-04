@@ -29,7 +29,7 @@ export default function Home() {
 
   const products: Product[] = [
     { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
-    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тр��йной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
+    { id: 2, name: "Смартфо�� Premium", price: 59900, description: "Флагман��кий смарт��он с тр��йной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спортивными функциями" },
@@ -225,7 +225,7 @@ export default function Home() {
               <div className="relative overflow-hidden max-w-lg h-12">
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
-                    <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
+                    <span className="whitespace-nowrap">Самая качественная техника в ��ухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
@@ -266,53 +266,111 @@ export default function Home() {
 
           {/* Right Content */}
           <div className="flex flex-col justify-center items-center space-y-6">
-            <div className="relative w-[280px] lg:w-[360px] h-[280px] lg:h-[360px] overflow-hidden rounded-lg">
-              <model-viewer
-                src={models[currentModel].url}
-                alt="3D Model"
-                auto-rotate
-                camera-controls
-                autoplay
-                animation-name=""
-                field-of-view="30deg"
-                camera-orbit="0deg 75deg 150%"
-                style={{ width: '100%', height: '100%' }}
-                loading="lazy"
-                min-camera-orbit="auto auto 120%"
-                max-camera-orbit="auto auto 200%"
-              ></model-viewer>
-            </div>
-
-            {/* Model Color Selection */}
-            <div className="flex items-center space-x-4 mb-4">
-              <div className="text-gray-400 text-xs uppercase tracking-wide">
-                Цвет модели
+            <div className="flex items-center space-x-6">
+              <div className="relative w-[280px] lg:w-[360px] h-[280px] lg:h-[360px] overflow-hidden rounded-lg">
+                <model-viewer
+                  src={models[currentModel].url}
+                  alt="3D Model"
+                  auto-rotate
+                  camera-controls
+                  autoplay
+                  animation-name=""
+                  field-of-view="30deg"
+                  camera-orbit="0deg 75deg 150%"
+                  style={{ width: '100%', height: '100%' }}
+                  loading="lazy"
+                  min-camera-orbit="auto auto 120%"
+                  max-camera-orbit="auto auto 200%"
+                ></model-viewer>
               </div>
-              <div className="flex space-x-3">
-                <button
-                  onClick={() => setSelectedColor(0)}
-                  className={`
-                    w-6 h-6 rounded-full transition-all duration-300 border-2 cursor-pointer
-                    bg-white border-gray-300
-                    ${selectedColor === 0
-                      ? 'ring-2 ring-yellow-400 ring-offset-1'
-                      : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1'
-                    }
-                  `}
-                  title="Белый"
-                />
-                <button
-                  onClick={() => setSelectedColor(1)}
-                  className={`
-                    w-6 h-6 rounded-full transition-all duration-300 border-2 cursor-pointer
-                    bg-black border-gray-700
-                    ${selectedColor === 1
-                      ? 'ring-2 ring-yellow-400 ring-offset-1'
-                      : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1'
-                    }
-                  `}
-                  title="Черный"
-                />
+
+              {/* Model Color Selection - Right side */}
+              <div className="flex flex-col items-center space-y-4">
+                <div className="text-gray-400 text-xs uppercase tracking-wide text-center">
+                  Цвет<br/>модели
+                </div>
+                <div
+                  className="flex flex-col space-y-4 cursor-grab active:cursor-grabbing"
+                  onMouseDown={(e) => {
+                    const startY = e.clientY;
+                    let isDragging = false;
+
+                    const handleMouseMove = (e: MouseEvent) => {
+                      const deltaY = e.clientY - startY;
+                      if (Math.abs(deltaY) > 20 && !isDragging) {
+                        isDragging = true;
+                        if (deltaY > 0) {
+                          // Drag down - switch to black
+                          setSelectedColor(1);
+                        } else {
+                          // Drag up - switch to white
+                          setSelectedColor(0);
+                        }
+                      }
+                    };
+
+                    const handleMouseUp = () => {
+                      document.removeEventListener('mousemove', handleMouseMove);
+                      document.removeEventListener('mouseup', handleMouseUp);
+                    };
+
+                    document.addEventListener('mousemove', handleMouseMove);
+                    document.addEventListener('mouseup', handleMouseUp);
+                  }}
+                  onTouchStart={(e) => {
+                    const startY = e.touches[0].clientY;
+                    let isDragging = false;
+
+                    const handleTouchMove = (e: TouchEvent) => {
+                      const deltaY = e.touches[0].clientY - startY;
+                      if (Math.abs(deltaY) > 20 && !isDragging) {
+                        isDragging = true;
+                        if (deltaY > 0) {
+                          setSelectedColor(1);
+                        } else {
+                          setSelectedColor(0);
+                        }
+                      }
+                    };
+
+                    const handleTouchEnd = () => {
+                      document.removeEventListener('touchmove', handleTouchMove);
+                      document.removeEventListener('touchend', handleTouchEnd);
+                    };
+
+                    document.addEventListener('touchmove', handleTouchMove);
+                    document.addEventListener('touchend', handleTouchEnd);
+                  }}
+                >
+                  <button
+                    onClick={() => setSelectedColor(0)}
+                    className={`
+                      w-8 h-8 rounded-full transition-all duration-300 border-2 cursor-pointer
+                      bg-white border-gray-300
+                      ${selectedColor === 0
+                        ? 'ring-2 ring-yellow-400 ring-offset-1 scale-110'
+                        : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1 hover:scale-105'
+                      }
+                    `}
+                    title="Белый"
+                  />
+                  <div className="text-gray-300 text-xs">⇅</div>
+                  <button
+                    onClick={() => setSelectedColor(1)}
+                    className={`
+                      w-8 h-8 rounded-full transition-all duration-300 border-2 cursor-pointer
+                      bg-black border-gray-700
+                      ${selectedColor === 1
+                        ? 'ring-2 ring-yellow-400 ring-offset-1 scale-110'
+                        : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1 hover:scale-105'
+                      }
+                    `}
+                    title="Черный"
+                  />
+                </div>
+                <div className="text-gray-300 text-xs text-center">
+                  потяните<br/>для смены
+                </div>
               </div>
             </div>
 
@@ -815,7 +873,7 @@ export default function Home() {
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                    alt="Беспроводные н��ушники"
+                    alt="Беспроводные н��ушн��ки"
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
