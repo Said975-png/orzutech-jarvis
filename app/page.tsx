@@ -38,7 +38,7 @@ export default function Home() {
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
     {
       id: 1,
-      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать �� товарах, помочь с выбором техники или ответить на вопросы о магазине.",
+      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором техники или ответить на вопросы о магазине.",
       isUser: false,
       timestamp: new Date()
     }
@@ -51,7 +51,7 @@ export default function Home() {
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спортивными функциями" },
-    { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
+    { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стил��са" }
   ]
 
   const addToCart = (product: Product) => {
@@ -300,7 +300,7 @@ export default function Home() {
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
               <p className="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed max-w-md font-light">
-                Наша деятельность: Продажа Телефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
+                Наша деятельность: Продажа Телефонов и аксессуаров, Планшет��в, разных Гаджетов и много много интересного.
               </p>
 
               {/* Auto-scrolling slider */}
@@ -462,7 +462,7 @@ export default function Home() {
               onWheel={(e) => {
                 e.preventDefault()
                 if (e.deltaY > 0) {
-                  // Ск���олл вниз - следующая модель
+                  // Ск��олл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
                   // Ск��олл вверх - предыдущая модель
@@ -871,7 +871,7 @@ export default function Home() {
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                    alt="Игровой ��оутбук"
+                    alt="Игровой Ноутбук"
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -1038,7 +1038,7 @@ export default function Home() {
                 <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                    alt={"С��арт Телевизор 55\""}
+                    alt={"Смарт Телевизор 55\""}
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -1163,7 +1163,7 @@ export default function Home() {
                     onClick={() => addToCart(products[3])}
                     className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
                   >
-                    Заказать
+                    ��аказать
                   </button>
                 </div>
               </div>
@@ -1348,7 +1348,7 @@ export default function Home() {
           </div>
 
           {/* Chat Input */}
-          <div className="bg-white border-t border-gray-200 px-4 py-4">
+          <div className="bg-white border-t border-gray-200 px-3 md:px-4 py-3 md:py-4">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-end space-x-3">
                 <div className="flex-1 relative">
