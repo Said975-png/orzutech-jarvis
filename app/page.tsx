@@ -34,7 +34,7 @@ export default function Home() {
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спортивными функциями" },
-    { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
+    { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиона��ьный планшет для работы и тво����ества с поддержкой стилуса" }
   ]
 
   const addToCart = (product: Product) => {
@@ -176,7 +176,7 @@ export default function Home() {
               <input
                 type="search"
                 placeholder="Поиск..."
-                className="w-full bg-white/90 backdrop-blur-sm text-gray-800 placeholder-gray-500 pl-10 pr-10 py-2 rounded-full border border-white/30 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20 transition-colors text-sm font-sans shadow-lg"
+                className="w-full bg-white/90 backdrop-blur-sm text-gray-800 placeholder-gray-500 pl-10 pr-10 py-2 rounded-full border border-gray-300 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20 transition-colors text-sm font-sans shadow-lg"
                 autoFocus={isSearchOpen}
               />
               <button
@@ -261,7 +261,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Самая качественная техника в ��ухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
-                    <span className="whitespace-nowrap">Полная гар��нтия на все товары</span>
+                    <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
@@ -1202,7 +1202,7 @@ export default function Home() {
                     Планшет Pro
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Профессиональный с стилусом
+                    Профессиональный с стилус��м
                   </p>
                   <div className="text-lg font-bold text-gray-900">
                     $ 799
