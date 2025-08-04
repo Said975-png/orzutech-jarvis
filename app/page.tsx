@@ -47,7 +47,7 @@ export default function Home() {
 
   const products: Product[] = [
     { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
-    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
+    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быст��ой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
@@ -116,7 +116,7 @@ export default function Home() {
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/RobotExpressive.glb",
-      name: "Ро��от"
+      name: "Робот"
     },
     {
       url: "https://modelviewer.dev/shared-assets/models/reflective-sphere.gltf",
@@ -405,7 +405,7 @@ export default function Home() {
               }}
             >
               <div className="text-center text-gray-400 text-xs mb-2">
-                Прок��утите для смены модели
+                Пр��к��утите для смены модели
               </div>
               <div className="flex justify-center space-x-1">
                 {models.map((_, index) => (
@@ -433,7 +433,7 @@ export default function Home() {
               </div>
 
               <h1 className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
-                <span className="block md:hidden">СОВРЕМЕННАЯ ЭЛЕКТРОНИКА</span>
+                <span className="block md:hidden">СОВРЕ��ЕННАЯ ЭЛЕКТРОНИКА</span>
                 <span className="hidden md:block">ORZUTECH</span>
               </h1>
 
