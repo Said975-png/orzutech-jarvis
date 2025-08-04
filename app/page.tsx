@@ -800,6 +800,52 @@ export default function Home() {
                     <div className="text-2xl font-bold text-red-600">₽ 12,500</div>
                   </div>
                 </div>
+
+                {/* Complete duplicate set for perfect looping */}
+                <div className="flex-shrink-0 w-64 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F4b42886ccd0846e8845f7fea196bdae6?format=webp&width=800"
+                      alt="Grooming Kit Pro"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Grooming Kit Pro</h3>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональный набор для ухода</p>
+                    <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
+                  </div>
+                </div>
+
+                <div className="flex-shrink-0 w-64 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2Fad77a22293914f76ad5c86b0cc1cb048?format=webp&width=800"
+                      alt="Apple Watch Series 10"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Apple Watch Series 10</h3>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Rose Gold, Black 42MM/46MM</p>
+                    <div className="text-2xl font-bold text-red-600">₽ 35,000</div>
+                  </div>
+                </div>
+
+                <div className="flex-shrink-0 w-64 sm:w-80 group bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  <div className="aspect-[4/3] bg-white p-4 relative overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fc8bf4f4f123f490cafc5f12f207720b8%2F593de0ffc9344103bcb253bcf1c49c90?format=webp&width=800"
+                      alt="PlayStation 5 Slim"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
+                    <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">PlayStation 5 Slim</h3>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консоль нового поколения</p>
+                    <div className="text-2xl font-bold text-red-600">₽ 45,000</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
