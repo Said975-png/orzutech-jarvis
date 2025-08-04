@@ -313,8 +313,8 @@ export default function Home() {
                     <span className="whitespace-nowrap">Полная гарантия на все то��ары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
-                    <span className="whitespace-nowrap">Профессио��альная установка</span>
-                    <span className="whitespace-nowrap">Качественное обсл��живание</span>
+                    <span className="whitespace-nowrap">��рофессио��альная установка</span>
+                    <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
                 </div>
               </div>
@@ -1153,7 +1153,7 @@ export default function Home() {
                     Беспроводные наушники
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Premium с ��умоп��давлением
+                    Premium с шумоп��давлением
                   </p>
                   <div className="text-lg font-bold text-gray-900">
                     $ 249
@@ -1303,7 +1303,7 @@ export default function Home() {
 
           {/* Chat Messages Area */}
           <div className="flex-1 overflow-y-auto bg-gray-50" style={{ height: 'calc(100vh - 200px)' }}>
-            <div className="max-w-4xl mx-auto px-4 py-6">
+            <div className="max-w-4xl mx-auto px-3 md:px-4 py-4 md:py-6">
               {chatMessages.map((message) => (
                 <div key={message.id} className="mb-6">
                   {message.isUser ? (
