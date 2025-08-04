@@ -283,6 +283,39 @@ export default function Home() {
               ></model-viewer>
             </div>
 
+            {/* Model Color Selection */}
+            <div className="flex items-center space-x-4 mb-4">
+              <div className="text-gray-400 text-xs uppercase tracking-wide">
+                Цвет модели
+              </div>
+              <div className="flex space-x-3">
+                <button
+                  onClick={() => setSelectedColor(0)}
+                  className={`
+                    w-6 h-6 rounded-full transition-all duration-300 border-2 cursor-pointer
+                    bg-white border-gray-300
+                    ${selectedColor === 0
+                      ? 'ring-2 ring-yellow-400 ring-offset-1'
+                      : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1'
+                    }
+                  `}
+                  title="Белый"
+                />
+                <button
+                  onClick={() => setSelectedColor(1)}
+                  className={`
+                    w-6 h-6 rounded-full transition-all duration-300 border-2 cursor-pointer
+                    bg-black border-gray-700
+                    ${selectedColor === 1
+                      ? 'ring-2 ring-yellow-400 ring-offset-1'
+                      : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1'
+                    }
+                  `}
+                  title="Черный"
+                />
+              </div>
+            </div>
+
             {/* Custom Model Selector */}
             <div
               className="w-[280px] lg:w-[360px]"
@@ -873,7 +906,7 @@ export default function Home() {
                     Планшет Pro
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Професс��ональный с стилусом
+                    Профессиональный с стилусом
                   </p>
                   <div className="text-lg font-bold text-gray-900">
                     $ 799
@@ -1031,7 +1064,7 @@ export default function Home() {
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="У��ные часы"
+                        alt="Умные часы"
                         className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
