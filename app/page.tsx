@@ -89,7 +89,7 @@ export default function Home() {
       setTimeout(() => {
         const jarvisResponse: ChatMessage = {
           id: Date.now() + 1,
-          text: "��пасиб�� за ��аш вопрос! Я обра��атываю ваш запрос и скоро дам детальный ответ.",
+          text: "Спасибо за ваш вопрос! Я обрабатываю ваш запрос и скоро дам детальный ответ.",
           isUser: false,
           timestamp: new Date()
         }
@@ -1210,7 +1210,7 @@ export default function Home() {
 
                   <div className="flex gap-2">
                     <button className="flex-1 bg-white text-black py-2.5 px-4 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200">
-                      Заказ��ть
+                      Заказать
                     </button>
                     <button
                       onClick={() => addToCart(products[0])}
