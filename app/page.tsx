@@ -46,7 +46,7 @@ export default function Home() {
   const [currentMessage, setCurrentMessage] = useState('')
 
   const products: Product[] = [
-    { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешен��е с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
+    { id: 1, name: "Смарт Телевизор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагманский смартфон с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
@@ -496,7 +496,7 @@ export default function Home() {
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
               <p className="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed max-w-md font-light">
-                Наша деятельность: Продажа Телефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
+                Наша деятельность: Продажа ��елефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
               </p>
 
               {/* Auto-scrolling slider */}
@@ -713,7 +713,7 @@ export default function Home() {
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Grooming Kit Pro</h3>
                     <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональный набор для ухода</p>
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
-                      Подробне��
+                      Подробнее
                     </button>
                   </div>
                 </div>
@@ -765,7 +765,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Samsung Watch Ultra</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Умные часы с премиум функци��ми</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Умные часы с премиум функциями</p>
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
                       Подробнее
                     </button>
@@ -888,7 +888,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Grooming Kit Pro</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональный набор для ухода</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональный набор для уход��</p>
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
                       Подробнее
                     </button>
@@ -1146,7 +1146,7 @@ export default function Home() {
 
                   <div className="flex gap-2 mt-auto">
                     <button className="flex-1 bg-white text-black py-2.5 px-4 rounded-lg text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200">
-                      Заказат��
+                      Заказать
                     </button>
                     <button
                       onClick={() => addToCart(products[1])}
