@@ -591,7 +591,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="text-gray-300 text-xs text-center">
-                  потяните<br/>дл�� смены
+                  потяните<br/>для смены
                 </div>
               </div>
             </div>
