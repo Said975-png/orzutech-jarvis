@@ -46,7 +46,7 @@ export default function Home() {
   const [currentMessage, setCurrentMessage] = useState('')
 
   const products: Product[] = [
-    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями д��я максимального качества изображения" },
+    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимал��ного качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тр��йной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
@@ -472,7 +472,7 @@ export default function Home() {
             >
 
               <div className="text-center text-gray-400 text-xs mb-2">
-                Прокр��тите для смены модели
+                Прокрутите для смены модели
               </div>
               <div className="flex justify-center space-x-1">
                 {models.map((_, index) => (
@@ -1247,7 +1247,7 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <div className="border-t border-gray-200 p-8 lg:p-16 text-center">
+        <div className="border-t border-gray-200 p-4 md:p-8 lg:p-16 text-center">
           <p className="text-gray-600 uppercase tracking-wide text-sm">
             © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕ��Ы.
           </p>
