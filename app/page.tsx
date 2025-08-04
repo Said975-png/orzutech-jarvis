@@ -747,7 +747,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">PlayStation 5 Slim</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консоль нового поколения</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консол�� нового поколения</p>
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
                       Подробнее
                     </button>
@@ -801,7 +801,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Grooming Kit Pro</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Професс��ональный набор для ухода</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональный набор для ухода</p>
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
                       Подробнее
                     </button>
@@ -888,7 +888,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Grooming Kit Pro</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Проф��ссиональный набор для ухода</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональный набор для ухода</p>
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
                       Подробнее
                     </button>
@@ -1328,7 +1328,7 @@ export default function Home() {
                     Планшет Pro
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Профессиональный с сти��усом
+                    Профессиональный с стилусом
                   </p>
 
                   <div className="flex items-center justify-between mb-3">
@@ -1411,7 +1411,7 @@ export default function Home() {
                     Смартфон Premium
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Тройная камера, зарядка 65W
+                    Тройная камера, ��арядка 65W
                   </p>
                   <div className="text-lg font-bold text-gray-900">
                     $ 599
@@ -1630,7 +1630,7 @@ export default function Home() {
             <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
           </div>
           <div className="absolute -top-12 right-0 bg-black text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-            Чат с Джарвисом
+            Ча�� с Джарвисом
           </div>
         </button>
       )}
