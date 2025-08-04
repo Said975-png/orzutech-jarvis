@@ -48,7 +48,7 @@ export default function Home() {
   const products: Product[] = [
     { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тр��йной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
-    { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительнос��и в играх и работе" },
+    { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спортивными функциями" },
     { id: 6, name: "Планшет Pro", price: 79900, description: "����рофессиональный планшет для работы и тво����ества с поддержкой стилуса" }
@@ -311,7 +311,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
-                    <span className="whitespace-nowrap">Преми��м-сервис и поддержка</span>
+                    <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
@@ -472,7 +472,7 @@ export default function Home() {
             >
 
               <div className="text-center text-gray-400 text-xs mb-2">
-                Прокрутите для смены модели
+                Прокрутите ��ля смены модели
               </div>
               <div className="flex justify-center space-x-1">
                 {models.map((_, index) => (
@@ -1178,7 +1178,7 @@ export default function Home() {
 
                 <div className="p-4 border-t border-gray-100">
                   <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
-                    Беспроводные наушни��и
+                    Беспроводные наушники
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     Premium с шумоп��давлением
@@ -1382,6 +1382,9 @@ export default function Home() {
                 <div className="flex-1 relative">
                   <div className="relative">
                     <textarea
+                      value={currentMessage}
+                      onChange={(e) => setCurrentMessage(e.target.value)}
+                      onKeyPress={handleKeyPress}
                       placeholder="Напишите ваш вопрос..."
                       rows={1}
                       className="w-full bg-gray-100 text-gray-900 placeholder-gray-500 px-4 py-3 pr-12 rounded-2xl border border-gray-200 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/20 transition-colors resize-none min-h-[48px] max-h-32"
@@ -1392,7 +1395,11 @@ export default function Home() {
                         target.style.height = Math.min(target.scrollHeight, 128) + 'px';
                       }}
                     />
-                    <button className="absolute right-2 bottom-2 bg-green-500 hover:bg-green-600 text-white p-2 rounded-xl transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
+                    <button
+                      onClick={sendMessage}
+                      disabled={!currentMessage.trim()}
+                      className="absolute right-2 bottom-2 bg-green-500 hover:bg-green-600 text-white p-2 rounded-xl transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                       </svg>
