@@ -450,7 +450,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
-                    <span className="whitespace-nowrap">Полн��я ��арантия на все то����ары</span>
+                    <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решени�� для дома</span>
                     <span className="whitespace-nowrap">Профессио��альная установка</span>
@@ -687,7 +687,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">PlayStation 5 Slim</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консоль нового по��оления</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консоль нового по����оления</p>
                     <div className="text-2xl font-bold text-red-600">₽ 45,000</div>
                   </div>
                 </div>
@@ -704,7 +704,7 @@ export default function Home() {
                   <div className="p-4 border-t border-gray-100">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Samsung Watch Ultra</h3>
                     <p className="text-xs text-gray-600 mb-3 line-clamp-2">Умные часы с премиум функциями</p>
-                    <div className="text-2xl font-bold text-red-600">₽ 33,500</div>
+                    <div className="text-2xl font-bold text-red-600">��� 33,500</div>
                   </div>
                 </div>
 
@@ -1165,7 +1165,7 @@ export default function Home() {
                     Пл��ншет Pro
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Про��ессион��льны�� с стилусом
+                    Про��ессион��льный с ст��лусом
                   </p>
                   <div className="text-lg font-bold text-gray-900">
                     $ 799
@@ -1358,7 +1358,7 @@ export default function Home() {
                     <div className="w-full h-full bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-500 overflow-hidden p-4">
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F5725480e4bdd4d65a8c642331347a0e5%2F56c3a3426be04faba489dd5938619520?format=webp&width=800"
-                        alt="Умн��е часы"
+                        alt="Умные часы"
                         className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
