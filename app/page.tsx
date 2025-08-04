@@ -51,7 +51,7 @@ export default function Home() {
     { id: 3, name: "Игровой Ноутбук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz для максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально чистым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-часы с мониторингом здоровья и спортивными функциями" },
-    { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчества с поддержкой стилуса" }
+    { id: 6, name: "Планшет Pro", price: 79900, description: "Профессиональный планшет для работы и творчест��а с поддержкой стилуса" }
   ]
 
   const addToCart = (product: Product) => {
@@ -507,7 +507,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
-                    <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
+                    <span className="whitespace-nowrap">Премиум-сервис и ��оддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
@@ -747,7 +747,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">PlayStation 5 Slim</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консол�� нового поколения</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Игровая консоль нового поколения</p>
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
                       Подробнее
                     </button>
@@ -964,7 +964,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['До 25,000 ₽', '25,000 - 50,000 ₽', '50,000 - 75,000 ₽', '75,000 - 100,000 ₽', '100,000 - 150,000 ₽', 'Свыше 150,000 ��'].map((price, index) => (
+                        {['До 25,000 ₽', '25,000 - 50,000 ₽', '50,000 - 75,000 ₽', '75,000 - 100,000 ₽', '100,000 - 150,000 ₽', 'Свыше 150,000 ₽'].map((price, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
@@ -1366,7 +1366,7 @@ export default function Home() {
 
                 <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                   <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
-                    Смарт Телевизор 55"
+                    Смарт Те��евизор 55"
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     4K Ultra HD с HDR
@@ -1411,7 +1411,7 @@ export default function Home() {
                     Смартфон Premium
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Тройная камера, ��арядка 65W
+                    Тройная камера, зарядка 65W
                   </p>
                   <div className="text-lg font-bold text-gray-900">
                     $ 599
@@ -1630,7 +1630,7 @@ export default function Home() {
             <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
           </div>
           <div className="absolute -top-12 right-0 bg-black text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-            Ча�� с Джарвисом
+            Чат с Джарвисом
           </div>
         </button>
       )}
