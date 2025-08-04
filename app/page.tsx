@@ -1334,12 +1334,19 @@ export default function Home() {
                     $ 249
                   </div>
 
-                  <button
-                    onClick={() => addToCart(products[3])}
-                    className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
-                  >
-                    Заказать
-                  </button>
+                  <div className="flex gap-2">
+                    <button className="flex-1 bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200">
+                      Заказать
+                    </button>
+                    <button
+                      onClick={() => addToCart(products[3])}
+                      className="p-2.5 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+                    >
+                      <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l-2.5 5m0 0L12 21l7.5-3" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
 
