@@ -15,7 +15,7 @@ module.exports = {
         'neon-arc': 'neonArc 6s ease-in-out infinite',
         'scroll': 'scroll 8s linear infinite',
         'scroll-fast': 'scroll 15s linear infinite',
-        'scroll-mobile': 'scrollMobile 20s linear infinite',
+        'scroll-mobile': 'scrollMobile 8s linear infinite',
       },
       keyframes: {
         neonArc: {
