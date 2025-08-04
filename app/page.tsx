@@ -719,7 +719,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Huawei Watch Fit 3</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">+ FreeBuds SE 3 в под��рок</p>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">+ FreeBuds SE 3 в подарок</p>
                     <div className="text-2xl font-bold text-red-600">₽ 12,500</div>
                   </div>
                 </div>
@@ -974,7 +974,7 @@ export default function Home() {
                   </div>
 
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Тройная камера, з��рядка 65W
+                    Тройная камера, зарядка 65W
                   </p>
 
                   <div className="flex items-center justify-between mb-3">
@@ -1074,7 +1074,7 @@ export default function Home() {
 
                 <div className="p-4 border-t border-gray-100">
                   <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
-                    Беспроводные наушники
+                    Беспровод��ые наушники
                   </h3>
 
                   {/* Rating */}
