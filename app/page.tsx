@@ -29,7 +29,7 @@ export default function Home() {
 
   const products: Product[] = [
     { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
-    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тройной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
+    { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тр��йной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
     { id: 5, name: "Умные часы", price: 34900, description: "Современные смарт-час�� с мониторингом здоровья и спортивными функциями" },
@@ -165,7 +165,7 @@ export default function Home() {
             </div>
             <input
               type="search"
-              placeholder="П��иск..."
+              placeholder="Поиск..."
               className="w-full bg-white/90 backdrop-blur-sm text-gray-800 placeholder-gray-500 pl-10 pr-4 py-2 rounded-full border border-white/30 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20 transition-colors text-sm font-sans shadow-lg"
             />
           </div>
@@ -218,7 +218,7 @@ export default function Home() {
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
               <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-md font-light">
-                Наша деятельность: Продажа Телефонов �� аксессуаров, Планшетов, разных Га��жетов и много много инте��есно��о.
+                Наша деятельность: Продажа Телефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
               </p>
 
               {/* Auto-scrolling slider */}
@@ -226,7 +226,7 @@ export default function Home() {
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
-                    <span className="whitespace-nowrap">100% ��ригинальные устр��йства</span>
+                    <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
                     <span className="whitespace-nowrap">Полная гарантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
@@ -319,37 +319,52 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Flowing Golden Wave from Top Right to Bottom Left */}
-        <div className="relative w-full h-32 overflow-hidden bg-transparent">
+        {/* Realistic Flowing Golden Wave */}
+        <div className="relative w-full h-40 overflow-hidden bg-transparent">
           <svg
             className="absolute top-0 left-0 w-full h-full"
-            viewBox="0 0 1200 300"
+            viewBox="0 0 1400 400"
             fill="none"
             preserveAspectRatio="none"
           >
-            {/* Main Golden Wave flowing diagonally */}
+            {/* Main Golden Wave with realistic curves */}
             <path
-              d="M1200,0 L1200,40 C1000,80 800,100 600,80 C400,60 200,50 0,80 L0,300 L1200,300 Z"
-              fill="url(#goldGradient)"
-              className="drop-shadow-lg"
+              d="M1400,0 L1400,60 C1200,100 1050,120 900,90 C750,60 600,80 450,70 C300,60 150,45 0,65 L0,400 L1400,400 Z"
+              fill="url(#realisticGoldGradient)"
+              className="drop-shadow-2xl"
             />
-            {/* Secondary wave for depth and flow effect */}
+            {/* Secondary wave for depth */}
             <path
-              d="M1200,0 L1200,20 C950,60 700,70 450,50 C200,30 100,25 0,45 L0,300 L1200,300 Z"
-              fill="url(#goldGradient2)"
-              opacity="0.7"
+              d="M1400,0 L1400,30 C1150,70 1000,85 850,65 C700,45 550,60 400,55 C250,50 100,35 0,50 L0,400 L1400,400 Z"
+              fill="url(#lightGoldGradient)"
+              opacity="0.8"
             />
-            {/* Gradient definitions */}
+            {/* Subtle third wave for more realism */}
+            <path
+              d="M1400,0 L1400,15 C1100,45 950,55 800,40 C650,25 500,35 350,30 C200,25 50,20 0,35 L0,400 L1400,400 Z"
+              fill="url(#shimmerGradient)"
+              opacity="0.6"
+            />
+            {/* Gradient definitions for realistic gold flow */}
             <defs>
-              <linearGradient id="goldGradient" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#FDE047" />
+              <linearGradient id="realisticGoldGradient" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#FEF08A" />
+                <stop offset="25%" stopColor="#FDE047" />
                 <stop offset="50%" stopColor="#FACC15" />
-                <stop offset="100%" stopColor="#EAB308" />
+                <stop offset="75%" stopColor="#EAB308" />
+                <stop offset="100%" stopColor="#CA8A04" />
               </linearGradient>
-              <linearGradient id="goldGradient2" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#FEF3C7" />
-                <stop offset="50%" stopColor="#FDE047" />
+              <linearGradient id="lightGoldGradient" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#FFFBEB" />
+                <stop offset="30%" stopColor="#FEF3C7" />
+                <stop offset="60%" stopColor="#FDE047" />
                 <stop offset="100%" stopColor="#FACC15" />
+              </linearGradient>
+              <linearGradient id="shimmerGradient" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#FFFFFF" />
+                <stop offset="40%" stopColor="#FFFBEB" />
+                <stop offset="80%" stopColor="#FEF3C7" />
+                <stop offset="100%" stopColor="#FDE047" />
               </linearGradient>
             </defs>
           </svg>
@@ -360,7 +375,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-black text-black mb-2">500+</div>
-              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Товаро��</div>
+              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Товаров</div>
             </div>
             <div>
               <div className="text-4xl font-black text-black mb-2">150+</div>
@@ -372,7 +387,7 @@ export default function Home() {
             </div>
             <div>
               <div className="text-4xl font-black text-black mb-2">99%</div>
-              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Качеств��</div>
+              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Качества</div>
             </div>
           </div>
         </div>
@@ -385,7 +400,7 @@ export default function Home() {
             {/* Section Header */}
             <div className="text-center mb-12">
               <h2 className="text-3xl font-light text-gray-900 mb-2 tracking-wide">
-                Хит прода��
+                Хит продаж
               </h2>
               <div className="w-16 h-px bg-gray-400 mx-auto"></div>
             </div>
@@ -404,8 +419,8 @@ export default function Home() {
                   </div>
                   <div className="p-4 border-t border-gray-100">
                     <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">Grooming Kit Pro</h3>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">��рофессиональный набор для ухода</p>
-                    <div className="text-2xl font-bold text-red-600">�� 8,900</div>
+                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">Профессиональный набор для ухода</p>
+                    <div className="text-2xl font-bold text-red-600">₽ 8,900</div>
                   </div>
                 </div>
 
@@ -586,7 +601,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['5 звезд', '4 звезды и выше', '3 звезды и выше', '2 звезды и выше', '1 звезда и выше', 'Без рейтинга'].map((rating, index) => (
+                        {['5 звезд', '4 звезды и выше', '3 звезды и выше', '2 звезды и выше', '1 звезда и в��ше', 'Без рейтинга'].map((rating, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200 flex items-center"
