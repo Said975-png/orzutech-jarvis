@@ -257,7 +257,7 @@ export default function Home() {
             {/* Auth buttons */}
             <div className="hidden sm:flex items-center space-x-2">
               <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
-                ��ход
+                Вход
               </button>
               <span className="text-black">|</span>
               <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
@@ -450,7 +450,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Самая качественная техника в Бухаре</span>
                     <span className="whitespace-nowrap">100% оригинальные ус����ройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
-                    <span className="whitespace-nowrap">Полная гарантия на все товары</span>
+                    <span className="whitespace-nowrap">Полная ��арантия на все товары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессиональная установка</span>
@@ -591,7 +591,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="text-gray-300 text-xs text-center">
-                  потяните<br/>для смены
+                  потяни��е<br/>для смены
                 </div>
               </div>
             </div>
@@ -1205,7 +1205,7 @@ export default function Home() {
                     Умные часы
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Мониторинг здоровья и спорт
+                    ��ониторинг здоровья и спорт
                   </p>
                   <div className="text-lg font-bold text-gray-900">
                     $ 349
@@ -1239,7 +1239,7 @@ export default function Home() {
 
                 <div className="p-4 border-t border-gray-100 flex flex-col flex-1">
                   <h3 className="text-base font-medium text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
-                    П��аншет Pro
+                    Планшет Pro
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                     Профессиональный с стилусом
