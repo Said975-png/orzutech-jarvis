@@ -314,7 +314,7 @@ export default function Home() {
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
                     <span className="whitespace-nowrap">Профессио��альная установка</span>
-                    <span className="whitespace-nowrap">Качественное обслуживание</span>
+                    <span className="whitespace-nowrap">Качественное обсл��живание</span>
                   </div>
                 </div>
               </div>
@@ -1153,7 +1153,7 @@ export default function Home() {
                     Беспроводные наушники
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Premium с шумоп��давлением
+                    Premium с ��умоп��давлением
                   </p>
                   <div className="text-lg font-bold text-gray-900">
                     $ 249
@@ -1276,7 +1276,7 @@ export default function Home() {
       {isChatOpen && (
         <div className="fixed inset-0 z-50 bg-white">
           {/* Chat Header */}
-          <div className="flex items-center justify-between px-6 py-4 bg-white border-b border-gray-200 shadow-sm">
+          <div className="flex items-center justify-between px-4 md:px-6 py-3 md:py-4 bg-white border-b border-gray-200 shadow-sm">
             <div className="flex items-center space-x-3">
               <div className="relative">
                 <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center">
