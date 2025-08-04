@@ -35,14 +35,7 @@ module.exports = {
             transform: 'translateX(-50%)'
           },
         },
-        'scroll-smooth': {
-          '0%': {
-            transform: 'translateX(0)'
-          },
-          '100%': {
-            transform: 'translateX(calc(-100% + 100vw))'
-          },
-        },
+
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
