@@ -21,6 +21,13 @@ interface CartItem extends Product {
   quantity: number
 }
 
+interface ChatMessage {
+  id: number
+  text: string
+  isUser: boolean
+  timestamp: Date
+}
+
 export default function Home() {
   const [currentModel, setCurrentModel] = useState(0)
   const [selectedColor, setSelectedColor] = useState(0)
@@ -28,9 +35,18 @@ export default function Home() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [isChatOpen, setIsChatOpen] = useState(false)
+  const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
+    {
+      id: 1,
+      text: "Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором техники или ответить на вопросы о ма��азине.",
+      isUser: false,
+      timestamp: new Date()
+    }
+  ])
+  const [currentMessage, setCurrentMessage] = useState('')
 
   const products: Product[] = [
-    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для максимального качества изображения" },
+    { id: 1, name: "Смарт Тел��визор 55\"", price: 89900, description: "4K Ultra HD разрешение с поддержкой HDR и Smart TV функциями для макси��ального качества изображения" },
     { id: 2, name: "Смартфон Premium", price: 59900, description: "Флагман��кий смарт��он с тр��йной камерой и быстрой зарядкой 65W для профессиональной фотографии" },
     { id: 3, name: "Игровой Ноу��бук", price: 129900, description: "RTX 4060, 16GB RAM и дисплей 144Hz дл�� максимальной производительности в играх и работе" },
     { id: 4, name: "Беспроводные наушники", price: 24900, description: "Premium наушники с активным шумоподавлением и кристально ч��стым звуком" },
@@ -55,6 +71,38 @@ export default function Home() {
 
   const getTotalItems = () => {
     return cart.reduce((total, item) => total + item.quantity, 0)
+  }
+
+  const sendMessage = () => {
+    if (currentMessage.trim()) {
+      const userMessage: ChatMessage = {
+        id: Date.now(),
+        text: currentMessage,
+        isUser: true,
+        timestamp: new Date()
+      }
+
+      setChatMessages(prev => [...prev, userMessage])
+      setCurrentMessage('')
+
+      // Simulate Jarvis response
+      setTimeout(() => {
+        const jarvisResponse: ChatMessage = {
+          id: Date.now() + 1,
+          text: "Спасибо за ваш вопрос! Я обра��атываю ваш запрос и скоро дам детальный ответ.",
+          isUser: false,
+          timestamp: new Date()
+        }
+        setChatMessages(prev => [...prev, jarvisResponse])
+      }, 1000)
+    }
+  }
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      sendMessage()
+    }
   }
 
   const models = [
@@ -152,14 +200,14 @@ export default function Home() {
       {/* Main Container */}
       <div className="w-full bg-transparent relative z-20">
         {/* Navigation */}
-        <nav className="flex items-center justify-between px-8 lg:px-16 py-6 relative z-30">
+        <nav className="flex items-center justify-between px-4 md:px-8 lg:px-16 py-4 md:py-6 relative z-30">
           {/* Logo */}
           <div className="flex items-center">
-            <span className="text-yellow-400 font-bold text-2xl tracking-wide font-sans drop-shadow-sm">ORZUTECH</span>
+            <span className="text-yellow-400 font-bold text-xl md:text-2xl tracking-wide font-sans drop-shadow-sm">ORZUTECH</span>
           </div>
 
           {/* Animated Search Bar */}
-          <div className="relative flex-1 max-w-2xl mx-8">
+          <div className="relative flex-1 max-w-2xl mx-4 md:mx-8">
             <div
               className={`
                 relative transition-all duration-500 ease-in-out overflow-hidden
@@ -192,7 +240,7 @@ export default function Home() {
           </div>
 
           {/* Auth and Cart */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 md:space-x-4">
             {/* Search Icon */}
             <button
               onClick={() => setIsSearchOpen(true)}
@@ -207,7 +255,7 @@ export default function Home() {
             </button>
 
             {/* Auth buttons */}
-            <div className="flex items-center space-x-2">
+            <div className="hidden sm:flex items-center space-x-2">
               <button className="text-black hover:text-gray-700 transition-colors duration-300 text-sm font-medium drop-shadow-sm">
                 Вход
               </button>
@@ -230,28 +278,166 @@ export default function Home() {
         </nav>
 
         {/* Main Content */}
-        <div className="relative grid lg:grid-cols-2 gap-16 p-8 lg:p-16 min-h-[70vh] overflow-hidden">
+        <div className="relative flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-16 p-4 md:p-8 lg:p-16 min-h-[60vh] md:min-h-[70vh] overflow-hidden">
           {/* Light Effect from Left */}
           <div className="absolute -left-32 top-0 bottom-0 w-96 bg-gradient-to-r from-gray-200/10 via-gray-200/5 to-transparent blur-3xl opacity-60"></div>
           <div className="absolute -left-20 top-1/4 bottom-1/4 w-64 bg-gradient-to-r from-gray-200/20 via-gray-200/8 to-transparent blur-2xl opacity-40"></div>
           <div className="absolute -left-10 top-1/3 bottom-1/3 w-32 bg-gradient-to-r from-gray-200/30 via-gray-200/10 to-transparent blur-xl opacity-30"></div>
 
+          {/* Mobile: 3D Model Section First */}
+          <div className="flex flex-col justify-center items-center space-y-6 lg:hidden order-1">
+            <div className="flex items-center space-x-6">
+              <div className="relative w-[240px] h-[240px] overflow-hidden rounded-lg">
+                <model-viewer
+                  src={models[currentModel].url}
+                  alt="3D Model"
+                  auto-rotate
+                  camera-controls
+                  autoplay
+                  animation-name=""
+                  field-of-view="30deg"
+                  camera-orbit="0deg 75deg 150%"
+                  style={{ width: '100%', height: '100%' }}
+                  loading="lazy"
+                  min-camera-orbit="auto auto 120%"
+                  max-camera-orbit="auto auto 200%"
+                ></model-viewer>
+              </div>
 
+              {/* Model Color Selection - Mobile Right Side */}
+              <div className="flex flex-col items-center space-y-4">
+                <div className="text-gray-400 text-xs uppercase tracking-wide text-center">
+                  Цвет<br/>модели
+                </div>
+                <div
+                  className="flex flex-col space-y-4 cursor-grab active:cursor-grabbing"
+                  onMouseDown={(e) => {
+                    const startY = e.clientY;
+                    let isDragging = false;
+
+                    const handleMouseMove = (e: MouseEvent) => {
+                      const deltaY = e.clientY - startY;
+                      if (Math.abs(deltaY) > 20 && !isDragging) {
+                        isDragging = true;
+                        if (deltaY > 0) {
+                          setSelectedColor(1);
+                        } else {
+                          setSelectedColor(0);
+                        }
+                      }
+                    };
+
+                    const handleMouseUp = () => {
+                      document.removeEventListener('mousemove', handleMouseMove);
+                      document.removeEventListener('mouseup', handleMouseUp);
+                    };
+
+                    document.addEventListener('mousemove', handleMouseMove);
+                    document.addEventListener('mouseup', handleMouseUp);
+                  }}
+                  onTouchStart={(e) => {
+                    const startY = e.touches[0].clientY;
+                    let isDragging = false;
+
+                    const handleTouchMove = (e: TouchEvent) => {
+                      const deltaY = e.touches[0].clientY - startY;
+                      if (Math.abs(deltaY) > 20 && !isDragging) {
+                        isDragging = true;
+                        if (deltaY > 0) {
+                          setSelectedColor(1);
+                        } else {
+                          setSelectedColor(0);
+                        }
+                      }
+                    };
+
+                    const handleTouchEnd = () => {
+                      document.removeEventListener('touchmove', handleTouchMove);
+                      document.removeEventListener('touchend', handleTouchEnd);
+                    };
+
+                    document.addEventListener('touchmove', handleTouchMove);
+                    document.addEventListener('touchend', handleTouchEnd);
+                  }}
+                >
+                  <button
+                    onClick={() => setSelectedColor(0)}
+                    className={`
+                      w-4 h-4 rounded-full transition-all duration-300 border-2 cursor-pointer
+                      bg-white border-gray-300
+                      ${selectedColor === 0
+                        ? 'ring-2 ring-yellow-400 ring-offset-1 scale-110'
+                        : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1 hover:scale-105'
+                      }
+                    `}
+                    title="Белый"
+                  />
+                  <div className="text-gray-300 text-xs">⇅</div>
+                  <button
+                    onClick={() => setSelectedColor(1)}
+                    className={`
+                      w-4 h-4 rounded-full transition-all duration-300 border-2 cursor-pointer
+                      bg-black border-gray-700
+                      ${selectedColor === 1
+                        ? 'ring-2 ring-yellow-400 ring-offset-1 scale-110'
+                        : 'hover:ring-1 hover:ring-gray-300 hover:ring-offset-1 hover:scale-105'
+                      }
+                    `}
+                    title="Черный"
+                  />
+                </div>
+                <div className="text-gray-300 text-xs text-center">
+                  потяните<br/>для смены
+                </div>
+              </div>
+            </div>
+
+            {/* Custom Model Selector - Mobile */}
+            <div
+              className="w-[240px]"
+              onWheel={(e) => {
+                e.preventDefault()
+                if (e.deltaY > 0) {
+                  setCurrentModel((prev) => (prev + 1) % models.length)
+                } else {
+                  setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
+                }
+              }}
+            >
+              <div className="text-center text-gray-400 text-xs mb-2">
+                Прокрутите для смены модели
+              </div>
+              <div className="flex justify-center space-x-1">
+                {models.map((_, index) => (
+                  <div
+                    key={index}
+                    className={`
+                      w-2 h-2 rounded-full transition-all duration-300
+                      ${currentModel === index
+                        ? 'bg-white'
+                        : 'bg-gray-600'
+                      }
+                    `}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
 
           {/* Left Content */}
-          <div className="relative flex flex-col justify-center space-y-12 z-10">
-            <div className="space-y-6">
-              <div className="text-sm text-gray-600 font-medium uppercase tracking-[0.2em]">
+          <div className="relative flex flex-col justify-center items-start space-y-8 lg:space-y-12 z-10 order-2 lg:order-1">
+            <div className="space-y-6 text-left">
+              <div className="text-xs md:text-sm text-gray-600 font-medium uppercase tracking-[0.2em]">
                 СОВРЕМЕННАЯ ЭЛЕКТРОНИКА
               </div>
 
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
+              <h1 className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-yellow-400 leading-[0.9] tracking-tight">
                 ORZUTECH
               </h1>
 
               <div className="w-16 h-1 bg-gradient-to-r from-black to-gray-600"></div>
 
-              <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-md font-light">
+              <p className="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed max-w-md font-light">
                 Наша деятельность: Продажа Телефонов и аксессуаров, Планшетов, разных Гаджетов и много много интересного.
               </p>
 
@@ -259,13 +445,13 @@ export default function Home() {
               <div className="relative overflow-hidden max-w-lg h-12">
                 <div className="absolute inset-0 flex items-center">
                   <div className="flex animate-scroll space-x-8 text-sm text-black font-medium">
-                    <span className="whitespace-nowrap">Самая качественная техника в ��ухаре</span>
+                    <span className="whitespace-nowrap">Самая качественная техника в ��ухар��</span>
                     <span className="whitespace-nowrap">100% оригинальные устройства</span>
                     <span className="whitespace-nowrap">Быстрая доставка и установка</span>
-                    <span className="whitespace-nowrap">Полная гарантия на все товары</span>
+                    <span className="whitespace-nowrap">Полная гарантия на все то��ары</span>
                     <span className="whitespace-nowrap">Премиум-сервис и поддержка</span>
                     <span className="whitespace-nowrap">Инновационные решения для дома</span>
-                    <span className="whitespace-nowrap">Профессиональная установка</span>
+                    <span className="whitespace-nowrap">Профессио��альная установка</span>
                     <span className="whitespace-nowrap">Качественное обслуживание</span>
                   </div>
                 </div>
@@ -273,7 +459,7 @@ export default function Home() {
             </div>
 
             {/* Color Selection */}
-            <div className="flex items-center space-x-4 mt-8">
+            <div className="flex items-center justify-start space-x-4 mt-8">
               <div className="text-gray-400 text-xs uppercase tracking-wide">
                 Выбор цвета
               </div>
@@ -298,10 +484,10 @@ export default function Home() {
 
           </div>
 
-          {/* Right Content */}
-          <div className="flex flex-col justify-center items-center space-y-6">
-            <div className="flex items-center space-x-6">
-              <div className="relative w-[280px] lg:w-[360px] h-[280px] lg:h-[360px] overflow-hidden rounded-lg">
+          {/* Right Content - Desktop Only */}
+          <div className="hidden lg:flex flex-col justify-center items-center space-y-6 order-2">
+            <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
+              <div className="relative w-[240px] md:w-[280px] lg:w-[360px] h-[240px] md:h-[280px] lg:h-[360px] overflow-hidden rounded-lg">
                 <model-viewer
                   src={models[currentModel].url}
                   alt="3D Model"
@@ -410,14 +596,14 @@ export default function Home() {
 
             {/* Custom Model Selector */}
             <div
-              className="w-[280px] lg:w-[360px]"
+              className="w-[240px] md:w-[280px] lg:w-[360px]"
               onWheel={(e) => {
                 e.preventDefault()
                 if (e.deltaY > 0) {
                   // Ск��олл вниз - следующая модель
                   setCurrentModel((prev) => (prev + 1) % models.length)
                 } else {
-                  // Ск��олл вверх - предыдущая модель
+                  // Ск��олл в��ерх - предыдущая модель
                   setCurrentModel((prev) => (prev - 1 + models.length) % models.length)
                 }
               }}
@@ -446,41 +632,13 @@ export default function Home() {
 
 
 
-        {/* Stats Section */}
-        <div className="border-t border-gray-200 p-8 lg:p-16">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-black text-black mb-2">500+</div>
-              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Товаров</div>
-            </div>
-            <div>
-              <div className="text-4xl font-black text-black mb-2">150+</div>
-              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Клиентов</div>
-            </div>
-            <div>
-              <div className="text-4xl font-black text-black mb-2">24/7</div>
-              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Поддержка</div>
-            </div>
-            <div>
-              <div className="text-4xl font-black text-black mb-2">99%</div>
-              <div className="text-gray-600 uppercase tracking-wide text-sm font-medium">Качества</div>
-            </div>
-          </div>
-        </div>
+
 
 
 
         {/* Hit Products Section */}
-        <div className="bg-gray-50 py-16 px-4 lg:px-8 overflow-hidden">
+        <div className="bg-white py-6 md:py-8 px-3 md:px-4 lg:px-8 overflow-hidden">
           <div className="max-w-6xl mx-auto">
-            {/* Section Header */}
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-light text-gray-900 mb-2 tracking-wide">
-                Хит продаж
-              </h2>
-              <div className="w-16 h-px bg-gray-400 mx-auto"></div>
-            </div>
-
             {/* Slider Container */}
             <div className="relative">
               <div className="flex animate-scroll space-x-6">
@@ -615,7 +773,7 @@ export default function Home() {
         </div>
 
         {/* Products Section */}
-        <div className="bg-white py-16 px-4 lg:px-8">
+        <div className="bg-white py-8 md:py-16 px-3 md:px-4 lg:px-8">
           <div className="max-w-6xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12">
@@ -710,7 +868,7 @@ export default function Home() {
                   <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-48">
                     <div className="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                       <div className="p-2">
-                        {['Смартфоны', 'Телевизоры', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
+                        {['Смартфоны', 'Телевизор��', 'Ноутбуки', 'Планшеты', 'Наушники', 'Умные час��', 'Игровые консоли', 'Фотоаппараты', 'Аксессуары', 'Все категории'].map((category, index) => (
                           <button
                             key={index}
                             className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-200"
@@ -998,7 +1156,7 @@ export default function Home() {
                     Пл��ншет Pro
                   </h3>
                   <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                    Профессиональный с стилусом
+                    Про��ессиональный с стилусом
                   </p>
                   <div className="text-lg font-bold text-gray-900">
                     $ 799
@@ -1227,7 +1385,7 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <div className="border-t border-gray-200 p-8 lg:p-16 text-center">
+        <div className="border-t border-gray-200 p-4 md:p-8 lg:p-16 text-center">
           <p className="text-gray-600 uppercase tracking-wide text-sm">
             © 2024 ORZUTECH. БУХАРА, УЗБЕКИСТАН. ВСЕ ПРАВА ЗАЩИЩЕ��Ы.
           </p>
@@ -1252,65 +1410,116 @@ export default function Home() {
         </button>
       )}
 
-      {/* Fullscreen Chat Interface */}
+      {/* ChatGPT Style Chat Interface */}
       {isChatOpen && (
-        <div className="fixed inset-0 z-50 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
+        <div className="fixed inset-0 z-50 bg-white">
           {/* Chat Header */}
-          <div className="flex items-center justify-between p-6 bg-black/20 backdrop-blur-sm border-b border-white/10">
+          <div className="flex items-center justify-between px-4 md:px-6 py-3 md:py-4 bg-white border-b border-gray-200 shadow-sm">
             <div className="flex items-center space-x-3">
               <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
-                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-slate-900"></div>
+                <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-400 rounded-full border-2 border-white"></div>
               </div>
               <div>
-                <h2 className="text-xl font-bold text-white">Джарвис ИИ</h2>
-                <p className="text-sm text-gray-300">Ваш умный помощник</p>
+                <h2 className="text-lg font-semibold text-gray-900">Джарвис ИИ</h2>
+                <p className="text-sm text-gray-500">Он��айн</p>
               </div>
             </div>
             <button
               onClick={() => setIsChatOpen(false)}
-              className="p-2 text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
+              className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
 
           {/* Chat Messages Area */}
-          <div className="flex-1 overflow-y-auto p-6 space-y-4" style={{ height: 'calc(100vh - 140px)' }}>
-            {/* Welcome Message */}
-            <div className="flex items-start space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
-                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl rounded-tl-md p-4 max-w-md">
-                <p className="text-white">Привет! Я Джарвис, ваш ИИ-помощник ORZUTECH. Чем могу помочь? Могу рассказать о товарах, помочь с выбором техники или ответить на вопросы о магазине.</p>
-              </div>
+          <div className="flex-1 overflow-y-auto bg-gray-50" style={{ height: 'calc(100vh - 200px)' }}>
+            <div className="max-w-4xl mx-auto px-3 md:px-4 py-4 md:py-6">
+              {chatMessages.map((message) => (
+                <div key={message.id} className="mb-6">
+                  {message.isUser ? (
+                    // User Message
+                    <div className="flex items-start space-x-3 justify-end">
+                      <div className="flex-1 flex justify-end">
+                        <div className="bg-green-500 text-white rounded-2xl rounded-tr-lg px-3 md:px-4 py-2 md:py-3 shadow-sm max-w-xs md:max-w-2xl">
+                          <p className="leading-relaxed text-sm md:text-base">
+                            {message.text}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="w-8 h-8 bg-gray-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                      </div>
+                    </div>
+                  ) : (
+                    // Jarvis Message
+                    <div className="flex items-start space-x-3">
+                      <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <div className="bg-white rounded-2xl rounded-tl-lg px-3 md:px-4 py-2 md:py-3 shadow-sm border border-gray-200 max-w-xs md:max-w-2xl">
+                          <p className="text-gray-800 leading-relaxed text-sm md:text-base">
+                            {message.text}
+                          </p>
+                        </div>
+                        <div className="text-xs text-gray-500 mt-1 ml-4">
+                          Джарвис • {message.timestamp.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' })}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Chat Input */}
-          <div className="p-6 bg-black/20 backdrop-blur-sm border-t border-white/10">
-            <div className="flex items-center space-x-4">
-              <div className="flex-1 relative">
-                <input
-                  type="text"
-                  placeholder="Напишите ваш вопрос..."
-                  className="w-full bg-white/10 backdrop-blur-sm text-white placeholder-gray-300 px-4 py-3 rounded-2xl border border-white/20 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/20 transition-colors"
-                />
+          <div className="bg-white border-t border-gray-200 px-3 md:px-4 py-3 md:py-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-end space-x-3">
+                <div className="flex-1 relative">
+                  <div className="relative">
+                    <textarea
+                      value={currentMessage}
+                      onChange={(e) => setCurrentMessage(e.target.value)}
+                      onKeyPress={handleKeyPress}
+                      placeholder="Напишите ваш вопрос..."
+                      rows={1}
+                      className="w-full bg-gray-100 text-gray-900 placeholder-gray-500 px-4 py-3 pr-12 rounded-2xl border border-gray-200 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/20 transition-colors resize-none min-h-[48px] max-h-32"
+                      style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                      onInput={(e) => {
+                        const target = e.target as HTMLTextAreaElement;
+                        target.style.height = 'auto';
+                        target.style.height = Math.min(target.scrollHeight, 128) + 'px';
+                      }}
+                    />
+                    <button
+                      onClick={sendMessage}
+                      disabled={!currentMessage.trim()}
+                      className="absolute right-2 bottom-2 bg-green-500 hover:bg-green-600 text-white p-2 rounded-xl transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white p-3 rounded-2xl transition-all duration-200 hover:scale-105">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                </svg>
-              </button>
+              <div className="text-xs text-gray-500 text-center mt-2">
+                Джа��вис может делать ошибки. Проверяйте важную информацию.
+              </div>
             </div>
           </div>
         </div>
